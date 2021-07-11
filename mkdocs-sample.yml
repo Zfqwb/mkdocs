@@ -9,8 +9,8 @@ copyright: "&copy; 2019 peaceiris"
 
 # Repository
 repo_name: "GitHub"
-repo_url: "https://www.jsdelivr.com/package/gh/Zfqwb/mkdocs"
-edit_uri: "https://www.jsdelivr.com/package/gh/Zfqwb/mkdocs/edit/main/docs_sample"
+repo_url: "https://github.com/Zfqwb/mkdocs"
+edit_uri: "https://github.com/Zfqwb/mkdocs/edit/main/docs_sample"
 
 
 # Configuration
