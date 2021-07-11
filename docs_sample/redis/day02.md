@@ -1,4 +1,3 @@
-```
 ## 学习目标
 
 目标1：能够说出redis中的数据删除策与略淘汰策略
@@ -80,7 +79,7 @@ TTL返回的值有三种情况：正数，-1，-2
 
 - 对某个expires[*]检测时，随机挑选W个key检测
 
-​```markdown
+```markdown
   如果key超时，删除key
 
   如果一轮中删除的key的数量>W*25%，循环该过程
@@ -88,7 +87,7 @@ TTL返回的值有三种情况：正数，-1，-2
   如果一轮中删除的key的数量≤W*25%，检查下一个expires[*]，0-15循环
 
   W取值=ACTIVE_EXPIRE_CYCLE_LOOKUPS_PER_LOOP属性值
-​```
+```
 
 - 参数current_db用于记录**activeExpireCycle()** 进入哪个expires[*] 执行
 
@@ -104,27 +103,27 @@ TTL返回的值有三种情况：正数，-1，-2
 
 1：定时删除：
 
-​```markdown
+```markdown
 节约内存，无占用,
 不分时段占用CPU资源，频度高,
 拿时间换空间
-​```
+```
 
 2：惰性删除：
 
-​```markdown
+```markdown
 内存占用严重
 延时执行，CPU利用率高
 拿空间换时间
-​```
+```
 
 3：定期删除：
 
-​```markdown
+```markdown
 内存定期随机清理
 每秒花费固定的CPU资源维护内存
 随机抽查，重点抽查
-​```
+```
 
 ### 1.3 数据淘汰策略（逐出算法）
 
@@ -136,9 +135,9 @@ TTL返回的值有三种情况：正数，-1，-2
 
 注意：逐出数据的过程不是100%能够清理出足够的可使用的内存空间，如果不成功则反复执行。当对所有数据尝试完毕，  如不能达到内存清理的要求，将出现错误信息如下
 
-​```shell
+```shell
 (error) OOM command not allowed when used memory >'maxmemory'
-​```
+```
 
 #### 1.3.2 策略配置
 
@@ -146,52 +145,52 @@ TTL返回的值有三种情况：正数，-1，-2
 
 1：最大可使用内存，即占用物理内存的比例，默认值为0，表示不限制。生产环境中根据需求设定，通常设置在50%以上
 
-​```properties
+```properties
 maxmemory ?mb
-​```
+```
 
 2：每次选取待删除数据的个数，采用随机获取数据的方式作为待检测删除数据
 
-​```properties
+```properties
 maxmemory-samples count
-​```
+```
 
 3：对数据进行删除的选择策略
 
-​```properties
+```properties
 maxmemory-policy policy
-​```
+```
 
 那数据删除的策略policy到底有几种呢？一共是**3类8种**
 
 **第一类**：检测易失数据（可能会过期的数据集server.db[i].expires ）
 
-​```properties
+```properties
 volatile-lru：挑选最近最少使用的数据淘汰
 volatile-lfu：挑选最近使用次数最少的数据淘汰
 volatile-ttl：挑选将要过期的数据淘汰
 volatile-random：任意选择数据淘汰
-​```
+```
 
 **第二类**：检测全库数据（所有数据集server.db[i].dict ）
 
-​```properties
+```properties
 allkeys-lru：挑选最近最少使用的数据淘汰
 allkeLyRs-lfu：：挑选最近使用次数最少的数据淘汰
 allkeys-random：任意选择数据淘汰，相当于随机
-​```
+```
 
 **第三类**：放弃数据驱逐
 
-​```properties
+```properties
 no-enviction（驱逐）：禁止驱逐数据(redis4.0中默认策略)，会引发OOM(Out Of Memory)
-​```
+```
 
 注意：这些策略是配置到哪个属性上？怎么配置？如下所示
 
-​```properties
+```properties
 maxmemory-policy volatile-lru
-​```
+```
 
 **数据淘汰策略配置依据**
 
@@ -277,21 +276,21 @@ maxmemory-policy volatile-lru
 
 master:
 
-​```markdown
+```markdown
 写数据
 
 执行写操作时，将出现变化的数据自动同步到slave
 
 读数据（可忽略）
-​```
+```
 
 slave:
 
-​```markdown
+```markdown
 读数据
 
 写数据（禁止）
-​```
+```
 
 #### 2.1.3 主从复制的作用
 
@@ -345,75 +344,75 @@ master：保存slave的端口
 
 方式一：客户端发送命令
 
-​```properties
+```properties
 slaveof masterip masterport
-​```
+```
 
 方式二：启动服务器参数
 
-​```properties
+```properties
 redis-server --slaveof masterip masterport
-​```
+```
 
 方式三：服务器配置（**主流方式**）
 
-​```properties
+```properties
 slaveof masterip masterport
-​```
+```
 
 slave系统信息
 
-​```properties
+```properties
 master_link_down_since_seconds
 masterhost & masterport
-​```
+```
 
 master系统信息
 
-​```properties
+```properties
 uslave_listening_port(多个)
-​```
+```
 
 **主从断开连接**
 
 断开slave与master的连接，slave断开连接后，不会删除已有数据，只是不再接受master发送的数据
 
-​```properties
+```properties
 slaveof no one
-​```
+```
 
 **授权访问**
 
 master客户端发送命令设置密码
 
-​```properties
+```properties
 requirepass password
-​```
+```
 
 master配置文件设置密码
 
-​```properties
+```properties
 config set requirepass password
 config get requirepass
-​```
+```
 
 slave客户端发送命令设置密码
 
-​```properties
+```properties
 auth password
-​```
+```
 
 slave配置文件设置密码
 
-​```properties
+```properties
 masterauth password
-​```
+```
 
 slave启动服务器设置密码
 
-​```properties
+```properties
 redis-server –a password
-​```
+```
 
 
 
@@ -446,18 +445,18 @@ master：保存slave当前数据同步的位置
 
 2：复制缓冲区大小设定不合理，会导致数据溢出。如进行全量复制周期太长，进行部分复制时发现数据已经存在丢失的情况，必须进行第二次全量复制，致使slave陷入死循环状态。
 
-​```properties
+```properties
 repl-backlog-size ?mb
-​```
+```
 
 3. master单机内存占用主机内存的比例不应过大，建议使用50%-70%的内存，留下30%-50%的内存用于执 行bgsave命令和创建复制缓冲区
 
 **数据同步阶段slave说明**
 
 1. 为避免slave进行全量复制、部分复制时服务器响应阻塞或数据不同步，建议关闭此期间的对外服务
-​```properties
+```properties
    slave-serve-stale-data yes|no
-​```
+```
 
 2. 数据同步阶段，master发送给slave信息可以理解master是slave的一个客户端，主动向slave发送命令
 
@@ -490,7 +489,7 @@ repl-backlog-size ?mb
 
 - 服务器运行ID（runid）
 
-​```markdown
+```markdown
 概念：服务器运行ID是每一台服务器每次运行的身份识别码，一台服务器多次运行可以生成多个运行id
 
 组成：运行id由40位字符组成，是一个随机的十六进制字符
@@ -501,18 +500,18 @@ repl-backlog-size ?mb
 
 实现方式：运行id在每台服务器启动时自动生成的，master在首次连接slave时，会将自己的运行ID发送给slave，
 slave保存此ID，通过info Server命令，可以查看节点的runid
-​```
+```
 
 - 复制缓冲区
 
-​```markdown
+```markdown
 概念：复制缓冲区，又名复制积压缓冲区，是一个先进先出（FIFO）的队列，用于存储服务器执行过的命令，每次传播命令，master都会将传播的命令记录下来，并存储在复制缓冲区
 	复制缓冲区默认数据存储空间大小是1M
 	当入队元素的数量大于队列长度时，最先入队的元素会被弹出，而新元素会被放入队列
 作用：用于保存master收到的所有指令（仅影响数据变更的指令，例如set，select）
 
 数据来源：当master接收到主客户端的指令时，除了将指令执行，会将该指令存储到缓冲区中
-​```
+```
 
 复制缓冲区内部工作原理：
 
@@ -572,10 +571,10 @@ slave心跳任务
 
 - 当slave多数掉线，或延迟过高时，master为保障数据稳定性，将拒绝所有信息同步
 
-​```properties
+```properties
 min-slaves-to-write 2
 min-slaves-max-lag 8
-​```
+```
 
 slave数量少于2个，或者所有slave的延迟都大于等于8秒时，强制关闭master写功能，停止数据同步
 
@@ -601,19 +600,19 @@ slave数量少于2个，或者所有slave的延迟都大于等于8秒时，强�
 
 2：在master关闭时执行命令shutdown save，进行RDB持久化,将runid与offset保存到RDB文件中
 
-​```markdown
+```markdown
 repl-id  repl-offset
 
 通过redis-check-rdb命令可以查看该信息
-​```
+```
 
 3：master重启后加载RDB文件，恢复数据，重启后，将RDB文件中保存的repl-id与repl-offset加载到内存中
 
-​```markdown
+```markdown
 master_repl_id=repl  master_repl_offset =repl-offset
 
 通过info命令可以查看该信息
-​```
+```
 
 作用：本机保存上次runid，重启后恢复该值，使所有slave认为还是之前的master
 
@@ -628,9 +627,9 @@ master_repl_id=repl  master_repl_offset =repl-offset
 
 解决方案：修改复制缓冲区大小
 
-​```properties
+```properties
 repl-backlog-size ?mb
-​```
+```
 
 建议设置如下：
 
@@ -649,21 +648,21 @@ repl-backlog-size ?mb
 
 问题原因
 
-​```markdown
+```markdown
 slave每1秒发送REPLCONFACK命令到master
 
 当slave接到了慢查询时（keys * ，hgetall等），会大量占用CPU性能
 
 master每1秒调用复制定时函数replicationCron()，比对slave发现长时间没有进行响应
-​```
+```
 
 最终结果：master各种资源（输出缓冲区、带宽、连接等）被严重占用
 
 解决方案：通过设置合理的超时时间，确认是否释放slave
 
-​```properties
+```properties
 repl-timeout seconds
-​```
+```
 
 该参数定义了超时时间的阈值（默认60秒），超过该值，释放slave
 
@@ -674,19 +673,19 @@ repl-timeout seconds
 
 问题原因
 
-​```markdown
+```markdown
 master发送ping指令频度较低
 
 master设定超时时间较短
 
 ping指令在网络中存在丢包
-​```
+```
 
 解决方案：提高ping指令发送的频度
 
-​```properties
+```properties
 repl-ping-slave-period seconds
-​```
+```
 
 超时时间repl-time的时间至少是ping指令频度的5到10倍，否则slave很容易判定超时
 
@@ -698,15 +697,15 @@ repl-ping-slave-period seconds
 
 解决方案
 
-​```markdown
+```markdown
 优化主从间的网络环境，通常放置在同一个机房部署，如使用阿里云等云服务器时要注意此现象
 
 监控主从节点延迟（通过offset）判断，如果slave延迟过大，暂时屏蔽程序对该slave的数据访问
-​```
+```
 
-​```properties
+```properties
 slave-serve-stale-data	yes|no
-​```
+```
 
 开启后仅响应info、slaveof等少数命令（慎用，除非对数据一致性要求很高）
 
@@ -754,33 +753,33 @@ slave-serve-stale-data	yes|no
 
 1：设置哨兵监听的主服务器信息， sentinel_number表示参与投票的哨兵数量
 
-​```properties
+```properties
 sentinel monitor master_name  master_host	master_port	 sentinel_number
-​```
+```
 2：设置判定服务器宕机时长，该设置控制是否进行主从切换
 
-​```properties
+```properties
 sentinel down-after-milliseconds master_name	million_seconds
-​```
+```
 
 3：设置故障切换的最大超时时
 
-​```properties
+```properties
 sentinel failover-timeout master_name	million_seconds
-​```
+```
 
 4：设置主从切换后，同时进行数据同步的slave数量，数值越大，要求网络资源越高，数值越小，同步时间越长
 
-​```properties
+```properties
 sentinel parallel-syncs master_name sync_slave_number
-​```
+```
 
 
 - 启动哨兵
 
-​```properties
+```properties
 redis-sentinel filename
-​```
+```
 
 ### 3.3 哨兵工作原理
 
@@ -801,22 +800,22 @@ redis-sentinel filename
 
 - 获取master的状态
 
-​```markdown
+```markdown
 master属性
 	prunid
 	prole：master
 各个slave的详细信息	
-​```
+```
 
 - 获取所有slave的状态（根据master中的slave信息）
 
-​```markdown
+```markdown
 slave属性
 	prunid
 	prole：slave
 	pmaster_host、master_port
 	poffset
-​```
+```
 
 其内部的工作原理具体如下：
 
@@ -928,67 +927,67 @@ sentinel在通知阶段要不断的去获取master/slave的信息，然后在各
 
 - 是否启用cluster，加入cluster节点
 
-​```properties
+```properties
 cluster-enabled yes|no
-​```
+```
 
 - cluster配置文件名，该文件属于自动生成，仅用于快速查找文件并查询文件内容
 
-​```properties
+```properties
 cluster-config-file filename
-​```
+```
 
 - 节点服务响应超时时间，用于判定该节点是否下线或切换为从节点
 
-​```properties
+```properties
 cluster-node-timeout milliseconds
-​```
+```
 
 - master连接的slave最小数量
 
-​```properties
+```properties
 cluster-migration-barrier min_slave_number
-​```
+```
 
 **Cluster节点操作命令**
 
 -  查看集群节点信息
 
-​```properties
+```properties
 cluster nodes
-​```
+```
 
 - 更改slave指向新的master
 
-​```properties
+```properties
 cluster replicate master-id
-​```
+```
 
 - 发现一个新节点，新增master
 
-​```properties
+```properties
 cluster meet ip:port
-​```
+```
 
 - 忽略一个没有solt的节点
 
-​```properties
+```properties
 cluster forget server_id
-​```
+```
 
 - 手动故障转移
 
-​```properties
+```properties
 cluster failover
-​```
+```
 
 **集群操作命令：**
 
 - 创建集群
 
-​```properties
+```properties
 redis-cli –-cluster create masterhost1:masterport1 masterhost2:masterport2  masterhost3:masterport3 [masterhostn:masterportn …] slavehost1:slaveport1  slavehost2:slaveport2 slavehost3:slaveport3 -–cluster-replicas n
-​```
+```
 
 注意：master与slave的数量要匹配，一个master对应n个slave，由最后的参数n决定
 
@@ -998,27 +997,27 @@ master与slave的匹配顺序为第一个master与前n个slave分为一组，形
 
 - 添加master到当前集群中，连接时可以指定任意现有节点地址与端口
 
-​```properties
+```properties
 redis-cli --cluster add-node new-master-host:new-master-port now-host:now-port
-​```
+```
 
 - 添加slave
 
-​```properties
+```properties
 redis-cli --cluster add-node new-slave-host:new-slave-port master-host:master-port --cluster-slave --cluster-master-id masterid
-​```
+```
 
 - 删除节点，如果删除的节点是master，必须保障其中没有槽slot
 
-​```properties
+```properties
 redis-cli --cluster del-node del-slave-host:del-slave-port del-slave-id
-​```
+```
 
 - 重新分槽，分槽是从具有槽的master中划分一部分给其他master，过程中不创建新的槽
 
-​```properties
+```properties
 redis-cli --cluster reshard new-master-host:new-master:port --cluster-from src-  master-id1, src-master-id2, src-master-idn --cluster-to target-master-id --  cluster-slots slots
-​```
+```
 
 注意：将需要参与分槽的所有masterid不分先后顺序添加到参数中，使用，分隔
 
@@ -1026,9 +1025,9 @@ redis-cli --cluster reshard new-master-host:new-master:port --cluster-from src- 
 
 - 重新分配槽，从具有槽的master中分配指定数量的槽到另一个master中，常用于清空指定master中的槽
 
-​```properties
+```properties
 redis-cli --cluster reshard src-master-host:src-master-port --cluster-from src-  master-id --cluster-to target-master-id --cluster-slots slots --cluster-yes
-​```
+```
 
 ## 5.企业级解决方案
 
@@ -1477,5 +1476,3 @@ redis中的监控指标如下：
 >slowlog-log-slower-than 1000 #设置慢查询的时间下线，单位：微妙
 >slowlog-max-len 100	#设置慢查询命令对应的日志显示长度，单位：命令数
 >```
-```
-
