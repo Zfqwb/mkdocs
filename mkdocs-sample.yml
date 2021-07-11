@@ -79,8 +79,5 @@ nav:
       - "Docerfile": "docker/5.md"
       - "服务编排": "docker/6.md"
       - "私有仓库": "docker/7.md"
-  - "MongoDB":
-      - "MathJax": "extensions/mathjax.md"
-      - "Code Hilite": "extensions/code-hilite.md"
-      - "Footnote": "extensions/footnote.md"
+  - "MongoDB": "MongoDB/MongoDB.md"
   - "MongoDB": "license.md"
