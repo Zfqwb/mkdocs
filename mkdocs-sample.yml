@@ -72,11 +72,13 @@ nav:
       - "day01": "redis/day01.md"
       - "day02": "redis/day02.md"
   - "Docker":
-      - "Combinations": "hosting-and-deployment/combinations.md"
-      - "Netlify": "hosting-and-deployment/netlify.md"
-      - "GitHub Pages": "hosting-and-deployment/github-pages.md"
-      - "GitLab Pages": "hosting-and-deployment/gitlab-pages.md"
-      - "AWS Amplify Console": "hosting-and-deployment/aws-amplify-console.md"
+      - "初识 Docker": "docker/1.md"
+      - "docker命令": "docker/2.md"
+      - "docker容器的数据卷": "docker/3.md"
+      - "docker部署容器": "docker/4.md"
+      - "Docerfile": "docker/5.md"
+      - "服务编排": "docker/6.md"
+      - "私有仓库": "docker/7.md"
   - "MongoDB":
       - "MathJax": "extensions/mathjax.md"
       - "Code Hilite": "extensions/code-hilite.md"
