@@ -82,5 +82,5 @@ nav:
       - "私有仓库": "docker/7.md"
   - "MongoDB": "MongoDB/MongoDB.md"
   - "面试": 
-      - "interview": "interview/e.g.1.0.0.md"
+      - "e.g.1.0.0": "interview/e.g.1.0.0.md"
      
