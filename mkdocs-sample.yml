@@ -69,11 +69,8 @@ nav:
   - "Home": "index.md"
   - "Mysql": "MySQL.md"
   - "Redis":
-      - "Download boilerplate": "getting-started/download-boilerplate.md"
-      - "pipenv": "getting-started/pipenv.md"
-      - "invoke": "getting-started/invoke.md"
-      - "Docker": "getting-started/docker.md"
-      - "pip": "getting-started/pip.md"
+      - "day01": "redis/day01.md"
+      - "day02": "redis/day02.md"
   - "Docker":
       - "Combinations": "hosting-and-deployment/combinations.md"
       - "Netlify": "hosting-and-deployment/netlify.md"
