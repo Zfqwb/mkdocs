@@ -1,0 +1,1564 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions.">
+      
+      
+      
+        <meta name="author" content="nitto">
+      
+      
+        <link rel="canonical" href="https://nitto.netlify.app/interview/e.g.1.0.0/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>interview - Nitto Java Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#java" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nitto Java Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              interview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nitto Java Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/4/" class="md-nav__link">
+        docker部署容器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/5/" class="md-nav__link">
+        Docerfile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/6/" class="md-nav__link">
+        服务编排
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/7/" class="md-nav__link">
+        私有仓库
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/MongoDB/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        面试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="面试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          面试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          interview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        interview
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1java" class="md-nav__link">
+    1.Java基础知识
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Java基础知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1面向对象的特征（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12java" class="md-nav__link">
+    1.2Java的基本数据类型有哪些（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13jdkjrejvm" class="md-nav__link">
+    1.3JDKJREJVM的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4重载和重写的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15javaequals" class="md-nav__link">
+    1.5Java中==和equals的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16stringstringbufferstringbuilder" class="md-nav__link">
+    1.6String、StringBuffer、StringBuilder三者之间的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    1.7接口和抽象类的区别是什么？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18string" class="md-nav__link">
+    1.8string常用的方法有哪些？（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    1.9什么是单例模式？有几种？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    1.10反射（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111jdk18" class="md-nav__link">
+    1.11jdk1.8的新特性（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112java" class="md-nav__link">
+    1.12Java的异常（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113bionioaio" class="md-nav__link">
+    1.13BIO、NIO、AIO有什么区别？（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114threadloal" class="md-nav__link">
+    1.14Threadloal的原理（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    1.16同步锁、死锁、乐观锁、悲观锁（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117synchronized" class="md-nav__link">
+    1.17说一下synchronized底层实现原理？（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#118synchronizedvolatile" class="md-nav__link">
+    1.18synchronized和volatile的区别是什么？（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#119synchronizedlock" class="md-nav__link">
+    1.19synchronized和Lock 有什么区别？（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#120" class="md-nav__link">
+    1.20手写冒泡排序？（必会）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.集合（必会）
+  </a>
+  
+    <nav class="md-nav" aria-label="2.集合（必会）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1常见的数据结构（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2集合和数组的区别（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23listmapset" class="md-nav__link">
+    2.3List和Map、Set的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24listmapset" class="md-nav__link">
+    2.4List和Map、Set的实现类（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25hashmap" class="md-nav__link">
+    2.5Hashmap的底层原理（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26hashmaphashtable_concurrenthashmap" class="md-nav__link">
+    2.6Hashmap和hashtable ConcurrentHashMap区别（高薪常问）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.多线程（必会）
+  </a>
+  
+    <nav class="md-nav" aria-label="3.多线程（必会）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1什么是线程？线程和进程的区别？（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2创建线程有几种方式（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33runnablecallable" class="md-nav__link">
+    3.3Runnable和Callable的区别？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34startrun" class="md-nav__link">
+    3.4如何启动一个新线程、调用start和run方法的区别？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5线程有哪几种状态以及各种状态之间的转换？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    3.6线程相关的基本方法？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37_waitsleep" class="md-nav__link">
+    3.7 wait（）和sleep（）的区别？（必会）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.线程池
+  </a>
+  
+    <nav class="md-nav" aria-label="4.线程池">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1为什么需要线程池（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2线程池的分类（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3核心参数（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4线程池的原理（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5拒绝策略（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    4.6线程池的关闭（了解）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6jvm" class="md-nav__link">
+    6.Jvm
+  </a>
+  
+    <nav class="md-nav" aria-label="6.Jvm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#62jdk18" class="md-nav__link">
+    6.2JDK1.8堆内存结构（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63gc" class="md-nav__link">
+    6.3Gc垃圾回收（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64jvm" class="md-nav__link">
+    6.4JVM调优参数（了解）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1java" class="md-nav__link">
+    1.Java基础知识
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Java基础知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1面向对象的特征（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12java" class="md-nav__link">
+    1.2Java的基本数据类型有哪些（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13jdkjrejvm" class="md-nav__link">
+    1.3JDKJREJVM的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4重载和重写的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15javaequals" class="md-nav__link">
+    1.5Java中==和equals的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16stringstringbufferstringbuilder" class="md-nav__link">
+    1.6String、StringBuffer、StringBuilder三者之间的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    1.7接口和抽象类的区别是什么？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18string" class="md-nav__link">
+    1.8string常用的方法有哪些？（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    1.9什么是单例模式？有几种？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    1.10反射（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111jdk18" class="md-nav__link">
+    1.11jdk1.8的新特性（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112java" class="md-nav__link">
+    1.12Java的异常（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113bionioaio" class="md-nav__link">
+    1.13BIO、NIO、AIO有什么区别？（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114threadloal" class="md-nav__link">
+    1.14Threadloal的原理（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    1.16同步锁、死锁、乐观锁、悲观锁（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117synchronized" class="md-nav__link">
+    1.17说一下synchronized底层实现原理？（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#118synchronizedvolatile" class="md-nav__link">
+    1.18synchronized和volatile的区别是什么？（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#119synchronizedlock" class="md-nav__link">
+    1.19synchronized和Lock 有什么区别？（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#120" class="md-nav__link">
+    1.20手写冒泡排序？（必会）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.集合（必会）
+  </a>
+  
+    <nav class="md-nav" aria-label="2.集合（必会）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1常见的数据结构（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2集合和数组的区别（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23listmapset" class="md-nav__link">
+    2.3List和Map、Set的区别（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24listmapset" class="md-nav__link">
+    2.4List和Map、Set的实现类（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25hashmap" class="md-nav__link">
+    2.5Hashmap的底层原理（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26hashmaphashtable_concurrenthashmap" class="md-nav__link">
+    2.6Hashmap和hashtable ConcurrentHashMap区别（高薪常问）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.多线程（必会）
+  </a>
+  
+    <nav class="md-nav" aria-label="3.多线程（必会）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1什么是线程？线程和进程的区别？（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2创建线程有几种方式（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33runnablecallable" class="md-nav__link">
+    3.3Runnable和Callable的区别？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34startrun" class="md-nav__link">
+    3.4如何启动一个新线程、调用start和run方法的区别？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5线程有哪几种状态以及各种状态之间的转换？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    3.6线程相关的基本方法？（必会）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37_waitsleep" class="md-nav__link">
+    3.7 wait（）和sleep（）的区别？（必会）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.线程池
+  </a>
+  
+    <nav class="md-nav" aria-label="4.线程池">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1为什么需要线程池（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2线程池的分类（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3核心参数（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4线程池的原理（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5拒绝策略（了解）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    4.6线程池的关闭（了解）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6jvm" class="md-nav__link">
+    6.Jvm
+  </a>
+  
+    <nav class="md-nav" aria-label="6.Jvm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#62jdk18" class="md-nav__link">
+    6.2JDK1.8堆内存结构（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63gc" class="md-nav__link">
+    6.3Gc垃圾回收（高薪常问）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64jvm" class="md-nav__link">
+    6.4JVM调优参数（了解）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/interview/e.g.1.0.0.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="java">一、Java基础<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
+<h2 id="1java">1.Java基础知识<a class="headerlink" href="#1java" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1面向对象的特征（了解）<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>封装, 类的私有化</p>
+<p>继承,</p>
+<p>多态 父类/父接口引用指向子类对象</p>
+<h3 id="12java">1.2Java的基本数据类型有哪些（了解）<a class="headerlink" href="#12java" title="Permanent link">&para;</a></h3>
+<p>8种</p>
+<h3 id="13jdkjrejvm">1.3JDKJREJVM的区别（必会）<a class="headerlink" href="#13jdkjrejvm" title="Permanent link">&para;</a></h3>
+<h3 id="14">1.4重载和重写的区别（必会）<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>重载： 发生在同一个类中，方法名必须相同，参数类型不同.个数不同.
+顺序不同，方法返回值和访问修饰符可以不同，发生在编译时。</p>
+<p>重写： 发生在父子类中，方法名.参数列表必须相同，返回值范围小于
+等于父类，抛出的异常范围小于等于父类，
+访问修饰符范围大于等于父类；如果父类方法访问修饰符为 private 则
+子类就不能重写该方法。</p>
+<h3 id="15javaequals">1.5Java中==和equals的区别（必会）<a class="headerlink" href="#15javaequals" title="Permanent link">&para;</a></h3>
+<h3 id="16stringstringbufferstringbuilder">1.6String、StringBuffer、StringBuilder三者之间的区别（必会）<a class="headerlink" href="#16stringstringbufferstringbuilder" title="Permanent link">&para;</a></h3>
+<h3 id="17">1.7接口和抽象类的区别是什么？（必会）<a class="headerlink" href="#17" title="Permanent link">&para;</a></h3>
+<h3 id="18string">1.8string常用的方法有哪些？（了解）<a class="headerlink" href="#18string" title="Permanent link">&para;</a></h3>
+<h3 id="19">1.9什么是单例模式？有几种？（必会）<a class="headerlink" href="#19" title="Permanent link">&para;</a></h3>
+<h3 id="110">1.10反射（了解）<a class="headerlink" href="#110" title="Permanent link">&para;</a></h3>
+<h3 id="111jdk18">1.11jdk1.8的新特性（高薪常问）<a class="headerlink" href="#111jdk18" title="Permanent link">&para;</a></h3>
+<h3 id="112java">1.12Java的异常（必会）<a class="headerlink" href="#112java" title="Permanent link">&para;</a></h3>
+<h3 id="113bionioaio">1.13BIO、NIO、AIO有什么区别？（高薪常问）<a class="headerlink" href="#113bionioaio" title="Permanent link">&para;</a></h3>
+<h3 id="114threadloal">1.14Threadloal的原理（高薪常问）<a class="headerlink" href="#114threadloal" title="Permanent link">&para;</a></h3>
+<h3 id="116">1.16同步锁、死锁、乐观锁、悲观锁（高薪常问）<a class="headerlink" href="#116" title="Permanent link">&para;</a></h3>
+<h3 id="117synchronized">1.17说一下synchronized底层实现原理？（高薪常问）<a class="headerlink" href="#117synchronized" title="Permanent link">&para;</a></h3>
+<h3 id="118synchronizedvolatile">1.18synchronized和volatile的区别是什么？（高薪常问）<a class="headerlink" href="#118synchronizedvolatile" title="Permanent link">&para;</a></h3>
+<h3 id="119synchronizedlock">1.19synchronized和Lock 有什么区别？（高薪常问）<a class="headerlink" href="#119synchronizedlock" title="Permanent link">&para;</a></h3>
+<h3 id="120">1.20手写冒泡排序？（必会）<a class="headerlink" href="#120" title="Permanent link">&para;</a></h3>
+<h2 id="2">2.集合（必会）<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1常见的数据结构（了解）<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<h3 id="22">2.2集合和数组的区别（了解）<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<h3 id="23listmapset">2.3List和Map、Set的区别（必会）<a class="headerlink" href="#23listmapset" title="Permanent link">&para;</a></h3>
+<h3 id="24listmapset">2.4List和Map、Set的实现类（必会）<a class="headerlink" href="#24listmapset" title="Permanent link">&para;</a></h3>
+<h3 id="25hashmap">2.5Hashmap的底层原理（高薪常问）<a class="headerlink" href="#25hashmap" title="Permanent link">&para;</a></h3>
+<h3 id="26hashmaphashtable_concurrenthashmap">2.6Hashmap和hashtable ConcurrentHashMap区别（高薪常问）<a class="headerlink" href="#26hashmaphashtable_concurrenthashmap" title="Permanent link">&para;</a></h3>
+<h2 id="3">3.多线程（必会）<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1什么是线程？线程和进程的区别？（了解）<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<h3 id="32">3.2创建线程有几种方式（必会）<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<h3 id="33runnablecallable">3.3Runnable和Callable的区别？（必会）<a class="headerlink" href="#33runnablecallable" title="Permanent link">&para;</a></h3>
+<h3 id="34startrun">3.4如何启动一个新线程、调用start和run方法的区别？（必会）<a class="headerlink" href="#34startrun" title="Permanent link">&para;</a></h3>
+<h3 id="35">3.5线程有哪几种状态以及各种状态之间的转换？（必会）<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<h3 id="36">3.6线程相关的基本方法？（必会）<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
+<h3 id="37_waitsleep">3.7 wait（）和sleep（）的区别？（必会）<a class="headerlink" href="#37_waitsleep" title="Permanent link">&para;</a></h3>
+<h2 id="4">4.线程池<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1为什么需要线程池（了解）<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<h3 id="42">4.2线程池的分类（高薪常问）<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<h3 id="43">4.3核心参数（高薪常问）<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<h3 id="44">4.4线程池的原理（高薪常问）<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<h3 id="45">4.5拒绝策略（了解）<a class="headerlink" href="#45" title="Permanent link">&para;</a></h3>
+<h3 id="46">4.6线程池的关闭（了解）<a class="headerlink" href="#46" title="Permanent link">&para;</a></h3>
+<h2 id="6jvm">6.Jvm<a class="headerlink" href="#6jvm" title="Permanent link">&para;</a></h2>
+<h3 id="62jdk18">6.2JDK1.8堆内存结构（高薪常问）<a class="headerlink" href="#62jdk18" title="Permanent link">&para;</a></h3>
+<h3 id="63gc">6.3Gc垃圾回收（高薪常问）<a class="headerlink" href="#63gc" title="Permanent link">&para;</a></h3>
+<h3 id="64jvm">6.4JVM调优参数（了解）<a class="headerlink" href="#64jvm" title="Permanent link">&para;</a></h3>
+<h1 id="web">二、Web<a class="headerlink" href="#web" title="Permanent link">&para;</a></h1>
+<h2 id="1">1.网络通讯部分<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11tcpudp">1.1TCP与UDP区别？（了解）<a class="headerlink" href="#11tcpudp" title="Permanent link">&para;</a></h3>
+<h3 id="12http">1.2什么是HTTP协议？<a class="headerlink" href="#12http" title="Permanent link">&para;</a></h3>
+<h3 id="13tcp14http">1.3TCP的三次握手1.4HTTP中重定向和请求转发的区别？<a class="headerlink" href="#13tcp14http" title="Permanent link">&para;</a></h3>
+<h3 id="15getpost">1.5Get和Post的区别？<a class="headerlink" href="#15getpost" title="Permanent link">&para;</a></h3>
+<h2 id="2cookiesession">2.cookie和session的区别？（必会）<a class="headerlink" href="#2cookiesession" title="Permanent link">&para;</a></h2>
+<h2 id="3jspservlet">3.Jsp和Servlet（了解）<a class="headerlink" href="#3jspservlet" title="Permanent link">&para;</a></h2>
+<h3 id="1jspservlet">1.Jsp和Servlet的区别？<a class="headerlink" href="#1jspservlet" title="Permanent link">&para;</a></h3>
+<h3 id="2servlet">2.Servlet的生命周期<a class="headerlink" href="#2servlet" title="Permanent link">&para;</a></h3>
+<h3 id="3jsp">3.JSP九大内置对象<a class="headerlink" href="#3jsp" title="Permanent link">&para;</a></h3>
+<h2 id="4ajax">4.Ajax的介绍（必会）<a class="headerlink" href="#4ajax" title="Permanent link">&para;</a></h2>
+<h1 id="_1">三、数据库<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="1_1">1.连接查询（必会）<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
+<h2 id="2_1">2.聚合函数（必会）<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<h2 id="3sql">3.SQL关键字（必会）<a class="headerlink" href="#3sql" title="Permanent link">&para;</a></h2>
+<h2 id="4sql_select">4.SQL Select 语句完整的执行顺序：（必会）<a class="headerlink" href="#4sql_select" title="Permanent link">&para;</a></h2>
+<h2 id="5">5.数据库三范式（必会）<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h2 id="6">6.存储引擎（高薪常问）<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="1myisam">1.MyISAM存储引擎<a class="headerlink" href="#1myisam" title="Permanent link">&para;</a></h3>
+<h3 id="2innodb">2.InnoDB存储引擎<a class="headerlink" href="#2innodb" title="Permanent link">&para;</a></h3>
+<h2 id="7">7.数据库事务（必会）<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h3 id="1_2">1.事务特性<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
+<h3 id="2_2">2.隔离级别<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h3>
+<h2 id="8">8.索引<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<h3 id="1_3">1.索引的概念和优点（了解）<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h3>
+<h3 id="2_3">2.索引的分类（必会）<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h3>
+<h3 id="3_1">3.索引的底层实现原理（高薪常问）<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<h3 id="4_1">4.如何避免索引失效（高薪常问）<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<h2 id="9">9.数据库锁（高薪常问）<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<h3 id="1_4">1.行锁和表锁<a class="headerlink" href="#1_4" title="Permanent link">&para;</a></h3>
+<h3 id="2_4">2.悲观锁和乐观锁<a class="headerlink" href="#2_4" title="Permanent link">&para;</a></h3>
+<h2 id="10mysql">10.MySql优化（高薪常问）<a class="headerlink" href="#10mysql" title="Permanent link">&para;</a></h2>
+<h3 id="1sql">1）定位执行效率慢的sql语句.（了解）<a class="headerlink" href="#1sql" title="Permanent link">&para;</a></h3>
+<h3 id="2_5">2）优化索引（高薪）<a class="headerlink" href="#2_5" title="Permanent link">&para;</a></h3>
+<h3 id="3sql_1">3）Sql语句调优（高薪）<a class="headerlink" href="#3sql_1" title="Permanent link">&para;</a></h3>
+<h3 id="4_2">4）合理的数据库设计（了解）<a class="headerlink" href="#4_2" title="Permanent link">&para;</a></h3>
+<h1 id="_2">四、框架<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="1mybatis">1.Mybatis框架<a class="headerlink" href="#1mybatis" title="Permanent link">&para;</a></h2>
+<h3 id="11mybatis">1.1谈一谈你对Mybatis框架的理解（了解）<a class="headerlink" href="#11mybatis" title="Permanent link">&para;</a></h3>
+<h3 id="12mybatis">1.2在mybatis中，$}和##}的区别是什么？（必会）<a class="headerlink" href="#12mybatis" title="Permanent link">&para;</a></h3>
+<h3 id="13mybatis">1.3MyBatis编程步骤是什么样的？（了解）<a class="headerlink" href="#13mybatis" title="Permanent link">&para;</a></h3>
+<h3 id="14mybatisresulttyperesultmap">1.4在mybatis中，resultType和ResultMap的区别是什么？（必会）<a class="headerlink" href="#14mybatisresulttyperesultmap" title="Permanent link">&para;</a></h3>
+<h3 id="15mybatissql">1.5在Mybatis中你知道的动态SQL的标签有哪些？作用分别是什么？（…<a class="headerlink" href="#15mybatissql" title="Permanent link">&para;</a></h3>
+<h3 id="16mybatis">1.6谈一下你对mybatis缓存机制的理解？（了解）<a class="headerlink" href="#16mybatis" title="Permanent link">&para;</a></h3>
+<h2 id="2spring">2.Spring框架<a class="headerlink" href="#2spring" title="Permanent link">&para;</a></h2>
+<h3 id="21springioc">2.1Spring的两大核心是什么？谈一谈你对IOC的理解？谈一谈你对…<a class="headerlink" href="#21springioc" title="Permanent link">&para;</a></h3>
+<p>IOC和AOP</p>
+<p>ioc  控制翻转，Spring反向控制应用程序所需要使用的外部资源</p>
+<h3 id="22spring">2.2Spring的生命周期？（高薪常问）<a class="headerlink" href="#22spring" title="Permanent link">&para;</a></h3>
+<h3 id="23springbean">2.3Spring支持bean的作用域有几种吗？每种作用域是什么样的？（…<a class="headerlink" href="#23springbean" title="Permanent link">&para;</a></h3>
+<h3 id="24beanfactoryapplicationcontext">2.4BeanFactory和ApplicationContext有什么区别（了解）<a class="headerlink" href="#24beanfactoryapplicationcontext" title="Permanent link">&para;</a></h3>
+<h3 id="25spring">2.5Spring框架中都用到了哪些设计模式？（必会）<a class="headerlink" href="#25spring" title="Permanent link">&para;</a></h3>
+<h3 id="26spring">2.6Spring事务的实现方式和实现原理（必会）<a class="headerlink" href="#26spring" title="Permanent link">&para;</a></h3>
+<h3 id="26spring_1">2.6你知道的Spring的通知类型有哪些，分别在什么时候执行？（了解）<a class="headerlink" href="#26spring_1" title="Permanent link">&para;</a></h3>
+<h3 id="27springbean">2.7Spring的对象默认是单例的还是多例的？单例bean存不存在线.…<a class="headerlink" href="#27springbean" title="Permanent link">&para;</a></h3>
+<h3 id="28resourceautowiredqualifie">2.8@Resource和@Autowired依赖注入的区别是什么？@Qualifie...<a class="headerlink" href="#28resourceautowiredqualifie" title="Permanent link">&para;</a></h3>
+<h3 id="28spring">2.8Spring的常用注解（必会）<a class="headerlink" href="#28spring" title="Permanent link">&para;</a></h3>
+<h3 id="29spring">2.9Spring的事务传播行为（高薪常问）<a class="headerlink" href="#29spring" title="Permanent link">&para;</a></h3>
+<h3 id="210spring">2.10Spring中的隔离级别（高薪常问）<a class="headerlink" href="#210spring" title="Permanent link">&para;</a></h3>
+<h2 id="3springmvc">3.SpringMVC框架<a class="headerlink" href="#3springmvc" title="Permanent link">&para;</a></h2>
+<h3 id="31springmvc">3.1谈一下你对SpringMVC框架的理解（了解）<a class="headerlink" href="#31springmvc" title="Permanent link">&para;</a></h3>
+<h3 id="32springmvc">3.2SpringMVC主要组件（必会）<a class="headerlink" href="#32springmvc" title="Permanent link">&para;</a></h3>
+<h3 id="33springmvc">3.3谈一下SpringMVC的执行流程以及各个组件的作用（必会）<a class="headerlink" href="#33springmvc" title="Permanent link">&para;</a></h3>
+<h3 id="34springmvc">3.4说一下SpringMVC支持的转发和重定向的写法（必会）<a class="headerlink" href="#34springmvc" title="Permanent link">&para;</a></h3>
+<h3 id="35_springmvc">3.5 SpringMVC的常用注解（必会）<a class="headerlink" href="#35_springmvc" title="Permanent link">&para;</a></h3>
+<h3 id="36springmvc">3.6谈一下SpringMVC统一异常处理的思想和实现方式（必会）<a class="headerlink" href="#36springmvc" title="Permanent link">&para;</a></h3>
+<h3 id="37springmvc">3.7在SpringMVC中，如果想通过转发将数据传递到前台，有几种写.…<a class="headerlink" href="#37springmvc" title="Permanent link">&para;</a></h3>
+<h3 id="38springmvc">3.8在SpringMVC中拦截器的使用步骤是什么样的？（必会）<a class="headerlink" href="#38springmvc" title="Permanent link">&para;</a></h3>
+<h3 id="39springmvc">3.9在SpringMVC中文件上传的使用步骤是什么样的？前台三要素…<a class="headerlink" href="#39springmvc" title="Permanent link">&para;</a></h3>
+<h3 id="310springmvcgetipost">3.10SpringMVC中如何解决GETIPOST请求中文乱码问题？（了解）<a class="headerlink" href="#310springmvcgetipost" title="Permanent link">&para;</a></h3>
+<h2 id="4dubbo">4.Dubbo<a class="headerlink" href="#4dubbo" title="Permanent link">&para;</a></h2>
+<h3 id="41dubbo">4.1什么是dubbo（必会）<a class="headerlink" href="#41dubbo" title="Permanent link">&para;</a></h3>
+<h3 id="42dubbo">4.2Dubbo的实现原理（必会）<a class="headerlink" href="#42dubbo" title="Permanent link">&para;</a></h3>
+<h3 id="43_1">4.3节点角色说明（必会）<a class="headerlink" href="#43_1" title="Permanent link">&para;</a></h3>
+<h3 id="44_1">4.4调用关系说明（必会）<a class="headerlink" href="#44_1" title="Permanent link">&para;</a></h3>
+<h3 id="45rpc">4.5在实际开发的场景中应该如何选择RPC框架（了解）<a class="headerlink" href="#45rpc" title="Permanent link">&para;</a></h3>
+<h2 id="5zookeeper">5.Zookeeper<a class="headerlink" href="#5zookeeper" title="Permanent link">&para;</a></h2>
+<h3 id="1zookeeper">1.Zookeeper是什么（了解）<a class="headerlink" href="#1zookeeper" title="Permanent link">&para;</a></h3>
+<h3 id="2zookeeper">2.Zookeeper的数据模型（必会）<a class="headerlink" href="#2zookeeper" title="Permanent link">&para;</a></h3>
+<h3 id="3zookeeperwatch">3.Zookeeper的watch监听机制（高薪常问）<a class="headerlink" href="#3zookeeperwatch" title="Permanent link">&para;</a></h3>
+<h3 id="31_1">3.1监听器原理<a class="headerlink" href="#31_1" title="Permanent link">&para;</a></h3>
+<h3 id="32_1">3.2监听器实际应用<a class="headerlink" href="#32_1" title="Permanent link">&para;</a></h3>
+<h3 id="4zookeeper">4.Zookeeper的应用场景（高薪常问）<a class="headerlink" href="#4zookeeper" title="Permanent link">&para;</a></h3>
+<h3 id="41_1">4.1统一命名服务<a class="headerlink" href="#41_1" title="Permanent link">&para;</a></h3>
+<h3 id="42_1">4.2统一配置管理<a class="headerlink" href="#42_1" title="Permanent link">&para;</a></h3>
+<h3 id="43_2">4.3统一集群管理<a class="headerlink" href="#43_2" title="Permanent link">&para;</a></h3>
+<h3 id="44_2">4.4集群选主<a class="headerlink" href="#44_2" title="Permanent link">&para;</a></h3>
+<h3 id="45_1">4.5分布式锁<a class="headerlink" href="#45_1" title="Permanent link">&para;</a></h3>
+<h2 id="5zookeeper_1">5.Zookeeper集群[高级]（高薪常问）<a class="headerlink" href="#5zookeeper_1" title="Permanent link">&para;</a></h2>
+<h3 id="51zk">5.1ZK集群介绍<a class="headerlink" href="#51zk" title="Permanent link">&para;</a></h3>
+<h3 id="52">5.2数据一致性处理<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<h3 id="521">5.2.1集群角色<a class="headerlink" href="#521" title="Permanent link">&para;</a></h3>
+<h3 id="522zookeeper">5.2.2Zookeeper的特性<a class="headerlink" href="#522zookeeper" title="Permanent link">&para;</a></h3>
+<h3 id="523zab">5.2.3ZAB协议<a class="headerlink" href="#523zab" title="Permanent link">&para;</a></h3>
+<h3 id="524zk">5.2.4ZK集群写数据流程<a class="headerlink" href="#524zk" title="Permanent link">&para;</a></h3>
+<h3 id="53zk">5.3ZK集群选举机制<a class="headerlink" href="#53zk" title="Permanent link">&para;</a></h3>
+<h3 id="531">5.3.1集群启动器的选举机制<a class="headerlink" href="#531" title="Permanent link">&para;</a></h3>
+<h3 id="532leader">5.3.2服务器运行时期的Leader选举<a class="headerlink" href="#532leader" title="Permanent link">&para;</a></h3>
+<h2 id="6zookeeper">6.为什么zookeeper集群的数目，一般为奇数个？（高薪常问）<a class="headerlink" href="#6zookeeper" title="Permanent link">&para;</a></h2>
+<h3 id="6springboot">6.SpringBoot<a class="headerlink" href="#6springboot" title="Permanent link">&para;</a></h3>
+<h3 id="61springboot">6.1SpringBoot是什么（了解）<a class="headerlink" href="#61springboot" title="Permanent link">&para;</a></h3>
+<h3 id="62springboot">6.2SpringBoot的优点（必会）<a class="headerlink" href="#62springboot" title="Permanent link">&para;</a></h3>
+<h3 id="63springboot">6.3运行SpringBoot项目的方式（必会）<a class="headerlink" href="#63springboot" title="Permanent link">&para;</a></h3>
+<h3 id="64springbootstarter">6.4SpringBoot的启动器starter（必会）<a class="headerlink" href="#64springbootstarter" title="Permanent link">&para;</a></h3>
+<h3 id="65springboot">6.5SpringBoot运行原理剖析（必会）<a class="headerlink" href="#65springboot" title="Permanent link">&para;</a></h3>
+<h3 id="66springboot">6.6SpringBoot热部署（了解）<a class="headerlink" href="#66springboot" title="Permanent link">&para;</a></h3>
+<h3 id="67_springboot">6.7 SpringBoot中的配置文件（必会）<a class="headerlink" href="#67_springboot" title="Permanent link">&para;</a></h3>
+<h3 id="68springboot">6.8SpringBoot支持哪些日志框架（了解）<a class="headerlink" href="#68springboot" title="Permanent link">&para;</a></h3>
+<h3 id="69springboot">6.9SpringBoot常用注解（必会）<a class="headerlink" href="#69springboot" title="Permanent link">&para;</a></h3>
+<h2 id="7springcloud">7.SpringCloud<a class="headerlink" href="#7springcloud" title="Permanent link">&para;</a></h2>
+<h3 id="71soa">7.1SOA和微服务的区别？（必会）<a class="headerlink" href="#71soa" title="Permanent link">&para;</a></h3>
+<h3 id="72_springcloud">7.2 SpringCloud是什么？（了解）<a class="headerlink" href="#72_springcloud" title="Permanent link">&para;</a></h3>
+<h3 id="73springcloud">7.3SpringCloud的优势？（了解）<a class="headerlink" href="#73springcloud" title="Permanent link">&para;</a></h3>
+<h3 id="74springcloud">7.4SpringCloud有哪些核心组件？（必会）<a class="headerlink" href="#74springcloud" title="Permanent link">&para;</a></h3>
+<h3 id="75springbootspringcloud">7.5SpringBoot和SpringCloud的关系（必会）<a class="headerlink" href="#75springbootspringcloud" title="Permanent link">&para;</a></h3>
+<h3 id="76springclouddubbo">7.6SpringCloud和Dubbo的区别（高薪常问）<a class="headerlink" href="#76springclouddubbo" title="Permanent link">&para;</a></h3>
+<h3 id="77_eurekazookeeper">7.7 Eureka和Zookeeper的区别（高薪常问）<a class="headerlink" href="#77_eurekazookeeper" title="Permanent link">&para;</a></h3>
+<h1 id="_3">五、技术点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<h2 id="1redis">1.Redis<a class="headerlink" href="#1redis" title="Permanent link">&para;</a></h2>
+<h3 id="11redis">1.1Redis是什么？<a class="headerlink" href="#11redis" title="Permanent link">&para;</a></h3>
+<h3 id="12redis">1.2Redis的存储结构有哪些？<a class="headerlink" href="#12redis" title="Permanent link">&para;</a></h3>
+<h3 id="13redis">1.3Redis的优点？<a class="headerlink" href="#13redis" title="Permanent link">&para;</a></h3>
+<h3 id="14redis">1.4为什么要用Redis<a class="headerlink" href="#14redis" title="Permanent link">&para;</a></h3>
+<h3 id="15redis">1.5redis的持久化<a class="headerlink" href="#15redis" title="Permanent link">&para;</a></h3>
+<h3 id="16redis">1.6Redis的缺点<a class="headerlink" href="#16redis" title="Permanent link">&para;</a></h3>
+<h3 id="17redis">1.7Redis集群<a class="headerlink" href="#17redis" title="Permanent link">&para;</a></h3>
+<h3 id="171">1.7.1主从复制<a class="headerlink" href="#171" title="Permanent link">&para;</a></h3>
+<h3 id="172">1.7.2哨兵模式<a class="headerlink" href="#172" title="Permanent link">&para;</a></h3>
+<h3 id="173_redis-cluster">1.7.3 Redis-Cluster 集群<a class="headerlink" href="#173_redis-cluster" title="Permanent link">&para;</a></h3>
+<h3 id="18redis">1.8Redis的分布式锁<a class="headerlink" href="#18redis" title="Permanent link">&para;</a></h3>
+<h2 id="2rocketmq">2.RocketMQ<a class="headerlink" href="#2rocketmq" title="Permanent link">&para;</a></h2>
+<h3 id="21_1">2.1消息中间件的区别？<a class="headerlink" href="#21_1" title="Permanent link">&para;</a></h3>
+<h3 id="22mq">2.2为什么要使用MQ？<a class="headerlink" href="#22mq" title="Permanent link">&para;</a></h3>
+<h3 id="23rocketmq">2.3RocketMQ由哪些角色组成，每个角色作用和特点是什么？<a class="headerlink" href="#23rocketmq" title="Permanent link">&para;</a></h3>
+<h3 id="24rocketmq">2.4RocketMQ消费模式有几种？<a class="headerlink" href="#24rocketmq" title="Permanent link">&para;</a></h3>
+<h3 id="25rocketmq">2.5RocketMQ如何做负载均衡？<a class="headerlink" href="#25rocketmq" title="Permanent link">&para;</a></h3>
+<h3 id="26">2.6消息重复消费如何解决？<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
+<h3 id="27rocketmq">2.7如何让RocketMQ保证消息的顺序消费<a class="headerlink" href="#27rocketmq" title="Permanent link">&para;</a></h3>
+<h3 id="28rocketmq">2.8RocketMQ如何保证消息不丢失<a class="headerlink" href="#28rocketmq" title="Permanent link">&para;</a></h3>
+<h3 id="29rocketmq">2.9RocketMQ的消息堆积如何处理<a class="headerlink" href="#29rocketmq" title="Permanent link">&para;</a></h3>
+<h3 id="210rocketmq">2.10RocketMQ如何实现分布式事务？<a class="headerlink" href="#210rocketmq" title="Permanent link">&para;</a></h3>
+<h3 id="211broker">2.11任何一台Broker突然宕机了怎么办？<a class="headerlink" href="#211broker" title="Permanent link">&para;</a></h3>
+<h2 id="3mongodb">3.MongoDb<a class="headerlink" href="#3mongodb" title="Permanent link">&para;</a></h2>
+<h3 id="31mongodb">3.1MongoDB是什么？<a class="headerlink" href="#31mongodb" title="Permanent link">&para;</a></h3>
+<h3 id="32mongodbmysql">3.2MongoDB和关系型数据库mysql区别<a class="headerlink" href="#32mongodbmysql" title="Permanent link">&para;</a></h3>
+<h3 id="33mongodb3">3.3MongoDB有3个数据库<a class="headerlink" href="#33mongodb3" title="Permanent link">&para;</a></h3>
+<h3 id="34mongo">3.4Mongo中的数据类型<a class="headerlink" href="#34mongo" title="Permanent link">&para;</a></h3>
+<h3 id="35mongodb">3.5MongoDB适用业务场景<a class="headerlink" href="#35mongodb" title="Permanent link">&para;</a></h3>
+<h2 id="4nginx">4.Nginx<a class="headerlink" href="#4nginx" title="Permanent link">&para;</a></h2>
+<h3 id="41nginx">4.1Nginx是什么？<a class="headerlink" href="#41nginx" title="Permanent link">&para;</a></h3>
+<h3 id="42nginx">4.2Nginx的作用？<a class="headerlink" href="#42nginx" title="Permanent link">&para;</a></h3>
+<h3 id="43nginx">4.3Nginx的优势？<a class="headerlink" href="#43nginx" title="Permanent link">&para;</a></h3>
+<h3 id="44_3">4.4什么是反向代理？<a class="headerlink" href="#44_3" title="Permanent link">&para;</a></h3>
+<h3 id="45_2">4.5什么是正向代理？<a class="headerlink" href="#45_2" title="Permanent link">&para;</a></h3>
+<h3 id="46_1">4.6什么是负载均衡？<a class="headerlink" href="#46_1" title="Permanent link">&para;</a></h3>
+<h3 id="47nginx">4.7Nginx是如何处理一个请求的？<a class="headerlink" href="#47nginx" title="Permanent link">&para;</a></h3>
+<h3 id="48nginx">4.8为什么Nginx性能这么高？<a class="headerlink" href="#48nginx" title="Permanent link">&para;</a></h3>
+<h2 id="5fastdfs">5.FastDFS<a class="headerlink" href="#5fastdfs" title="Permanent link">&para;</a></h2>
+<h3 id="51fastdfs">5.1FastDFS是什么？<a class="headerlink" href="#51fastdfs" title="Permanent link">&para;</a></h3>
+<h3 id="52_fastdfs">5.2 FastDFS组成<a class="headerlink" href="#52_fastdfs" title="Permanent link">&para;</a></h3>
+<h3 id="53fastdfs">5.3FastDFS的流程<a class="headerlink" href="#53fastdfs" title="Permanent link">&para;</a></h3>
+<h3 id="54fastdfs_storage_server">5.4FastDFS如何现在组内的多个 storage server的数据同步？<a class="headerlink" href="#54fastdfs_storage_server" title="Permanent link">&para;</a></h3>
+<h2 id="6jwt">6.JWT<a class="headerlink" href="#6jwt" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1组成<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<h3 id="62">6.2使用场景<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<h3 id="63">6.3面试问题：<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<h3 id="1jwt_token">1.JWT token 泄露了怎么办？（常问）<a class="headerlink" href="#1jwt_token" title="Permanent link">&para;</a></h3>
+<p>使用https加密你的应用，返回jwt给客户端时设置httpOnly=true并且使用cookie而不是LocalStorage存储jwt，这样可以防止XSS攻击和CSRF攻击。</p>
+<h3 id="2secret">2.Secret如何设计？<a class="headerlink" href="#2secret" title="Permanent link">&para;</a></h3>
+<p>jwt唯一存储在服务端的只有一个secret，个人认为这个secret应该设计成和用户相关的属性，而不是一个所有用户公用的统一值。这样可以有效的避免一些注销和修改密码时遇到的窘境。</p>
+<h3 id="3_2">3.注销和修改密码？<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
+<p>传统的session+cookie方案用户点击注销，服务端清空session即可，因为状态保存在服务端。但jwt的方案就比较难办了，因为jwt是无状态的，服务端通过计算来校验有效性。没有存储起来，所以即使客户端删除了jwt，但是该jwt还是在有效期内，只不过处于一个游离状态。分析下痛点：注销变得复杂的原因在于jwt的无状态。提供几个方案，视具体的业务来决定能不能接受：仅仅清空客户端cookie，这样用户访问时就不会携带jwt，服务端就认为用户需要</p>
+<h1 id="_4">六、探花交友<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<h1 id="_5">七、黑马头条<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../MongoDB/MongoDB/" class="md-footer__link md-footer__link--prev" aria-label="上一页: MongoDB" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              MongoDB
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 peaceiris
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/peaceiris" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/piris314en" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
