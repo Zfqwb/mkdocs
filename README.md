@@ -49,13 +49,40 @@
 
 ## JavaWeb面试题
 
-```sh
-git clone https://github.com/peaceiris/mkdocs-material-boilerplate.git
-cd mkdocs-material-boilerplate
-pipenv sync --dev
-pipenv shell
-inv serve --config-file mkdocs-sample.yml
-```
+### 1-cookie和session的区别与联系
+
+### 2-在HTTP请求中，什么情况下我们会选择post方式而非get？反之也是如何考虑的？
+
+### 3-JSP的九大内置对象及作用分别是什么？
+
+### 4-servlet的生命周期及常用方法
+
+### 5-转发和重定向的区别
+
+### 6-ajax书写方式及内部主要参数都有哪些
+
+### 7-Jquery常用选择器都有哪些
+
+### 8-JSP和Servlet的之间的联系及区别
+
+### 9-ajax提交请求默认是异步还是同步怎么改成同步？
+
+### 10-你的项目中使用过那些JSTI标签？
+
+### 11-JSP常用的动作标签及作用
+
+### 12-JSP四大作用域及请求范围
+
+### 13-如何防止表单重复提交问题
+
+### 14-分别说出http，https，ftp，talnet的默认端口
+
+### 15-常见的http返回状态码（200，301，302，400）
+
+### 16-TCP和UDP区别，你对HTTP协议的理解
+
+### 17-json数据的格式是什么
+
 
 
 
