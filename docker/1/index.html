@@ -13,21 +13,21 @@
         <meta name="author" content="nitto">
       
       
-        <link rel="canonical" href="https://nitto.netlify.app/">
+        <link rel="canonical" href="https://nitto.netlify.app/docker/1/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Nitto Java Docs</title>
+        <title>初识 Docker - Nitto Java Docs</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
         
           
           
@@ -45,10 +45,10 @@
       
     
     
-      <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
     
     
-      <link rel="stylesheet" href="assets/css/custom.css">
+      <link rel="stylesheet" href="../../assets/css/custom.css">
     
     
       
@@ -67,7 +67,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#docker" class="md-skip">
           跳转至
         </a>
       
@@ -86,7 +86,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              初识 Docker
             
           </span>
         </div>
@@ -179,7 +179,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -209,207 +209,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    基础面试题
-  </a>
-  
-    <nav class="md-nav" aria-label="基础面试题">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-map" class="md-nav__link">
-    1-map集合的遍历方式
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-1-hasmap" class="md-nav__link">
-    2-1-HasMap的特性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-2-hasmap" class="md-nav__link">
-    2-2-HasMap集合的扩展
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-1-java" class="md-nav__link">
-    3-1-Java虚拟机中的内存模型
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-2-" class="md-nav__link">
-    3-2-线程内存空间（扩展）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-java" class="md-nav__link">
-    4-简单说说Java中的异常处理机制的简单原理和应用。
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-" class="md-nav__link">
-    5-创建线程的几种方式？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-" class="md-nav__link">
-    6-谈谈你对垃圾回收机制的了解？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-hashcodeequals" class="md-nav__link">
-    7-说说HashCode（）、equals（）的区别？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-stringstirngbuilderstringbuffer" class="md-nav__link">
-    8-String.StirngBuilder，StringBuffer三者的区别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-staticstatio" class="md-nav__link">
-    9-是否可以从一个static方法内部发出对非statio方法的调用
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-waitsleep" class="md-nav__link">
-    10-wait方法和sleep方法的区别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-" class="md-nav__link">
-    11-问题扩展应用场景
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-stringsnew_stringxyzstringobjectstring" class="md-nav__link">
-    12-Strings=new String（xyz）：创建了几个Stringobject？是否可以继承String类？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-" class="md-nav__link">
-    13-多线程中解决同步问题的方式
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-stringshellossworldstring" class="md-nav__link">
-    14-Strings=Hello；s=s+world.：这两行代码执行后，原始的String对象中的内容到底变了没有？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-haslmaphashtable" class="md-nav__link">
-    15-HaslMap和Hashtable的区别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-" class="md-nav__link">
-    16-单例设计模式中懒汉式和饿汉式的区别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#17-" class="md-nav__link">
-    17-类加载机制有了解吗
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#javaweb" class="md-nav__link">
-    JavaWeb面试题
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    框架面试题
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    项目面试题
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -422,7 +226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="MySQL/" class="md-nav__link">
+      <a href="../../MySQL/" class="md-nav__link">
         Mysql
       </a>
     </li>
@@ -458,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="redis/day01/" class="md-nav__link">
+      <a href="../../redis/day01/" class="md-nav__link">
         day01
       </a>
     </li>
@@ -470,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="redis/day02/" class="md-nav__link">
+      <a href="../../redis/day02/" class="md-nav__link">
         day02
       </a>
     </li>
@@ -489,12 +293,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Docker
@@ -510,11 +316,58 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="docker/1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          初识 Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         初识 Docker
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11docker" class="md-nav__link">
+    1.1安装docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12_docker" class="md-nav__link">
+    1.2配置 Docker 镜像加速器
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -524,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/2/" class="md-nav__link">
+      <a href="../2/" class="md-nav__link">
         docker命令
       </a>
     </li>
@@ -536,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/3/" class="md-nav__link">
+      <a href="../3/" class="md-nav__link">
         docker容器的数据卷
       </a>
     </li>
@@ -548,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/4/" class="md-nav__link">
+      <a href="../4/" class="md-nav__link">
         docker部署容器
       </a>
     </li>
@@ -560,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/5/" class="md-nav__link">
+      <a href="../5/" class="md-nav__link">
         Docerfile
       </a>
     </li>
@@ -572,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/6/" class="md-nav__link">
+      <a href="../6/" class="md-nav__link">
         服务编排
       </a>
     </li>
@@ -584,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/7/" class="md-nav__link">
+      <a href="../7/" class="md-nav__link">
         私有仓库
       </a>
     </li>
@@ -626,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="extensions/mathjax/" class="md-nav__link">
+      <a href="../../extensions/mathjax/" class="md-nav__link">
         MathJax
       </a>
     </li>
@@ -638,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="extensions/code-hilite/" class="md-nav__link">
+      <a href="../../extensions/code-hilite/" class="md-nav__link">
         Code Hilite
       </a>
     </li>
@@ -650,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="extensions/footnote/" class="md-nav__link">
+      <a href="../../extensions/footnote/" class="md-nav__link">
         Footnote
       </a>
     </li>
@@ -671,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="license/" class="md-nav__link">
+      <a href="../../license/" class="md-nav__link">
         MongoDB
       </a>
     </li>
@@ -694,6 +547,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -702,168 +557,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    基础面试题
-  </a>
-  
-    <nav class="md-nav" aria-label="基础面试题">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-map" class="md-nav__link">
-    1-map集合的遍历方式
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-1-hasmap" class="md-nav__link">
-    2-1-HasMap的特性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-2-hasmap" class="md-nav__link">
-    2-2-HasMap集合的扩展
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-1-java" class="md-nav__link">
-    3-1-Java虚拟机中的内存模型
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-2-" class="md-nav__link">
-    3-2-线程内存空间（扩展）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-java" class="md-nav__link">
-    4-简单说说Java中的异常处理机制的简单原理和应用。
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-" class="md-nav__link">
-    5-创建线程的几种方式？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-" class="md-nav__link">
-    6-谈谈你对垃圾回收机制的了解？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-hashcodeequals" class="md-nav__link">
-    7-说说HashCode（）、equals（）的区别？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-stringstirngbuilderstringbuffer" class="md-nav__link">
-    8-String.StirngBuilder，StringBuffer三者的区别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-staticstatio" class="md-nav__link">
-    9-是否可以从一个static方法内部发出对非statio方法的调用
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-waitsleep" class="md-nav__link">
-    10-wait方法和sleep方法的区别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-" class="md-nav__link">
-    11-问题扩展应用场景
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-stringsnew_stringxyzstringobjectstring" class="md-nav__link">
-    12-Strings=new String（xyz）：创建了几个Stringobject？是否可以继承String类？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-" class="md-nav__link">
-    13-多线程中解决同步问题的方式
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-stringshellossworldstring" class="md-nav__link">
-    14-Strings=Hello；s=s+world.：这两行代码执行后，原始的String对象中的内容到底变了没有？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-haslmaphashtable" class="md-nav__link">
-    15-HaslMap和Hashtable的区别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-" class="md-nav__link">
-    16-单例设计模式中懒汉式和饿汉式的区别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#17-" class="md-nav__link">
-    17-类加载机制有了解吗
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#javaweb" class="md-nav__link">
-    JavaWeb面试题
+  <a href="#11docker" class="md-nav__link">
+    1.1安装docker
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    框架面试题
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    项目面试题
+  <a href="#12_docker" class="md-nav__link">
+    1.2配置 Docker 镜像加速器
   </a>
   
 </li>
@@ -880,54 +582,28 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/index.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/docker/1.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 align="center">
-<img src="https://gitee.com/wxqgm/pic/raw/master/nitto/nitto.png" alt="MkDocs icon" width="170">
-<br>Java Docs<br>nitto
-</h1>
-
-<h2 id="_1">基础面试题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="1-map">1-map集合的遍历方式<a class="headerlink" href="#1-map" title="Permanent link">&para;</a></h3>
-<h3 id="2-1-hasmap">2-1-HasMap的特性<a class="headerlink" href="#2-1-hasmap" title="Permanent link">&para;</a></h3>
-<h3 id="2-2-hasmap">2-2-HasMap集合的扩展<a class="headerlink" href="#2-2-hasmap" title="Permanent link">&para;</a></h3>
-<h3 id="3-1-java">3-1-Java虚拟机中的内存模型<a class="headerlink" href="#3-1-java" title="Permanent link">&para;</a></h3>
-<h3 id="3-2-">3-2-线程内存空间（扩展）<a class="headerlink" href="#3-2-" title="Permanent link">&para;</a></h3>
-<h3 id="4-java">4-简单说说Java中的异常处理机制的简单原理和应用。<a class="headerlink" href="#4-java" title="Permanent link">&para;</a></h3>
-<h3 id="5-">5-创建线程的几种方式？<a class="headerlink" href="#5-" title="Permanent link">&para;</a></h3>
-<h3 id="6-">6-谈谈你对垃圾回收机制的了解？<a class="headerlink" href="#6-" title="Permanent link">&para;</a></h3>
-<h3 id="7-hashcodeequals">7-说说HashCode（）、equals（）的区别？<a class="headerlink" href="#7-hashcodeequals" title="Permanent link">&para;</a></h3>
-<h3 id="8-stringstirngbuilderstringbuffer">8-String.StirngBuilder，StringBuffer三者的区别<a class="headerlink" href="#8-stringstirngbuilderstringbuffer" title="Permanent link">&para;</a></h3>
-<h3 id="9-staticstatio">9-是否可以从一个static方法内部发出对非statio方法的调用<a class="headerlink" href="#9-staticstatio" title="Permanent link">&para;</a></h3>
-<h3 id="10-waitsleep">10-wait方法和sleep方法的区别<a class="headerlink" href="#10-waitsleep" title="Permanent link">&para;</a></h3>
-<h3 id="11-">11-问题扩展应用场景<a class="headerlink" href="#11-" title="Permanent link">&para;</a></h3>
-<h3 id="12-stringsnew_stringxyzstringobjectstring">12-Strings=new String（xyz）：创建了几个Stringobject？是否可以继承String类？<a class="headerlink" href="#12-stringsnew_stringxyzstringobjectstring" title="Permanent link">&para;</a></h3>
-<h3 id="13-">13-多线程中解决同步问题的方式<a class="headerlink" href="#13-" title="Permanent link">&para;</a></h3>
-<h3 id="14-stringshellossworldstring">14-Strings=Hello；s=s+world.：这两行代码执行后，原始的String对象中的内容到底变了没有？<a class="headerlink" href="#14-stringshellossworldstring" title="Permanent link">&para;</a></h3>
-<h3 id="15-haslmaphashtable">15-HaslMap和Hashtable的区别<a class="headerlink" href="#15-haslmaphashtable" title="Permanent link">&para;</a></h3>
-<h3 id="16-">16-单例设计模式中懒汉式和饿汉式的区别<a class="headerlink" href="#16-" title="Permanent link">&para;</a></h3>
-<h3 id="17-">17-类加载机制有了解吗<a class="headerlink" href="#17-" title="Permanent link">&para;</a></h3>
-<h2 id="javaweb">JavaWeb面试题<a class="headerlink" href="#javaweb" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/peaceiris/mkdocs-material-boilerplate.git
-<span class="nb">cd</span> mkdocs-material-boilerplate
-pipenv sync --dev
-pipenv shell
-inv serve --config-file mkdocs-sample.yml
+                <h1 id="docker">初识 Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
+<h2 id="11docker">1.1安装docker<a class="headerlink" href="#11docker" title="Permanent link">&para;</a></h2>
+<p>Docker可以运行在MAC、Windows、CentOS、UBUNTU等操作系统上，本课程基于CentOS 7 安装 </p>
+<p>Docker。官网：https://www.docker.com</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 1、yum 包更新到最新 </span>
+yum update
+<span class="c1"># 2、安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的 </span>
+yum install -y yum-utils device-mapper-persistent-data lvm2
+<span class="c1"># 3、 设置yum源</span>
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+<span class="c1"># 4、 安装docker，出现输入的界面都按 y </span>
+yum install -y docker-ce
+<span class="c1"># 5、 查看docker版本，验证是否验证成功</span>
+docker -v
 </code></pre></div>
 
-<h2 id="_2">框架面试题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/mkdocs/mkdocs/">mkdocs/mkdocs: Project documentation with Markdown - GitHub</a></li>
-<li><a href="https://github.com/squidfunk/mkdocs-material">squidfunk/mkdocs-material: A Material Design theme for MkDocs</a></li>
-</ul>
-<h2 id="_3">项目面试题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/peaceiris/mkdocs-material-boilerplate/blob/main/LICENSE">MIT License</a></li>
-<li><a href="https://www.flaticon.com/free-icon/graduate-cap_62627">The graduate cap icon</a> made by <a href="https://www.freepik.com/">Freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0 BY</a></li>
-</ul>
+<h2 id="12_docker">1.2配置 Docker 镜像加速器<a class="headerlink" href="#12_docker" title="Permanent link">&para;</a></h2>
                 
               
               
@@ -946,15 +622,30 @@ inv serve --config-file mkdocs-sample.yml
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="../../redis/day02/" class="md-footer__link md-footer__link--prev" aria-label="上一页: day02" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              day02
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="MySQL/" class="md-footer__link md-footer__link--next" aria-label="下一页: Mysql" rel="next">
+        <a href="../2/" class="md-footer__link md-footer__link--next" aria-label="下一页: docker命令" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Mysql
+              docker命令
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1009,10 +700,10 @@ inv serve --config-file mkdocs-sample.yml
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

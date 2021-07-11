@@ -13,14 +13,14 @@
         <meta name="author" content="nitto">
       
       
-        <link rel="canonical" href="https://nitto.netlify.app/hosting-and-deployment/netlify/">
+        <link rel="canonical" href="https://nitto.netlify.app/docker/5/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Netlify - Nitto Java Docs</title>
+        <title>Docerfile - Nitto Java Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#host_on_netlify" class="md-skip">
+        <a href="#docerfile" class="md-skip">
           跳转至
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Netlify
+              Docerfile
             
           </span>
         </div>
@@ -318,8 +318,44 @@
   
   
     <li class="md-nav__item">
-      <a href="../combinations/" class="md-nav__link">
-        Combinations
+      <a href="../1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        docker部署容器
       </a>
     </li>
   
@@ -336,12 +372,38 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docerfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Netlify
+        Docerfile
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docerfile" class="md-nav__link">
+    Docerfile
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -352,8 +414,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-pages/" class="md-nav__link">
-        GitHub Pages
+      <a href="../6/" class="md-nav__link">
+        服务编排
       </a>
     </li>
   
@@ -364,20 +426,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitlab-pages/" class="md-nav__link">
-        GitLab Pages
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../aws-amplify-console/" class="md-nav__link">
-        AWS Amplify Console
+      <a href="../7/" class="md-nav__link">
+        私有仓库
       </a>
     </li>
   
@@ -486,8 +536,21 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docerfile" class="md-nav__link">
+    Docerfile
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -499,19 +562,117 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/hosting-and-deployment/netlify.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/docker/5.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="host_on_netlify">Host on Netlify<a class="headerlink" href="#host_on_netlify" title="Permanent link">&para;</a></h1>
-<ul>
-<li><a href="https://mkdocs-material.netlify.com/">Demo site on Netlify</a> (build &amp; deploy with Netlify)</li>
-</ul>
-<p>Create GitHub repository and deploy to Netlify with the following button in 1 min.</p>
-<p><a href="https://app.netlify.com/start/deploy?repository=https://github.com/peaceiris/mkdocs-material-boilerplate"><img alt="Deploy to Netlify from GitHub" src="https://www.netlify.com/img/deploy/button.svg" /></a></p>
-<!-- Internal References -->
-<!-- External References -->
+                  <h1>Docerfile</h1>
+                
+                <h2 id="docerfile">Docerfile<a class="headerlink" href="#docerfile" title="Permanent link">&para;</a></h2>
+<p>前面的课程中已经知道了，要获得镜像，可以从Docker仓库中进行下载。那如果我们想自己开发一个镜像，那该如 何做呢？答案是：Dockerfifile </p>
+<p>Dockerfifile其实就是一个文本文件，由一系列命令和参数构成，Docker可以读取Dockerfifile文件并根据Dockerfifile文 件的描述来构建镜像。 </p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>作用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FROM</td>
+<td>指定父镜像</td>
+<td>指定dockerfile基于那个image构建</td>
+</tr>
+<tr>
+<td>MAINTAINER</td>
+<td>作者信息</td>
+<td>用来标明这个dockerfile谁写的</td>
+</tr>
+<tr>
+<td>LABEL</td>
+<td>标签</td>
+<td>用来标明dockerfile的标签 可以使用Label代替Maintainer 最终都是在docker image基本信息中可以查看</td>
+</tr>
+<tr>
+<td>RUN</td>
+<td>执行命令</td>
+<td>执行一段命令 默认是/bin/sh 格式: RUN command 或者 RUN ["command" , "param1","param2"]</td>
+</tr>
+<tr>
+<td>CMD</td>
+<td>容器启动命令</td>
+<td>提供启动容器时候的默认命令 和ENTRYPOINT配合使用.格式 CMD command param1 param2 或者 CMD ["command" , "param1","param2"]</td>
+</tr>
+<tr>
+<td>ENTRYPOINT</td>
+<td>入口</td>
+<td>一般在制作一些执行就关闭的容器中会使用</td>
+</tr>
+<tr>
+<td>COPY</td>
+<td>复制文件</td>
+<td>build的时候复制文件到image中</td>
+</tr>
+<tr>
+<td>ADD</td>
+<td>添加文件</td>
+<td>build的时候添加文件到image中 不仅仅局限于当前build上下文 可以来源于远程服务</td>
+</tr>
+<tr>
+<td>ENV</td>
+<td>环境变量</td>
+<td>指定build时候的环境变量 可以在启动的容器的时候 通过-e覆盖 格式ENV name=value</td>
+</tr>
+<tr>
+<td>ARG</td>
+<td>构建参数</td>
+<td>构建参数 只在构建的时候使用的参数 如果有ENV 那么ENV的相同名字的值始终覆盖arg的参数</td>
+</tr>
+<tr>
+<td>VOLUME</td>
+<td>定义外部可以挂载的数据卷</td>
+<td>指定build的image那些目录可以启动的时候挂载到文件系统中 启动容器的时候使用 -v 绑定 格式 VOLUME ["目录"]</td>
+</tr>
+<tr>
+<td>EXPOSE</td>
+<td>暴露端口</td>
+<td>定义容器运行的时候监听的端口 启动容器的使用-p来绑定暴露端口 格式: EXPOSE 8080 或者 EXPOSE 8080/udp</td>
+</tr>
+<tr>
+<td>WORKDIR</td>
+<td>工作目录</td>
+<td>指定容器内部的工作目录 如果没有创建则自动创建 如果指定/ 使用的是绝对地址 如果不是/开头那么是在上一条workdir的路径的相对路径</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>指定执行用户</td>
+<td>指定build或者启动的时候 用户 在RUN CMD ENTRYPONT执行的时候的用户</td>
+</tr>
+<tr>
+<td>HEALTHCHECK</td>
+<td>健康检查</td>
+<td>指定监测当前容器的健康监测的命令 基本上没用 因为很多时候 应用本身有健康监测机制</td>
+</tr>
+<tr>
+<td>ONBUILD</td>
+<td>触发器</td>
+<td>当存在ONBUILD关键字的镜像作为基础镜像的时候 当执行FROM完成之后 会执行 ONBUILD的命令 但是不影响当前镜像 用处也不怎么大</td>
+</tr>
+<tr>
+<td>STOPSIGNAL</td>
+<td>发送信号量到宿主机</td>
+<td>该STOPSIGNAL指令设置将发送到容器的系统调用信号以退出。</td>
+</tr>
+<tr>
+<td>SHELL</td>
+<td>指定执行脚本的shell</td>
+<td>指定RUN CMD ENTRYPOINT 执行命令的时候 使用的shell</td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -531,7 +692,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../combinations/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Combinations" rel="prev">
+        <a href="../4/" class="md-footer__link md-footer__link--prev" aria-label="上一页: docker部署容器" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -540,20 +701,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              Combinations
+              docker部署容器
             </div>
           </div>
         </a>
       
       
         
-        <a href="../github-pages/" class="md-footer__link md-footer__link--next" aria-label="下一页: GitHub Pages" rel="next">
+        <a href="../6/" class="md-footer__link md-footer__link--next" aria-label="下一页: 服务编排" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              GitHub Pages
+              服务编排
             </div>
           </div>
           <div class="md-footer__button md-icon">

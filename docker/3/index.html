@@ -13,14 +13,14 @@
         <meta name="author" content="nitto">
       
       
-        <link rel="canonical" href="https://nitto.netlify.app/hosting-and-deployment/github-pages/">
+        <link rel="canonical" href="https://nitto.netlify.app/docker/3/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>GitHub Pages - Nitto Java Docs</title>
+        <title>docker容器的数据卷 - Nitto Java Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#host_on_github_pages" class="md-skip">
+        <a href="#docker" class="md-skip">
           跳转至
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GitHub Pages
+              docker容器的数据卷
             
           </span>
         </div>
@@ -318,8 +318,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../combinations/" class="md-nav__link">
-        Combinations
+      <a href="../1/" class="md-nav__link">
+        初识 Docker
       </a>
     </li>
   
@@ -330,8 +330,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../netlify/" class="md-nav__link">
-        Netlify
+      <a href="../2/" class="md-nav__link">
+        docker命令
       </a>
     </li>
   
@@ -352,12 +352,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          GitHub Pages
+          docker容器的数据卷
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        GitHub Pages
+        docker容器的数据卷
       </a>
       
         
@@ -375,29 +375,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#build_and_deploy_with_github_actions" class="md-nav__link">
-    Build and deploy with GitHub Actions
+  <a href="#31" class="md-nav__link">
+    3.1 数据卷概念
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#build_and_deploy_with_mkdocs_gh-deploy" class="md-nav__link">
-    Build and deploy with mkdocs gh-deploy
-  </a>
-  
-    <nav class="md-nav" aria-label="Build and deploy with mkdocs gh-deploy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pipenv" class="md-nav__link">
-    pipenv
+  <a href="#32" class="md-nav__link">
+    3.2 配置数据卷
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 配置数据卷容器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4 数据卷小结
+  </a>
   
 </li>
       
@@ -414,8 +415,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitlab-pages/" class="md-nav__link">
-        GitLab Pages
+      <a href="../4/" class="md-nav__link">
+        docker部署容器
       </a>
     </li>
   
@@ -426,8 +427,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../aws-amplify-console/" class="md-nav__link">
-        AWS Amplify Console
+      <a href="../5/" class="md-nav__link">
+        Docerfile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6/" class="md-nav__link">
+        服务编排
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7/" class="md-nav__link">
+        私有仓库
       </a>
     </li>
   
@@ -546,29 +571,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#build_and_deploy_with_github_actions" class="md-nav__link">
-    Build and deploy with GitHub Actions
+  <a href="#31" class="md-nav__link">
+    3.1 数据卷概念
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#build_and_deploy_with_mkdocs_gh-deploy" class="md-nav__link">
-    Build and deploy with mkdocs gh-deploy
-  </a>
-  
-    <nav class="md-nav" aria-label="Build and deploy with mkdocs gh-deploy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pipenv" class="md-nav__link">
-    pipenv
+  <a href="#32" class="md-nav__link">
+    3.2 配置数据卷
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 配置数据卷容器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4 数据卷小结
+  </a>
   
 </li>
       
@@ -584,34 +610,103 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/hosting-and-deployment/github-pages.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/docker/3.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="host_on_github_pages">Host on GitHub Pages<a class="headerlink" href="#host_on_github_pages" title="Permanent link">&para;</a></h1>
+                <h1 id="docker">docker容器的数据卷<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
+<h3 id="31">3.1 数据卷概念<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>思考：</p>
+<p>• Docker 容器删除后，在容器中产生的数据也会随之销毁 </p>
+<p>• Docker 容器和外部机器可以直接交换文件吗？ </p>
+<p>• 容器之间想要进行数据交互？</p>
+<p><strong>数据卷</strong></p>
 <ul>
-<li><a href="https://peaceiris.github.io/mkdocs-material-boilerplate/">Demo site on GitHub Pages</a> (build &amp; deploy with GitHub Actions)</li>
+<li>数据卷是宿主机中的一个目录或文件</li>
+<li>当容器目录和数据卷目录绑定后，对方的修改会立即同步</li>
+<li>一个数据卷可以被多个容器同时挂载</li>
+<li>一个容器也可以被挂载多个数据卷</li>
 </ul>
-<h2 id="build_and_deploy_with_github_actions">Build and deploy with GitHub Actions<a class="headerlink" href="#build_and_deploy_with_github_actions" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/peaceiris/actions-gh-pages">peaceiris/actions-gh-pages: GitHub Actions for deploying to GitHub Pages with Static Site Generators</a></li>
-</ul>
-<p>Go to the repository and read the latest <code>README.md</code> for more details.</p>
-<h2 id="build_and_deploy_with_mkdocs_gh-deploy">Build and deploy with <code>mkdocs gh-deploy</code><a class="headerlink" href="#build_and_deploy_with_mkdocs_gh-deploy" title="Permanent link">&para;</a></h2>
-<h3 id="pipenv">pipenv<a class="headerlink" href="#pipenv" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>pipenv run deploy
-
-# OR
-pipenv shell
-mkdocs gh-deploy
-
-# OR
-pipenv run mkdocs gh-deploy
+<p><strong>数据卷的作用</strong></p>
+<p>• 容器数据持久化 </p>
+<p>• 外部机器和容器间接通信 </p>
+<p>• 容器之间数据交换 </p>
+<h3 id="32">3.2 配置数据卷<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p><strong>创建启动容器时，使用 –v 参数 设置数据卷</strong></p>
+<div class="codehilite"><pre><span></span><code>docker run ... -v 宿主机目录<span class="o">(</span>文件<span class="o">)</span>:容器内目录<span class="o">(</span>文件<span class="o">)</span> ...
 </code></pre></div>
 
-<!-- Internal References -->
-<!-- External References -->
+<p><strong>注意事项：</strong> </p>
+<ol>
+<li>
+<p>目录必须是绝对路径 </p>
+</li>
+<li>
+<p>如果目录不存在，会自动创建 </p>
+</li>
+<li>
+<p>一个容器可以挂载多个数据卷</p>
+</li>
+<li>一个数据卷也可以被多个容器挂载</li>
+<li>两个容器可以挂载同一个容器</li>
+</ol>
+<p>在宿主机中实现与容器目录的挂载：</p>
+<ol>
+<li>数据卷的持久化：</li>
+</ol>
+<p>​   当我们把c1容器删除后，宿主机中的数据卷依然存在。  所以当我们重新创建一个容器的同时依然可以挂载宿主机中的data文件夹，对应data里的数据依然同步到容器中。</p>
+<ol>
+<li>
+<p>一个容器可以挂载多个数据卷</p>
+</li>
+<li>
+<p>多个容器可以挂载同一个数据卷</p>
+</li>
+</ol>
+<p>分别创建两个容器，两个容器都挂载宿主机中data目录，当 修改c3容器的data目录c4会实现同步。</p>
+<p>从而实现两个容器之间的交互。</p>
+<h3 id="33">3.3 配置数据卷容器<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p><strong>多容器进行数据交换</strong> </p>
+<ol>
+<li>
+<p>多个容器挂载同一个数据卷 </p>
+</li>
+<li>
+<p>数据卷容器 </p>
+</li>
+</ol>
+<p><strong>步骤：</strong></p>
+<p>1.创建启动c3数据卷容器，使用 –v 参数 设置数据卷</p>
+<div class="codehilite"><pre><span></span><code>docker run –it --name<span class="o">=</span>c3 -v /volume centos:7 /bin/bash
+</code></pre></div>
+
+<ol>
+<li>创建启动 c1 c2 容器，使用 –-volumes-from 参数 设置数据卷</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker run –it --name<span class="o">=</span>c1 --volumes-from c3 centos:7 /bin/bash
+
+docker run –it --name<span class="o">=</span>c2 --volumes-from c3 centos:7 /bin/bash
+</code></pre></div>
+
+<h3 id="34">3.4 数据卷小结<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>数据卷概念
+   •宿主机的一个目录或文件</p>
+</li>
+<li>
+<p>数据卷作用
+   • 容器数据持久化
+   • 客户端和容器数据交换
+   • 容器间数据交换</p>
+</li>
+<li>
+<p>数据卷容器
+   • 创建一个容器，挂载一个目录，让其他容器继承自该容器( --volume-from )。 </p>
+</li>
+</ol>
+<p>• 通过简单方式实现数据卷配置</p>
                 
               
               
@@ -631,7 +726,7 @@ pipenv run mkdocs gh-deploy
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../netlify/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Netlify" rel="prev">
+        <a href="../2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: docker命令" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -640,20 +735,20 @@ pipenv run mkdocs gh-deploy
               <span class="md-footer__direction">
                 上一页
               </span>
-              Netlify
+              docker命令
             </div>
           </div>
         </a>
       
       
         
-        <a href="../gitlab-pages/" class="md-footer__link md-footer__link--next" aria-label="下一页: GitLab Pages" rel="next">
+        <a href="../4/" class="md-footer__link md-footer__link--next" aria-label="下一页: docker部署容器" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              GitLab Pages
+              docker部署容器
             </div>
           </div>
           <div class="md-footer__button md-icon">

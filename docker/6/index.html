@@ -13,14 +13,14 @@
         <meta name="author" content="nitto">
       
       
-        <link rel="canonical" href="https://nitto.netlify.app/hosting-and-deployment/gitlab-pages/">
+        <link rel="canonical" href="https://nitto.netlify.app/docker/6/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>GitLab Pages - Nitto Java Docs</title>
+        <title>服务编排 - Nitto Java Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#host_on_gitlab_pages" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GitLab Pages
+              服务编排
             
           </span>
         </div>
@@ -318,8 +318,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../combinations/" class="md-nav__link">
-        Combinations
+      <a href="../1/" class="md-nav__link">
+        初识 Docker
       </a>
     </li>
   
@@ -330,8 +330,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../netlify/" class="md-nav__link">
-        Netlify
+      <a href="../2/" class="md-nav__link">
+        docker命令
       </a>
     </li>
   
@@ -342,8 +342,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-pages/" class="md-nav__link">
-        GitHub Pages
+      <a href="../3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        docker部署容器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        Docerfile
       </a>
     </li>
   
@@ -363,9 +387,100 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          服务编排
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        GitLab Pages
+        服务编排
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    6.1 服务编排概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62_docker_compose" class="md-nav__link">
+    6.2 Docker Compose 概述
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Docker Compose 概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621_docker_compose" class="md-nav__link">
+    6.2.1 Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622_docker_compose" class="md-nav__link">
+    6.2.2  Docker Compose 安装使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker_compose" class="md-nav__link">
+    Docker Compose
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker_compose_1" class="md-nav__link">
+    一、安装Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_compose_2" class="md-nav__link">
+    二、卸载Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_composenginxspringboot" class="md-nav__link">
+    三、 使用docker compose编排nginx+springboot项目
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -376,8 +491,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../aws-amplify-console/" class="md-nav__link">
-        AWS Amplify Console
+      <a href="../7/" class="md-nav__link">
+        私有仓库
       </a>
     </li>
   
@@ -489,6 +604,82 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    6.1 服务编排概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62_docker_compose" class="md-nav__link">
+    6.2 Docker Compose 概述
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Docker Compose 概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621_docker_compose" class="md-nav__link">
+    6.2.1 Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622_docker_compose" class="md-nav__link">
+    6.2.2  Docker Compose 安装使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker_compose" class="md-nav__link">
+    Docker Compose
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker_compose_1" class="md-nav__link">
+    一、安装Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_compose_2" class="md-nav__link">
+    二、卸载Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_composenginxspringboot" class="md-nav__link">
+    三、 使用docker compose编排nginx+springboot项目
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -499,15 +690,108 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/hosting-and-deployment/gitlab-pages.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/docker/6.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="host_on_gitlab_pages">Host on GitLab Pages<a class="headerlink" href="#host_on_gitlab_pages" title="Permanent link">&para;</a></h1>
+                <h1 id="_1">服务编排<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="61">6.1 服务编排概念<a class="headerlink" href="#61" title="Permanent link">&para;</a></h2>
+<p>微服务架构的应用系统中一般包含若干个微服务，每个微服务一般都会部署多个实例，如果每个微服务都要手动启停，维护的工作量会很大。</p>
 <ul>
-<li>See <a href="https://github.com/peaceiris/mkdocs-material-boilerplate/blob/main/.gitlab-ci.yml">.gitlab-ci.yml</a></li>
+<li>要从Dockerfile build image 或者去dockerhub拉取image</li>
+<li>要创建多个container</li>
+<li>要管理这些container（启动停止删除）</li>
+<li>服务编排： 按照一定的业务规则批量管理容器</li>
 </ul>
+<h2 id="62_docker_compose">6.2 Docker Compose 概述<a class="headerlink" href="#62_docker_compose" title="Permanent link">&para;</a></h2>
+<h4 id="621_docker_compose">6.2.1 Docker Compose<a class="headerlink" href="#621_docker_compose" title="Permanent link">&para;</a></h4>
+<p>Docker Compose是一个编排多容器分布式部署的工具，提供命令集管理容器化应用的完整开发周期，包括服务构建 ，启动和停止。使用步骤： </p>
+<ol>
+<li>
+<p>利用 Dockerfile 定义运行环境镜像 </p>
+</li>
+<li>
+<p>使用 docker-compose.yml 定义组成应用的各服务 </p>
+</li>
+<li>
+<p>运行 docker-compose up 启动应用</p>
+</li>
+</ol>
+<h4 id="622_docker_compose">6.2.2  Docker Compose 安装使用<a class="headerlink" href="#622_docker_compose" title="Permanent link">&para;</a></h4>
+<h2 id="docker_compose">Docker Compose<a class="headerlink" href="#docker_compose" title="Permanent link">&para;</a></h2>
+<h3 id="docker_compose_1">一、安装Docker Compose<a class="headerlink" href="#docker_compose_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Compose目前已经完全支持Linux、Mac OS和Windows，在我们安装Compose之前，需要先安装Docker。下面我 们以编译好的二进制包方式安装在Linux系统中。 </span>
+curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-<span class="sb">`</span>uname -s<span class="sb">`</span>-<span class="sb">`</span>uname -m<span class="sb">`</span> -o /usr/local/bin/docker-compose
+<span class="c1"># 设置文件可执行权限 </span>
+chmod +x /usr/local/bin/docker-compose
+<span class="c1"># 查看版本信息 </span>
+docker-compose -version
+</code></pre></div>
+
+<h3 id="docker_compose_2">二、卸载Docker Compose<a class="headerlink" href="#docker_compose_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 二进制包方式安装的，删除二进制文件即可</span>
+rm /usr/local/bin/docker-compose
+</code></pre></div>
+
+<h3 id="docker_composenginxspringboot">三、 使用docker compose编排nginx+springboot项目<a class="headerlink" href="#docker_composenginxspringboot" title="Permanent link">&para;</a></h3>
+<ol>
+<li>创建docker-compose目录</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>mkdir ~/docker-compose
+<span class="nb">cd</span> ~/docker-compose
+</code></pre></div>
+
+<ol>
+<li>编写 docker-compose.yml 文件</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>version: <span class="s1">&#39;3&#39;</span>
+services:
+  nginx:
+   image: nginx
+   ports:
+    - <span class="m">80</span>:80
+   links:
+    - app
+   volumes:
+    - ./nginx/conf.d:/etc/nginx/conf.d
+  app:
+    image: app
+    expose:
+      - <span class="s2">&quot;8080&quot;</span>
+</code></pre></div>
+
+<ol>
+<li>创建./nginx/conf.d目录</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>mkdir -p ./nginx/conf.d
+</code></pre></div>
+
+<ol>
+<li>在./nginx/conf.d目录下 编写itheima.conf文件</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>server <span class="o">{</span>
+    listen <span class="m">80</span><span class="p">;</span>
+    access_log off<span class="p">;</span>
+
+    location / <span class="o">{</span>
+        proxy_pass http://app:8080<span class="p">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div>
+
+<ol>
+<li>在~/docker-compose 目录下 使用docker-compose 启动容器</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker-compose up
+</code></pre></div>
+
+<ol>
+<li>测试访问</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>http://192.168.149.135/hello
+</code></pre></div>
                 
               
               
@@ -527,7 +811,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../github-pages/" class="md-footer__link md-footer__link--prev" aria-label="上一页: GitHub Pages" rel="prev">
+        <a href="../5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Docerfile" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -536,20 +820,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              GitHub Pages
+              Docerfile
             </div>
           </div>
         </a>
       
       
         
-        <a href="../aws-amplify-console/" class="md-footer__link md-footer__link--next" aria-label="下一页: AWS Amplify Console" rel="next">
+        <a href="../7/" class="md-footer__link md-footer__link--next" aria-label="下一页: 私有仓库" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              AWS Amplify Console
+              私有仓库
             </div>
           </div>
           <div class="md-footer__button md-icon">

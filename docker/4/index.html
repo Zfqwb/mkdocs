@@ -13,14 +13,14 @@
         <meta name="author" content="nitto">
       
       
-        <link rel="canonical" href="https://nitto.netlify.app/hosting-and-deployment/combinations/">
+        <link rel="canonical" href="https://nitto.netlify.app/docker/4/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Combinations - Nitto Java Docs</title>
+        <title>docker部署容器 - Nitto Java Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hosting_and_deployment" class="md-skip">
+        <a href="#mysql" class="md-skip">
           跳转至
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Combinations
+              docker部署容器
             
           </span>
         </div>
@@ -316,6 +316,42 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -324,24 +360,20 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Combinations
+          docker部署容器
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Combinations
+        docker部署容器
       </a>
       
         
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -351,29 +383,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github_pages_and_github" class="md-nav__link">
-    GitHub Pages and GitHub
+  <a href="#mysql" class="md-nav__link">
+    一、部署MySQL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gitlab_pages_and_gitlab" class="md-nav__link">
-    GitLab Pages and GitLab
+  <a href="#tomcat" class="md-nav__link">
+    二、部署Tomcat
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#netlify" class="md-nav__link">
-    Netlify
+  <a href="#nginx" class="md-nav__link">
+    三、部署Nginx
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aws_amplify_console" class="md-nav__link">
-    AWS Amplify Console
+  <a href="#redis" class="md-nav__link">
+    四、部署Redis
   </a>
   
 </li>
@@ -391,8 +423,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../netlify/" class="md-nav__link">
-        Netlify
+      <a href="../5/" class="md-nav__link">
+        Docerfile
       </a>
     </li>
   
@@ -403,8 +435,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-pages/" class="md-nav__link">
-        GitHub Pages
+      <a href="../6/" class="md-nav__link">
+        服务编排
       </a>
     </li>
   
@@ -415,20 +447,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitlab-pages/" class="md-nav__link">
-        GitLab Pages
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../aws-amplify-console/" class="md-nav__link">
-        AWS Amplify Console
+      <a href="../7/" class="md-nav__link">
+        私有仓库
       </a>
     </li>
   
@@ -537,8 +557,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -547,29 +565,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github_pages_and_github" class="md-nav__link">
-    GitHub Pages and GitHub
+  <a href="#mysql" class="md-nav__link">
+    一、部署MySQL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gitlab_pages_and_gitlab" class="md-nav__link">
-    GitLab Pages and GitLab
+  <a href="#tomcat" class="md-nav__link">
+    二、部署Tomcat
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#netlify" class="md-nav__link">
-    Netlify
+  <a href="#nginx" class="md-nav__link">
+    三、部署Nginx
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aws_amplify_console" class="md-nav__link">
-    AWS Amplify Console
+  <a href="#redis" class="md-nav__link">
+    四、部署Redis
   </a>
   
 </li>
@@ -586,43 +604,199 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/hosting-and-deployment/combinations.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/docker/4.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="hosting_and_deployment">Hosting and Deployment<a class="headerlink" href="#hosting_and_deployment" title="Permanent link">&para;</a></h1>
-<h2 id="github_pages_and_github">GitHub Pages and GitHub<a class="headerlink" href="#github_pages_and_github" title="Permanent link">&para;</a></h2>
+                  <h1>docker部署容器</h1>
+                
+                <h3 id="mysql">一、部署MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h3>
+<ol>
+<li>搜索mysql镜像</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker search mysql
+</code></pre></div>
+
+<ol>
+<li>拉取mysql镜像</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker pull mysql:5.6
+</code></pre></div>
+
+<ol>
+<li>创建容器，设置端口映射、目录映射</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 在/root目录下创建mysql目录用于存储mysql数据信息</span>
+mkdir ~/mysql
+<span class="nb">cd</span> ~/mysql
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>docker run -id <span class="se">\</span>
+-p <span class="m">3306</span>:3306 <span class="se">\</span>
+--name<span class="o">=</span>c_mysql1 <span class="se">\</span>
+-v <span class="nv">$PWD</span>/conf:/etc/mysql/conf.d <span class="se">\</span>
+-v <span class="nv">$PWD</span>/logs:/logs <span class="se">\</span>
+-v <span class="nv">$PWD</span>/data:/var/lib/mysql <span class="se">\</span>
+-e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="m">123456</span> <span class="se">\</span>
+mysql:5.6
+</code></pre></div>
+
 <ul>
-<li>Host source code on GitHub.</li>
-<li>Build and deploy with:<ul>
-<li><code>mkdocs gh-deploy</code></li>
-<li>GitHub Actions</li>
-</ul>
+<li>参数说明：</li>
+<li><strong>-p 3307:3306</strong>：将容器的 3306 端口映射到宿主机的 3307 端口。</li>
+<li><strong>-v $PWD/conf:/etc/mysql/conf.d</strong>：将主机当前目录下的 conf/my.cnf 挂载到容器的 /etc/mysql/my.cnf。配置目录</li>
+<li><strong>-v $PWD/logs:/logs</strong>：将主机当前目录下的 logs 目录挂载到容器的 /logs。日志目录</li>
+<li><strong>-v $PWD/data:/var/lib/mysql</strong> ：将主机当前目录下的data目录挂载到容器的 /var/lib/mysql 。数据目录</li>
+<li>
+<p><strong>-e MYSQL_ROOT_PASSWORD=123456：</strong>初始化 root 用户的密码。</p>
+</li>
+<li>
+<p>进入容器，操作mysql</p>
 </li>
 </ul>
-<h2 id="gitlab_pages_and_gitlab">GitLab Pages and GitLab<a class="headerlink" href="#gitlab_pages_and_gitlab" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>docker <span class="nb">exec</span> –it c_mysql /bin/bash
+</code></pre></div>
+
+<ol>
+<li>使用外部机器连接容器中的mysql</li>
+</ol>
+<h3 id="tomcat">二、部署Tomcat<a class="headerlink" href="#tomcat" title="Permanent link">&para;</a></h3>
+<ol>
+<li>搜索tomcat镜像</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker search tomcat
+</code></pre></div>
+
+<ol>
+<li>拉取tomcat镜像</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker pull tomcat
+</code></pre></div>
+
+<ol>
+<li>创建容器，设置端口映射、目录映射</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 在/root目录下创建tomcat目录用于存储tomcat数据信息</span>
+mkdir ~/tomcat
+<span class="nb">cd</span> ~/tomcat
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>docker run -id --name<span class="o">=</span>c_tomcat <span class="se">\</span>
+-p <span class="m">8080</span>:8080 <span class="se">\</span>
+-v <span class="nv">$PWD</span>:/usr/local/tomcat/webapps <span class="se">\</span>
+tomcat 
+</code></pre></div>
+
 <ul>
-<li>Host source code on GitLab.</li>
-<li>Build and deploy with GitLab CI/CD.</li>
+<li>参数说明：</li>
+<li>
+<p><strong>-p 8080:8080：</strong>将容器的8080端口映射到主机的8080端口</p>
+<p><strong>-v $PWD:/usr/local/tomcat/webapps：</strong>将主机中当前目录挂载到容器的webapps</p>
+</li>
+<li>
+<p>使用外部机器访问tomcat</p>
+</li>
 </ul>
-<h2 id="netlify">Netlify<a class="headerlink" href="#netlify" title="Permanent link">&para;</a></h2>
-<p>Host source code on:</p>
+<h3 id="nginx">三、部署Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h3>
+<ol>
+<li>搜索nginx镜像</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker search nginx
+</code></pre></div>
+
+<ol>
+<li>拉取nginx镜像</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker pull nginx
+</code></pre></div>
+
+<ol>
+<li>创建容器，设置端口映射、目录映射</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 在/root目录下创建nginx目录用于存储nginx数据信息</span>
+mkdir ~/nginx
+<span class="nb">cd</span> ~/nginx
+mkdir conf
+<span class="nb">cd</span> conf
+<span class="c1"># 在~/nginx/conf/下创建nginx.conf文件,粘贴下面内容</span>
+vim nginx.conf
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>user  nginx<span class="p">;</span>
+worker_processes  <span class="m">1</span><span class="p">;</span>
+
+error_log  /var/log/nginx/error.log warn<span class="p">;</span>
+pid        /var/run/nginx.pid<span class="p">;</span>
+
+
+events <span class="o">{</span>
+    worker_connections  <span class="m">1024</span><span class="p">;</span>
+<span class="o">}</span>
+http <span class="o">{</span>
+    include       /etc/nginx/mime.types<span class="p">;</span>
+    default_type  application/octet-stream<span class="p">;</span>
+
+    log_format  main  <span class="s1">&#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39;</span>
+                      <span class="s1">&#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39;</span>
+                      <span class="s1">&#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;</span><span class="p">;</span>
+
+    access_log  /var/log/nginx/access.log  main<span class="p">;</span>
+
+    sendfile        on<span class="p">;</span>
+    <span class="c1">#tcp_nopush     on;</span>
+
+    keepalive_timeout  <span class="m">65</span><span class="p">;</span>
+
+    <span class="c1">#gzip  on;</span>
+
+    include /etc/nginx/conf.d/*.conf<span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>docker run -id --name<span class="o">=</span>c_nginx <span class="se">\</span>
+-p <span class="m">80</span>:80 <span class="se">\</span>
+-v <span class="nv">$PWD</span>/conf/nginx.conf:/etc/nginx/nginx.conf <span class="se">\</span>
+-v <span class="nv">$PWD</span>/logs:/var/log/nginx <span class="se">\</span>
+-v <span class="nv">$PWD</span>/html:/usr/share/nginx/html <span class="se">\</span>
+nginx
+</code></pre></div>
+
 <ul>
-<li>GitHub</li>
-<li>GitLab</li>
-<li>BitBucket</li>
+<li>参数说明：</li>
+<li><strong>-p 80:80</strong>：将容器的 80端口映射到宿主机的 80 端口。</li>
+<li><strong>-v $PWD/conf/nginx.conf:/etc/nginx/nginx.conf</strong>：将主机当前目录下的 /conf/nginx.conf 挂载到容器的 :/etc/nginx/nginx.conf。配置目录</li>
+<li>
+<p><strong>-v $PWD/logs:/var/log/nginx</strong>：将主机当前目录下的 logs 目录挂载到容器的/var/log/nginx。日志目录</p>
+</li>
+<li>
+<p>使用外部机器访问nginx</p>
+</li>
 </ul>
-<p>Build and deploy with Netlify.</p>
-<h2 id="aws_amplify_console">AWS Amplify Console<a class="headerlink" href="#aws_amplify_console" title="Permanent link">&para;</a></h2>
-<p>Host source code on:</p>
-<ul>
-<li>GitHub</li>
-<li>GitLab</li>
-<li>BitBucket</li>
-<li>AWS CodeCommit</li>
-</ul>
-<p>Build and deploy with AWS Amplify Console.</p>
+<h3 id="redis">四、部署Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h3>
+<ol>
+<li>搜索redis镜像</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker search redis
+</code></pre></div>
+
+<ol>
+<li>拉取redis镜像</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker pull redis:5.0
+</code></pre></div>
+
+<ol>
+<li>创建容器，设置端口映射</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>docker run -id --name<span class="o">=</span>c_redis -p <span class="m">6379</span>:6379 redis:5.0
+</code></pre></div>
+
+<ol>
+<li>使用外部机器连接redis</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>./redis-cli.exe -h <span class="m">192</span>.168.149.135 -p <span class="m">6379</span>
+</code></pre></div>
                 
               
               
@@ -642,7 +816,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../redis/day02/" class="md-footer__link md-footer__link--prev" aria-label="上一页: day02" rel="prev">
+        <a href="../3/" class="md-footer__link md-footer__link--prev" aria-label="上一页: docker容器的数据卷" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -651,20 +825,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              day02
+              docker容器的数据卷
             </div>
           </div>
         </a>
       
       
         
-        <a href="../netlify/" class="md-footer__link md-footer__link--next" aria-label="下一页: Netlify" rel="next">
+        <a href="../5/" class="md-footer__link md-footer__link--next" aria-label="下一页: Docerfile" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Netlify
+              Docerfile
             </div>
           </div>
           <div class="md-footer__button md-icon">

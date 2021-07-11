@@ -21,6 +21,41 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://nitto.netlify.app/docker/1/</loc>
+         <lastmod>2021-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nitto.netlify.app/docker/2/</loc>
+         <lastmod>2021-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nitto.netlify.app/docker/3/</loc>
+         <lastmod>2021-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nitto.netlify.app/docker/4/</loc>
+         <lastmod>2021-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nitto.netlify.app/docker/5/</loc>
+         <lastmod>2021-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nitto.netlify.app/docker/6/</loc>
+         <lastmod>2021-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nitto.netlify.app/docker/7/</loc>
+         <lastmod>2021-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://nitto.netlify.app/extensions/code-hilite/</loc>
          <lastmod>2021-07-11</lastmod>
          <changefreq>daily</changefreq>
@@ -32,31 +67,6 @@
     </url>
     <url>
          <loc>https://nitto.netlify.app/extensions/mathjax/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nitto.netlify.app/hosting-and-deployment/aws-amplify-console/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nitto.netlify.app/hosting-and-deployment/combinations/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nitto.netlify.app/hosting-and-deployment/github-pages/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nitto.netlify.app/hosting-and-deployment/gitlab-pages/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nitto.netlify.app/hosting-and-deployment/netlify/</loc>
          <lastmod>2021-07-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
