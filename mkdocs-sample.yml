@@ -49,7 +49,7 @@ plugins:
   - search:
       separator: '[\s\-\.]+'
       lang:
-        - zh
+        - en
 
 # Customization
 extra_javascript:
