@@ -36,31 +36,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nitto.netlify.app/getting-started/docker/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nitto.netlify.app/getting-started/download-boilerplate/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nitto.netlify.app/getting-started/invoke/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nitto.netlify.app/getting-started/pip/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nitto.netlify.app/getting-started/pipenv/</loc>
-         <lastmod>2021-07-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://nitto.netlify.app/hosting-and-deployment/aws-amplify-console/</loc>
          <lastmod>2021-07-11</lastmod>
          <changefreq>daily</changefreq>
@@ -82,6 +57,16 @@
     </url>
     <url>
          <loc>https://nitto.netlify.app/hosting-and-deployment/netlify/</loc>
+         <lastmod>2021-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nitto.netlify.app/redis/day01/</loc>
+         <lastmod>2021-07-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nitto.netlify.app/redis/day02/</loc>
          <lastmod>2021-07-11</lastmod>
          <changefreq>daily</changefreq>
     </url>

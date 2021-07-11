@@ -1,0 +1,2069 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions.">
+      
+      
+      
+        <meta name="author" content="nitto">
+      
+      
+        <link rel="canonical" href="https://nitto.netlify.app/redis/day02/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>day02 - Nitto Java Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nitto Java Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              day02
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nitto Java Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        day02
+      </a>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hosting-and-deployment/combinations/" class="md-nav__link">
+        Combinations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hosting-and-deployment/netlify/" class="md-nav__link">
+        Netlify
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hosting-and-deployment/github-pages/" class="md-nav__link">
+        GitHub Pages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hosting-and-deployment/gitlab-pages/" class="md-nav__link">
+        GitLab Pages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hosting-and-deployment/aws-amplify-console/" class="md-nav__link">
+        AWS Amplify Console
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        MongoDB
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="MongoDB" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          MongoDB
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/mathjax/" class="md-nav__link">
+        MathJax
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/code-hilite/" class="md-nav__link">
+        Code Hilite
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/footnote/" class="md-nav__link">
+        Footnote
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/redis/day02.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>day02</h1>
+                
+                <div class="codehilite"><pre><span></span><code><span class="err">##</span><span class="w"> </span><span class="n">学习目标</span><span class="w"></span>
+
+<span class="n">目标1</span><span class="err">：</span><span class="n">能够说出redis中的数据删除策与略淘汰策略</span><span class="w"></span>
+
+<span class="n">目标2</span><span class="err">：</span><span class="n">能够说出主从复制的概念</span><span class="err">，</span><span class="n">工作流程以及场景问题及解决方案</span><span class="w"></span>
+
+<span class="n">目标3</span><span class="err">：</span><span class="n">能够说出哨兵的作用以及工作原理</span><span class="err">，</span><span class="n">以及如何启用哨兵</span><span class="w"></span>
+
+<span class="n">目标4</span><span class="err">：</span><span class="n">能够说出集群的架构设计</span><span class="err">，</span><span class="n">完成集群的搭建</span><span class="w"></span>
+
+<span class="n">目标5</span><span class="err">：</span><span class="n">能够说出缓存预热</span><span class="err">，</span><span class="n">雪崩</span><span class="err">，</span><span class="n">击穿</span><span class="err">，</span><span class="n">穿透的概念</span><span class="err">，</span><span class="n">能说出redis的相关监控指标</span><span class="w"></span>
+
+<span class="err">##</span><span class="w"> </span><span class="mf">1.</span><span class="n">数据删除与淘汰策略</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">1.1</span><span class="w"> </span><span class="n">过期数据</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="o">**</span><span class="mf">1.1.1</span><span class="w"> </span><span class="n">Redis中的数据特征</span><span class="o">**</span><span class="w"></span>
+
+<span class="n">Redis是一种内存级数据库</span><span class="err">，</span><span class="n">所有数据均存放在内存中</span><span class="err">，</span><span class="n">内存中的数据可以通过TTL指令获取其状态</span><span class="w"></span>
+
+<span class="n">TTL返回的值有三种情况</span><span class="err">：</span><span class="n">正数</span><span class="err">，</span><span class="o">-</span><span class="mi">1</span><span class="err">，</span><span class="o">-</span><span class="mi">2</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">正数</span><span class="o">**</span><span class="err">：</span><span class="n">代表该数据在内存中还能存活的时间</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="o">**-</span><span class="mi">1</span><span class="o">**</span><span class="err">：</span><span class="n">永久有效的数据</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="mi">2</span><span class="o">**</span><span class="w"> </span><span class="err">：</span><span class="n">已经过期的数据</span><span class="w"> </span><span class="n">或被删除的数据</span><span class="w"> </span><span class="n">或</span><span class="w"> </span><span class="n">未定义的数据</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">删除策略就是针对已过期数据的处理策略</span><span class="o">**</span><span class="err">，</span><span class="n">已过期的数据是真的就立即删除了吗</span><span class="err">？</span><span class="n">其实也不是</span><span class="err">，</span><span class="n">我们会有多种删除策略</span><span class="err">，</span><span class="n">是分情况的</span><span class="err">，</span><span class="n">在不同的场景下使用不同的删除方式会有不同效果</span><span class="err">，</span><span class="n">这也正是我们要将的数据的删除策略的问题</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">1.1.2</span><span class="w"> </span><span class="n">时效性数据的存储结构</span><span class="w"></span>
+
+<span class="n">在Redis中</span><span class="err">，</span><span class="n">如何给数据设置它的失效周期呢</span><span class="err">？</span><span class="n">数据的时效在redis中如何存储呢</span><span class="err">？</span><span class="w"></span>
+
+<span class="n">过期数据是一块独立的存储空间</span><span class="err">，</span><span class="n">Hash结构</span><span class="err">，</span><span class="n">field是内存地址</span><span class="err">，</span><span class="n">value是过期时间</span><span class="err">，</span><span class="n">保存了所有key的过期描述</span><span class="err">，</span><span class="n">在最终进行过期处理的时候</span><span class="err">，</span><span class="n">对该空间的数据进行检测</span><span class="err">，</span><span class="w"> </span><span class="n">当时间到期之后通过field找到内存该地址处的数据</span><span class="err">，</span><span class="n">然后进行相关操作</span><span class="err">。</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">1.2</span><span class="w"> </span><span class="n">数据删除策略</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">1.2.1</span><span class="w"> </span><span class="n">数据删除策略的目标</span><span class="w"></span>
+
+<span class="n">在内存占用与CPU占用之间寻找一种平衡</span><span class="err">，</span><span class="n">顾此失彼都会造成整体redis性能的下降</span><span class="err">，</span><span class="n">甚至引发服务器宕机或</span><span class="w"> </span><span class="n">内存泄露</span><span class="w"></span>
+
+<span class="n">针对过期数据要进行删除的时候都有哪些删除策略呢</span><span class="err">？</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="mf">1.</span><span class="n">定时删除</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="mf">2.</span><span class="n">惰性删除</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="mf">3.</span><span class="n">定期删除</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">1.2.2</span><span class="w"> </span><span class="n">定时删除</span><span class="w"></span>
+
+<span class="n">创建一个定时器</span><span class="err">，</span><span class="n">当key设置有过期时间</span><span class="err">，</span><span class="n">且过期时间到达时</span><span class="err">，</span><span class="n">由定时器任务立即执行对键的删除操作</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">优点</span><span class="o">**</span><span class="err">：</span><span class="n">节约内存</span><span class="err">，</span><span class="n">到时就删除</span><span class="err">，</span><span class="n">快速释放掉不必要的内存占用</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">缺点</span><span class="o">**</span><span class="err">：</span><span class="n">CPU压力很大</span><span class="err">，</span><span class="n">无论CPU此时负载量多高</span><span class="err">，</span><span class="n">均占用CPU</span><span class="err">，</span><span class="n">会影响redis服务器响应时间和指令吞吐量</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">总结</span><span class="o">**</span><span class="err">：</span><span class="n">用处理器性能换取存储空间</span><span class="err">（</span><span class="n">拿时间换空间</span><span class="err">）</span><span class="w"></span>
+
+
+
+<span class="err">####</span><span class="w"> </span><span class="mf">1.2.3</span><span class="w"> </span><span class="n">惰性删除</span><span class="w"></span>
+
+<span class="n">数据到达过期时间</span><span class="err">，</span><span class="n">不做处理</span><span class="err">。</span><span class="n">等下次访问该数据时</span><span class="err">，</span><span class="n">我们需要判断</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">如果未过期</span><span class="err">，</span><span class="n">返回数据</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">发现已过期</span><span class="err">，</span><span class="n">删除</span><span class="err">，</span><span class="n">返回不存在</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">优点</span><span class="o">**</span><span class="err">：</span><span class="n">节约CPU性能</span><span class="err">，</span><span class="n">发现必须删除的时候才删除</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">缺点</span><span class="o">**</span><span class="err">：</span><span class="n">内存压力很大</span><span class="err">，</span><span class="n">出现长期占用内存的数据</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">总结</span><span class="o">**</span><span class="err">：</span><span class="n">用存储空间换取处理器性能</span><span class="err">（</span><span class="n">拿时间换空间</span><span class="err">）</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">1.2.4</span><span class="w"> </span><span class="n">定期删除</span><span class="w"></span>
+
+<span class="n">定时删除和惰性删除这两种方案都是走的极端</span><span class="err">，</span><span class="n">那有没有折中方案</span><span class="err">？</span><span class="w"></span>
+
+<span class="n">我们来讲redis的定期删除方案</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">Redis启动服务器初始化时</span><span class="err">，</span><span class="n">读取配置server</span><span class="p">.</span><span class="n">hz的值</span><span class="err">，</span><span class="n">默认为10</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">每秒钟执行server</span><span class="p">.</span><span class="n">hz次</span><span class="o">**</span><span class="n">serverCron</span><span class="p">()</span><span class="o">**--------&gt;**</span><span class="n">databasesCron</span><span class="p">()</span><span class="o">**---------&gt;**</span><span class="n">activeExpireCycle</span><span class="p">()</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">activeExpireCycle</span><span class="p">()</span><span class="o">**</span><span class="n">对每个expires</span><span class="o">[</span><span class="n">*</span><span class="o">]</span><span class="n">逐一进行检测</span><span class="err">，</span><span class="n">每次执行耗时</span><span class="err">：</span><span class="mi">250</span><span class="n">ms</span><span class="o">/</span><span class="n">server</span><span class="p">.</span><span class="n">hz</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">对某个expires</span><span class="o">[</span><span class="n">*</span><span class="o">]</span><span class="n">检测时</span><span class="err">，</span><span class="n">随机挑选W个key检测</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="w">  </span><span class="n">如果key超时</span><span class="err">，</span><span class="n">删除key</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">如果一轮中删除的key的数量</span><span class="o">&gt;</span><span class="n">W</span><span class="o">*</span><span class="mi">25</span><span class="o">%</span><span class="err">，</span><span class="n">循环该过程</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">如果一轮中删除的key的数量</span><span class="err">≤</span><span class="n">W</span><span class="o">*</span><span class="mi">25</span><span class="o">%</span><span class="err">，</span><span class="n">检查下一个expires</span><span class="o">[</span><span class="n">*</span><span class="o">]</span><span class="err">，</span><span class="mi">0</span><span class="o">-</span><span class="mi">15</span><span class="n">循环</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">W取值</span><span class="o">=</span><span class="n">ACTIVE_EXPIRE_CYCLE_LOOKUPS_PER_LOOP属性值</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">参数current_db用于记录</span><span class="o">**</span><span class="n">activeExpireCycle</span><span class="p">()</span><span class="o">**</span><span class="w"> </span><span class="n">进入哪个expires</span><span class="o">[</span><span class="n">*</span><span class="o">]</span><span class="w"> </span><span class="n">执行</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">如果activeExpireCycle</span><span class="p">()</span><span class="n">执行时间到期</span><span class="err">，</span><span class="n">下次从current_db继续向下执行</span><span class="w"></span>
+
+<span class="n">总的来说</span><span class="err">：</span><span class="n">定期删除就是周期性轮询redis库中的时效性数据</span><span class="err">，</span><span class="n">采用随机抽取的策略</span><span class="err">，</span><span class="n">利用过期数据占比的方式控制删除频度</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">特点1</span><span class="o">**</span><span class="err">：</span><span class="n">CPU性能占用设置有峰值</span><span class="err">，</span><span class="n">检测频度可自定义设置</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">特点2</span><span class="o">**</span><span class="err">：</span><span class="n">内存压力不是很大</span><span class="err">，</span><span class="n">长期占用内存的冷数据会被持续清理</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">总结</span><span class="o">**</span><span class="err">：</span><span class="n">周期性抽查存储空间</span><span class="err">（</span><span class="n">随机抽查</span><span class="err">，</span><span class="n">重点抽查</span><span class="err">）</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">1.2.5</span><span class="w"> </span><span class="n">删除策略对比</span><span class="w"></span>
+
+<span class="mi">1</span><span class="err">：</span><span class="n">定时删除</span><span class="err">：</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">节约内存</span><span class="err">，</span><span class="n">无占用</span><span class="p">,</span><span class="w"></span>
+<span class="n">不分时段占用CPU资源</span><span class="err">，</span><span class="n">频度高</span><span class="p">,</span><span class="w"></span>
+<span class="n">拿时间换空间</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="mi">2</span><span class="err">：</span><span class="n">惰性删除</span><span class="err">：</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">内存占用严重</span><span class="w"></span>
+<span class="n">延时执行</span><span class="err">，</span><span class="n">CPU利用率高</span><span class="w"></span>
+<span class="n">拿空间换时间</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="mi">3</span><span class="err">：</span><span class="n">定期删除</span><span class="err">：</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">内存定期随机清理</span><span class="w"></span>
+<span class="n">每秒花费固定的CPU资源维护内存</span><span class="w"></span>
+<span class="n">随机抽查</span><span class="err">，</span><span class="n">重点抽查</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">1.3</span><span class="w"> </span><span class="n">数据淘汰策略</span><span class="err">（</span><span class="n">逐出算法</span><span class="err">）</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">1.3.1</span><span class="w"> </span><span class="n">淘汰策略概述</span><span class="w"></span>
+
+<span class="n">什么叫数据淘汰策略</span><span class="err">？</span><span class="n">什么样的应用场景需要用到数据淘汰策略</span><span class="err">？</span><span class="w"></span>
+
+<span class="n">当新数据进入redis时</span><span class="err">，</span><span class="n">如果内存不足怎么办</span><span class="err">？</span><span class="n">在执行每一个命令前</span><span class="err">，</span><span class="n">会调用</span><span class="o">**</span><span class="n">freeMemoryIfNeeded</span><span class="p">()</span><span class="o">**</span><span class="n">检测内存是否充足</span><span class="err">。</span><span class="n">如果内存不满足新</span><span class="w"> </span><span class="n">加入数据的最低存储要求</span><span class="err">，</span><span class="n">redis要临时删除一些数据为当前指令清理存储空间</span><span class="err">。</span><span class="n">清理数据的策略称为逐出算法</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">注意</span><span class="err">：</span><span class="n">逐出数据的过程不是100</span><span class="o">%</span><span class="n">能够清理出足够的可使用的内存空间</span><span class="err">，</span><span class="n">如果不成功则反复执行</span><span class="err">。</span><span class="n">当对所有数据尝试完毕</span><span class="err">，</span><span class="w">  </span><span class="n">如不能达到内存清理的要求</span><span class="err">，</span><span class="n">将出现错误信息如下</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">shell</span><span class="w"></span>
+<span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="n">OOM</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">allowed</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">memory</span><span class="w"> </span><span class="o">&gt;</span><span class="s1">&#39;maxmemory&#39;</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">1.3.2</span><span class="w"> </span><span class="n">策略配置</span><span class="w"></span>
+
+<span class="n">影响数据淘汰的相关配置如下</span><span class="err">：</span><span class="w"></span>
+
+<span class="mi">1</span><span class="err">：</span><span class="n">最大可使用内存</span><span class="err">，</span><span class="n">即占用物理内存的比例</span><span class="err">，</span><span class="n">默认值为0</span><span class="err">，</span><span class="n">表示不限制</span><span class="err">。</span><span class="n">生产环境中根据需求设定</span><span class="err">，</span><span class="n">通常设置在50</span><span class="o">%</span><span class="n">以上</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">maxmemory</span><span class="w"> </span><span class="vm">?</span><span class="n">mb</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="mi">2</span><span class="err">：</span><span class="n">每次选取待删除数据的个数</span><span class="err">，</span><span class="n">采用随机获取数据的方式作为待检测删除数据</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">maxmemory</span><span class="o">-</span><span class="n">samples</span><span class="w"> </span><span class="nf">count</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="mi">3</span><span class="err">：</span><span class="n">对数据进行删除的选择策略</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">maxmemory</span><span class="o">-</span><span class="n">policy</span><span class="w"> </span><span class="n">policy</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">那数据删除的策略policy到底有几种呢</span><span class="err">？</span><span class="n">一共是</span><span class="o">**</span><span class="mi">3</span><span class="n">类8种</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">第一类</span><span class="o">**</span><span class="err">：</span><span class="n">检测易失数据</span><span class="err">（</span><span class="n">可能会过期的数据集server</span><span class="p">.</span><span class="n">db</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="n">expires</span><span class="w"> </span><span class="err">）</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">volatile</span><span class="o">-</span><span class="n">lru</span><span class="err">：</span><span class="n">挑选最近最少使用的数据淘汰</span><span class="w"></span>
+<span class="n">volatile</span><span class="o">-</span><span class="n">lfu</span><span class="err">：</span><span class="n">挑选最近使用次数最少的数据淘汰</span><span class="w"></span>
+<span class="n">volatile</span><span class="o">-</span><span class="n">ttl</span><span class="err">：</span><span class="n">挑选将要过期的数据淘汰</span><span class="w"></span>
+<span class="n">volatile</span><span class="o">-</span><span class="n">random</span><span class="err">：</span><span class="n">任意选择数据淘汰</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">第二类</span><span class="o">**</span><span class="err">：</span><span class="n">检测全库数据</span><span class="err">（</span><span class="n">所有数据集server</span><span class="p">.</span><span class="n">db</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="n">dict</span><span class="w"> </span><span class="err">）</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">allkeys</span><span class="o">-</span><span class="n">lru</span><span class="err">：</span><span class="n">挑选最近最少使用的数据淘汰</span><span class="w"></span>
+<span class="n">allkeLyRs</span><span class="o">-</span><span class="n">lfu</span><span class="err">：：</span><span class="n">挑选最近使用次数最少的数据淘汰</span><span class="w"></span>
+<span class="n">allkeys</span><span class="o">-</span><span class="n">random</span><span class="err">：</span><span class="n">任意选择数据淘汰</span><span class="err">，</span><span class="n">相当于随机</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">第三类</span><span class="o">**</span><span class="err">：</span><span class="n">放弃数据驱逐</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="k">no</span><span class="o">-</span><span class="n">enviction</span><span class="err">（</span><span class="n">驱逐</span><span class="err">）：</span><span class="n">禁止驱逐数据</span><span class="p">(</span><span class="n">redis4</span><span class="mf">.0</span><span class="n">中默认策略</span><span class="p">)</span><span class="err">，</span><span class="n">会引发OOM</span><span class="p">(</span><span class="k">Out</span><span class="w"> </span><span class="k">Of</span><span class="w"> </span><span class="n">Memory</span><span class="p">)</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">注意</span><span class="err">：</span><span class="n">这些策略是配置到哪个属性上</span><span class="err">？</span><span class="n">怎么配置</span><span class="err">？</span><span class="n">如下所示</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">maxmemory</span><span class="o">-</span><span class="n">policy</span><span class="w"> </span><span class="n">volatile</span><span class="o">-</span><span class="n">lru</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">数据淘汰策略配置依据</span><span class="o">**</span><span class="w"></span>
+
+<span class="w"> </span><span class="n">使用INFO命令输出监控信息</span><span class="err">，</span><span class="n">查询缓存</span><span class="w"> </span><span class="n">hit</span><span class="w"> </span><span class="n">和</span><span class="w"> </span><span class="n">miss</span><span class="w"> </span><span class="n">的次数</span><span class="err">，</span><span class="n">根据业务需求调优Redis配置</span><span class="w"></span>
+
+<span class="err">##</span><span class="w"> </span><span class="mf">2.</span><span class="n">主从复制</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">2.1</span><span class="w"> </span><span class="n">主从复制简介</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">2.1.1</span><span class="w"> </span><span class="n">高可用</span><span class="w"></span>
+
+<span class="n">首先我们要理解互联网应用因为其独有的特性我们演化出的</span><span class="o">**</span><span class="n">三高</span><span class="o">**</span><span class="n">架构</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">高并发</span><span class="w"></span>
+
+<span class="w">  </span><span class="o">&gt;</span><span class="w"> </span><span class="n">应用要提供某一业务要能支持很多客户端同时访问的能力</span><span class="err">，</span><span class="n">我们称为并发</span><span class="err">，</span><span class="n">高并发意思就很明确了</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">高性能</span><span class="w"></span>
+
+<span class="w">  </span><span class="o">&gt;</span><span class="n">性能带给我们最直观的感受就是</span><span class="err">：</span><span class="n">速度快</span><span class="err">，</span><span class="n">时间短</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">高可用</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">可用性</span><span class="o">**</span><span class="err">：</span><span class="n">一年中应用服务正常运行的时间占全年时间的百分比</span><span class="err">，</span><span class="n">如下图</span><span class="err">：</span><span class="n">表示了应用服务在全年宕机的时间</span><span class="w"></span>
+
+<span class="n">我们把这些时间加在一起就是全年应用服务不可用的时间</span><span class="err">，</span><span class="n">然后我们可以得到应用服务全年可用的时间</span><span class="w"></span>
+
+<span class="o">&gt;</span><span class="mi">4</span><span class="n">小时27分15秒</span><span class="o">+</span><span class="mi">11</span><span class="n">分36秒</span><span class="o">+</span><span class="mi">2</span><span class="n">分16秒</span><span class="o">=</span><span class="mi">4</span><span class="n">小时41分7秒</span><span class="o">=</span><span class="mi">16867</span><span class="n">秒</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="mi">1</span><span class="n">年</span><span class="o">=</span><span class="mi">365</span><span class="o">*</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">=</span><span class="mi">31536000</span><span class="n">秒</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">可用性</span><span class="o">=</span><span class="err">（</span><span class="mi">31536000</span><span class="o">-</span><span class="mi">16867</span><span class="err">）</span><span class="o">/</span><span class="mi">31536000</span><span class="o">*</span><span class="mi">100</span><span class="o">%=</span><span class="mf">99.9465151</span><span class="o">%</span><span class="w"></span>
+
+<span class="n">业界可用性目标</span><span class="o">**</span><span class="mi">5</span><span class="n">个9</span><span class="err">，</span><span class="n">即99</span><span class="mf">.999</span><span class="o">%**</span><span class="err">，</span><span class="n">即服务器年宕机时长低于315秒</span><span class="err">，</span><span class="n">约5</span><span class="mf">.25</span><span class="n">分钟</span><span class="w"></span>
+
+
+
+<span class="err">####</span><span class="w"> </span><span class="mf">2.1.2</span><span class="w"> </span><span class="n">主从复制概念</span><span class="w"></span>
+
+<span class="n">知道了三高的概念之后</span><span class="err">，</span><span class="n">我们想</span><span class="err">：</span><span class="n">你的</span><span class="err">“</span><span class="n">Redis</span><span class="err">”</span><span class="n">是否高可用</span><span class="err">？</span><span class="n">那我们要来分析单机redis的风险与问题</span><span class="w"></span>
+
+<span class="n">问题1</span><span class="p">.</span><span class="n">机器故障</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">现象</span><span class="err">：</span><span class="n">硬盘故障</span><span class="err">、</span><span class="n">系统崩溃</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">本质</span><span class="err">：</span><span class="n">数据丢失</span><span class="err">，</span><span class="n">很可能对业务造成灾难性打击</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">结论</span><span class="err">：</span><span class="n">基本上会放弃使用redis</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">问题2</span><span class="p">.</span><span class="n">容量瓶颈</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">现象</span><span class="err">：</span><span class="n">内存不足</span><span class="err">，</span><span class="n">从16G升级到64G</span><span class="err">，</span><span class="n">从64G升级到128G</span><span class="err">，</span><span class="n">无限升级内存</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">本质</span><span class="err">：</span><span class="n">穷</span><span class="err">，</span><span class="n">硬件条件跟不上</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">结论</span><span class="err">：</span><span class="n">放弃使用redis</span><span class="w"></span>
+
+<span class="n">结论</span><span class="err">：</span><span class="w"></span>
+
+<span class="n">为了避免单点Redis服务器故障</span><span class="err">，</span><span class="n">准备多台服务器</span><span class="err">，</span><span class="n">互相连通</span><span class="err">。</span><span class="n">将数据复制多个副本保存在不同的服务器上</span><span class="err">，</span><span class="n">连接在一起</span><span class="err">，</span><span class="n">并保证数据是同步的</span><span class="err">。</span><span class="n">即使有其中一台服务器宕机</span><span class="err">，</span><span class="n">其他服务器依然可以继续提供服务</span><span class="err">，</span><span class="n">实现Redis的高可用</span><span class="err">，</span><span class="n">同时实现数据冗余备份</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">多台服务器连接方案</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">提供数据方</span><span class="err">：</span><span class="o">**</span><span class="n">master</span><span class="o">**</span><span class="w"></span>
+
+<span class="n">主服务器</span><span class="err">，</span><span class="n">主节点</span><span class="err">，</span><span class="n">主库主客户端</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">接收数据方</span><span class="err">：</span><span class="o">**</span><span class="n">slave</span><span class="o">**</span><span class="w"></span>
+
+<span class="n">从服务器</span><span class="err">，</span><span class="n">从节点</span><span class="err">，</span><span class="n">从库</span><span class="w"></span>
+
+<span class="n">从客户端</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">需要解决的问题</span><span class="err">：</span><span class="w"></span>
+
+<span class="n">数据同步</span><span class="err">（</span><span class="n">master的数据复制到slave中</span><span class="err">）</span><span class="w"></span>
+
+
+
+<span class="n">这里我们可以来解释主从复制的概念</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">概念</span><span class="err">：</span><span class="n">主从复制即将master中的数据即时</span><span class="err">、</span><span class="n">有效的复制到slave中</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">特征</span><span class="o">**</span><span class="err">：</span><span class="n">一个master可以拥有多个slave</span><span class="err">，</span><span class="n">一个slave只对应一个master</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">职责</span><span class="o">**</span><span class="err">：</span><span class="n">master和slave各自的职责不一样</span><span class="w"></span>
+
+<span class="nl">master</span><span class="p">:</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">写数据</span><span class="w"></span>
+
+<span class="n">执行写操作时</span><span class="err">，</span><span class="n">将出现变化的数据自动同步到slave</span><span class="w"></span>
+
+<span class="n">读数据</span><span class="err">（</span><span class="n">可忽略</span><span class="err">）</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="nl">slave</span><span class="p">:</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">读数据</span><span class="w"></span>
+
+<span class="n">写数据</span><span class="err">（</span><span class="n">禁止</span><span class="err">）</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">2.1.3</span><span class="w"> </span><span class="n">主从复制的作用</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">读写分离</span><span class="err">：</span><span class="n">master写</span><span class="err">、</span><span class="n">slave读</span><span class="err">，</span><span class="n">提高服务器的读写负载能力</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">负载均衡</span><span class="err">：</span><span class="n">基于主从结构</span><span class="err">，</span><span class="n">配合读写分离</span><span class="err">，</span><span class="n">由slave分担master负载</span><span class="err">，</span><span class="n">并根据需求的变化</span><span class="err">，</span><span class="n">改变slave的数</span><span class="w"> </span><span class="n">量</span><span class="err">，</span><span class="n">通过多个从节点分担数据读取负载</span><span class="err">，</span><span class="n">大大提高Redis服务器并发量与数据吞吐量</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">故障恢复</span><span class="err">：</span><span class="n">当master出现问题时</span><span class="err">，</span><span class="n">由slave提供服务</span><span class="err">，</span><span class="n">实现快速的故障恢复</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">数据冗余</span><span class="err">：</span><span class="n">实现数据热备份</span><span class="err">，</span><span class="n">是持久化之外的一种数据冗余方式</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">高可用基石</span><span class="err">：</span><span class="n">基于主从复制</span><span class="err">，</span><span class="n">构建哨兵模式与集群</span><span class="err">，</span><span class="n">实现Redis的高可用方案</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">2.2</span><span class="w"> </span><span class="n">主从复制工作流程</span><span class="w"></span>
+
+<span class="n">主从复制过程大体可以分为3个阶段</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">建立连接阶段</span><span class="err">（</span><span class="n">即准备阶段</span><span class="err">）</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">数据同步阶段</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">命令传播阶段</span><span class="err">（</span><span class="n">反复同步</span><span class="err">）</span><span class="w"></span>
+
+<span class="n">而命令的传播其实有4种</span><span class="err">，</span><span class="n">分别如下</span><span class="err">：</span><span class="w"></span>
+
+
+
+<span class="err">####</span><span class="w"> </span><span class="mf">2.2.1</span><span class="w"> </span><span class="n">主从复制的工作流程</span><span class="err">（</span><span class="n">三个阶段</span><span class="err">）</span><span class="w"></span>
+
+<span class="err">#####</span><span class="w"> </span><span class="mf">2.2.1.1</span><span class="w"> </span><span class="n">阶段一</span><span class="err">：</span><span class="n">建立连接</span><span class="w"></span>
+
+<span class="n">建立slave到master的连接</span><span class="err">，</span><span class="n">使master能够识别slave</span><span class="err">，</span><span class="n">并保存slave端口号</span><span class="w"></span>
+
+<span class="n">流程如下</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">步骤1</span><span class="err">：</span><span class="n">设置master的地址和端口</span><span class="err">，</span><span class="n">保存master信息</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">步骤2</span><span class="err">：</span><span class="n">建立socket连接</span><span class="w"></span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">步骤3</span><span class="err">：</span><span class="n">发送ping命令</span><span class="err">（</span><span class="n">定时器任务</span><span class="err">）</span><span class="w"></span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">步骤4</span><span class="err">：</span><span class="n">身份验证</span><span class="w"></span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">步骤5</span><span class="err">：</span><span class="n">发送slave端口信息</span><span class="w"></span>
+
+<span class="n">至此</span><span class="err">，</span><span class="n">主从连接成功</span><span class="err">！</span><span class="w"></span>
+
+<span class="n">当前状态</span><span class="err">：</span><span class="w"></span>
+
+<span class="n">slave</span><span class="err">：</span><span class="n">保存master的地址与端口</span><span class="w"></span>
+
+<span class="n">master</span><span class="err">：</span><span class="n">保存slave的端口</span><span class="w"></span>
+
+<span class="n">总体</span><span class="err">：</span><span class="n">之间创建了连接的socket</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">master和slave互联</span><span class="o">**</span><span class="w"></span>
+
+<span class="n">接下来就要通过某种方式将master和slave连接到一起</span><span class="w"></span>
+
+<span class="n">方式一</span><span class="err">：</span><span class="n">客户端发送命令</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">slaveof</span><span class="w"> </span><span class="n">masterip</span><span class="w"> </span><span class="n">masterport</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">方式二</span><span class="err">：</span><span class="n">启动服务器参数</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="w"> </span><span class="o">--</span><span class="n">slaveof</span><span class="w"> </span><span class="n">masterip</span><span class="w"> </span><span class="n">masterport</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">方式三</span><span class="err">：</span><span class="n">服务器配置</span><span class="err">（</span><span class="o">**</span><span class="n">主流方式</span><span class="o">**</span><span class="err">）</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">slaveof</span><span class="w"> </span><span class="n">masterip</span><span class="w"> </span><span class="n">masterport</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">slave系统信息</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">master_link_down_since_seconds</span><span class="w"></span>
+<span class="n">masterhost</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">masterport</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">master系统信息</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">uslave_listening_port</span><span class="p">(</span><span class="n">多个</span><span class="p">)</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">主从断开连接</span><span class="o">**</span><span class="w"></span>
+
+<span class="n">断开slave与master的连接</span><span class="err">，</span><span class="n">slave断开连接后</span><span class="err">，</span><span class="n">不会删除已有数据</span><span class="err">，</span><span class="n">只是不再接受master发送的数据</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">slaveof</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">one</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">授权访问</span><span class="o">**</span><span class="w"></span>
+
+<span class="n">master客户端发送命令设置密码</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">requirepass</span><span class="w"> </span><span class="n">password</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">master配置文件设置密码</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">config</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">requirepass</span><span class="w"> </span><span class="n">password</span><span class="w"></span>
+<span class="n">config</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="n">requirepass</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">slave客户端发送命令设置密码</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">auth</span><span class="w"> </span><span class="n">password</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">slave配置文件设置密码</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">masterauth</span><span class="w"> </span><span class="n">password</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">slave启动服务器设置密码</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="w"> </span><span class="err">–</span><span class="n">a</span><span class="w"> </span><span class="n">password</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+
+
+<span class="err">#####</span><span class="w"> </span><span class="mf">2.2.1.2</span><span class="w"> </span><span class="n">阶段二</span><span class="err">：</span><span class="n">数据同步</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">在slave初次连接master后</span><span class="err">，</span><span class="n">复制master中的所有数据到slave</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">将slave的数据库状态更新成master当前的数据库状态</span><span class="w"></span>
+
+<span class="n">同步过程如下</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">步骤1</span><span class="err">：</span><span class="n">请求同步数据</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">步骤2</span><span class="err">：</span><span class="n">创建RDB同步数据</span><span class="w"></span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">步骤3</span><span class="err">：</span><span class="n">恢复RDB同步数据</span><span class="w"></span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">步骤4</span><span class="err">：</span><span class="n">请求部分同步数据</span><span class="w"></span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">步骤5</span><span class="err">：</span><span class="n">恢复部分同步数据</span><span class="w"></span>
+
+<span class="n">至此</span><span class="err">，</span><span class="n">数据同步工作完成</span><span class="err">！</span><span class="w"></span>
+
+<span class="n">当前状态</span><span class="err">：</span><span class="w"></span>
+
+<span class="n">slave</span><span class="err">：</span><span class="n">具有master端全部数据</span><span class="err">，</span><span class="n">包含RDB过程接收的数据</span><span class="w"></span>
+
+<span class="n">master</span><span class="err">：</span><span class="n">保存slave当前数据同步的位置</span><span class="w"></span>
+
+<span class="n">总体</span><span class="err">：</span><span class="n">之间完成了数据克隆</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">数据同步阶段master说明</span><span class="o">**</span><span class="w"></span>
+
+<span class="mi">1</span><span class="err">：</span><span class="n">如果master数据量巨大</span><span class="err">，</span><span class="n">数据同步阶段应避开流量高峰期</span><span class="err">，</span><span class="n">避免造成master阻塞</span><span class="err">，</span><span class="n">影响业务正常执行</span><span class="w"></span>
+
+<span class="mi">2</span><span class="err">：</span><span class="n">复制缓冲区大小设定不合理</span><span class="err">，</span><span class="n">会导致数据溢出</span><span class="err">。</span><span class="n">如进行全量复制周期太长</span><span class="err">，</span><span class="n">进行部分复制时发现数据已经存在丢失的情况</span><span class="err">，</span><span class="n">必须进行第二次全量复制</span><span class="err">，</span><span class="n">致使slave陷入死循环状态</span><span class="err">。</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">repl</span><span class="o">-</span><span class="n">backlog</span><span class="o">-</span><span class="k">size</span><span class="w"> </span><span class="vm">?</span><span class="n">mb</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="w"> </span><span class="n">master单机内存占用主机内存的比例不应过大</span><span class="err">，</span><span class="n">建议使用50</span><span class="o">%-</span><span class="mi">70</span><span class="o">%</span><span class="n">的内存</span><span class="err">，</span><span class="n">留下30</span><span class="o">%-</span><span class="mi">50</span><span class="o">%</span><span class="n">的内存用于执</span><span class="w"> </span><span class="n">行bgsave命令和创建复制缓冲区</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">数据同步阶段slave说明</span><span class="o">**</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">为避免slave进行全量复制</span><span class="err">、</span><span class="n">部分复制时服务器响应阻塞或数据不同步</span><span class="err">，</span><span class="n">建议关闭此期间的对外服务</span><span class="w"></span>
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="w">   </span><span class="n">slave</span><span class="o">-</span><span class="n">serve</span><span class="o">-</span><span class="n">stale</span><span class="o">-</span><span class="k">data</span><span class="w"> </span><span class="n">yes</span><span class="o">|</span><span class="k">no</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="w"> </span><span class="n">数据同步阶段</span><span class="err">，</span><span class="n">master发送给slave信息可以理解master是slave的一个客户端</span><span class="err">，</span><span class="n">主动向slave发送命令</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="w"> </span><span class="n">多个slave同时对master请求数据同步</span><span class="err">，</span><span class="n">master发送的RDB文件增多</span><span class="err">，</span><span class="n">会对带宽造成巨大冲击</span><span class="err">，</span><span class="n">如果master带宽不足</span><span class="err">，</span><span class="n">因此数据同步需要根据业务需求</span><span class="err">，</span><span class="n">适量错峰</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="w"> </span><span class="n">slave过多时</span><span class="err">，</span><span class="n">建议调整拓扑结构</span><span class="err">，</span><span class="n">由一主多从结构变为树状结构</span><span class="err">，</span><span class="n">中间的节点既是master</span><span class="err">，</span><span class="n">也是</span><span class="w"> </span><span class="n">slave</span><span class="err">。</span><span class="n">注意使用树状结构时</span><span class="err">，</span><span class="n">由于层级深度</span><span class="err">，</span><span class="n">导致深度越高的slave与最顶层master间数据同步延迟</span><span class="w"> </span><span class="n">较大</span><span class="err">，</span><span class="n">数据一致性变差</span><span class="err">，</span><span class="n">应谨慎选择</span><span class="w"></span>
+
+<span class="err">#####</span><span class="w"> </span><span class="mf">2.2.1.3</span><span class="w"> </span><span class="n">阶段三</span><span class="err">：</span><span class="n">命令传播</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">当master数据库状态被修改后</span><span class="err">，</span><span class="n">导致主从服务器数据库状态不一致</span><span class="err">，</span><span class="n">此时需要让主从数据同步到一致的状态</span><span class="err">，</span><span class="n">同步的动作称为命令传播</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">master将接收到的数据变更命令发送给slave</span><span class="err">，</span><span class="n">slave接收命令后执行命令</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">命令传播阶段的部分复制</span><span class="o">**</span><span class="w"></span>
+
+<span class="n">命令传播阶段出现了断网现象</span><span class="err">：</span><span class="w"></span>
+
+<span class="n">网络闪断闪连</span><span class="err">：</span><span class="n">忽略</span><span class="w"></span>
+
+<span class="n">短时间网络中断</span><span class="err">：</span><span class="n">部分复制</span><span class="w"></span>
+
+<span class="n">长时间网络中断</span><span class="err">：</span><span class="n">全量复制</span><span class="w"></span>
+
+
+
+<span class="n">这里我们主要来看部分复制</span><span class="err">，</span><span class="n">部分复制的三个核心要素</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">服务器的运行</span><span class="w"> </span><span class="n">id</span><span class="err">（</span><span class="n">run</span><span class="w"> </span><span class="n">id</span><span class="err">）</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">主服务器的复制积压缓冲区</span><span class="w"></span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">主从服务器的复制偏移量</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">服务器运行ID</span><span class="err">（</span><span class="n">runid</span><span class="err">）</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">概念</span><span class="err">：</span><span class="n">服务器运行ID是每一台服务器每次运行的身份识别码</span><span class="err">，</span><span class="n">一台服务器多次运行可以生成多个运行id</span><span class="w"></span>
+
+<span class="n">组成</span><span class="err">：</span><span class="n">运行id由40位字符组成</span><span class="err">，</span><span class="n">是一个随机的十六进制字符</span><span class="w"></span>
+<span class="n">例如</span><span class="err">：</span><span class="n">fdc9ff13b9bbaab28db42b3d50f852bb5e3fcdce</span><span class="w"></span>
+
+<span class="n">作用</span><span class="err">：</span><span class="n">运行id被用于在服务器间进行传输</span><span class="err">，</span><span class="n">识别身份</span><span class="w"></span>
+<span class="n">如果想两次操作均对同一台服务器进行</span><span class="err">，</span><span class="n">必须每次操作携带对应的运行id</span><span class="err">，</span><span class="n">用于对方识别</span><span class="w"></span>
+
+<span class="n">实现方式</span><span class="err">：</span><span class="n">运行id在每台服务器启动时自动生成的</span><span class="err">，</span><span class="n">master在首次连接slave时</span><span class="err">，</span><span class="n">会将自己的运行ID发送给slave</span><span class="err">，</span><span class="w"></span>
+<span class="n">slave保存此ID</span><span class="err">，</span><span class="n">通过info</span><span class="w"> </span><span class="n">Server命令</span><span class="err">，</span><span class="n">可以查看节点的runid</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">复制缓冲区</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">概念</span><span class="err">：</span><span class="n">复制缓冲区</span><span class="err">，</span><span class="n">又名复制积压缓冲区</span><span class="err">，</span><span class="n">是一个先进先出</span><span class="err">（</span><span class="n">FIFO</span><span class="err">）</span><span class="n">的队列</span><span class="err">，</span><span class="n">用于存储服务器执行过的命令</span><span class="err">，</span><span class="n">每次传播命令</span><span class="err">，</span><span class="n">master都会将传播的命令记录下来</span><span class="err">，</span><span class="n">并存储在复制缓冲区</span><span class="w"></span>
+<span class="w">    </span><span class="n">复制缓冲区默认数据存储空间大小是1M</span><span class="w"></span>
+<span class="w">    </span><span class="n">当入队元素的数量大于队列长度时</span><span class="err">，</span><span class="n">最先入队的元素会被弹出</span><span class="err">，</span><span class="n">而新元素会被放入队列</span><span class="w"></span>
+<span class="n">作用</span><span class="err">：</span><span class="n">用于保存master收到的所有指令</span><span class="err">（</span><span class="n">仅影响数据变更的指令</span><span class="err">，</span><span class="n">例如set</span><span class="err">，</span><span class="k">select</span><span class="err">）</span><span class="w"></span>
+
+<span class="n">数据来源</span><span class="err">：</span><span class="n">当master接收到主客户端的指令时</span><span class="err">，</span><span class="n">除了将指令执行</span><span class="err">，</span><span class="n">会将该指令存储到缓冲区中</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">复制缓冲区内部工作原理</span><span class="err">：</span><span class="w"></span>
+
+<span class="n">组成</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">偏移量</span><span class="w"></span>
+
+<span class="w">  </span><span class="o">&gt;</span><span class="n">概念</span><span class="err">：</span><span class="n">一个数字</span><span class="err">，</span><span class="n">描述复制缓冲区中的指令字节位置</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;</span><span class="n">分类</span><span class="err">：</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;-</span><span class="w"> </span><span class="n">master复制偏移量</span><span class="err">：</span><span class="n">记录发送给所有slave的指令字节对应的位置</span><span class="err">（</span><span class="n">多个</span><span class="err">）</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;-</span><span class="w"> </span><span class="n">slave复制偏移量</span><span class="err">：</span><span class="n">记录slave接收master发送过来的指令字节对应的位置</span><span class="err">（</span><span class="n">一个</span><span class="err">）</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;</span><span class="n">作用</span><span class="err">：</span><span class="n">同步信息</span><span class="err">，</span><span class="n">比对master与slave的差异</span><span class="err">，</span><span class="n">当slave断线后</span><span class="err">，</span><span class="n">恢复数据使用</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;</span><span class="n">数据来源</span><span class="err">：</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;-</span><span class="w"> </span><span class="n">master端</span><span class="err">：</span><span class="n">发送一次记录一次</span><span class="w"></span>
+<span class="w">  </span><span class="o">&gt;-</span><span class="w"> </span><span class="n">slave端</span><span class="err">：</span><span class="n">接收一次记录一次</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">字节值</span><span class="w"></span>
+
+<span class="n">工作原理</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">通过offset区分不同的slave当前数据传播的差异</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">master记录已发送的信息对应的offset</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">slave记录已接收的信息对应的offset</span><span class="w"></span>
+
+
+
+<span class="err">####</span><span class="w"> </span><span class="mf">2.2.2</span><span class="w"> </span><span class="n">流程更新</span><span class="p">(</span><span class="n">全量复制</span><span class="o">/</span><span class="n">部分复制</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">我们再次的总结一下主从复制的三个阶段的工作流程</span><span class="err">：</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">2.2.3</span><span class="w"> </span><span class="n">心跳机制</span><span class="w"></span>
+
+<span class="n">什么是心跳机制</span><span class="err">？</span><span class="w"></span>
+
+<span class="n">进入命令传播阶段候</span><span class="err">，</span><span class="n">master与slave间需要进行信息交换</span><span class="err">，</span><span class="n">使用心跳机制进行维护</span><span class="err">，</span><span class="n">实现双方连接保持在线</span><span class="w"></span>
+
+<span class="n">master心跳</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">内部指令</span><span class="err">：</span><span class="n">PING</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">周期</span><span class="err">：</span><span class="n">由repl</span><span class="o">-</span><span class="n">ping</span><span class="o">-</span><span class="n">slave</span><span class="o">-</span><span class="n">period决定</span><span class="err">，</span><span class="n">默认10秒</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">作用</span><span class="err">：</span><span class="n">判断slave是否在线</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">查询</span><span class="err">：</span><span class="n">INFO</span><span class="w"> </span><span class="k">replication</span><span class="w">  </span><span class="n">获取slave最后一次连接时间间隔</span><span class="err">，</span><span class="n">lag项维持在0或1视为正常</span><span class="w"></span>
+
+<span class="n">slave心跳任务</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">内部指令</span><span class="err">：</span><span class="n">REPLCONF</span><span class="w"> </span><span class="n">ACK</span><span class="w"> </span><span class="err">{</span><span class="n">offset</span><span class="err">}</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">周期</span><span class="err">：</span><span class="mi">1</span><span class="n">秒</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">作用1</span><span class="err">：</span><span class="n">汇报slave自己的复制偏移量</span><span class="err">，</span><span class="n">获取最新的数据变更指令</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">作用2</span><span class="err">：</span><span class="n">判断master是否在线</span><span class="w"></span>
+
+<span class="n">心跳阶段注意事项</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">当slave多数掉线</span><span class="err">，</span><span class="n">或延迟过高时</span><span class="err">，</span><span class="n">master为保障数据稳定性</span><span class="err">，</span><span class="n">将拒绝所有信息同步</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="nf">min</span><span class="o">-</span><span class="n">slaves</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="k">write</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="nf">min</span><span class="o">-</span><span class="n">slaves</span><span class="o">-</span><span class="nf">max</span><span class="o">-</span><span class="n">lag</span><span class="w"> </span><span class="mi">8</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">slave数量少于2个</span><span class="err">，</span><span class="n">或者所有slave的延迟都大于等于8秒时</span><span class="err">，</span><span class="n">强制关闭master写功能</span><span class="err">，</span><span class="n">停止数据同步</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">slave数量由slave发送REPLCONF</span><span class="w"> </span><span class="n">ACK命令做确认</span><span class="w"></span>
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">slave延迟由slave发送REPLCONF</span><span class="w"> </span><span class="n">ACK命令做确认</span><span class="w"></span>
+
+
+
+<span class="n">至此</span><span class="err">：</span><span class="n">我们可以总结出完整的主从复制流程</span><span class="err">：</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">2.3</span><span class="w"> </span><span class="n">主从复制常见问题</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">2.3.1</span><span class="w"> </span><span class="n">频繁的全量复制</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">伴随着系统的运行</span><span class="err">，</span><span class="n">master的数据量会越来越大</span><span class="err">，</span><span class="n">一旦master重启</span><span class="err">，</span><span class="n">runid将发生变化</span><span class="err">，</span><span class="n">会导致全部slave的全量复制操作</span><span class="w"></span>
+
+
+<span class="n">内部优化调整方案</span><span class="err">：</span><span class="w"></span>
+
+<span class="mi">1</span><span class="err">：</span><span class="n">master内部创建master_replid变量</span><span class="err">，</span><span class="n">使用runid相同的策略生成</span><span class="err">，</span><span class="n">长度41位</span><span class="err">，</span><span class="n">并发送给所有slave</span><span class="w"></span>
+
+<span class="mi">2</span><span class="err">：</span><span class="n">在master关闭时执行命令shutdown</span><span class="w"> </span><span class="k">save</span><span class="err">，</span><span class="n">进行RDB持久化</span><span class="p">,</span><span class="n">将runid与offset保存到RDB文件中</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">repl</span><span class="o">-</span><span class="n">id</span><span class="w">  </span><span class="n">repl</span><span class="o">-</span><span class="n">offset</span><span class="w"></span>
+
+<span class="n">通过redis</span><span class="o">-</span><span class="k">check</span><span class="o">-</span><span class="n">rdb命令可以查看该信息</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="mi">3</span><span class="err">：</span><span class="n">master重启后加载RDB文件</span><span class="err">，</span><span class="n">恢复数据</span><span class="err">，</span><span class="n">重启后</span><span class="err">，</span><span class="n">将RDB文件中保存的repl</span><span class="o">-</span><span class="n">id与repl</span><span class="o">-</span><span class="n">offset加载到内存中</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">master_repl_id</span><span class="o">=</span><span class="n">repl</span><span class="w">  </span><span class="n">master_repl_offset</span><span class="w"> </span><span class="o">=</span><span class="n">repl</span><span class="o">-</span><span class="n">offset</span><span class="w"></span>
+
+<span class="n">通过info命令可以查看该信息</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">作用</span><span class="err">：</span><span class="n">本机保存上次runid</span><span class="err">，</span><span class="n">重启后恢复该值</span><span class="err">，</span><span class="n">使所有slave认为还是之前的master</span><span class="w"></span>
+
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">第二种出现频繁全量复制的问题现象</span><span class="err">：</span><span class="n">网络环境不佳</span><span class="err">，</span><span class="n">出现网络中断</span><span class="err">，</span><span class="n">slave不提供服务</span><span class="w"></span>
+
+
+<span class="n">问题原因</span><span class="err">：</span><span class="n">复制缓冲区过小</span><span class="err">，</span><span class="n">断网后slave的offset越界</span><span class="err">，</span><span class="n">触发全量复制</span><span class="w"></span>
+
+<span class="n">最终结果</span><span class="err">：</span><span class="n">slave反复进行全量复制</span><span class="w"></span>
+
+<span class="n">解决方案</span><span class="err">：</span><span class="n">修改复制缓冲区大小</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">repl</span><span class="o">-</span><span class="n">backlog</span><span class="o">-</span><span class="k">size</span><span class="w"> </span><span class="vm">?</span><span class="n">mb</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">建议设置如下</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">测算从master到slave的重连平均时长second</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">获取master平均每秒产生写命令数据总量write_size_per_second</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">最优复制缓冲区空间</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">second</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">write_size_per_second</span><span class="w"></span>
+
+
+
+<span class="err">####</span><span class="w"> </span><span class="mf">2.3.2</span><span class="w"> </span><span class="n">频繁的网络中断</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">问题现象</span><span class="err">：</span><span class="n">master的CPU占用过高</span><span class="w"> </span><span class="n">或</span><span class="w"> </span><span class="n">slave频繁断开连接</span><span class="w"></span>
+
+
+<span class="n">问题原因</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">slave每1秒发送REPLCONFACK命令到master</span><span class="w"></span>
+
+<span class="n">当slave接到了慢查询时</span><span class="err">（</span><span class="n">keys</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="err">，</span><span class="n">hgetall等</span><span class="err">），</span><span class="n">会大量占用CPU性能</span><span class="w"></span>
+
+<span class="n">master每1秒调用复制定时函数replicationCron</span><span class="p">()</span><span class="err">，</span><span class="n">比对slave发现长时间没有进行响应</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">最终结果</span><span class="err">：</span><span class="n">master各种资源</span><span class="err">（</span><span class="n">输出缓冲区</span><span class="err">、</span><span class="n">带宽</span><span class="err">、</span><span class="n">连接等</span><span class="err">）</span><span class="n">被严重占用</span><span class="w"></span>
+
+<span class="n">解决方案</span><span class="err">：</span><span class="n">通过设置合理的超时时间</span><span class="err">，</span><span class="n">确认是否释放slave</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">repl</span><span class="o">-</span><span class="n">timeout</span><span class="w"> </span><span class="n">seconds</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">该参数定义了超时时间的阈值</span><span class="err">（</span><span class="n">默认60秒</span><span class="err">），</span><span class="n">超过该值</span><span class="err">，</span><span class="n">释放slave</span><span class="w"></span>
+
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">问题现象</span><span class="err">：</span><span class="n">slave与master连接断开</span><span class="w"></span>
+
+
+<span class="n">问题原因</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">master发送ping指令频度较低</span><span class="w"></span>
+
+<span class="n">master设定超时时间较短</span><span class="w"></span>
+
+<span class="n">ping指令在网络中存在丢包</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">解决方案</span><span class="err">：</span><span class="n">提高ping指令发送的频度</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">repl</span><span class="o">-</span><span class="n">ping</span><span class="o">-</span><span class="n">slave</span><span class="o">-</span><span class="n">period</span><span class="w"> </span><span class="n">seconds</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">超时时间repl</span><span class="o">-</span><span class="n">time的时间至少是ping指令频度的5到10倍</span><span class="err">，</span><span class="n">否则slave很容易判定超时</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">2.3.3</span><span class="w"> </span><span class="n">数据不一致</span><span class="w"></span>
+
+<span class="n">问题现象</span><span class="err">：</span><span class="n">多个slave获取相同数据不同步</span><span class="w"></span>
+
+<span class="n">问题原因</span><span class="err">：</span><span class="n">网络信息不同步</span><span class="err">，</span><span class="n">数据发送有延迟</span><span class="w"></span>
+
+<span class="n">解决方案</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">优化主从间的网络环境</span><span class="err">，</span><span class="n">通常放置在同一个机房部署</span><span class="err">，</span><span class="n">如使用阿里云等云服务器时要注意此现象</span><span class="w"></span>
+
+<span class="n">监控主从节点延迟</span><span class="err">（</span><span class="n">通过offset</span><span class="err">）</span><span class="n">判断</span><span class="err">，</span><span class="n">如果slave延迟过大</span><span class="err">，</span><span class="n">暂时屏蔽程序对该slave的数据访问</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">slave</span><span class="o">-</span><span class="n">serve</span><span class="o">-</span><span class="n">stale</span><span class="o">-</span><span class="k">data</span><span class="w">  </span><span class="n">yes</span><span class="o">|</span><span class="k">no</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">开启后仅响应info</span><span class="err">、</span><span class="n">slaveof等少数命令</span><span class="err">（</span><span class="n">慎用</span><span class="err">，</span><span class="n">除非对数据一致性要求很高</span><span class="err">）</span><span class="w"></span>
+
+<span class="err">##</span><span class="w"> </span><span class="mf">3.</span><span class="n">哨兵模式</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">3.1</span><span class="w"> </span><span class="n">哨兵简介</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">3.1.1</span><span class="w"> </span><span class="n">哨兵概念</span><span class="w"></span>
+
+<span class="n">首先我们来看一个业务场景</span><span class="err">：</span><span class="n">如果redis的master宕机了</span><span class="err">，</span><span class="n">此时应该怎么办</span><span class="err">？</span><span class="w"></span>
+
+<span class="n">那此时我们可能需要从一堆的slave中重新选举出一个新的master</span><span class="err">，</span><span class="n">那这个操作过程是什么样的呢</span><span class="err">？</span><span class="n">这里面会有什么问题出现呢</span><span class="err">？</span><span class="w"></span>
+
+<span class="n">要实现这些功能</span><span class="err">，</span><span class="n">我们就需要redis的哨兵</span><span class="err">，</span><span class="n">那哨兵是什么呢</span><span class="err">？</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">哨兵</span><span class="o">**</span><span class="w"></span>
+
+<span class="n">哨兵</span><span class="p">(</span><span class="n">sentinel</span><span class="p">)</span><span class="w"> </span><span class="n">是一个分布式系统</span><span class="err">，</span><span class="n">用于对主从结构中的每台服务器进行</span><span class="o">**</span><span class="n">监控</span><span class="o">**</span><span class="err">，</span><span class="n">当出现故障时通过</span><span class="o">**</span><span class="n">投票</span><span class="o">**</span><span class="n">机制</span><span class="o">**</span><span class="n">选择</span><span class="o">**</span><span class="n">新的master并将所有slave连接到新的master</span><span class="err">。</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">3.1.2</span><span class="w"> </span><span class="n">哨兵作用</span><span class="w"></span>
+
+<span class="n">哨兵的作用</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">监控</span><span class="err">：</span><span class="n">监控master和slave</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">不断的检查master和slave是否正常运行</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">master存活检测</span><span class="err">、</span><span class="n">master与slave运行情况检测</span><span class="w"></span>
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">通知</span><span class="err">（</span><span class="n">提醒</span><span class="err">）：</span><span class="n">当被监控的服务器出现问题时</span><span class="err">，</span><span class="n">向其他</span><span class="err">（</span><span class="n">哨兵间</span><span class="err">，</span><span class="n">客户端</span><span class="err">）</span><span class="n">发送通知</span><span class="w"></span>
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">自动故障转移</span><span class="err">：</span><span class="n">断开master与slave连接</span><span class="err">，</span><span class="n">选取一个slave作为master</span><span class="err">，</span><span class="n">将其他slave连接新的master</span><span class="err">，</span><span class="n">并告知客户端新的服务器地址</span><span class="w"></span>
+
+<span class="n">注意</span><span class="err">：</span><span class="n">哨兵也是一台redis服务器</span><span class="err">，</span><span class="n">只是不提供数据相关服务</span><span class="err">，</span><span class="n">通常哨兵的数量配置为单数</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">3.2</span><span class="w"> </span><span class="n">启用哨兵</span><span class="w"></span>
+
+<span class="n">配置哨兵</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">配置一拖二的主从结构</span><span class="err">（</span><span class="n">利用之前的方式启动即可</span><span class="err">）</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">配置三个哨兵</span><span class="err">（</span><span class="n">配置相同</span><span class="err">，</span><span class="n">端口不同</span><span class="err">），</span><span class="n">参看sentinel</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
+
+<span class="mi">1</span><span class="err">：</span><span class="n">设置哨兵监听的主服务器信息</span><span class="err">，</span><span class="w"> </span><span class="n">sentinel_number表示参与投票的哨兵数量</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">sentinel</span><span class="w"> </span><span class="n">monitor</span><span class="w"> </span><span class="n">master_name</span><span class="w">  </span><span class="n">master_host</span><span class="w">   </span><span class="n">master_port</span><span class="w">  </span><span class="n">sentinel_number</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+<span class="mi">2</span><span class="err">：</span><span class="n">设置判定服务器宕机时长</span><span class="err">，</span><span class="n">该设置控制是否进行主从切换</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">sentinel</span><span class="w"> </span><span class="n">down</span><span class="o">-</span><span class="k">after</span><span class="o">-</span><span class="n">milliseconds</span><span class="w"> </span><span class="n">master_name</span><span class="w">    </span><span class="n">million_seconds</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="mi">3</span><span class="err">：</span><span class="n">设置故障切换的最大超时时</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">sentinel</span><span class="w"> </span><span class="n">failover</span><span class="o">-</span><span class="n">timeout</span><span class="w"> </span><span class="n">master_name</span><span class="w">   </span><span class="n">million_seconds</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="mi">4</span><span class="err">：</span><span class="n">设置主从切换后</span><span class="err">，</span><span class="n">同时进行数据同步的slave数量</span><span class="err">，</span><span class="n">数值越大</span><span class="err">，</span><span class="n">要求网络资源越高</span><span class="err">，</span><span class="n">数值越小</span><span class="err">，</span><span class="n">同步时间越长</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">sentinel</span><span class="w"> </span><span class="n">parallel</span><span class="o">-</span><span class="n">syncs</span><span class="w"> </span><span class="n">master_name</span><span class="w"> </span><span class="n">sync_slave_number</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">启动哨兵</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">redis</span><span class="o">-</span><span class="n">sentinel</span><span class="w"> </span><span class="n">filename</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">3.3</span><span class="w"> </span><span class="n">哨兵工作原理</span><span class="w"></span>
+
+<span class="n">哨兵在进行主从切换过程中经历三个阶段</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">监控</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">通知</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">故障转移</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">3.3.1</span><span class="w"> </span><span class="n">监控</span><span class="w"></span>
+
+<span class="n">用于同步各个节点的状态信息</span><span class="w"></span>
+
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">获取各个sentinel的状态</span><span class="err">（</span><span class="n">是否在线</span><span class="err">）</span><span class="w"></span>
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">获取master的状态</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">master属性</span><span class="w"></span>
+<span class="w">    </span><span class="n">prunid</span><span class="w"></span>
+<span class="w">    </span><span class="n">prole</span><span class="err">：</span><span class="n">master</span><span class="w"></span>
+<span class="n">各个slave的详细信息</span><span class="w">    </span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">获取所有slave的状态</span><span class="err">（</span><span class="n">根据master中的slave信息</span><span class="err">）</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">markdown</span><span class="w"></span>
+<span class="n">slave属性</span><span class="w"></span>
+<span class="w">    </span><span class="n">prunid</span><span class="w"></span>
+<span class="w">    </span><span class="n">prole</span><span class="err">：</span><span class="n">slave</span><span class="w"></span>
+<span class="w">    </span><span class="n">pmaster_host</span><span class="err">、</span><span class="n">master_port</span><span class="w"></span>
+<span class="w">    </span><span class="n">poffset</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">其内部的工作原理具体如下</span><span class="err">：</span><span class="w"></span>
+
+
+
+<span class="err">####</span><span class="w"> </span><span class="mf">3.3.2</span><span class="w"> </span><span class="n">通知</span><span class="w"></span>
+
+<span class="n">sentinel在通知阶段要不断的去获取master</span><span class="o">/</span><span class="n">slave的信息</span><span class="err">，</span><span class="n">然后在各个sentinel之间进行共享</span><span class="err">，</span><span class="n">具体的流程如下</span><span class="err">：</span><span class="w"></span>
+
+<span class="err">####</span><span class="w"> </span><span class="mf">3.3.3</span><span class="w"> </span><span class="n">故障转移</span><span class="w"></span>
+
+<span class="n">当master宕机后sentinel是如何知晓并判断出master是真的宕机了呢</span><span class="err">？</span><span class="n">我们来看具体的操作流程</span><span class="w"></span>
+
+<span class="n">当sentinel认定master下线之后</span><span class="err">，</span><span class="n">此时需要决定更换master</span><span class="err">，</span><span class="n">那这件事由哪个sentinel来做呢</span><span class="err">？</span><span class="n">这时候sentinel之间要进行选举</span><span class="err">，</span><span class="n">如下图所示</span><span class="err">：</span><span class="w"></span>
+
+<span class="n">在选举的时候每一个人手里都有一票</span><span class="err">，</span><span class="n">而每一个人的又都想当这个处理事故的人</span><span class="err">，</span><span class="n">那怎么办</span><span class="err">？</span><span class="n">大家就开始抢</span><span class="err">，</span><span class="n">于是每个人都会发出一个指令</span><span class="err">，</span><span class="n">在内网里边告诉大家我要当选举人</span><span class="err">，</span><span class="n">比如说现在的sentinel1和sentinel4发出这个选举指令了</span><span class="err">，</span><span class="n">那么sentinel2既能接到sentinel1的也能接到sentinel4的</span><span class="err">，</span><span class="n">接到了他们的申请以后呢</span><span class="err">，</span><span class="n">sentinel2他就会把他的一票投给其中一方</span><span class="err">，</span><span class="n">投给谁呢</span><span class="err">？</span><span class="n">谁先过来我投给谁</span><span class="err">，</span><span class="n">假设sentinel1先过来</span><span class="err">，</span><span class="n">所以这个票就给到了sentinel1</span><span class="err">。</span><span class="n">那么给过去以后呢</span><span class="err">，</span><span class="n">现在sentinel1就拿到了一票</span><span class="err">，</span><span class="n">按照这样的一种形式</span><span class="err">，</span><span class="n">最终会有一个选举结果</span><span class="err">。</span><span class="n">对应的选举最终得票多的</span><span class="err">，</span><span class="n">那自然就成为了处理事故的人</span><span class="err">。</span><span class="n">需要注意在这个过程中有可能会存在失败的现象</span><span class="err">，</span><span class="n">就是一轮选举完没有选取</span><span class="err">，</span><span class="n">那就会接着进行第二轮第三轮直到完成选举</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">接下来就是由选举胜出的sentinel去从slave中选一个新的master出来的工作</span><span class="err">，</span><span class="n">这个流程是什么样的呢</span><span class="err">？</span><span class="w"></span>
+
+<span class="n">首先它有一个在服务器列表中挑选备选master的原则</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">不在线的OUT</span><span class="w"></span>
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">响应慢的OUT</span><span class="w"></span>
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">与原master断开时间久的OUT</span><span class="w"></span>
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">优先原则</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">优先级</span><span class="w"></span>
+<span class="w">            </span><span class="n">offset</span><span class="w"></span>
+<span class="w">            </span><span class="n">runid</span><span class="w"></span>
+
+<span class="n">选出新的master之后</span><span class="err">，</span><span class="n">发送指令</span><span class="err">（</span><span class="w"> </span><span class="n">sentinel</span><span class="w"> </span><span class="err">）</span><span class="n">给其他的slave</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">向新的master发送slaveof</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">one</span><span class="w"></span>
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">向其他slave发送slaveof</span><span class="w"> </span><span class="n">新masterIP端口</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">总结</span><span class="o">**</span><span class="err">：</span><span class="n">故障转移阶段</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">发现问题</span><span class="err">，</span><span class="n">主观下线与客观下线</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">竞选负责人</span><span class="w"></span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">优选新master</span><span class="w"></span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">新master上任</span><span class="err">，</span><span class="n">其他slave切换master</span><span class="err">，</span><span class="n">原master作为slave故障恢复后连接</span><span class="w"></span>
+
+<span class="err">##</span><span class="w"> </span><span class="mf">4.</span><span class="n">集群cluster</span><span class="w"></span>
+
+<span class="n">现状问题</span><span class="err">：</span><span class="n">业务发展过程中遇到的峰值瓶颈</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">redis提供的服务OPS可以达到10万</span><span class="o">/</span><span class="n">秒</span><span class="err">，</span><span class="n">当前业务OPS已经达到10万</span><span class="o">/</span><span class="n">秒</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">内存单机容量达到256G</span><span class="err">，</span><span class="n">当前业务需求内存容量1T</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">使用集群的方式可以快速解决上述问题</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">4.1</span><span class="w"> </span><span class="n">集群简介</span><span class="w"></span>
+
+<span class="n">集群就是使用网络将若干台计算机联通起来</span><span class="err">，</span><span class="n">并提供统一的管理方式</span><span class="err">，</span><span class="n">使其对外呈现单机的服务效果</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">集群作用</span><span class="err">：</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">分散单台服务器的访问压力</span><span class="err">，</span><span class="n">实现负载均衡</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">分散单台服务器的存储压力</span><span class="err">，</span><span class="n">实现可扩展性</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">降低单台服务器宕机带来的业务灾难</span><span class="w"></span>
+
+
+
+<span class="err">###</span><span class="w"> </span><span class="mf">4.2</span><span class="w"> </span><span class="n">Cluster集群结构设计</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">数据存储设计</span><span class="err">：</span><span class="o">**</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">通过算法设计</span><span class="err">，</span><span class="n">计算出key应该保存的位置</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="w"> </span><span class="n">将所有的存储空间计划切割成16384份</span><span class="err">，</span><span class="n">每台主机保存一部分</span><span class="w"></span>
+
+<span class="w">   </span><span class="n">注意</span><span class="err">：</span><span class="n">每份代表的是一个存储空间</span><span class="err">，</span><span class="n">不是一个key的保存空间</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="w"> </span><span class="n">将key按照计算出的结果放到对应的存储空间</span><span class="w"></span>
+
+
+
+<span class="n">那redis的集群是如何增强可扩展性的呢</span><span class="err">？</span><span class="n">譬如我们要增加一个集群节点</span><span class="w"></span>
+
+
+
+<span class="n">当我们查找数据时</span><span class="err">，</span><span class="n">集群是如何操作的呢</span><span class="err">？</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">各个数据库相互通信</span><span class="err">，</span><span class="n">保存各个库中槽的编号数据</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">一次命中</span><span class="err">，</span><span class="n">直接返回</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">一次未命中</span><span class="err">，</span><span class="n">告知具体位置</span><span class="w"></span>
+
+
+
+<span class="err">###</span><span class="w"> </span><span class="mf">4.3</span><span class="w"> </span><span class="n">Cluster集群结构搭建</span><span class="w"></span>
+
+<span class="n">首先要明确的几个要点</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">配置服务器</span><span class="err">（</span><span class="mi">3</span><span class="n">主3从</span><span class="err">）</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">建立通信</span><span class="err">（</span><span class="n">Meet</span><span class="err">）</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">分槽</span><span class="err">（</span><span class="n">Slot</span><span class="err">）</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">搭建主从</span><span class="err">（</span><span class="n">master</span><span class="o">-</span><span class="n">slave</span><span class="err">）</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">Cluster配置</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">是否启用cluster</span><span class="err">，</span><span class="n">加入cluster节点</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">cluster</span><span class="o">-</span><span class="n">enabled</span><span class="w"> </span><span class="n">yes</span><span class="o">|</span><span class="k">no</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">cluster配置文件名</span><span class="err">，</span><span class="n">该文件属于自动生成</span><span class="err">，</span><span class="n">仅用于快速查找文件并查询文件内容</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">cluster</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="k">file</span><span class="w"> </span><span class="n">filename</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">节点服务响应超时时间</span><span class="err">，</span><span class="n">用于判定该节点是否下线或切换为从节点</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">cluster</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="n">timeout</span><span class="w"> </span><span class="n">milliseconds</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">master连接的slave最小数量</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">cluster</span><span class="o">-</span><span class="n">migration</span><span class="o">-</span><span class="n">barrier</span><span class="w"> </span><span class="n">min_slave_number</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">Cluster节点操作命令</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">-</span><span class="w">  </span><span class="n">查看集群节点信息</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">cluster</span><span class="w"> </span><span class="n">nodes</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">更改slave指向新的master</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">cluster</span><span class="w"> </span><span class="nf">replicate</span><span class="w"> </span><span class="n">master</span><span class="o">-</span><span class="n">id</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">发现一个新节点</span><span class="err">，</span><span class="n">新增master</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">cluster</span><span class="w"> </span><span class="n">meet</span><span class="w"> </span><span class="nl">ip</span><span class="p">:</span><span class="n">port</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">忽略一个没有solt的节点</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">cluster</span><span class="w"> </span><span class="n">forget</span><span class="w"> </span><span class="n">server_id</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">手动故障转移</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">cluster</span><span class="w"> </span><span class="n">failover</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">集群操作命令</span><span class="err">：</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">创建集群</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"> </span><span class="err">–</span><span class="o">-</span><span class="n">cluster</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="nl">masterhost1</span><span class="p">:</span><span class="n">masterport1</span><span class="w"> </span><span class="nl">masterhost2</span><span class="p">:</span><span class="n">masterport2</span><span class="w">  </span><span class="nl">masterhost3</span><span class="p">:</span><span class="n">masterport3</span><span class="w"> </span><span class="o">[</span><span class="n">masterhostn:masterportn …</span><span class="o">]</span><span class="w"> </span><span class="nl">slavehost1</span><span class="p">:</span><span class="n">slaveport1</span><span class="w">  </span><span class="nl">slavehost2</span><span class="p">:</span><span class="n">slaveport2</span><span class="w"> </span><span class="nl">slavehost3</span><span class="p">:</span><span class="n">slaveport3</span><span class="w"> </span><span class="o">-</span><span class="err">–</span><span class="n">cluster</span><span class="o">-</span><span class="n">replicas</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">注意</span><span class="err">：</span><span class="n">master与slave的数量要匹配</span><span class="err">，</span><span class="n">一个master对应n个slave</span><span class="err">，</span><span class="n">由最后的参数n决定</span><span class="w"></span>
+
+<span class="n">master与slave的匹配顺序为第一个master与前n个slave分为一组</span><span class="err">，</span><span class="n">形成主从结构</span><span class="w"></span>
+
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">添加master到当前集群中</span><span class="err">，</span><span class="n">连接时可以指定任意现有节点地址与端口</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="w"> </span><span class="k">add</span><span class="o">-</span><span class="n">node</span><span class="w"> </span><span class="k">new</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="k">host</span><span class="err">:</span><span class="k">new</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">port</span><span class="w"> </span><span class="n">now</span><span class="o">-</span><span class="k">host</span><span class="err">:</span><span class="n">now</span><span class="o">-</span><span class="n">port</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">添加slave</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="w"> </span><span class="k">add</span><span class="o">-</span><span class="n">node</span><span class="w"> </span><span class="k">new</span><span class="o">-</span><span class="n">slave</span><span class="o">-</span><span class="k">host</span><span class="err">:</span><span class="k">new</span><span class="o">-</span><span class="n">slave</span><span class="o">-</span><span class="n">port</span><span class="w"> </span><span class="n">master</span><span class="o">-</span><span class="k">host</span><span class="err">:</span><span class="n">master</span><span class="o">-</span><span class="n">port</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="o">-</span><span class="n">slave</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">id</span><span class="w"> </span><span class="n">masterid</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">删除节点</span><span class="err">，</span><span class="n">如果删除的节点是master</span><span class="err">，</span><span class="n">必须保障其中没有槽slot</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="w"> </span><span class="n">del</span><span class="o">-</span><span class="n">node</span><span class="w"> </span><span class="n">del</span><span class="o">-</span><span class="n">slave</span><span class="o">-</span><span class="k">host</span><span class="err">:</span><span class="n">del</span><span class="o">-</span><span class="n">slave</span><span class="o">-</span><span class="n">port</span><span class="w"> </span><span class="n">del</span><span class="o">-</span><span class="n">slave</span><span class="o">-</span><span class="n">id</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">重新分槽</span><span class="err">，</span><span class="n">分槽是从具有槽的master中划分一部分给其他master</span><span class="err">，</span><span class="n">过程中不创建新的槽</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="w"> </span><span class="n">reshard</span><span class="w"> </span><span class="k">new</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="k">host</span><span class="err">:</span><span class="k">new</span><span class="o">-</span><span class="nl">master</span><span class="p">:</span><span class="n">port</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="o">-</span><span class="k">from</span><span class="w"> </span><span class="n">src</span><span class="o">-</span><span class="w">  </span><span class="n">master</span><span class="o">-</span><span class="n">id1</span><span class="p">,</span><span class="w"> </span><span class="n">src</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">id2</span><span class="p">,</span><span class="w"> </span><span class="n">src</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">idn</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="o">-</span><span class="k">to</span><span class="w"> </span><span class="n">target</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">id</span><span class="w"> </span><span class="o">--</span><span class="w">  </span><span class="n">cluster</span><span class="o">-</span><span class="n">slots</span><span class="w"> </span><span class="n">slots</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="n">注意</span><span class="err">：</span><span class="n">将需要参与分槽的所有masterid不分先后顺序添加到参数中</span><span class="err">，</span><span class="n">使用</span><span class="err">，</span><span class="n">分隔</span><span class="w"></span>
+
+<span class="n">指定目标得到的槽的数量</span><span class="err">，</span><span class="n">所有的槽将平均从每个来源的master处获取</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">重新分配槽</span><span class="err">，</span><span class="n">从具有槽的master中分配指定数量的槽到另一个master中</span><span class="err">，</span><span class="n">常用于清空指定master中的槽</span><span class="w"></span>
+
+<span class="err">​```</span><span class="n">properties</span><span class="w"></span>
+<span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="w"> </span><span class="n">reshard</span><span class="w"> </span><span class="n">src</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="k">host</span><span class="err">:</span><span class="n">src</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">port</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="o">-</span><span class="k">from</span><span class="w"> </span><span class="n">src</span><span class="o">-</span><span class="w">  </span><span class="n">master</span><span class="o">-</span><span class="n">id</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="o">-</span><span class="k">to</span><span class="w"> </span><span class="n">target</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">id</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="o">-</span><span class="n">slots</span><span class="w"> </span><span class="n">slots</span><span class="w"> </span><span class="o">--</span><span class="n">cluster</span><span class="o">-</span><span class="n">yes</span><span class="w"></span>
+<span class="err">​```</span><span class="w"></span>
+
+<span class="err">##</span><span class="w"> </span><span class="mf">5.</span><span class="n">企业级解决方案</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">5.1</span><span class="w"> </span><span class="n">缓存预热</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">场景</span><span class="o">**</span><span class="err">：“</span><span class="n">宕机</span><span class="err">”</span><span class="w"></span>
+
+<span class="n">服务器启动后迅速宕机</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">问题排查</span><span class="o">**</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">请求数量较高</span><span class="err">，</span><span class="n">大量的请求过来之后都需要去从缓存中获取数据</span><span class="err">，</span><span class="n">但是缓存中又没有</span><span class="err">，</span><span class="n">此时从数据库中查找数据然后将数据再存入缓存</span><span class="err">，</span><span class="n">造成了短期内对redis的高强度操作从而导致问题</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">主从之间数据吞吐量较大</span><span class="err">，</span><span class="n">数据同步操作频度较高</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">解决方案</span><span class="err">：</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">前置准备工作</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">日常例行统计数据访问记录</span><span class="err">，</span><span class="n">统计访问频度较高的热点数据</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">利用LRU数据删除策略</span><span class="err">，</span><span class="n">构建数据留存队列例如</span><span class="err">：</span><span class="n">storm与kafka配合</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">准备工作</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">将统计结果中的数据分类</span><span class="err">，</span><span class="n">根据级别</span><span class="err">，</span><span class="n">redis优先加载级别较高的热点数据</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">利用分布式多服务器同时进行数据读取</span><span class="err">，</span><span class="n">提速数据加载过程</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">热点数据主从同时预热</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">实施</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="n">使用脚本程序固定触发数据预热过程</span><span class="w"></span>
+
+<span class="mf">5.</span><span class="n">如果条件允许</span><span class="err">，</span><span class="n">使用了CDN</span><span class="err">（</span><span class="n">内容分发网络</span><span class="err">），</span><span class="n">效果会更好</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">总的来说</span><span class="o">**</span><span class="err">：</span><span class="n">缓存预热就是系统启动前</span><span class="err">，</span><span class="n">提前将相关的缓存数据直接加载到缓存系统</span><span class="err">。</span><span class="n">避免在用户请求的时候</span><span class="err">，</span><span class="n">先查询数据库</span><span class="err">，</span><span class="n">然后再将数据缓存的问题</span><span class="err">！</span><span class="n">用户直接查询事先被预热的缓存数据</span><span class="err">！</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">5.2</span><span class="w"> </span><span class="n">缓存雪崩</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">场景</span><span class="o">**</span><span class="err">：</span><span class="n">数据库服务器崩溃</span><span class="err">，</span><span class="n">一连串的场景会随之儿来</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">系统平稳运行过程中</span><span class="err">，</span><span class="n">忽然数据库连接量激增</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">应用服务器无法及时处理请求</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">大量408</span><span class="err">，</span><span class="mi">500</span><span class="n">错误页面出现</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="n">客户反复刷新页面获取数据</span><span class="w"></span>
+
+<span class="mf">5.</span><span class="n">数据库崩溃</span><span class="w"></span>
+
+<span class="mf">6.</span><span class="n">应用服务器崩溃</span><span class="w"></span>
+
+<span class="mf">7.</span><span class="n">重启应用服务器无效</span><span class="w"></span>
+
+<span class="mf">8.</span><span class="n">Redis服务器崩溃</span><span class="w"></span>
+
+<span class="mf">9.</span><span class="n">Redis集群崩溃</span><span class="w"></span>
+
+<span class="mf">10.</span><span class="n">重启数据库后再次被瞬间流量放倒</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">问题排查</span><span class="o">**</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">在一个较短的时间内</span><span class="err">，</span><span class="n">缓存中较多的key集中过期</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">此周期内请求访问过期的数据</span><span class="err">，</span><span class="n">redis未命中</span><span class="err">，</span><span class="n">redis向数据库获取数据</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">数据库同时接收到大量的请求无法及时处理</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="n">Redis大量请求被积压</span><span class="err">，</span><span class="n">开始出现超时现象</span><span class="w"></span>
+
+<span class="mf">5.</span><span class="n">数据库流量激增</span><span class="err">，</span><span class="n">数据库崩溃</span><span class="w"></span>
+
+<span class="mf">6.</span><span class="n">重启后仍然面对缓存中无数据可用</span><span class="w"></span>
+
+<span class="mf">7.</span><span class="n">Redis服务器资源被严重占用</span><span class="err">，</span><span class="n">Redis服务器崩溃</span><span class="w"></span>
+
+<span class="mf">8.</span><span class="n">Redis集群呈现崩塌</span><span class="err">，</span><span class="n">集群瓦解</span><span class="w"></span>
+
+<span class="mf">9.</span><span class="n">应用服务器无法及时得到数据响应请求</span><span class="err">，</span><span class="n">来自客户端的请求数量越来越多</span><span class="err">，</span><span class="n">应用服务器崩溃</span><span class="w"></span>
+
+<span class="mf">10.</span><span class="n">应用服务器</span><span class="err">，</span><span class="n">redis</span><span class="err">，</span><span class="n">数据库全部重启</span><span class="err">，</span><span class="n">效果不理想</span><span class="w"></span>
+
+
+
+<span class="n">总而言之就两点</span><span class="err">：</span><span class="n">短时间范围内</span><span class="err">，</span><span class="n">大量key集中过期</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">解决方案</span><span class="o">**</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">思路</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">更多的页面静态化处理</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">构建多级缓存架构</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">Nginx缓存</span><span class="o">+</span><span class="n">redis缓存</span><span class="o">+</span><span class="n">ehcache缓存</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">检测Mysql严重耗时业务进行优化</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">对数据库的瓶颈排查</span><span class="err">：</span><span class="n">例如超时查询</span><span class="err">、</span><span class="n">耗时较高事务等</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="n">灾难预警机制</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">监控redis服务器性能指标</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">CPU占用</span><span class="err">、</span><span class="n">CPU使用率</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">内存容量</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">查询平均响应时间</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">线程数</span><span class="w"></span>
+
+<span class="mf">5.</span><span class="n">限流</span><span class="err">、</span><span class="n">降级</span><span class="w"></span>
+
+<span class="n">短时间范围内牺牲一些客户体验</span><span class="err">，</span><span class="n">限制一部分请求访问</span><span class="err">，</span><span class="n">降低应用服务器压力</span><span class="err">，</span><span class="n">待业务低速运转后再逐步放开访问</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">落地实践</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">LRU与LFU切换</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">数据有效期策略调整</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">根据业务数据有效期进行分类错峰</span><span class="err">，</span><span class="n">A类90分钟</span><span class="err">，</span><span class="n">B类80分钟</span><span class="err">，</span><span class="n">C类70分钟</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">过期时间使用固定时间</span><span class="o">+</span><span class="n">随机值的形式</span><span class="err">，</span><span class="n">稀释集中到期的key的数量</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">超热数据使用永久key</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="n">定期维护</span><span class="err">（</span><span class="n">自动</span><span class="o">+</span><span class="n">人工</span><span class="err">）</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">对即将过期数据做访问量分析</span><span class="err">，</span><span class="n">确认是否延时</span><span class="err">，</span><span class="n">配合访问量统计</span><span class="err">，</span><span class="n">做热点数据的延时</span><span class="w"></span>
+
+<span class="mf">5.</span><span class="n">加锁</span><span class="err">：</span><span class="n">慎用</span><span class="err">！</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">总的来说</span><span class="o">**</span><span class="err">：</span><span class="n">缓存雪崩就是瞬间过期数据量太大</span><span class="err">，</span><span class="n">导致对数据库服务器造成压力</span><span class="err">。</span><span class="n">如能够有效避免过期时间集中</span><span class="err">，</span><span class="n">可以有效解决雪崩现象的</span><span class="w"> </span><span class="n">出现</span><span class="err">（</span><span class="n">约40</span><span class="o">%</span><span class="err">），</span><span class="n">配合其他策略一起使用</span><span class="err">，</span><span class="n">并监控服务器的运行数据</span><span class="err">，</span><span class="n">根据运行记录做快速调整</span><span class="err">。</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">5.3</span><span class="w"> </span><span class="n">缓存击穿</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">场景</span><span class="o">**</span><span class="err">：</span><span class="n">还是数据库服务器崩溃</span><span class="err">，</span><span class="n">但是跟之前的场景有点不太一样</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">系统平稳运行过程中</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">数据库连接量瞬间激增</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">Redis服务器无大量key过期</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="n">Redis内存平稳</span><span class="err">，</span><span class="n">无波动</span><span class="w"></span>
+
+<span class="mf">5.</span><span class="n">Redis服务器CPU正常</span><span class="w"></span>
+
+<span class="mf">6.</span><span class="n">数据库崩溃</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">问题排查</span><span class="err">：</span><span class="o">**</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">Redis中某个key过期</span><span class="err">，</span><span class="n">该key访问量巨大</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">多个数据请求从服务器直接压到Redis后</span><span class="err">，</span><span class="n">均未命中</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">Redis在短时间内发起了大量对数据库中同一数据的访问</span><span class="w"></span>
+
+
+
+<span class="n">总而言之就两点</span><span class="err">：</span><span class="n">单个key高热数据</span><span class="err">，</span><span class="n">key过期</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">解决方案</span><span class="o">**</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">预先设定</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">以电商为例</span><span class="err">，</span><span class="n">每个商家根据店铺等级</span><span class="err">，</span><span class="n">指定若干款主打商品</span><span class="err">，</span><span class="n">在购物节期间</span><span class="err">，</span><span class="n">加大此类信息key的过期时长</span><span class="w"> </span><span class="n">注意</span><span class="err">：</span><span class="n">购物节不仅仅指当天</span><span class="err">，</span><span class="n">以及后续若干天</span><span class="err">，</span><span class="n">访问峰值呈现逐渐降低的趋势</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">现场调整</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">监控访问量</span><span class="err">，</span><span class="n">对自然流量激增的数据延长过期时间或设置为永久性key</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">后台刷新数据</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">启动定时任务</span><span class="err">，</span><span class="n">高峰期来临之前</span><span class="err">，</span><span class="n">刷新数据有效期</span><span class="err">，</span><span class="n">确保不丢失</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="n">二级缓存</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">设置不同的失效时间</span><span class="err">，</span><span class="n">保障不会被同时淘汰就行</span><span class="w"></span>
+
+<span class="mf">5.</span><span class="n">加锁</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">分布式锁</span><span class="err">，</span><span class="n">防止被击穿</span><span class="err">，</span><span class="n">但是要注意也是性能瓶颈</span><span class="err">，</span><span class="n">慎重</span><span class="err">！</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">总的来说</span><span class="o">**</span><span class="err">：</span><span class="n">缓存击穿就是单个高热数据过期的瞬间</span><span class="err">，</span><span class="n">数据访问量较大</span><span class="err">，</span><span class="n">未命中redis后</span><span class="err">，</span><span class="n">发起了大量对同一数据的数据库访问</span><span class="err">，</span><span class="n">导致对数</span><span class="w"> </span><span class="n">据库服务器造成压力</span><span class="err">。</span><span class="n">应对策略应该在业务数据分析与预防方面进行</span><span class="err">，</span><span class="n">配合运行监控测试与即时调整策略</span><span class="err">，</span><span class="n">毕竟单个key的过</span><span class="w"> </span><span class="n">期监控难度较高</span><span class="err">，</span><span class="n">配合雪崩处理策略即可</span><span class="err">。</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">5.4</span><span class="w"> </span><span class="n">缓存穿透</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">场景</span><span class="o">**</span><span class="err">：</span><span class="n">数据库服务器又崩溃了</span><span class="err">，</span><span class="n">跟之前的一样吗</span><span class="err">？</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">系统平稳运行过程中</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">应用服务器流量随时间增量较大</span><span class="w"></span>
+
+<span class="mf">3.</span><span class="n">Redis服务器命中率随时间逐步降低</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="n">Redis内存平稳</span><span class="err">，</span><span class="n">内存无压力</span><span class="w"></span>
+
+<span class="mf">5.</span><span class="n">Redis服务器CPU占用激增</span><span class="w"></span>
+
+<span class="mf">6.</span><span class="n">数据库服务器压力激增</span><span class="w"></span>
+
+<span class="mf">7.</span><span class="n">数据库崩溃</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">问题排查</span><span class="err">：</span><span class="o">**</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">Redis中大面积出现未命中</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">出现非正常URL访问</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">问题分析</span><span class="o">**</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">获取的数据在数据库中也不存在</span><span class="err">，</span><span class="n">数据库查询未得到对应数据</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">Redis获取到null数据未进行持久化</span><span class="err">，</span><span class="n">直接返回</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">下次此类数据到达重复上述过程</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">出现黑客攻击服务器</span><span class="w"></span>
+
+<span class="o">**</span><span class="n">解决方案</span><span class="o">**</span><span class="err">：</span><span class="w"></span>
+
+<span class="mf">1.</span><span class="n">缓存null</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">对查询结果为null的数据进行缓存</span><span class="err">（</span><span class="n">长期使用</span><span class="err">，</span><span class="n">定期清理</span><span class="err">），</span><span class="n">设定短时限</span><span class="err">，</span><span class="n">例如30</span><span class="o">-</span><span class="mi">60</span><span class="n">秒</span><span class="err">，</span><span class="n">最高5分钟</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">白名单策略</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">提前预热各种分类数据id对应的bitmaps</span><span class="err">，</span><span class="n">id作为bitmaps的offset</span><span class="err">，</span><span class="n">相当于设置了数据白名单</span><span class="err">。</span><span class="n">当加载正常数据时放行</span><span class="err">，</span><span class="n">加载异常数据时直接拦截</span><span class="err">（</span><span class="n">效率偏低</span><span class="err">）</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">使用布隆过滤器</span><span class="err">（</span><span class="n">有关布隆过滤器的命中问题对当前状况可以忽略</span><span class="err">）</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">实施监控</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">实时监控redis命中率</span><span class="err">（</span><span class="n">业务正常范围时</span><span class="err">，</span><span class="n">通常会有一个波动值</span><span class="err">）</span><span class="n">与null数据的占比</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">非活动时段波动</span><span class="err">：</span><span class="n">通常检测3</span><span class="o">-</span><span class="mi">5</span><span class="n">倍</span><span class="err">，</span><span class="n">超过5倍纳入重点排查对象</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">活动时段波动</span><span class="err">：</span><span class="n">通常检测10</span><span class="o">-</span><span class="mi">50</span><span class="n">倍</span><span class="err">，</span><span class="n">超过50倍纳入重点排查对象</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">根据倍数不同</span><span class="err">，</span><span class="n">启动不同的排查流程</span><span class="err">。</span><span class="n">然后使用黑名单进行防控</span><span class="err">（</span><span class="n">运营</span><span class="err">）</span><span class="w"></span>
+
+<span class="mf">4.</span><span class="n">key加密</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">问题出现后</span><span class="err">，</span><span class="n">临时启动防灾业务key</span><span class="err">，</span><span class="n">对key进行业务层传输加密服务</span><span class="err">，</span><span class="n">设定校验程序</span><span class="err">，</span><span class="n">过来的key校验</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">例如每天随机分配60个加密串</span><span class="err">，</span><span class="n">挑选2到3个</span><span class="err">，</span><span class="n">混淆到页面数据id中</span><span class="err">，</span><span class="n">发现访问key不满足规则</span><span class="err">，</span><span class="n">驳回数据访问</span><span class="w"></span>
+
+
+
+<span class="o">**</span><span class="n">总的来说</span><span class="o">**</span><span class="err">：</span><span class="n">缓存击穿是指访问了不存在的数据</span><span class="err">，</span><span class="n">跳过了合法数据的redis数据缓存阶段</span><span class="err">，</span><span class="n">每次访问数据库</span><span class="err">，</span><span class="n">导致对数据库服务器造成压力</span><span class="err">。</span><span class="n">通常此类数据的出现量是一个较低的值</span><span class="err">，</span><span class="n">当出现此类情况以毒攻毒</span><span class="err">，</span><span class="n">并及时报警</span><span class="err">。</span><span class="n">应对策略应该在临时预案防范方面多做文章</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">无论是黑名单还是白名单</span><span class="err">，</span><span class="n">都是对整体系统的压力</span><span class="err">，</span><span class="n">警报解除后尽快移除</span><span class="err">。</span><span class="w"></span>
+
+<span class="err">###</span><span class="w"> </span><span class="mf">5.5</span><span class="w"> </span><span class="n">性能指标监控</span><span class="w"></span>
+
+<span class="n">redis中的监控指标如下</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">性能指标</span><span class="err">：</span><span class="n">Performance</span><span class="w"></span>
+
+<span class="o">&gt;</span><span class="nl">响应请求的平均时间</span><span class="p">:</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">latency</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">平均每秒处理请求总数</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">instantaneous_ops_per_sec</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">缓存查询命中率</span><span class="err">（</span><span class="n">通过查询总次数与查询得到非nil数据总次数计算而来</span><span class="err">）</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">hit_rate</span><span class="p">(</span><span class="n">calculated</span><span class="p">)</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">内存指标</span><span class="err">：</span><span class="n">Memory</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">当前内存使用量</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">used_memory</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">内存碎片率</span><span class="err">（</span><span class="n">关系到是否进行碎片整理</span><span class="err">）</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">mem_fragmentation_ratio</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">为避免内存溢出删除的key的总数量</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">evicted_keys</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">基于阻塞操作</span><span class="err">（</span><span class="n">BLPOP等</span><span class="err">）</span><span class="n">影响的客户端数量</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">blocked_clients</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">基本活动指标</span><span class="err">：</span><span class="n">Basic_activity</span><span class="w"></span>
+
+<span class="o">&gt;</span><span class="n">当前客户端连接总数</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">connected_clients</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">当前连接slave总数</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">connected_slaves</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">最后一次主从信息交换距现在的秒</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">master_last_io_seconds_ago</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">key的总数</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">keyspace</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">持久性指标</span><span class="err">：</span><span class="n">Persistence</span><span class="w"></span>
+
+<span class="o">&gt;</span><span class="n">当前服务器最后一次RDB持久化的时间</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">rdb_last_save_time</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">当前服务器最后一次RDB持久化后数据变化总量</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">rdb_changes_since_last_save</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+
+
+
+<span class="o">-</span><span class="w"> </span><span class="n">错误指标</span><span class="err">：</span><span class="n">Error</span><span class="w"></span>
+
+<span class="o">&gt;</span><span class="n">被拒绝连接的客户端总数</span><span class="err">（</span><span class="n">基于达到最大连接值的因素</span><span class="err">）</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">rejected_connections</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">key未命中的总次数</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">keyspace_misses</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">主从断开的秒数</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">master_link_down_since_seconds</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+
+
+
+
+
+<span class="n">要对redis的相关指标进行监控</span><span class="err">，</span><span class="n">我们可以采用一些用具</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">CloudInsight</span><span class="w"> </span><span class="n">Redis</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">Prometheus</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">Redis</span><span class="o">-</span><span class="n">stat</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">Redis</span><span class="o">-</span><span class="n">faina</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">RedisLive</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="n">zabbix</span><span class="w"></span>
+
+<span class="n">也有一些命令工具</span><span class="err">：</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">benchmark</span><span class="w"></span>
+
+<span class="o">&gt;</span><span class="n">测试当前服务器的并发性能</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">redis</span><span class="o">-</span><span class="n">benchmark</span><span class="w"> </span><span class="o">[</span><span class="n">-h </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-p </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-c </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-n &lt;requests</span><span class="o">]&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">-k </span><span class="o">]</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">范例1</span><span class="err">：</span><span class="mi">50</span><span class="n">个连接</span><span class="err">，</span><span class="mi">10000</span><span class="n">次请求对应的性能</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">redis</span><span class="o">-</span><span class="n">benchmark</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">范例2</span><span class="err">：</span><span class="mi">100</span><span class="n">个连接</span><span class="err">，</span><span class="mi">5000</span><span class="n">次请求对应的性能</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">redis</span><span class="o">-</span><span class="n">benchmark</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">5000</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+
+<span class="o">-</span><span class="w"> </span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">monitor</span><span class="err">：</span><span class="n">启动服务器调试信息</span><span class="w"></span>
+
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">monitor</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">slowlog</span><span class="err">：</span><span class="n">慢日志</span><span class="w"></span>
+
+<span class="o">&gt;</span><span class="n">获取慢查询日志</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">slowlog</span><span class="w"> </span><span class="o">[</span><span class="n">operator</span><span class="o">]</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w">   </span><span class="k">get</span><span class="w"> </span><span class="err">：</span><span class="n">获取慢查询日志信息</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w">   </span>
+<span class="o">&gt;</span><span class="w">   </span><span class="nf">len</span><span class="w"> </span><span class="err">：</span><span class="n">获取慢查询日志条目数</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w">   </span>
+<span class="o">&gt;</span><span class="w">   </span><span class="n">reset</span><span class="w"> </span><span class="err">：</span><span class="n">重置慢查询日志</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">相关配置</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="n">properties</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">slowlog</span><span class="o">-</span><span class="nf">log</span><span class="o">-</span><span class="n">slower</span><span class="o">-</span><span class="k">than</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">#设置慢查询的时间下线</span><span class="err">，</span><span class="n">单位</span><span class="err">：</span><span class="n">微妙</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">slowlog</span><span class="o">-</span><span class="nf">max</span><span class="o">-</span><span class="nf">len</span><span class="w"> </span><span class="mi">100</span><span class="w">    </span><span class="n">#设置慢查询命令对应的日志显示长度</span><span class="err">，</span><span class="n">单位</span><span class="err">：</span><span class="n">命令数</span><span class="w"></span>
+<span class="o">&gt;</span><span class="err">```</span><span class="w"></span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../day01/" class="md-footer__link md-footer__link--prev" aria-label="上一页: day01" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              day01
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../hosting-and-deployment/combinations/" class="md-footer__link md-footer__link--next" aria-label="下一页: Combinations" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Combinations
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 peaceiris
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/peaceiris" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/piris314en" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
