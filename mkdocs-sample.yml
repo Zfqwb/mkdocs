@@ -67,14 +67,14 @@ extra:
 # Page tree
 nav:
   - "Home": "index.md"
-  - "Material for MkDocs": "material-for-mkdocs.md"
-  - "Getting started":
+  - "Mysql": "material-for-mkdocs.md"
+  - "redis":
       - "Download boilerplate": "getting-started/download-boilerplate.md"
       - "pipenv": "getting-started/pipenv.md"
       - "invoke": "getting-started/invoke.md"
       - "Docker": "getting-started/docker.md"
       - "pip": "getting-started/pip.md"
-  - "Hosting and Deployment":
+  - "MongoDB":
       - "Combinations": "hosting-and-deployment/combinations.md"
       - "Netlify": "hosting-and-deployment/netlify.md"
       - "GitHub Pages": "hosting-and-deployment/github-pages.md"
