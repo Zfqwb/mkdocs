@@ -67,7 +67,7 @@ extra:
 # Page tree
 nav:
   - "Home": "index.md"
-  - "Mysql": "material-for-mkdocs.md"
+  - "Mysql": "MySQL.md"
   - "Redis":
       - "Download boilerplate": "getting-started/download-boilerplate.md"
       - "pipenv": "getting-started/pipenv.md"
