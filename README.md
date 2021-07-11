@@ -88,24 +88,93 @@
 
 ## 框架面试题
 
-- [mkdocs/mkdocs: Project documentation with Markdown - GitHub]
-- [squidfunk/mkdocs-material: A Material Design theme for MkDocs]
+### 1-Spring 是如何管理事务的，事务管理机制？以及隔离级别
 
-[mkdocs/mkdocs: Project documentation with Markdown - GitHub]: https://github.com/mkdocs/mkdocs/
-[squidfunk/mkdocs-material: A Material Design theme for MkDocs]: https://github.com/squidfunk/mkdocs-material
+### 2-Spring AOP的实现原理？
+
+### 3-IOC和DT的关系
+
+### 4-Spring 中用到了那些设计模式？
+
+### 5-Spring中Bean的作用域有哪些？
+
+### 6-spring框架实现实例化和依赖注入的方式分别是什么？
+
+### 7-springMVC的执行流程
+
+### 8-spring和sprinVC中的常用注解
+
+### 9-springfVC和struts2的区别有哪些
+
+### 10-springfVC中的前端控制器和处理器映射器的说明
+
+### 11-springVC如何实现请求参数绑定的
+
+### 12-springMVC获取表单数据的几种方式
+
+### 13-ssm整合流程说明
+
+### 14-mybatis和hibernate的优缺点分析
+
+### 15-mybatis中#和$传参的区别
+
+### 16-mybatis中的动态sql语句是什么意思？
+
+### 17-mybatis映射配置文件的编写规范
+
+### 18-mybatis的执行过程分析
+
+### 19-说说你比较熟悉的设计模式及应用场景？
+
+### 20-两种动态代理的区别
+
 
 
 
 ## 项目面试题
 
-- [MIT License]
-- [The graduate cap icon] made by [Freepik] from [www.flaticon.com] is licensed by [CC 3.0 BY]
+### 1-电商项目中有没有用到多线程，哪些地方要用多线程？
 
-[MIT License]: https://github.com/peaceiris/mkdocs-material-boilerplate/blob/main/LICENSE
-[The graduate cap icon]: https://www.flaticon.com/free-icon/graduate-cap_62627
-[Freepik]: https://www.freepik.com/
-[www.flaticon.com]: https://www.flaticon.com/
-[CC 3.0 BY]: http://creativecommons.org/licenses/by/3.0/
+### 2-日志文件的管理，你们是怎么做的？
+
+### 3-你觉得分布式开发的缺点是什么？
+
+### 4-支付接口是怎么做的？
+
+### 5-so1r怎么设置搜索结果排名靠前（得分）？
+
+### 6-active@在项目中如何应用的？
+
+### 7-activea如果数据提交不成功怎么办？
+
+### 8-单点登录系统是怎么做的？
+
+### 9-dubbo服务开发流程，运行流程？
+
+### 10-solr跟数据库的区别，你清楚么？
+
+### 11-广告数据是怎么用redis缓存的？
+
+### 12-.项目中权限是怎么做的？
+
+### 13-如何处理activeQ消息丢失的问题
+
+### 14-token在项目中的应用？token校验的过程
+
+### 15-so1r和数据库怎么交互的？
+
+### 16-redis缓存与数据库同步，怎么做的？
+
+### 17-fastDFS的执行流程，你清楚么？
+
+### 18-zookeeper集群，全部都挂了，怎么办？
+
+### 19-如何解决购物车内存大小的问题？
+
+### 20-springboot和springoloud的关系
+
+### 21-SpringDataJpa如何使用
+
 
 
 
