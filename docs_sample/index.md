@@ -1,1 +1,1 @@
-https://cdn.jsdelivr.net/gh/Zfqwb/MySQL-RM@1.0/docs/README.md
+../README.md
