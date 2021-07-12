@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://nitto.netlify.app/jquery/</loc>
+         <lastmod>2021-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://nitto.netlify.app/redis/day01/</loc>
          <lastmod>2021-07-12</lastmod>
          <changefreq>daily</changefreq>
