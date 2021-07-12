@@ -1,0 +1,3133 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions.">
+      
+      
+      
+        <meta name="author" content="nitto">
+      
+      
+        <link rel="canonical" href="https://nitto.netlify.app/tantan/day02/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>day02 - Nitto Java Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nitto Java Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              day02
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nitto Java Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jquery/" class="md-nav__link">
+        JQuery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ajax/" class="md-nav__link">
+        AJAX
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/4/" class="md-nav__link">
+        docker部署容器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/5/" class="md-nav__link">
+        Docerfile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/6/" class="md-nav__link">
+        服务编排
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/7/" class="md-nav__link">
+        私有仓库
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/MongoDB/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        项目一-探花交友
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目一-探花交友" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          项目一-探花交友
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          day02
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        day02
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    课程介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、完善个人信息
+  </a>
+  
+    <nav class="md-nav" aria-label="1、完善个人信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1、图片上传
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1、图片上传">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    1.1.1、图片存储解决方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112oss" class="md-nav__link">
+    1.1.2、阿里云OSS存储
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.2、阿里云OSS存储">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1121oss" class="md-nav__link">
+    1.1.2.1、什么是OSS服务？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1122" class="md-nav__link">
+    1.1.2.2、购买服务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1123bucket" class="md-nav__link">
+    1.1.2.3、创建Bucket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1124" class="md-nav__link">
+    1.1.2.4、创建用户
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    1.1.3、导入依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114oss" class="md-nav__link">
+    1.1.4、OSS配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115picuploadservice" class="md-nav__link">
+    1.1.5、PicUploadService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116picuploadcontroller" class="md-nav__link">
+    1.1.6、PicUploadController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    1.1.7、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2、人脸识别
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2、人脸识别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    1.2.1、使用说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122jar" class="md-nav__link">
+    1.2.2、安装jar到本地仓库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    1.2.3、开始使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124" class="md-nav__link">
+    1.2.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3、实现完善个人信息
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3、实现完善个人信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131userinfomapper" class="md-nav__link">
+    1.3.1、UserInfoMapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132userinfoservice" class="md-nav__link">
+    1.3.2、UserInfoService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133userinfocontroller" class="md-nav__link">
+    1.3.3、UserInfoController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144" class="md-nav__link">
+    1.4.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2token" class="md-nav__link">
+    2、校验token
+  </a>
+  
+    <nav class="md-nav" aria-label="2、校验token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21usercontroller" class="md-nav__link">
+    2.1、UserController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22userservice" class="md-nav__link">
+    2.2、UserService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3mongodb" class="md-nav__link">
+    3、MongoDB快速入门
+  </a>
+  
+    <nav class="md-nav" aria-label="3、MongoDB快速入门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31mongodb" class="md-nav__link">
+    3.1、MongoDB简介
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32dockermongodb" class="md-nav__link">
+    3.2、通过docker安装MongoDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33mongodb" class="md-nav__link">
+    3.3、MongoDB基本操作
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3、MongoDB基本操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    3.3.1、基本概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    3.3.2、数据库以及表的操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    3.3.3、新增数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334" class="md-nav__link">
+    3.3.4、更新数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335" class="md-nav__link">
+    3.3.5、删除数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#336" class="md-nav__link">
+    3.3.6、查询数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4、索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5、执行计划
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36ui" class="md-nav__link">
+    3.6、UI客户端工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4springbootmongodb" class="md-nav__link">
+    4、SpringBoot整合MongoDB
+  </a>
+  
+    <nav class="md-nav" aria-label="4、SpringBoot整合MongoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1、导入依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42applicationproperties" class="md-nav__link">
+    4.2、编写application.properties配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3、编写实体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44dao" class="md-nav__link">
+    4.4、编写dao
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5、编写启动类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    4.6、编写单元测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day03/" class="md-nav__link">
+        day03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day04/" class="md-nav__link">
+        day04
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day09/" class="md-nav__link">
+        day09
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_11" type="checkbox" id="__nav_8_11" >
+      
+      <label class="md-nav__link" for="__nav_8_11">
+        补充资料
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="补充资料" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_11">
+          <span class="md-nav__icon md-icon"></span>
+          补充资料
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/lombok/" class="md-nav__link">
+        day01_lombok
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/mybatisPlus/" class="md-nav__link">
+        day01_mybatis_plus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/aliyun/" class="md-nav__link">
+        day01_阿里云
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/sso/" class="md-nav__link">
+        day01_单点登录及jwt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/nginx/" class="md-nav__link">
+        day03_nginx
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/threadlocal/README.md" class="md-nav__link">
+        day03_ThreadLocal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/mongodb/" class="md-nav__link">
+        day04_MongoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/ansy/" class="md-nav__link">
+        day04_多线程@Ansy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        面试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="面试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          面试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/e.g.1.0.0/" class="md-nav__link">
+        e.g.1.0.0
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    课程介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、完善个人信息
+  </a>
+  
+    <nav class="md-nav" aria-label="1、完善个人信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1、图片上传
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1、图片上传">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    1.1.1、图片存储解决方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112oss" class="md-nav__link">
+    1.1.2、阿里云OSS存储
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.2、阿里云OSS存储">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1121oss" class="md-nav__link">
+    1.1.2.1、什么是OSS服务？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1122" class="md-nav__link">
+    1.1.2.2、购买服务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1123bucket" class="md-nav__link">
+    1.1.2.3、创建Bucket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1124" class="md-nav__link">
+    1.1.2.4、创建用户
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    1.1.3、导入依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114oss" class="md-nav__link">
+    1.1.4、OSS配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115picuploadservice" class="md-nav__link">
+    1.1.5、PicUploadService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116picuploadcontroller" class="md-nav__link">
+    1.1.6、PicUploadController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    1.1.7、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2、人脸识别
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2、人脸识别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    1.2.1、使用说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122jar" class="md-nav__link">
+    1.2.2、安装jar到本地仓库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    1.2.3、开始使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124" class="md-nav__link">
+    1.2.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3、实现完善个人信息
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3、实现完善个人信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131userinfomapper" class="md-nav__link">
+    1.3.1、UserInfoMapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132userinfoservice" class="md-nav__link">
+    1.3.2、UserInfoService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133userinfocontroller" class="md-nav__link">
+    1.3.3、UserInfoController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144" class="md-nav__link">
+    1.4.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2token" class="md-nav__link">
+    2、校验token
+  </a>
+  
+    <nav class="md-nav" aria-label="2、校验token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21usercontroller" class="md-nav__link">
+    2.1、UserController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22userservice" class="md-nav__link">
+    2.2、UserService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3mongodb" class="md-nav__link">
+    3、MongoDB快速入门
+  </a>
+  
+    <nav class="md-nav" aria-label="3、MongoDB快速入门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31mongodb" class="md-nav__link">
+    3.1、MongoDB简介
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32dockermongodb" class="md-nav__link">
+    3.2、通过docker安装MongoDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33mongodb" class="md-nav__link">
+    3.3、MongoDB基本操作
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3、MongoDB基本操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    3.3.1、基本概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    3.3.2、数据库以及表的操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    3.3.3、新增数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334" class="md-nav__link">
+    3.3.4、更新数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335" class="md-nav__link">
+    3.3.5、删除数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#336" class="md-nav__link">
+    3.3.6、查询数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4、索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5、执行计划
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36ui" class="md-nav__link">
+    3.6、UI客户端工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4springbootmongodb" class="md-nav__link">
+    4、SpringBoot整合MongoDB
+  </a>
+  
+    <nav class="md-nav" aria-label="4、SpringBoot整合MongoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1、导入依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42applicationproperties" class="md-nav__link">
+    4.2、编写application.properties配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3、编写实体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44dao" class="md-nav__link">
+    4.4、编写dao
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5、编写启动类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    4.6、编写单元测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/tantan/day02/README.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>day02</h1>
+                
+                <h2 id="_1">课程介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>完善个人信息</li>
+<li>阿里云OSS服务应用</li>
+<li>人脸识别</li>
+<li>MongoDB快速入门</li>
+<li>SpringBoot整合MongoDB</li>
+</ul>
+<h2 id="1">1、完善个人信息<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>用户在首次登录时需要完善个人信息，包括性别、昵称、生日、城市、头像等。</p>
+<p>其中，头像数据需要做图片上传，这里采用阿里云的OSS服务作为我们的图片服务器，并且对头像要做人脸识别，非人脸照片不得上传。</p>
+<h3 id="11">1.1、图片上传<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<h4 id="111">1.1.1、图片存储解决方案<a class="headerlink" href="#111" title="Permanent link">&para;</a></h4>
+<p>实现图片上传服务，需要有存储的支持，那么我们的解决方案将以下几种：</p>
+<ol>
+<li>直接将图片保存到服务的硬盘</li>
+<li>优点：开发便捷，成本低</li>
+<li>缺点：扩容困难</li>
+<li>使用分布式文件系统进行存储</li>
+<li>优点：容易实现扩容</li>
+<li>缺点：开发复杂度稍大（有成熟的产品可以使用，比如：FastDFS）</li>
+<li>使用nfs做存储</li>
+<li>优点：开发较为便捷</li>
+<li>缺点：需要有一定的运维知识进行部署和维护</li>
+<li>使用第三方的存储服务</li>
+<li>优点：开发简单，拥有强大功能，免维护</li>
+<li>缺点：付费</li>
+</ol>
+<p>在本套课程中选用阿里云的OSS服务进行图片存储。</p>
+<h4 id="112oss">1.1.2、阿里云OSS存储<a class="headerlink" href="#112oss" title="Permanent link">&para;</a></h4>
+<p>流程：</p>
+<p><img alt="image-20201122161002420" src="assets/image-20201122161002420.png" /></p>
+<h5 id="1121oss">1.1.2.1、什么是OSS服务？<a class="headerlink" href="#1121oss" title="Permanent link">&para;</a></h5>
+<p>地址：https://www.aliyun.com/product/oss</p>
+<p><img alt="image-20201017104006281" src="assets/image-20201017104006281.png" /></p>
+<h5 id="1122">1.1.2.2、购买服务<a class="headerlink" href="#1122" title="Permanent link">&para;</a></h5>
+<p>使用第三方服务最大的缺点就是需要付费，下面，我们看下如何购买开通服务。 </p>
+<p><img alt="image-20201017112543995" src="assets/image-20201017112543995.png" /></p>
+<p><img alt="image-20201017112639162" src="assets/image-20201017112639162.png" /></p>
+<p>购买下行流量包： （不购买也可以使用，按照流量付费）</p>
+<p><img alt="image-20201017112802078" src="assets/image-20201017112802078.png" /></p>
+<blockquote>
+<p>说明：OSS的上行流量是免费的，但是下行流量是需要购买的。</p>
+</blockquote>
+<h5 id="1123bucket">1.1.2.3、创建Bucket<a class="headerlink" href="#1123bucket" title="Permanent link">&para;</a></h5>
+<p>使用OSS，首先需要创建Bucket，Bucket翻译成中文是水桶的意思，把存储的图片资源看做是水，想要盛水必须得有桶，就是这个意思了。</p>
+<p>进入控制台，https://oss.console.aliyun.com/overview</p>
+<p><img alt="image-20201017113211471" src="assets/image-20201017113211471.png" /></p>
+<p>选择Bucket后，即可看到对应的信息，如：url、消耗流量等 :</p>
+<p><img alt="image-20201017113430118" src="assets/image-20201017113430118.png" /></p>
+<p>文件管理：</p>
+<p><img alt="image-20201017113536835" src="assets/image-20201017113536835.png" /></p>
+<p>查看文件：</p>
+<p><img alt="image-20201017113557135" src="assets/image-20201017113557135.png" /></p>
+<h5 id="1124">1.1.2.4、创建用户<a class="headerlink" href="#1124" title="Permanent link">&para;</a></h5>
+<p>创建用户的方式与短信接口中的方式一样，需要设置oss权限。</p>
+<p><img alt="image-20201017114136997" src="assets/image-20201017114136997.png" /></p>
+<h4 id="113">1.1.3、导入依赖<a class="headerlink" href="#113" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.aliyun.oss<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>aliyun-sdk-oss<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>2.8.3<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+
+<h4 id="114oss">1.1.4、OSS配置<a class="headerlink" href="#114oss" title="Permanent link">&para;</a></h4>
+<p>aliyun.properties：</p>
+<div class="codehilite"><pre><span></span><code><span class="na">aliyun.endpoint</span> <span class="o">=</span> <span class="s">http://oss-cn-zhangjiakou.aliyuncs.com</span>
+<span class="na">aliyun.accessKeyId</span> <span class="o">=</span> <span class="s">***********</span>
+<span class="na">aliyun.accessKeySecret</span> <span class="o">=</span> <span class="s">***************</span>
+<span class="na">aliyun.bucketName</span><span class="o">=</span> <span class="s">tanhua-dev</span>
+<span class="na">aliyun.urlPrefix</span><span class="o">=</span><span class="s">http://tanhua-dev.oss-cn-zhangjiakou.aliyuncs.com/</span>
+</code></pre></div>
+
+<p>AliyunConfig：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.config</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.aliyun.oss.OSSClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.context.properties.ConfigurationProperties</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.PropertySource</span><span class="p">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="nd">@PropertySource</span><span class="p">(</span><span class="s">&quot;classpath:aliyun.properties&quot;</span><span class="p">)</span>
+<span class="nd">@ConfigurationProperties</span><span class="p">(</span><span class="n">prefix</span> <span class="o">=</span> <span class="s">&quot;aliyun&quot;</span><span class="p">)</span>
+<span class="nd">@Data</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AliyunConfig</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">endpoint</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">accessKeyId</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">accessKeySecret</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">bucketName</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">urlPrefix</span><span class="p">;</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="n">OSSClient</span> <span class="nf">oSSClient</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">OSSClient</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">accessKeyId</span><span class="p">,</span> <span class="n">accessKeySecret</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="115picuploadservice">1.1.5、PicUploadService<a class="headerlink" href="#115picuploadservice" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.aliyun.oss.OSSClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.config.AliyunConfig</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.vo.PicUploadResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.RandomUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.joda.time.DateTime</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartFile</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.ByteArrayInputStream</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PicUploadService</span> <span class="p">{</span>
+
+    <span class="c1">// 允许上传的格式</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span><span class="o">[]</span> <span class="n">IMAGE_TYPE</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;.bmp&quot;</span><span class="p">,</span> <span class="s">&quot;.jpg&quot;</span><span class="p">,</span>
+            <span class="s">&quot;.jpeg&quot;</span><span class="p">,</span> <span class="s">&quot;.gif&quot;</span><span class="p">,</span> <span class="s">&quot;.png&quot;</span><span class="p">};</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">OSSClient</span> <span class="n">ossClient</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">AliyunConfig</span> <span class="n">aliyunConfig</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">PicUploadResult</span> <span class="nf">upload</span><span class="p">(</span><span class="n">MultipartFile</span> <span class="n">uploadFile</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">PicUploadResult</span> <span class="n">fileUploadResult</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PicUploadResult</span><span class="p">();</span>
+
+        <span class="c1">//图片做校验，对后缀名</span>
+        <span class="kt">boolean</span> <span class="n">isLegal</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">type</span> <span class="p">:</span> <span class="n">IMAGE_TYPE</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">endsWithIgnoreCase</span><span class="p">(</span><span class="n">uploadFile</span><span class="p">.</span><span class="na">getOriginalFilename</span><span class="p">(),</span>
+                    <span class="n">type</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">isLegal</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">isLegal</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">fileUploadResult</span><span class="p">.</span><span class="na">setStatus</span><span class="p">(</span><span class="s">&quot;error&quot;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">fileUploadResult</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 文件新路径</span>
+        <span class="n">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="n">uploadFile</span><span class="p">.</span><span class="na">getOriginalFilename</span><span class="p">();</span>
+        <span class="n">String</span> <span class="n">filePath</span> <span class="o">=</span> <span class="n">getFilePath</span><span class="p">(</span><span class="n">fileName</span><span class="p">);</span>
+
+        <span class="c1">// 上传到阿里云</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">// 目录结构：images/2018/12/29/xxxx.jpg</span>
+            <span class="n">ossClient</span><span class="p">.</span><span class="na">putObject</span><span class="p">(</span><span class="n">aliyunConfig</span><span class="p">.</span><span class="na">getBucketName</span><span class="p">(),</span> <span class="n">filePath</span><span class="p">,</span> <span class="k">new</span>
+                    <span class="n">ByteArrayInputStream</span><span class="p">(</span><span class="n">uploadFile</span><span class="p">.</span><span class="na">getBytes</span><span class="p">()));</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+            <span class="c1">//上传失败</span>
+            <span class="n">fileUploadResult</span><span class="p">.</span><span class="na">setStatus</span><span class="p">(</span><span class="s">&quot;error&quot;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">fileUploadResult</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 上传成功</span>
+        <span class="n">fileUploadResult</span><span class="p">.</span><span class="na">setStatus</span><span class="p">(</span><span class="s">&quot;done&quot;</span><span class="p">);</span>
+        <span class="n">fileUploadResult</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">aliyunConfig</span><span class="p">.</span><span class="na">getUrlPrefix</span><span class="p">()</span> <span class="o">+</span> <span class="n">filePath</span><span class="p">);</span>
+        <span class="n">fileUploadResult</span><span class="p">.</span><span class="na">setUid</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">()));</span>
+
+        <span class="k">return</span> <span class="n">fileUploadResult</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="nf">getFilePath</span><span class="p">(</span><span class="n">String</span> <span class="n">sourceFileName</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">DateTime</span> <span class="n">dateTime</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DateTime</span><span class="p">();</span>
+        <span class="k">return</span> <span class="s">&quot;images/&quot;</span> <span class="o">+</span> <span class="n">dateTime</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="s">&quot;yyyy&quot;</span><span class="p">)</span>
+                <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">dateTime</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="s">&quot;MM&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span>
+                <span class="o">+</span> <span class="n">dateTime</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="s">&quot;dd&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">()</span> <span class="o">+</span>
+                <span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">9999</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;.&quot;</span> <span class="o">+</span>
+                <span class="n">StringUtils</span><span class="p">.</span><span class="na">substringAfterLast</span><span class="p">(</span><span class="n">sourceFileName</span><span class="p">,</span> <span class="s">&quot;.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<p>所需其他的代码：</p>
+<p>PicUploadResult:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.vo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PicUploadResult</span> <span class="p">{</span>
+
+    <span class="c1">// 文件唯一标识</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">uid</span><span class="p">;</span>
+    <span class="c1">// 文件名</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="c1">// 状态有：uploading done error removed</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">status</span><span class="p">;</span>
+    <span class="c1">// 服务端响应内容，如：&#39;{&quot;status&quot;: &quot;success&quot;}&#39;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">response</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="116picuploadcontroller">1.1.6、PicUploadController<a class="headerlink" href="#116picuploadcontroller" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.controller</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.service.PicUploadService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.vo.PicUploadResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Controller</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.PostMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestParam</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.ResponseBody</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartFile</span><span class="p">;</span>
+
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;pic/upload&quot;</span><span class="p">)</span>
+<span class="nd">@Controller</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PicUploadController</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">PicUploadService</span> <span class="n">picUploadService</span><span class="p">;</span>
+
+    <span class="nd">@PostMapping</span>
+    <span class="nd">@ResponseBody</span>
+    <span class="kd">public</span> <span class="n">PicUploadResult</span> <span class="nf">upload</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">&quot;file&quot;</span><span class="p">)</span> <span class="n">MultipartFile</span> <span class="n">multipartFile</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">picUploadService</span><span class="p">.</span><span class="na">upload</span><span class="p">(</span><span class="n">multipartFile</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="117">1.1.7、测试<a class="headerlink" href="#117" title="Permanent link">&para;</a></h4>
+<p><img alt="1563979044942" src="assets/1563979044942.png" /></p>
+<p><img alt="1563979058395" src="assets/1563979058395.png" /></p>
+<p><img alt="1563979080567" src="assets/1563979080567.png" /></p>
+<h3 id="12">1.2、人脸识别<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>人脸识别技术采用虹软开放平台实现（免费使用）。官网：https://www.arcsoft.com.cn/ <img alt="1563979263800" src="assets/1563979263800.png" /></p>
+<h4 id="121">1.2.1、使用说明<a class="headerlink" href="#121" title="Permanent link">&para;</a></h4>
+<p>使用虹软平台需要先注册开发者账号：https://ai.arcsoft.com.cn/ucenter/user/userlogin</p>
+<p><img alt="1563979739584" src="assets/1563979739584.png" /></p>
+<p>注册完成后进行登录，然后进行创建应用：</p>
+<p><img alt="image-20201123103558410" src="assets/image-20201123103558410.png" /></p>
+<p>创建完成后，需要进行实名认证，否则相关的SDK是不能使用的。</p>
+<p><img alt="1563980059191" src="assets/1563980059191.png" /></p>
+<p>实名认证后即可下载对应平台的SDk，我们需要下载windows以及linux平台。</p>
+<p>添加SDK（Linux与Windows平台）：</p>
+<p><img alt="image-20201123103650588" src="assets/image-20201123103650588.png" /></p>
+<p><img alt="image-20201123103734310" src="assets/image-20201123103734310.png" /></p>
+<p><img alt="image-20201123103924768" src="assets/image-20201123103924768.png" /></p>
+<p>下载SDK，打开解压包，可以看到有提供相应的jar包以及示例代码：</p>
+<p><img alt="1563980211415" src="assets/1563980211415.png" /></p>
+<p>需要特别说明的是：每个账号的SDK包不通用，所以自己要下载自己的SDK包。</p>
+<h4 id="122jar">1.2.2、安装jar到本地仓库<a class="headerlink" href="#122jar" title="Permanent link">&para;</a></h4>
+<p>进入到libs目录，需要将arcsoft-sdk-face-3.0.0.0.jar安装到本地仓库：</p>
+<div class="codehilite"><pre><span></span><code>mvn install:install-file -DgroupId<span class="o">=</span>com.arcsoft.face -DartifactId<span class="o">=</span>arcsoft-sdk-face -Dversion<span class="o">=</span><span class="m">3</span>.0.0.0 -Dpackaging<span class="o">=</span>jar -Dfile<span class="o">=</span>arcsoft-sdk-face-3.0.0.0.jar
+</code></pre></div>
+
+<p>安装成功后，即可通过maven坐标引用了：</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.arcsoft.face<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>arcsoft-sdk-face<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.0.0.0<span class="nt">&lt;/version&gt;</span>
+    <span class="c">&lt;!--&lt;scope&gt;system&lt;/scope&gt;--&gt;</span>
+    <span class="c">&lt;!--如果没有安装到本地仓库，可以将jar包拷贝到工程的lib下面下，直接引用--&gt;</span>
+    <span class="c">&lt;!--&lt;systemPath&gt;${project.basedir}/lib/arcsoft-sdk-face-3.0.0.0.jar&lt;/systemPath&gt;--&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+
+<h4 id="123">1.2.3、开始使用<a class="headerlink" href="#123" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>说明：虹软的SDK是免费使用的，但是首次使用时需要联网激活，激活后可离线使用。使用周期为1年，1年后需要联网再次激活。</p>
+<p>个人免费激活SDK总数量为100。</p>
+</blockquote>
+<p>配置：application.properties</p>
+<div class="codehilite"><pre><span></span><code><span class="c">#虹软相关配置(在虹软应用中找到对应的参数)</span>
+<span class="na">arcsoft.appid</span><span class="o">=</span><span class="s">******************</span>
+<span class="na">arcsoft.sdkKey</span><span class="o">=</span><span class="s">*****************</span>
+<span class="na">arcsoft.libPath</span><span class="o">=</span><span class="s">F:\\code\\WIN64</span>
+</code></pre></div>
+
+<p>FaceEngineService：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.EngineConfiguration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.FaceEngine</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.FaceInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.FunctionConfiguration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.enums.DetectMode</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.enums.DetectOrient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.enums.ErrorInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.enums.ImageFormat</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.toolkit.ImageFactory</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.arcsoft.face.toolkit.ImageInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.slf4j.Logger</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.annotation.PostConstruct</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.io.File</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FaceEngineService</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Logger</span> <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">LoggerFactory</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">FaceEngineService</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+    <span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${arcsoft.appid}&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">appid</span><span class="p">;</span>
+
+    <span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${arcsoft.sdkKey}&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">sdkKey</span><span class="p">;</span>
+
+    <span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${arcsoft.libPath}&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">libPath</span><span class="p">;</span>
+
+    <span class="kd">private</span> <span class="n">FaceEngine</span> <span class="n">faceEngine</span><span class="p">;</span>
+
+    <span class="nd">@PostConstruct</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 激活并且初始化引擎</span>
+        <span class="n">FaceEngine</span> <span class="n">faceEngine</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FaceEngine</span><span class="p">(</span><span class="n">libPath</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">activeCode</span> <span class="o">=</span> <span class="n">faceEngine</span><span class="p">.</span><span class="na">activeOnline</span><span class="p">(</span><span class="n">appid</span><span class="p">,</span> <span class="n">sdkKey</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">activeCode</span> <span class="o">!=</span> <span class="n">ErrorInfo</span><span class="p">.</span><span class="na">MOK</span><span class="p">.</span><span class="na">getValue</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">activeCode</span> <span class="o">!=</span> <span class="n">ErrorInfo</span><span class="p">.</span><span class="na">MERR_ASF_ALREADY_ACTIVATED</span><span class="p">.</span><span class="na">getValue</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">LOGGER</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;引擎激活失败&quot;</span><span class="p">);</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;引擎激活失败&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//引擎配置</span>
+        <span class="n">EngineConfiguration</span> <span class="n">engineConfiguration</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EngineConfiguration</span><span class="p">();</span>
+        <span class="c1">//IMAGE检测模式，用于处理单张的图像数据</span>
+        <span class="n">engineConfiguration</span><span class="p">.</span><span class="na">setDetectMode</span><span class="p">(</span><span class="n">DetectMode</span><span class="p">.</span><span class="na">ASF_DETECT_MODE_IMAGE</span><span class="p">);</span>
+        <span class="c1">//人脸检测角度，全角度</span>
+        <span class="n">engineConfiguration</span><span class="p">.</span><span class="na">setDetectFaceOrientPriority</span><span class="p">(</span><span class="n">DetectOrient</span><span class="p">.</span><span class="na">ASF_OP_ALL_OUT</span><span class="p">);</span>
+
+        <span class="c1">//功能配置</span>
+        <span class="n">FunctionConfiguration</span> <span class="n">functionConfiguration</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FunctionConfiguration</span><span class="p">();</span>
+        <span class="n">functionConfiguration</span><span class="p">.</span><span class="na">setSupportAge</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="n">functionConfiguration</span><span class="p">.</span><span class="na">setSupportFace3dAngle</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="n">functionConfiguration</span><span class="p">.</span><span class="na">setSupportFaceDetect</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="n">functionConfiguration</span><span class="p">.</span><span class="na">setSupportFaceRecognition</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="n">functionConfiguration</span><span class="p">.</span><span class="na">setSupportGender</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="n">functionConfiguration</span><span class="p">.</span><span class="na">setSupportLiveness</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="n">functionConfiguration</span><span class="p">.</span><span class="na">setSupportIRLiveness</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="n">engineConfiguration</span><span class="p">.</span><span class="na">setFunctionConfiguration</span><span class="p">(</span><span class="n">functionConfiguration</span><span class="p">);</span>
+
+        <span class="c1">//初始化引擎</span>
+        <span class="kt">int</span> <span class="n">initCode</span> <span class="o">=</span> <span class="n">faceEngine</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">engineConfiguration</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">initCode</span> <span class="o">!=</span> <span class="n">ErrorInfo</span><span class="p">.</span><span class="na">MOK</span><span class="p">.</span><span class="na">getValue</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">LOGGER</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;初始化引擎出错!&quot;</span><span class="p">);</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;初始化引擎出错!&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="na">faceEngine</span> <span class="o">=</span> <span class="n">faceEngine</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 检测图片是否为人像</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param imageInfo 图像对象</span>
+<span class="cm">     * @return true:人像，false:非人像</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkIsPortrait</span><span class="p">(</span><span class="n">ImageInfo</span> <span class="n">imageInfo</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 定义人脸列表</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">FaceInfo</span><span class="o">&gt;</span> <span class="n">faceInfoList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">FaceInfo</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">faceEngine</span><span class="p">.</span><span class="na">detectFaces</span><span class="p">(</span><span class="n">imageInfo</span><span class="p">.</span><span class="na">getImageData</span><span class="p">(),</span> <span class="n">imageInfo</span><span class="p">.</span><span class="na">getWidth</span><span class="p">(),</span> <span class="n">imageInfo</span><span class="p">.</span><span class="na">getHeight</span><span class="p">(),</span> <span class="n">ImageFormat</span><span class="p">.</span><span class="na">CP_PAF_BGR24</span><span class="p">,</span> <span class="n">faceInfoList</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">!</span><span class="n">faceInfoList</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkIsPortrait</span><span class="p">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">imageData</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">checkIsPortrait</span><span class="p">(</span><span class="n">ImageFactory</span><span class="p">.</span><span class="na">getRGBData</span><span class="p">(</span><span class="n">imageData</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkIsPortrait</span><span class="p">(</span><span class="n">File</span> <span class="n">file</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">checkIsPortrait</span><span class="p">(</span><span class="n">ImageFactory</span><span class="p">.</span><span class="na">getRGBData</span><span class="p">(</span><span class="n">file</span><span class="p">));</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#问题：</span>
+Caused by: java.lang.UnsatisfiedLinkError: D:<span class="se">\g</span>ongju<span class="se">\r</span>enlian<span class="se">\h</span>aha<span class="se">\l</span>ibs<span class="se">\W</span>IN64<span class="se">\l</span>ibarcsoft_face.dll: Can<span class="err">&#39;</span>t find dependent libraries
+
+解决：
+安装资料中的：vcredist_x64.exe，即可解决。
+</code></pre></div>
+
+<h4 id="124">1.2.4、测试<a class="headerlink" href="#124" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.runner.RunWith</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.test.context.junit4.SpringJUnit4ClassRunner</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.File</span><span class="p">;</span>
+
+<span class="nd">@SpringBootTest</span>
+<span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringJUnit4ClassRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestFaceEngineService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">FaceEngineService</span> <span class="n">faceEngineService</span><span class="p">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCheckIsPortrait</span><span class="p">(){</span>
+        <span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="s">&quot;F:\\1.jpg&quot;</span><span class="p">);</span>
+        <span class="kt">boolean</span> <span class="n">checkIsPortrait</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">faceEngineService</span><span class="p">.</span><span class="na">checkIsPortrait</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">checkIsPortrait</span><span class="p">);</span> <span class="c1">// true|false</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="13">1.3、实现完善个人信息<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>完善个人信息的功能实现，分为2个接口完成，分别是：完善个人资料信息、头像上传。</p>
+<p>mock接口：</p>
+<ul>
+<li>完善个人信息</li>
+<li>https://mock.boxuegu.com/project/164/interface/api/28553</li>
+<li><img alt="1564544646937" src="assets/1564544646937.png" /></li>
+<li>上传头像</li>
+<li>https://mock.boxuegu.com/project/164/interface/api/39725</li>
+<li><img alt="1564544663974" src="assets/1564544663974.png" /></li>
+</ul>
+<h4 id="131userinfomapper">1.3.1、UserInfoMapper<a class="headerlink" href="#131userinfomapper" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.mapper</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.mapper.BaseMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.pojo.UserInfo</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserInfoMapper</span> <span class="kd">extends</span> <span class="n">BaseMapper</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="132userinfoservice">1.3.2、UserInfoService<a class="headerlink" href="#132userinfoservice" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.conditions.query.QueryWrapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.enums.SexEnum</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.mapper.UserInfoMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.pojo.User</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.pojo.UserInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.vo.PicUploadResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartFile</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserInfoService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserService</span> <span class="n">userService</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserInfoMapper</span> <span class="n">userInfoMapper</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">FaceEngineService</span> <span class="n">faceEngineService</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">PicUploadService</span> <span class="n">picUploadService</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">saveUserInfo</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">param</span><span class="p">,</span> <span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//校验token</span>
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userService</span><span class="p">.</span><span class="na">queryUserByToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">user</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">UserInfo</span> <span class="n">userInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UserInfo</span><span class="p">();</span>
+        <span class="n">userInfo</span><span class="p">.</span><span class="na">setUserId</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+        <span class="n">userInfo</span><span class="p">.</span><span class="na">setSex</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="n">param</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;gender&quot;</span><span class="p">),</span> <span class="s">&quot;man&quot;</span><span class="p">)</span> <span class="o">?</span> <span class="n">SexEnum</span><span class="p">.</span><span class="na">MAN</span> <span class="p">:</span> <span class="n">SexEnum</span><span class="p">.</span><span class="na">WOMAN</span><span class="p">);</span>
+        <span class="n">userInfo</span><span class="p">.</span><span class="na">setNickName</span><span class="p">(</span><span class="n">param</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;nickname&quot;</span><span class="p">));</span>
+        <span class="n">userInfo</span><span class="p">.</span><span class="na">setBirthday</span><span class="p">(</span><span class="n">param</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;birthday&quot;</span><span class="p">));</span>
+        <span class="n">userInfo</span><span class="p">.</span><span class="na">setCity</span><span class="p">(</span><span class="n">param</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;city&quot;</span><span class="p">));</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoMapper</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">userInfo</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">saveUserLogo</span><span class="p">(</span><span class="n">MultipartFile</span> <span class="n">file</span><span class="p">,</span> <span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//校验token</span>
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userService</span><span class="p">.</span><span class="na">queryUserByToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">user</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">//校验图片是否是人像，如果不是人像就返回false</span>
+            <span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">faceEngineService</span><span class="p">.</span><span class="na">checkIsPortrait</span><span class="p">(</span><span class="n">file</span><span class="p">.</span><span class="na">getBytes</span><span class="p">());</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="c1">//图片上传到阿里云OSS</span>
+        <span class="n">PicUploadResult</span> <span class="n">result</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">picUploadService</span><span class="p">.</span><span class="na">upload</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getName</span><span class="p">()))</span> <span class="p">{</span>
+            <span class="c1">//上传失败</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//把头像保存到用户信息表中</span>
+        <span class="n">UserInfo</span> <span class="n">userInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UserInfo</span><span class="p">();</span>
+        <span class="n">userInfo</span><span class="p">.</span><span class="na">setLogo</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+
+        <span class="n">QueryWrapper</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="n">queryWrapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueryWrapper</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">queryWrapper</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="s">&quot;user_id&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoMapper</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">userInfo</span><span class="p">,</span> <span class="n">queryWrapper</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="133userinfocontroller">1.3.3、UserInfoController<a class="headerlink" href="#133userinfocontroller" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.controller</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.service.UserInfoService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.service.UserService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.vo.ErrorResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.HttpStatus</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.ResponseEntity</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.multipart.MultipartFile</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="nd">@RestController</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;user&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserInfoController</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserInfoService</span> <span class="n">userInfoService</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 完善个人信息-基本信息</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param param</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;loginReginfo&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="nf">saveUserInfo</span><span class="p">(</span><span class="nd">@RequestBody</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">param</span><span class="p">,</span>
+                                               <span class="nd">@RequestHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">)</span> <span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">Boolean</span> <span class="n">bool</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoService</span><span class="p">.</span><span class="na">saveUserInfo</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">token</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">bool</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="n">ErrorResult</span> <span class="n">errorResult</span> <span class="o">=</span> <span class="n">ErrorResult</span><span class="p">.</span><span class="na">builder</span><span class="p">().</span><span class="na">errCode</span><span class="p">(</span><span class="s">&quot;000001&quot;</span><span class="p">).</span><span class="na">errMessage</span><span class="p">(</span><span class="s">&quot;保存用户信息失败！&quot;</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">status</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">INTERNAL_SERVER_ERROR</span><span class="p">).</span><span class="na">body</span><span class="p">(</span><span class="n">errorResult</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 完善个人信息-用户头像</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;loginReginfo/head&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="nf">saveUserLogo</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">&quot;headPhoto&quot;</span><span class="p">)</span> <span class="n">MultipartFile</span> <span class="n">file</span><span class="p">,</span>
+                                               <span class="nd">@RequestHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">)</span> <span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">Boolean</span> <span class="n">bool</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoService</span><span class="p">.</span><span class="na">saveUserLogo</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">token</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">bool</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="n">ErrorResult</span> <span class="n">errorResult</span> <span class="o">=</span> <span class="n">ErrorResult</span><span class="p">.</span><span class="na">builder</span><span class="p">().</span><span class="na">errCode</span><span class="p">(</span><span class="s">&quot;000001&quot;</span><span class="p">).</span><span class="na">errMessage</span><span class="p">(</span><span class="s">&quot;保存用户logo失败！&quot;</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">status</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">INTERNAL_SERVER_ERROR</span><span class="p">).</span><span class="na">body</span><span class="p">(</span><span class="n">errorResult</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="144">1.4.4、测试<a class="headerlink" href="#144" title="Permanent link">&para;</a></h4>
+<p><img alt="1564544823149" src="assets/1564544823149.png" /></p>
+<p><img alt="1564544871515" src="assets/1564544871515.png" /></p>
+<p><img alt="1564544931311" src="assets/1564544931311.png" /></p>
+<p>图片上传超过1MB出错的解决方案：</p>
+<div class="codehilite"><pre><span></span><code><span class="c">#在application.properties文件中，填入下面的配置</span>
+<span class="c">#设置最大的文件上传大小</span>
+<span class="na">spring.servlet.multipart.max-request-size</span><span class="o">=</span><span class="s">30MB</span>
+<span class="na">spring.servlet.multipart.max-file-size</span><span class="o">=</span><span class="s">30MB</span>
+</code></pre></div>
+
+<h2 id="2token">2、校验token<a class="headerlink" href="#2token" title="Permanent link">&para;</a></h2>
+<p>在整个系统架构中，只有SSO保存了JWT中的秘钥，所以只能通过SSO系统提供的接口服务进行对token的校验，所以在SSO系统中，需要对外开放接口，通过token进行查询用户信息，如果返回null说明用户状态已过期或者是非法的token，否则返回User对象数据。</p>
+<h3 id="21usercontroller">2.1、UserController<a class="headerlink" href="#21usercontroller" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>    <span class="cm">/**</span>
+<span class="cm">     * 校验token，根据token查询用户数据</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param token</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;{token}&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">User</span> <span class="nf">queryUserByToken</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">&quot;token&quot;</span><span class="p">)</span> <span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">userService</span><span class="p">.</span><span class="na">queryUserByToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h3 id="22userservice">2.2、UserService<a class="headerlink" href="#22userservice" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>    <span class="kd">public</span> <span class="n">User</span> <span class="nf">queryUserByToken</span><span class="p">(</span><span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">// 通过token解析数据</span>
+            <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">body</span> <span class="o">=</span> <span class="n">Jwts</span><span class="p">.</span><span class="na">parser</span><span class="p">()</span>
+                    <span class="p">.</span><span class="na">setSigningKey</span><span class="p">(</span><span class="n">secret</span><span class="p">)</span>
+                    <span class="p">.</span><span class="na">parseClaimsJws</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+                    <span class="p">.</span><span class="na">getBody</span><span class="p">();</span>
+
+            <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="p">();</span>
+            <span class="n">user</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">Long</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">body</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">()));</span>
+
+            <span class="c1">//需要返回user对象中的mobile，需要查询数据库获取到mobile数据</span>
+            <span class="c1">//如果每次都查询数据库，必然会导致性能问题，需要对用户的手机号进行缓存操作</span>
+            <span class="c1">//数据缓存时，需要设置过期时间，过期时间要与token的时间一致</span>
+            <span class="c1">//如果用户修改了手机号，需要同步修改redis中的数据</span>
+
+            <span class="n">String</span> <span class="n">redisKey</span> <span class="o">=</span> <span class="s">&quot;TANHUA_USER_MOBILE_&quot;</span> <span class="o">+</span> <span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">hasKey</span><span class="p">(</span><span class="n">redisKey</span><span class="p">)){</span>
+                <span class="n">String</span> <span class="n">mobile</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">opsForValue</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">redisKey</span><span class="p">);</span>
+                <span class="n">user</span><span class="p">.</span><span class="na">setMobile</span><span class="p">(</span><span class="n">mobile</span><span class="p">);</span>
+            <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+                <span class="c1">//查询数据库</span>
+                <span class="n">User</span> <span class="n">u</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userMapper</span><span class="p">.</span><span class="na">selectById</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+                <span class="n">user</span><span class="p">.</span><span class="na">setMobile</span><span class="p">(</span><span class="n">u</span><span class="p">.</span><span class="na">getMobile</span><span class="p">());</span>
+
+                <span class="c1">//将手机号写入到redis中</span>
+                <span class="c1">//在jwt中的过期时间的单位为：秒</span>
+                <span class="kt">long</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">Long</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">body</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;exp&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">())</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">-</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
+                <span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">opsForValue</span><span class="p">().</span><span class="na">set</span><span class="p">(</span><span class="n">redisKey</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="na">getMobile</span><span class="p">(),</span> <span class="n">timeout</span><span class="p">,</span> <span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="n">user</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ExpiredJwtException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;token已经过期！ token = &quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;token不合法！ token = &quot;</span><span class="o">+</span> <span class="n">token</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h3 id="23">2.3、测试<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20201123155434121" src="assets/image-20201123155434121.png" /></p>
+<p>数据已经存储到redis中：</p>
+<p><img alt="image-20201123162229283" src="assets/image-20201123162229283.png" /></p>
+<h2 id="3mongodb">3、MongoDB快速入门<a class="headerlink" href="#3mongodb" title="Permanent link">&para;</a></h2>
+<h3 id="31mongodb">3.1、MongoDB简介<a class="headerlink" href="#31mongodb" title="Permanent link">&para;</a></h3>
+<p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。</p>
+<p>MongoDB是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的，它支持的数据结构非常松散，是类似json的bson格式，因此可以存储比较复杂的数据类型。</p>
+<p>MongoDB最大的特点是它支持的查询语言非常强大，其语法有点类似于面向对象的查询语言，几乎可以实现类似关系数据库单表查询的绝大部分功能，而且还支持对数据建立索引。</p>
+<p>官网：https://www.mongodb.com</p>
+<h3 id="32dockermongodb">3.2、通过docker安装MongoDB<a class="headerlink" href="#32dockermongodb" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">#拉取镜像</span>
+docker pull mongo:4.0.3
+
+<span class="c1">#创建容器</span>
+docker create --name mongodb-server -p <span class="m">27018</span>:27017 -v mongodb-data:/data/db mongo:4.0.3 --auth
+
+<span class="c1">#启动容器</span>
+docker start mongodb-server
+
+<span class="c1">#进入容器</span>
+docker <span class="nb">exec</span> -it mongodb-server /bin/bash
+
+
+<span class="c1">#进入admin数据库</span>
+mongo
+use admin
+
+<span class="c1">#添加管理员，其拥有管理用户和角色的权限</span>
+db.createUser<span class="o">({</span> user: <span class="s1">&#39;root&#39;</span>, pwd: <span class="s1">&#39;root&#39;</span>, roles: <span class="o">[</span> <span class="o">{</span> role: <span class="s2">&quot;root&quot;</span>, db: <span class="s2">&quot;admin&quot;</span> <span class="o">}</span> <span class="o">]</span> <span class="o">})</span>
+
+<span class="c1">#测试，发现是没有权限操作的</span>
+&gt; show dbs
+<span class="m">2020</span>-10-20T09:09:15.543+0000 E QUERY    <span class="o">[</span>js<span class="o">]</span> Error: listDatabases failed:<span class="o">{</span>
+        <span class="s2">&quot;ok&quot;</span> : <span class="m">0</span>,
+        <span class="s2">&quot;errmsg&quot;</span> : <span class="s2">&quot;command listDatabases requires authentication&quot;</span>,
+        <span class="s2">&quot;code&quot;</span> : <span class="m">13</span>,
+        <span class="s2">&quot;codeName&quot;</span> : <span class="s2">&quot;Unauthorized&quot;</span>
+<span class="o">}</span> :
+
+<span class="c1">#进行认证</span>
+mongo -u <span class="s2">&quot;root&quot;</span> -p <span class="s2">&quot;root&quot;</span> --authenticationDatabase <span class="s2">&quot;admin&quot;</span>
+
+<span class="c1">#通过admin添加普通用户</span>
+use admin
+db.createUser<span class="o">({</span> user: <span class="s1">&#39;tanhua&#39;</span>, pwd: <span class="s1">&#39;l3SCjl0HvmSkTtiSbN0Swv40spYnHhDV&#39;</span>, roles: <span class="o">[</span> <span class="o">{</span> role: <span class="s2">&quot;readWrite&quot;</span>, db: <span class="s2">&quot;tanhua&quot;</span> <span class="o">}</span> <span class="o">]</span> <span class="o">})</span><span class="p">;</span>
+
+<span class="c1">#通过tanhua用户登录进行测试</span>
+mongo -u <span class="s2">&quot;tanhua&quot;</span> -p <span class="s2">&quot;l3SCjl0HvmSkTtiSbN0Swv40spYnHhDV&quot;</span> --authenticationDatabase <span class="s2">&quot;admin&quot;</span>
+
+<span class="c1">#测试</span>
+root@5d848955ff7e:/# mongo -u <span class="s2">&quot;tanhua&quot;</span> -p <span class="s2">&quot;tanhua123&quot;</span> --authenticationDatabase <span class="s2">&quot;admin&quot;</span>
+MongoDB shell version v4.0.3
+connecting to: mongodb://127.0.0.1:27017
+Implicit session: session <span class="o">{</span> <span class="s2">&quot;id&quot;</span> : UUID<span class="o">(</span><span class="s2">&quot;6c368269-30f0-4b29-a224-05a38b5847e2&quot;</span><span class="o">)</span> <span class="o">}</span>
+MongoDB server version: <span class="m">4</span>.0.3
+&gt; use tanhua
+switched to db tanhua
+&gt; db.user.insert<span class="o">({</span>id:1,username:<span class="s1">&#39;zhangsan&#39;</span>,age:20<span class="o">})</span>
+WriteResult<span class="o">({</span> <span class="s2">&quot;nInserted&quot;</span> : <span class="m">1</span> <span class="o">})</span>
+&gt; db.user.find<span class="o">()</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5f8eb2726e0de0aa9517afd3&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">1</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;zhangsan&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">20</span> <span class="o">}</span>
+</code></pre></div>
+
+<h3 id="33mongodb">3.3、MongoDB基本操作<a class="headerlink" href="#33mongodb" title="Permanent link">&para;</a></h3>
+<h4 id="331">3.3.1、基本概念<a class="headerlink" href="#331" title="Permanent link">&para;</a></h4>
+<p>为了更好的理解，下面与SQL中的概念进行对比：</p>
+<table>
+<thead>
+<tr>
+<th>SQL术语/概念</th>
+<th>MongoDB术语/概念</th>
+<th>解释/说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>database</td>
+<td>database</td>
+<td>数据库</td>
+</tr>
+<tr>
+<td>table</td>
+<td>collection</td>
+<td>数据库表/集合</td>
+</tr>
+<tr>
+<td>row</td>
+<td>document</td>
+<td>数据记录行/文档</td>
+</tr>
+<tr>
+<td>column</td>
+<td>field</td>
+<td>数据字段/域</td>
+</tr>
+<tr>
+<td>index</td>
+<td>index</td>
+<td>索引</td>
+</tr>
+<tr>
+<td>table joins</td>
+<td></td>
+<td>表连接,MongoDB不支持</td>
+</tr>
+<tr>
+<td>primary key</td>
+<td>primary key</td>
+<td>主键,MongoDB自动将_id字段设置为主键</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="img" src="assets/Figure-1-Mapping-Table-to-Collection-1.png" /></p>
+<h4 id="332">3.3.2、数据库以及表的操作<a class="headerlink" href="#332" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">#查看所有的数据库</span>
+&gt; show dbs
+admin   <span class="m">0</span>.000GB
+config  <span class="m">0</span>.000GB
+<span class="nb">local</span>   <span class="m">0</span>.000GB
+
+<span class="c1">#通过use关键字切换数据库</span>
+&gt; use admin
+switched to db admin
+
+<span class="c1">#创建数据库</span>
+<span class="c1">#说明：在MongoDB中，数据库是自动创建的，通过use切换到新数据库中，进行插入数据即可自动创建数据库</span>
+&gt; use testdb
+switched to db testdb
+&gt; show dbs <span class="c1">#并没有创建数据库</span>
+admin   <span class="m">0</span>.000GB
+config  <span class="m">0</span>.000GB
+<span class="nb">local</span>   <span class="m">0</span>.000GB
+&gt; db.user.insert<span class="o">({</span>id:1,name:<span class="s1">&#39;zhangsan&#39;</span><span class="o">})</span>  <span class="c1">#插入数据</span>
+WriteResult<span class="o">({</span> <span class="s2">&quot;nInserted&quot;</span> : <span class="m">1</span> <span class="o">})</span>
+&gt; show dbs
+admin   <span class="m">0</span>.000GB
+config  <span class="m">0</span>.000GB
+<span class="nb">local</span>   <span class="m">0</span>.000GB
+testdb  <span class="m">0</span>.000GB <span class="c1">#数据库自动创建</span>
+
+<span class="c1">#查看表</span>
+&gt; show tables
+user
+&gt; show collections
+user
+&gt; 
+
+<span class="c1">#删除集合（表）</span>
+&gt; db.user.drop<span class="o">()</span>
+<span class="nb">true</span>  <span class="c1">#如果成功删除选定集合，则 drop() 方法返回 true，否则返回 false。</span>
+
+<span class="c1">#删除数据库</span>
+&gt; use testdb <span class="c1">#先切换到要删除的数据库中</span>
+switched to db testdb
+&gt; db.dropDatabase<span class="o">()</span>  <span class="c1">#删除数据库</span>
+<span class="o">{</span> <span class="s2">&quot;dropped&quot;</span> : <span class="s2">&quot;testdb&quot;</span>, <span class="s2">&quot;ok&quot;</span> : <span class="m">1</span> <span class="o">}</span>
+&gt; show dbs
+admin   <span class="m">0</span>.000GB
+config  <span class="m">0</span>.000GB
+<span class="nb">local</span>   <span class="m">0</span>.000GB
+</code></pre></div>
+
+<h4 id="333">3.3.3、新增数据<a class="headerlink" href="#333" title="Permanent link">&para;</a></h4>
+<p>在MongoDB中，存储的文档结构是一种类似于json的结构，称之为bson（全称为：Binary JSON）。</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#插入数据</span>
+
+<span class="c1">#语法：db.COLLECTION_NAME.insert(document)</span>
+&gt; db.user.insert<span class="o">({</span>id:1,username:<span class="s1">&#39;zhangsan&#39;</span>,age:20<span class="o">})</span>
+WriteResult<span class="o">({</span> <span class="s2">&quot;nInserted&quot;</span> : <span class="m">1</span> <span class="o">})</span>
+&gt; db.user.save<span class="o">({</span>id:2,username:<span class="s1">&#39;lisi&#39;</span>,age:25<span class="o">})</span>
+WriteResult<span class="o">({</span> <span class="s2">&quot;nInserted&quot;</span> : <span class="m">1</span> <span class="o">})</span>
+&gt; db.user.find<span class="o">()</span>  <span class="c1">#查询数据</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0024b318926e0c1f6dc&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">1</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;zhangsan&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">20</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0134b318926e0c1f6dd&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">2</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;lisi&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span> <span class="o">}</span>
+</code></pre></div>
+
+<h4 id="334">3.3.4、更新数据<a class="headerlink" href="#334" title="Permanent link">&para;</a></h4>
+<p>update() 方法用于更新已存在的文档。语法格式如下：</p>
+<div class="codehilite"><pre><span></span><code>db.collection.update<span class="o">(</span>
+   &lt;query&gt;,
+   &lt;update&gt;,
+   <span class="o">[</span>
+     upsert: &lt;boolean&gt;,
+     multi: &lt;boolean&gt;,
+     writeConcern: &lt;document&gt;
+   <span class="o">]</span>
+<span class="o">)</span>
+</code></pre></div>
+
+<p><strong>参数说明：</strong></p>
+<ul>
+<li><strong>query</strong> : update的查询条件，类似sql update查询内where后面的。</li>
+<li><strong>update</strong> : update的对象和一些更新的操作符（如<script type="math/tex">,</script>inc...）等，也可以理解为sql update查询内set后面的</li>
+<li><strong>upsert</strong> : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</li>
+<li><strong>multi</strong> : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li>
+<li><strong>writeConcern</strong> :可选，抛出异常的级别。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>&gt; db.user.find<span class="o">()</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0024b318926e0c1f6dc&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">1</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;zhangsan&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">20</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0134b318926e0c1f6dd&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">2</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;lisi&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span> <span class="o">}</span>
+
+&gt; db.user.update<span class="o">({</span>id:1<span class="o">}</span>,<span class="o">{</span><span class="nv">$set</span>:<span class="o">{</span>age:22<span class="o">}})</span> <span class="c1">#更新数据</span>
+
+WriteResult<span class="o">({</span> <span class="s2">&quot;nMatched&quot;</span> : <span class="m">1</span>, <span class="s2">&quot;nUpserted&quot;</span> : <span class="m">0</span>, <span class="s2">&quot;nModified&quot;</span> : <span class="m">1</span> <span class="o">})</span>
+
+&gt; db.user.find<span class="o">()</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0024b318926e0c1f6dc&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">1</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;zhangsan&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">22</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0134b318926e0c1f6dd&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">2</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;lisi&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span> <span class="o">}</span>
+
+<span class="c1">#注意：如果这样写，会删除掉其他的字段</span>
+&gt; db.user.update<span class="o">({</span>id:1<span class="o">}</span>,<span class="o">{</span>age:25<span class="o">})</span>
+WriteResult<span class="o">({</span> <span class="s2">&quot;nMatched&quot;</span> : <span class="m">1</span>, <span class="s2">&quot;nUpserted&quot;</span> : <span class="m">0</span>, <span class="s2">&quot;nModified&quot;</span> : <span class="m">1</span> <span class="o">})</span>
+&gt; db.user.find<span class="o">()</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0024b318926e0c1f6dc&quot;</span><span class="o">)</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0134b318926e0c1f6dd&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">2</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;lisi&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span> <span class="o">}</span>
+
+<span class="c1">#更新不存在的字段，会新增字段</span>
+&gt; db.user.update<span class="o">({</span>id:2<span class="o">}</span>,<span class="o">{</span><span class="nv">$set</span>:<span class="o">{</span>sex:1<span class="o">}})</span> <span class="c1">#更新数据</span>
+&gt; db.user.find<span class="o">()</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0024b318926e0c1f6dc&quot;</span><span class="o">)</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0134b318926e0c1f6dd&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">2</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;lisi&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span>, <span class="s2">&quot;sex&quot;</span> : <span class="m">1</span> <span class="o">}</span>
+
+<span class="c1">#更新不存在的数据，默认不会新增数据</span>
+&gt; db.user.update<span class="o">({</span>id:3<span class="o">}</span>,<span class="o">{</span><span class="nv">$set</span>:<span class="o">{</span>sex:1<span class="o">}})</span>
+WriteResult<span class="o">({</span> <span class="s2">&quot;nMatched&quot;</span> : <span class="m">0</span>, <span class="s2">&quot;nUpserted&quot;</span> : <span class="m">0</span>, <span class="s2">&quot;nModified&quot;</span> : <span class="m">0</span> <span class="o">})</span>
+&gt; db.user.find<span class="o">()</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0024b318926e0c1f6dc&quot;</span><span class="o">)</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0134b318926e0c1f6dd&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">2</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;lisi&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span>, <span class="s2">&quot;sex&quot;</span> : <span class="m">1</span> <span class="o">}</span>
+
+<span class="c1">#如果设置第一个参数为true，就是新增数据</span>
+&gt; db.user.update<span class="o">({</span>id:3<span class="o">}</span>,<span class="o">{</span><span class="nv">$set</span>:<span class="o">{</span>sex:1<span class="o">}}</span>,true<span class="o">)</span>
+WriteResult<span class="o">({</span>
+    <span class="s2">&quot;nMatched&quot;</span> : <span class="m">0</span>,
+    <span class="s2">&quot;nUpserted&quot;</span> : <span class="m">1</span>,
+    <span class="s2">&quot;nModified&quot;</span> : <span class="m">0</span>,
+    <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08cb281418d073246bc642&quot;</span><span class="o">)</span>
+<span class="o">})</span>
+&gt; db.user.find<span class="o">()</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0024b318926e0c1f6dc&quot;</span><span class="o">)</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08c0134b318926e0c1f6dd&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">2</span>, <span class="s2">&quot;username&quot;</span> : <span class="s2">&quot;lisi&quot;</span>, <span class="s2">&quot;age&quot;</span> : <span class="m">25</span>, <span class="s2">&quot;sex&quot;</span> : <span class="m">1</span> <span class="o">}</span>
+<span class="o">{</span> <span class="s2">&quot;_id&quot;</span> : ObjectId<span class="o">(</span><span class="s2">&quot;5c08cb281418d073246bc642&quot;</span><span class="o">)</span>, <span class="s2">&quot;id&quot;</span> : <span class="m">3</span>, <span class="s2">&quot;sex&quot;</span> : <span class="m">1</span> <span class="o">}</span>
+</code></pre></div>
+
+<h4 id="335">3.3.5、删除数据<a class="headerlink" href="#335" title="Permanent link">&para;</a></h4>
+<p>通过remove()方法进行删除数据，语法如下：</p>
+<div class="codehilite"><pre><span></span><code>db.collection.remove<span class="o">(</span>
+   &lt;query&gt;,
+   <span class="o">{</span>
+     justOne: &lt;boolean&gt;,
+     writeConcern: &lt;document&gt;
+   <span class="o">}</span>
+<span class="o">)</span>
+</code></pre></div>
+
+<p><strong>参数说明：</strong></p>
+<ul>
+<li><strong>query</strong> :（可选）删除的文档的条件。</li>
+<li><strong>justOne</strong> : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。</li>
+<li><strong>writeConcern</strong> :（可选）抛出异常的级别。</li>
+</ul>
+<p>实例：</p>
+<div class="codehilite"><pre><span></span><code>&gt; db.user.remove<span class="o">({</span>age:25<span class="o">})</span>
+WriteResult<span class="o">({</span> <span class="s2">&quot;nRemoved&quot;</span> : <span class="m">2</span> <span class="o">})</span>  <span class="c1">#删除了2条数据</span>
+
+<span class="c1">#插入4条测试数据</span>
+db.user.insert<span class="o">({</span>id:1,username:<span class="s1">&#39;zhangsan&#39;</span>,age:20<span class="o">})</span>
+db.user.insert<span class="o">({</span>id:2,username:<span class="s1">&#39;lisi&#39;</span>,age:21<span class="o">})</span>
+db.user.insert<span class="o">({</span>id:3,username:<span class="s1">&#39;wangwu&#39;</span>,age:22<span class="o">})</span>
+db.user.insert<span class="o">({</span>id:4,username:<span class="s1">&#39;zhaoliu&#39;</span>,age:22<span class="o">})</span>
+
+&gt; db.user.remove<span class="o">({</span>age:22<span class="o">}</span>,true<span class="o">)</span>
+WriteResult<span class="o">({</span> <span class="s2">&quot;nRemoved&quot;</span> : <span class="m">1</span> <span class="o">})</span>  <span class="c1">#删除了1条数据</span>
+
+<span class="c1">#删除所有数据</span>
+&gt; db.user.remove<span class="o">({})</span>
+
+<span class="c1">#说明：为了简化操作，官方推荐使用deleteOne()与deleteMany()进行删除数据操作。</span>
+db.user.deleteOne<span class="o">({</span>id:1<span class="o">})</span>
+db.user.deleteMany<span class="o">({})</span>  <span class="c1">#删除所有数据</span>
+</code></pre></div>
+
+<h4 id="336">3.3.6、查询数据<a class="headerlink" href="#336" title="Permanent link">&para;</a></h4>
+<p>MongoDB 查询数据的语法格式如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">db</span><span class="p">.</span><span class="k">user</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="o">[</span><span class="n">query</span><span class="o">]</span><span class="p">,</span><span class="o">[</span><span class="n">fields</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+<ul>
+<li><strong>query</strong> ：可选，使用查询操作符指定查询条件</li>
+<li><strong>fields</strong> ：可选，使用投影操作符指定返回的键。查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。</li>
+</ul>
+<p>如果你需要以易读的方式来读取数据，可以使用 pretty() 方法，语法格式如下：</p>
+<div class="codehilite"><pre><span></span><code>&gt;db.col.find().pretty()
+</code></pre></div>
+
+<p>pretty() 方法以格式化的方式来显示所有文档。</p>
+<p>条件查询：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>格式</th>
+<th>范例</th>
+<th>RDBMS中的类似语句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等于</td>
+<td><code>{&lt;key&gt;:&lt;value&gt;</code>}</td>
+<td><code>db.col.find({"by":"黑马程序员"}).pretty()</code></td>
+<td><code>where by = '黑马程序员'</code></td>
+</tr>
+<tr>
+<td>小于</td>
+<td><code>{&lt;key&gt;:{$lt:&lt;value&gt;}}</code></td>
+<td><code>db.col.find({"likes":{$lt:50}}).pretty()</code></td>
+<td><code>where likes &lt; 50</code></td>
+</tr>
+<tr>
+<td>小于或等于</td>
+<td><code>{&lt;key&gt;:{$lte:&lt;value&gt;}}</code></td>
+<td><code>db.col.find({"likes":{$lte:50}}).pretty()</code></td>
+<td><code>where likes &lt;= 50</code></td>
+</tr>
+<tr>
+<td>大于</td>
+<td><code>{&lt;key&gt;:{$gt:&lt;value&gt;}}</code></td>
+<td><code>db.col.find({"likes":{$gt:50}}).pretty()</code></td>
+<td><code>where likes &gt; 50</code></td>
+</tr>
+<tr>
+<td>大于或等于</td>
+<td><code>{&lt;key&gt;:{$gte:&lt;value&gt;}}</code></td>
+<td><code>db.col.find({"likes":{$gte:50}}).pretty()</code></td>
+<td><code>where likes &gt;= 50</code></td>
+</tr>
+<tr>
+<td>不等于</td>
+<td><code>{&lt;key&gt;:{$ne:&lt;value&gt;}}</code></td>
+<td><code>db.col.find({"likes":{$ne:50}}).pretty()</code></td>
+<td><code>where likes != 50</code></td>
+</tr>
+</tbody>
+</table>
+<p>实例：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#插入测试数据</span>
+db.user.insert<span class="o">({</span>id:1,username:<span class="s1">&#39;zhangsan&#39;</span>,age:20<span class="o">})</span>
+db.user.insert<span class="o">({</span>id:2,username:<span class="s1">&#39;lisi&#39;</span>,age:21<span class="o">})</span>
+db.user.insert<span class="o">({</span>id:3,username:<span class="s1">&#39;wangwu&#39;</span>,age:22<span class="o">})</span>
+db.user.insert<span class="o">({</span>id:4,username:<span class="s1">&#39;zhaoliu&#39;</span>,age:22<span class="o">})</span>
+
+db.user.find<span class="o">()</span>  <span class="c1">#查询全部数据</span>
+db.user.find<span class="o">({}</span>,<span class="o">{</span>id:1,username:1<span class="o">})</span>  <span class="c1">#只查询id与username字段</span>
+db.user.find<span class="o">()</span>.count<span class="o">()</span>  <span class="c1">#查询数据条数</span>
+db.user.find<span class="o">({</span>id:1<span class="o">})</span> <span class="c1">#查询id为1的数据</span>
+db.user.find<span class="o">({</span>age:<span class="o">{</span><span class="nv">$lte</span>:21<span class="o">}})</span> <span class="c1">#查询小于等于21的数据</span>
+db.user.find<span class="o">({</span>age:<span class="o">{</span><span class="nv">$lte</span>:21<span class="o">}</span>, id:<span class="o">{</span><span class="nv">$gte</span>:2<span class="o">}})</span> <span class="c1">#and查询，age小于等于21并且id大于等于2</span>
+db.user.find<span class="o">({</span><span class="nv">$or</span>:<span class="o">[{</span>id:1<span class="o">}</span>,<span class="o">{</span>id:2<span class="o">}]})</span> <span class="c1">#查询id=1 or id=2</span>
+
+<span class="c1">#分页查询：Skip()跳过几条，limit()查询条数</span>
+db.user.find<span class="o">()</span>.limit<span class="o">(</span><span class="m">2</span><span class="o">)</span>.skip<span class="o">(</span><span class="m">1</span><span class="o">)</span>  <span class="c1">#跳过1条数据，查询2条数据</span>
+
+db.user.find<span class="o">()</span>.sort<span class="o">({</span>id:-1<span class="o">})</span> <span class="c1">#按照age倒序排序，-1为倒序，1为正序</span>
+</code></pre></div>
+
+<h3 id="34">3.4、索引<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<p>索引通常能够极大的提高查询的效率，如果没有索引，MongoDB在读取数据时必须扫描集合中的每个文件并选取那些符合查询条件的记录。</p>
+<p>这种扫描全集合的查询效率是非常低的，特别在处理大量的数据时，查询可以要花费几十秒甚至几分钟，这对网站的性能是非常致命的。</p>
+<p>索引是特殊的数据结构，索引存储在一个易于遍历读取的数据集合中，索引是对数据库表中一列或多列的值进行排序的一种结构</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#查看索引</span>
+&gt; db.user.getIndexes<span class="o">()</span>
+<span class="o">[</span>
+    <span class="o">{</span>
+        <span class="s2">&quot;v&quot;</span> : <span class="m">2</span>,
+        <span class="s2">&quot;key&quot;</span> : <span class="o">{</span>
+            <span class="s2">&quot;_id&quot;</span> : <span class="m">1</span>
+        <span class="o">}</span>,
+        <span class="s2">&quot;name&quot;</span> : <span class="s2">&quot;_id_&quot;</span>,
+        <span class="s2">&quot;ns&quot;</span> : <span class="s2">&quot;testdb.user&quot;</span>
+    <span class="o">}</span>
+<span class="o">]</span>
+
+<span class="c1">#说明：1表示升序创建索引，-1表示降序创建索引。</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#创建索引</span>
+&gt; db.user.createIndex<span class="o">({</span><span class="s1">&#39;age&#39;</span>:1<span class="o">})</span>
+<span class="o">{</span>
+    <span class="s2">&quot;createdCollectionAutomatically&quot;</span> : false,
+    <span class="s2">&quot;numIndexesBefore&quot;</span> : <span class="m">1</span>,
+    <span class="s2">&quot;numIndexesAfter&quot;</span> : <span class="m">2</span>,
+    <span class="s2">&quot;ok&quot;</span> : <span class="m">1</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#删除索引</span>
+db.user.dropIndex<span class="o">(</span><span class="s2">&quot;age_1&quot;</span><span class="o">)</span>
+<span class="c1">#或者，删除除了_id之外的索引</span>
+db.user.dropIndexes<span class="o">()</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#创建联合索引</span>
+db.user.createIndex<span class="o">({</span><span class="s1">&#39;age&#39;</span>:1, <span class="s1">&#39;id&#39;</span>:-1<span class="o">})</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#查看索引大小，单位：字节</span>
+db.user.totalIndexSize<span class="o">()</span>
+</code></pre></div>
+
+<h3 id="35">3.5、执行计划<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<p>MongoDB 查询分析可以确保我们建议的索引是否有效，是查询语句性能分析的重要工具。</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#插入1000条数据</span>
+<span class="k">for</span><span class="o">(</span>var <span class="nv">i</span><span class="o">=</span><span class="m">1</span><span class="p">;</span>i&lt;<span class="m">1000</span><span class="p">;</span>i++<span class="o">)</span>db.user.insert<span class="o">({</span>id:100+i,username:<span class="s1">&#39;name_&#39;</span>+i,age:10+i<span class="o">})</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#查看执行计划</span>
+&gt; db.user.find<span class="o">({</span>age:<span class="o">{</span><span class="nv">$gt</span>:100<span class="o">}</span>,id:<span class="o">{</span><span class="nv">$lt</span>:200<span class="o">}})</span>.explain<span class="o">()</span>
+<span class="o">{</span>
+    <span class="s2">&quot;queryPlanner&quot;</span> : <span class="o">{</span>
+        <span class="s2">&quot;plannerVersion&quot;</span> : <span class="m">1</span>,
+        <span class="s2">&quot;namespace&quot;</span> : <span class="s2">&quot;testdb.user&quot;</span>,
+        <span class="s2">&quot;indexFilterSet&quot;</span> : false,
+        <span class="s2">&quot;parsedQuery&quot;</span> : <span class="o">{</span>
+            <span class="s2">&quot;</span><span class="nv">$and</span><span class="s2">&quot;</span> : <span class="o">[</span>
+                <span class="o">{</span>
+                    <span class="s2">&quot;id&quot;</span> : <span class="o">{</span>
+                        <span class="s2">&quot;</span><span class="nv">$lt</span><span class="s2">&quot;</span> : <span class="m">200</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>,
+                <span class="o">{</span>
+                    <span class="s2">&quot;age&quot;</span> : <span class="o">{</span>
+                        <span class="s2">&quot;</span><span class="nv">$gt</span><span class="s2">&quot;</span> : <span class="m">100</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">]</span>
+        <span class="o">}</span>,
+        <span class="s2">&quot;winningPlan&quot;</span> : <span class="o">{</span>  <span class="c1">#最佳执行计划</span>
+            <span class="s2">&quot;stage&quot;</span> : <span class="s2">&quot;FETCH&quot;</span>, <span class="c1">#查询方式，常见的有COLLSCAN/全表扫描、IXSCAN/索引扫描、FETCH/根据索引去检索文档、SHARD_MERGE/合并分片结果、IDHACK/针对_id进行查询</span>
+            <span class="s2">&quot;inputStage&quot;</span> : <span class="o">{</span>
+                <span class="s2">&quot;stage&quot;</span> : <span class="s2">&quot;IXSCAN&quot;</span>,
+                <span class="s2">&quot;keyPattern&quot;</span> : <span class="o">{</span>
+                    <span class="s2">&quot;age&quot;</span> : <span class="m">1</span>,
+                    <span class="s2">&quot;id&quot;</span> : -1
+                <span class="o">}</span>,
+                <span class="s2">&quot;indexName&quot;</span> : <span class="s2">&quot;age_1_id_-1&quot;</span>,
+                <span class="s2">&quot;isMultiKey&quot;</span> : false,
+                <span class="s2">&quot;multiKeyPaths&quot;</span> : <span class="o">{</span>
+                    <span class="s2">&quot;age&quot;</span> : <span class="o">[</span> <span class="o">]</span>,
+                    <span class="s2">&quot;id&quot;</span> : <span class="o">[</span> <span class="o">]</span>
+                <span class="o">}</span>,
+                <span class="s2">&quot;isUnique&quot;</span> : false,
+                <span class="s2">&quot;isSparse&quot;</span> : false,
+                <span class="s2">&quot;isPartial&quot;</span> : false,
+                <span class="s2">&quot;indexVersion&quot;</span> : <span class="m">2</span>,
+                <span class="s2">&quot;direction&quot;</span> : <span class="s2">&quot;forward&quot;</span>,
+                <span class="s2">&quot;indexBounds&quot;</span> : <span class="o">{</span>
+                    <span class="s2">&quot;age&quot;</span> : <span class="o">[</span>
+                        <span class="s2">&quot;(100.0, inf.0]&quot;</span>
+                    <span class="o">]</span>,
+                    <span class="s2">&quot;id&quot;</span> : <span class="o">[</span>
+                        <span class="s2">&quot;(200.0, -inf.0]&quot;</span>
+                    <span class="o">]</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>,
+        <span class="s2">&quot;rejectedPlans&quot;</span> : <span class="o">[</span> <span class="o">]</span>
+    <span class="o">}</span>,
+    <span class="s2">&quot;serverInfo&quot;</span> : <span class="o">{</span>
+        <span class="s2">&quot;host&quot;</span> : <span class="s2">&quot;c493d5ff750a&quot;</span>,
+        <span class="s2">&quot;port&quot;</span> : <span class="m">27017</span>,
+        <span class="s2">&quot;version&quot;</span> : <span class="s2">&quot;4.0.3&quot;</span>,
+        <span class="s2">&quot;gitVersion&quot;</span> : <span class="s2">&quot;7ea530946fa7880364d88c8d8b6026bbc9ffa48c&quot;</span>
+    <span class="o">}</span>,
+    <span class="s2">&quot;ok&quot;</span> : <span class="m">1</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#测试没有使用索引</span>
+&gt; db.user.find<span class="o">({</span>username:<span class="s1">&#39;zhangsan&#39;</span><span class="o">})</span>.explain<span class="o">()</span>
+<span class="o">{</span>
+    <span class="s2">&quot;queryPlanner&quot;</span> : <span class="o">{</span>
+        <span class="s2">&quot;plannerVersion&quot;</span> : <span class="m">1</span>,
+        <span class="s2">&quot;namespace&quot;</span> : <span class="s2">&quot;testdb.user&quot;</span>,
+        <span class="s2">&quot;indexFilterSet&quot;</span> : false,
+        <span class="s2">&quot;parsedQuery&quot;</span> : <span class="o">{</span>
+            <span class="s2">&quot;username&quot;</span> : <span class="o">{</span>
+                <span class="s2">&quot;</span><span class="nv">$eq</span><span class="s2">&quot;</span> : <span class="s2">&quot;zhangsan&quot;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>,
+        <span class="s2">&quot;winningPlan&quot;</span> : <span class="o">{</span>
+            <span class="s2">&quot;stage&quot;</span> : <span class="s2">&quot;COLLSCAN&quot;</span>,  <span class="c1">#全表扫描</span>
+            <span class="s2">&quot;filter&quot;</span> : <span class="o">{</span>
+                <span class="s2">&quot;username&quot;</span> : <span class="o">{</span>
+                    <span class="s2">&quot;</span><span class="nv">$eq</span><span class="s2">&quot;</span> : <span class="s2">&quot;zhangsan&quot;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>,
+            <span class="s2">&quot;direction&quot;</span> : <span class="s2">&quot;forward&quot;</span>
+        <span class="o">}</span>,
+        <span class="s2">&quot;rejectedPlans&quot;</span> : <span class="o">[</span> <span class="o">]</span>
+    <span class="o">}</span>,
+    <span class="s2">&quot;serverInfo&quot;</span> : <span class="o">{</span>
+        <span class="s2">&quot;host&quot;</span> : <span class="s2">&quot;c493d5ff750a&quot;</span>,
+        <span class="s2">&quot;port&quot;</span> : <span class="m">27017</span>,
+        <span class="s2">&quot;version&quot;</span> : <span class="s2">&quot;4.0.3&quot;</span>,
+        <span class="s2">&quot;gitVersion&quot;</span> : <span class="s2">&quot;7ea530946fa7880364d88c8d8b6026bbc9ffa48c&quot;</span>
+    <span class="o">}</span>,
+    <span class="s2">&quot;ok&quot;</span> : <span class="m">1</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<h3 id="36ui">3.6、UI客户端工具<a class="headerlink" href="#36ui" title="Permanent link">&para;</a></h3>
+<p>Robo 3T是MongoDB的客户端工具，我们可以使用它来操作MongoDB。</p>
+<p><img alt="1544109001776" src="assets/1544109001776.png" /></p>
+<p>查看数据： <img alt="1544109144162" src="assets/1544109144162.png" /></p>
+<p>或使用Navicat Premium 15：</p>
+<p><img alt="image-20201123162352921" src="assets/image-20201123162352921.png" /></p>
+<h2 id="4springbootmongodb">4、SpringBoot整合MongoDB<a class="headerlink" href="#4springbootmongodb" title="Permanent link">&para;</a></h2>
+<p>spring-data对MongoDB做了支持，使用spring-data-mongodb可以简化MongoDB的操作。</p>
+<p>地址：https://spring.io/projects/spring-data-mongodb</p>
+<h3 id="41">4.1、导入依赖<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+
+    <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>2.1.0.RELEASE<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/parent&gt;</span>
+
+    <span class="nt">&lt;groupId&gt;</span>cn.itcast.mongodb<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>itcast-mongodb<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-data-mongodb<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;optional&gt;</span>true<span class="nt">&lt;/optional&gt;</span>
+            <span class="nt">&lt;version&gt;</span>1.18.4<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+
+    <span class="nt">&lt;build&gt;</span>
+        <span class="nt">&lt;plugins&gt;</span>
+            <span class="c">&lt;!-- java编译插件 --&gt;</span>
+            <span class="nt">&lt;plugin&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>3.2<span class="nt">&lt;/version&gt;</span>
+                <span class="nt">&lt;configuration&gt;</span>
+                    <span class="nt">&lt;source&gt;</span>1.8<span class="nt">&lt;/source&gt;</span>
+                    <span class="nt">&lt;target&gt;</span>1.8<span class="nt">&lt;/target&gt;</span>
+                    <span class="nt">&lt;encoding&gt;</span>UTF-8<span class="nt">&lt;/encoding&gt;</span>
+                <span class="nt">&lt;/configuration&gt;</span>
+            <span class="nt">&lt;/plugin&gt;</span>
+        <span class="nt">&lt;/plugins&gt;</span>
+    <span class="nt">&lt;/build&gt;</span>
+
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+
+<h3 id="42applicationproperties">4.2、编写application.properties配置文件<a class="headerlink" href="#42applicationproperties" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c"># Spring boot application</span>
+<span class="na">spring.application.name</span> <span class="o">=</span> <span class="s">itcast-mongodb</span>
+
+<span class="c">#无认证信息的配置</span>
+<span class="c">#spring.data.mongodb.uri=mongodb://192.168.31.81:27017/tanhua</span>
+
+<span class="c">#springboot 配置</span>
+<span class="na">spring.data.mongodb.username</span><span class="o">=</span><span class="s">tanhua</span>
+<span class="na">spring.data.mongodb.password</span><span class="o">=</span><span class="s">l3SCjl0HvmSkTtiSbN0Swv40spYnHhDV</span>
+<span class="na">spring.data.mongodb.authentication-database</span><span class="o">=</span><span class="s">admin</span>
+<span class="na">spring.data.mongodb.database</span><span class="o">=</span><span class="s">tanhua</span>
+<span class="na">spring.data.mongodb.port</span><span class="o">=</span><span class="s">27018</span>
+<span class="na">spring.data.mongodb.host</span><span class="o">=</span><span class="s">192.168.31.81</span>
+</code></pre></div>
+
+<h3 id="43">4.3、编写实体<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">cn.itcast.mongodb.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Address</span> <span class="n">address</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">cn.itcast.mongodb.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Address</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">street</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">city</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">zip</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="44dao">4.4、编写dao<a class="headerlink" href="#44dao" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">cn.itcast.mongodb.dao</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">cn.itcast.mongodb.pojo.Person</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.mongodb.client.result.DeleteResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.mongodb.client.result.UpdateResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.MongoTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Criteria</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Query</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Update</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PersonDao</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">MongoTemplate</span> <span class="n">mongoTemplate</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">savePerson</span><span class="p">(</span><span class="n">Person</span> <span class="n">person</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">person</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="nf">queryPersonListByName</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">name</span><span class="p">));</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">Person</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="nf">queryPersonPageList</span><span class="p">(</span><span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">rows</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Query</span><span class="p">().</span><span class="na">limit</span><span class="p">(</span><span class="n">rows</span><span class="p">).</span><span class="na">skip</span><span class="p">((</span><span class="n">page</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">rows</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">Person</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">UpdateResult</span> <span class="nf">update</span><span class="p">(</span><span class="n">Person</span> <span class="n">person</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">getId</span><span class="p">()));</span>
+        <span class="n">Update</span> <span class="n">update</span> <span class="o">=</span> <span class="n">Update</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">person</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">updateFirst</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">update</span><span class="p">,</span> <span class="n">Person</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">DeleteResult</span> <span class="nf">deleteById</span><span class="p">(</span><span class="n">String</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">Person</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="45">4.5、编写启动类<a class="headerlink" href="#45" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">cn.itcast.mongodb</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.boot.SpringApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="p">;</span>
+
+<span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MongoApplication</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">MongoApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="46">4.6、编写单元测试<a class="headerlink" href="#46" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">cn.itcast.mongodb</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">cn.itcast.mongodb.dao.PersonDao</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">cn.itcast.mongodb.pojo.Address</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">cn.itcast.mongodb.pojo.Person</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.runner.RunWith</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.test.context.junit4.SpringRunner</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="nd">@SpringBootTest</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestPersonDao</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">PersonDao</span> <span class="n">personDao</span><span class="p">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSave</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Person</span> <span class="n">person</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="n">ObjectId</span><span class="p">.</span><span class="na">get</span><span class="p">(),</span> <span class="s">&quot;张三&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span>
+                <span class="k">new</span> <span class="n">Address</span><span class="p">(</span><span class="s">&quot;人民路&quot;</span><span class="p">,</span> <span class="s">&quot;上海市&quot;</span><span class="p">,</span> <span class="s">&quot;666666&quot;</span><span class="p">));</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">personDao</span><span class="p">.</span><span class="na">savePerson</span><span class="p">(</span><span class="n">person</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testQuery</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">personList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">personDao</span><span class="p">.</span><span class="na">queryPersonListByName</span><span class="p">(</span><span class="s">&quot;张三&quot;</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Person</span> <span class="n">person</span> <span class="p">:</span> <span class="n">personList</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">person</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testQuery2</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">personList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">personDao</span><span class="p">.</span><span class="na">queryPersonPageList</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Person</span> <span class="n">person</span> <span class="p">:</span> <span class="n">personList</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">person</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testUpdate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Person</span> <span class="n">person</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">();</span>
+        <span class="n">person</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="k">new</span> <span class="n">ObjectId</span><span class="p">(</span><span class="s">&quot;5c0956ce235e192520086736&quot;</span><span class="p">));</span>
+        <span class="n">person</span><span class="p">.</span><span class="na">setAge</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">personDao</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">person</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testDelete</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">personDao</span><span class="p">.</span><span class="na">deleteById</span><span class="p">(</span><span class="s">&quot;5c09ca05235e192d8887a389&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../day01/" class="md-footer__link md-footer__link--prev" aria-label="上一页: day01" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              day01
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../day03/" class="md-footer__link md-footer__link--next" aria-label="下一页: day03" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              day03
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 peaceiris
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/peaceiris" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/piris314en" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

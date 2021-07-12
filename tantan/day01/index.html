@@ -1,0 +1,3445 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions.">
+      
+      
+      
+        <meta name="author" content="nitto">
+      
+      
+        <link rel="canonical" href="https://nitto.netlify.app/tantan/day01/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>day01 - Nitto Java Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nitto Java Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              day01
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nitto Java Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jquery/" class="md-nav__link">
+        JQuery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ajax/" class="md-nav__link">
+        AJAX
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/4/" class="md-nav__link">
+        docker部署容器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/5/" class="md-nav__link">
+        Docerfile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/6/" class="md-nav__link">
+        服务编排
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/7/" class="md-nav__link">
+        私有仓库
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/MongoDB/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        项目一-探花交友
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目一-探花交友" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          项目一-探花交友
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          day01
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        day01
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    课程介绍  《探花交友》
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、功能介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="1、功能介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1、功能列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2、注册登录
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3、交友
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3、交友">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    1.3.1、首页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    1.3.2、探花
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    1.3.3、搜附近
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    1.3.4、桃花传音
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    1.3.5、测灵魂
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4、圈子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    1.5、消息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    1.6、小视频
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    1.7、我的
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、项目介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="2、项目介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1、项目背景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2、市场分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3、目标用户群体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4、技术方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    2.5、技术架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    2.6、技术解决方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    2.7、技术亮点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    2.8、开发方式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    2.9、基础环境
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、注册登录
+  </a>
+  
+    <nav class="md-nav" aria-label="3、注册登录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1、单点登录系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2、搭建工程
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2、搭建工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321my-tanhua" class="md-nav__link">
+    3.2.1、my-tanhua
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322my-tanhua-sso" class="md-nav__link">
+    3.2.2、my-tanhua-sso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323" class="md-nav__link">
+    3.2.3、网易模拟器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3、数据库表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4、编写配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5、编写基础代码
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5、编写基础代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351lombok" class="md-nav__link">
+    3.5.1、Lombok
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5.1、Lombok">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3511" class="md-nav__link">
+    3.5.1.1、配置安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3512" class="md-nav__link">
+    3.5.1.2、常用注解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352sexenum" class="md-nav__link">
+    3.5.2、SexEnum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353useruserinfo" class="md-nav__link">
+    3.5.3、User、UserInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354mymetaobjecthandler" class="md-nav__link">
+    3.5.4、MyMetaObjectHandler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355usermapper" class="md-nav__link">
+    3.5.5、UserMapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#356myapplication" class="md-nav__link">
+    3.5.6、MyApplication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    3.6、短信验证码
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6、短信验证码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361" class="md-nav__link">
+    3.6.1、阿里云短信服务
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.1、阿里云短信服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3611" class="md-nav__link">
+    3.6.1.1、申请签名与模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3612" class="md-nav__link">
+    3.6.1.2、设置用户权限
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3613" class="md-nav__link">
+    3.6.1.3、示例代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3614" class="md-nav__link">
+    3.6.1.4、实现发送短信方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362sso" class="md-nav__link">
+    3.6.2、SSO短信接口服务
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.2、SSO短信接口服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3621mock" class="md-nav__link">
+    3.6.2.1、mock接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3622" class="md-nav__link">
+    3.6.2.2、编写接口服务
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37jwt" class="md-nav__link">
+    3.7、JWT
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7、JWT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371" class="md-nav__link">
+    3.7.1、简介
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372" class="md-nav__link">
+    3.7.2、格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httpsjwtio" class="md-nav__link">
+    官网测试：https://jwt.io/
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base64eyjhbgcioijiuzi1niisinr5cci6ikpxvcj9" class="md-nav__link">
+    base64加密后的字符串为：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base64" class="md-nav__link">
+    base64后的字符串为：
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokeneyjhbgcioijiuzi1niisinr5cci6ikpxvcj9eyjzdwiioiixmjm0nty3odkwiiwibmftzsi6ikpvag4grg9liiwiawf0ijoxnte2mjm5mdiyfqdwmtjjktoffdclhqjjmrgyzico6fjouc3jmev9escbc" class="md-nav__link">
+    整体的token为：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.DwMTjJktoFFdClHqjJMRgYzICo6FJOUc3Jmev9EScBc
+  </a>
+  
+    <nav class="md-nav" aria-label="整体的token为：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.DwMTjJktoFFdClHqjJMRgYzICo6FJOUc3Jmev9EScBc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#373" class="md-nav__link">
+    3.7.3、流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#374" class="md-nav__link">
+    3.7.4、示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    3.8、用户登录
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8、用户登录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371mock" class="md-nav__link">
+    3.7.1、mock接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372usercontroller" class="md-nav__link">
+    3.7.2、UserController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#373userservice" class="md-nav__link">
+    3.7.3、UserService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#374_1" class="md-nav__link">
+    3.7.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day03/" class="md-nav__link">
+        day03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day04/" class="md-nav__link">
+        day04
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day09/" class="md-nav__link">
+        day09
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_11" type="checkbox" id="__nav_8_11" >
+      
+      <label class="md-nav__link" for="__nav_8_11">
+        补充资料
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="补充资料" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_11">
+          <span class="md-nav__icon md-icon"></span>
+          补充资料
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/lombok/" class="md-nav__link">
+        day01_lombok
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/mybatisPlus/" class="md-nav__link">
+        day01_mybatis_plus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/aliyun/" class="md-nav__link">
+        day01_阿里云
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/sso/" class="md-nav__link">
+        day01_单点登录及jwt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/nginx/" class="md-nav__link">
+        day03_nginx
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/threadlocal/README.md" class="md-nav__link">
+        day03_ThreadLocal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/mongodb/" class="md-nav__link">
+        day04_MongoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/ansy/" class="md-nav__link">
+        day04_多线程@Ansy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        面试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="面试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          面试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/e.g.1.0.0/" class="md-nav__link">
+        e.g.1.0.0
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    课程介绍  《探花交友》
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、功能介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="1、功能介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1、功能列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2、注册登录
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3、交友
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3、交友">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    1.3.1、首页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    1.3.2、探花
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    1.3.3、搜附近
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    1.3.4、桃花传音
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    1.3.5、测灵魂
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4、圈子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    1.5、消息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    1.6、小视频
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    1.7、我的
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、项目介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="2、项目介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1、项目背景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2、市场分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3、目标用户群体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4、技术方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    2.5、技术架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    2.6、技术解决方案
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    2.7、技术亮点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    2.8、开发方式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    2.9、基础环境
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、注册登录
+  </a>
+  
+    <nav class="md-nav" aria-label="3、注册登录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1、单点登录系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2、搭建工程
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2、搭建工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321my-tanhua" class="md-nav__link">
+    3.2.1、my-tanhua
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322my-tanhua-sso" class="md-nav__link">
+    3.2.2、my-tanhua-sso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323" class="md-nav__link">
+    3.2.3、网易模拟器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3、数据库表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4、编写配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5、编写基础代码
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5、编写基础代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351lombok" class="md-nav__link">
+    3.5.1、Lombok
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5.1、Lombok">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3511" class="md-nav__link">
+    3.5.1.1、配置安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3512" class="md-nav__link">
+    3.5.1.2、常用注解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352sexenum" class="md-nav__link">
+    3.5.2、SexEnum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353useruserinfo" class="md-nav__link">
+    3.5.3、User、UserInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354mymetaobjecthandler" class="md-nav__link">
+    3.5.4、MyMetaObjectHandler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355usermapper" class="md-nav__link">
+    3.5.5、UserMapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#356myapplication" class="md-nav__link">
+    3.5.6、MyApplication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    3.6、短信验证码
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6、短信验证码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361" class="md-nav__link">
+    3.6.1、阿里云短信服务
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.1、阿里云短信服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3611" class="md-nav__link">
+    3.6.1.1、申请签名与模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3612" class="md-nav__link">
+    3.6.1.2、设置用户权限
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3613" class="md-nav__link">
+    3.6.1.3、示例代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3614" class="md-nav__link">
+    3.6.1.4、实现发送短信方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362sso" class="md-nav__link">
+    3.6.2、SSO短信接口服务
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.2、SSO短信接口服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3621mock" class="md-nav__link">
+    3.6.2.1、mock接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3622" class="md-nav__link">
+    3.6.2.2、编写接口服务
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37jwt" class="md-nav__link">
+    3.7、JWT
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7、JWT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371" class="md-nav__link">
+    3.7.1、简介
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372" class="md-nav__link">
+    3.7.2、格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httpsjwtio" class="md-nav__link">
+    官网测试：https://jwt.io/
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base64eyjhbgcioijiuzi1niisinr5cci6ikpxvcj9" class="md-nav__link">
+    base64加密后的字符串为：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base64" class="md-nav__link">
+    base64后的字符串为：
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokeneyjhbgcioijiuzi1niisinr5cci6ikpxvcj9eyjzdwiioiixmjm0nty3odkwiiwibmftzsi6ikpvag4grg9liiwiawf0ijoxnte2mjm5mdiyfqdwmtjjktoffdclhqjjmrgyzico6fjouc3jmev9escbc" class="md-nav__link">
+    整体的token为：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.DwMTjJktoFFdClHqjJMRgYzICo6FJOUc3Jmev9EScBc
+  </a>
+  
+    <nav class="md-nav" aria-label="整体的token为：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.DwMTjJktoFFdClHqjJMRgYzICo6FJOUc3Jmev9EScBc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#373" class="md-nav__link">
+    3.7.3、流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#374" class="md-nav__link">
+    3.7.4、示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    3.8、用户登录
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8、用户登录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371mock" class="md-nav__link">
+    3.7.1、mock接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372usercontroller" class="md-nav__link">
+    3.7.2、UserController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#373userservice" class="md-nav__link">
+    3.7.3、UserService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#374_1" class="md-nav__link">
+    3.7.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/tantan/day01/README.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h2 id="_1">课程介绍  《探花交友》<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>功能介绍</li>
+<li>项目介绍</li>
+<li>工程搭建</li>
+<li>短信验证码</li>
+<li>实现用户登录功能</li>
+</ul>
+<h2 id="1">1、功能介绍<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>探花交友是一个陌生人的在线交友平台，在该平台中可以搜索附近的人，查看好友动态，平台还会通过大数据计算进行智能推荐，通过智能推荐可以找到更加匹配的好友，这样才能增进用户对产品的喜爱度。探花平台还提供了在线即时通讯功能，可以实时的与好友进行沟通，让沟通随时随地的进行。  </p>
+<h3 id="11">1.1、功能列表<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>注册、登录</td>
+<td>用户无需单独注册，直接通过手机号登录即可</td>
+<td>首次登录成功后需要完善个人信息</td>
+</tr>
+<tr>
+<td>交友</td>
+<td>主要功能有：测灵魂、桃花传音、搜附近、探花等</td>
+<td></td>
+</tr>
+<tr>
+<td>圈子</td>
+<td>类似微信朋友圈，用户可以发动态、查看好友动态等</td>
+<td></td>
+</tr>
+<tr>
+<td>消息</td>
+<td>通知类消息 + 即时通讯消息</td>
+<td></td>
+</tr>
+<tr>
+<td>小视频</td>
+<td>类似抖音，用户可以发小视频，评论等</td>
+<td>显示小视频列表需要进行推荐算法计算后进行展现。</td>
+</tr>
+<tr>
+<td>我的</td>
+<td>我的动态、关注数、粉丝数、通用设置等</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="12">1.2、注册登录<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>业务说明：</p>
+<p>用户通过手机验证码进行登录，如果是第一次登录则需要完善个人信息，在上传图片时，需要对上传的图片做人像的校验，防止用户上传非人像的图片作为头像。流程完成后，则登录成功。</p>
+<p><img alt="1563681330146" src="assets/1563681330146.png" /></p>
+<p><img alt="1563681348382" src="assets/1563681348382.png" /></p>
+<p><img alt="1563681365123" src="assets/1563681365123.png" /></p>
+<p><img alt="1563681382592" src="assets/1563681382592.png" /></p>
+<p><img alt="1563681397466" src="assets/1563681397466.png" /></p>
+<p><img alt="1563681412881" src="assets/1563681412881.png" /></p>
+<h3 id="13">1.3、交友<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>交友是探花项目的核心功能之一，用户可以查看好友，添加好友，搜索好友等操作。</p>
+<p><img alt="1563698504256" src="assets/1563698504256.png" /></p>
+<h4 id="131">1.3.1、首页<a class="headerlink" href="#131" title="Permanent link">&para;</a></h4>
+<p>在首页中，主要功能有“今日佳人”、“推荐”、“最近访客”等</p>
+<ul>
+<li>今日佳人</li>
+<li>按照“缘分值”进行匹配，将“缘分值”最高的用户展现出来</li>
+<li>推荐</li>
+<li>按照“缘分值”进行推荐，由后台的推荐系统计算得出，展现出来</li>
+<li>最近访客</li>
+<li>显示最近来看“我”的用户</li>
+</ul>
+<h4 id="132">1.3.2、探花<a class="headerlink" href="#132" title="Permanent link">&para;</a></h4>
+<p><img alt="1563714212568" src="assets/1563714212568.png" /></p>
+<blockquote>
+<p>说明：左划喜欢，右划不喜欢，每天限量不超过100个，开通会员可增加限额。双方互相喜欢则配对成功。</p>
+<p>实现：数据来源推荐系统计算后的结果。</p>
+</blockquote>
+<h4 id="133">1.3.3、搜附近<a class="headerlink" href="#133" title="Permanent link">&para;</a></h4>
+<p><img alt="1563714826374" src="assets/1563714826374.png" /></p>
+<p>根据用户当前所在的位置进行查询，并且在10km的范围内进行查询，可以通过筛选按钮进行条件筛选。</p>
+<h4 id="134">1.3.4、桃花传音<a class="headerlink" href="#134" title="Permanent link">&para;</a></h4>
+<p>功能类似QQ中的漂流瓶，用户可以发送和接收语音消息，陌生人就会接收到消息。</p>
+<p><img alt="1563718868686" src="assets/1563718868686.png" /></p>
+<h4 id="135">1.3.5、测灵魂<a class="headerlink" href="#135" title="Permanent link">&para;</a></h4>
+<ol>
+<li>测试题用于对用户进行分类，每次提交答案后更新用户属性</li>
+<li>测试题在后台进行维护</li>
+<li>
+<p>测试题测试完后产生结果页可以进行分享</p>
+</li>
+<li>
+<p>测试题为顺序回答，回答完初级题解锁下一级问题</p>
+</li>
+<li>
+<p>点击锁定问题 显示提示 请先回答上一级问题</p>
+</li>
+</ol>
+<p><img alt="1563719052277" src="assets/1563719052277.png" /></p>
+<p><img alt="1563719092059" src="assets/1563719092059.png" /></p>
+<p><img alt="1563719100855" src="assets/1563719100855.png" /></p>
+<h3 id="14">1.4、圈子<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>1、推荐频道为根据问卷及喜好推荐相似用户动态</p>
+<p>2、显示内容为用户头像、用户昵称、用户性别、用户年龄、用户标签和用户发布动态</p>
+<p>3、图片最多不超过6张或发布一个小视频</p>
+<p>4、动态下方显示发布时间距离当时时间，例如10分钟前、3小时前、2天前，显示时间进行取整</p>
+<p>5、动态下方显示距离为发布动态地与本地距离</p>
+<p>6、显示用户浏览量</p>
+<p>7、显示点赞数、评论数 转发数</p>
+<p><img alt="1563719380223" src="assets/1563719380223.png" /></p>
+<p><img alt="1563719403171" src="assets/1563719403171.png" /></p>
+<h3 id="15">1.5、消息<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
+<p>消息包含通知类的消息和好友消息。</p>
+<p><img alt="1563719621939" src="assets/1563719621939.png" /></p>
+<h3 id="16">1.6、小视频<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
+<p>用户可以上传小视频，也可以查看小视频列表，并且可以进行点赞操作。</p>
+<p><img alt="1563719761162" src="assets/1563719761162.png" /></p>
+<h3 id="17">1.7、我的<a class="headerlink" href="#17" title="Permanent link">&para;</a></h3>
+<p>显示关注数、喜欢数、粉丝数、我的动态等信息。</p>
+<p><img alt="1563719894481" src="assets/1563719894481.png" /></p>
+<p><img alt="1563719949700" src="assets/1563719949700.png" /></p>
+<h2 id="2">2、项目介绍<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1、项目背景<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>在线社交是互联网时代的产物，已成为互联网用户的基础需求之一。移动互联网自2003年起快速发展，促使在线社交逐渐从PC端转移至移动端。移动社交最初以熟人社交为主，以维系熟人关系、共享资源信息的形式存在。随着人们交友需求的延伸，移动社交开始向陌生人社交、兴趣社交等垂直方向发展，形式丰富多样。</p>
+<h3 id="22">2.2、市场分析<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>探花交友项目定位于 <strong>陌生人交友市场</strong>。</p>
+<ul>
+<li>根据《2018社交领域投融资报告》中指出：虽然相比2017年，投融资事件减少29.5%，但是融资的总额却大幅增长，达到68%。</li>
+<li>这些迹象说明：社交领域的发展规模正在扩大，而很多没有特色的产品也会被淘汰。而随着那些尾部产品的倒下，对我们来说就是机会，及时抓住不同社交需求的机会。以社交为核心向不同的细分领域衍生正在逐渐走向成熟化。</li>
+<li>而我们按照娱乐形式和内容为主两个维度，将社交行业公司分类为：即时通信、内容社群、陌生人社交、泛娱乐社交以及兴趣社交几个领域。</li>
+<li>而在2018年社交的各个细分领域下，均有备受资本所关注的项目，根据烯牛数据2018年的报告中，也同样指出：内容社交及陌生人社交为资本重要关注领域，合计融资占比达73%。</li>
+</ul>
+<p><img alt="img" src="assets/clip_image002.jpg" /></p>
+<p>根据市场现状以及融资事件来看：陌生人社交、内容社群、兴趣社交在2019年仍然保持强劲的动力，占到近70%的比例，它们仍然是资本市场主要关注领域。从增长率来看陌生人社交的增长速度远远大于其他几类，因此我们要从这个方向入手。</p>
+<h3 id="23">2.3、目标用户群体<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>从整体年龄段来看：目前目标用户群体主要以30岁以下为主，其中以18-25岁年龄群体为主要受众人群。</p>
+<ul>
+<li><strong>上班群体：</strong>热衷于通过分享内容或表达“个人情绪”在陌生人面前建立特殊的人设，并借此提升自我价值扩大自己的交际圈；</li>
+<li><strong>学生群体：</strong>追求个性选择，更倾向找到有共同话题的陌生人对象并建立长期的关系，乐于展现自我；</li>
+<li><strong>文艺群体：</strong>拥有自己独特的爱好且拥有特别的个人追求，追求文艺圈子内的交流，希望通过分享结交更多好友；</li>
+<li><strong>沟通弱势群体：</strong>对现有长期保持线上对社交模式表现无力且无效，渴望有更加有效且安全的社交方式出现，解决目前单调乏味的沟通方式；</li>
+</ul>
+<h3 id="24">2.4、技术方案<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p>前端：</p>
+<ul>
+<li>flutter + android + 环信SDK + redux + shared_preferences + connectivity + iconfont + webview + sqflite</li>
+</ul>
+<p>后端：</p>
+<ul>
+<li>Spring Boot + SpringMVC + Mybatis + MybatisPlus + Dubbo</li>
+<li>Elasticsearch geo 实现地理位置查询</li>
+<li>MongoDB 实现海量数据的存储</li>
+<li>Redis 数据的缓存</li>
+<li>Spark + MLlib 实现智能推荐</li>
+<li>第三方服务 环信即时通讯 </li>
+<li>第三方服务 阿里云 OSS 、 短信服务</li>
+<li>第三方服务 虹软开放平台</li>
+</ul>
+<h3 id="25">2.5、技术架构<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
+<p><img alt="1563457093887" src="../../../../1563457093887.png" /></p>
+<h3 id="26">2.6、技术解决方案<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
+<ul>
+<li>使用Elasticsearch geo实现附近的人的解决方案</li>
+<li>使用Spark + Mllib实现智能推荐的解决方案</li>
+<li>使用MongoDB进行海量数据的存储的解决方案</li>
+<li>使用采用分布式文件系统存储小视频数据的解决方案</li>
+<li>使用虹软开放平台进行人脸识别的解决方案</li>
+</ul>
+<h3 id="27">2.7、技术亮点<a class="headerlink" href="#27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>采用Elasticsearch geo实现地理位置查询</li>
+<li>采用RocketMQ作为消息服务中间件</li>
+<li>采用MongoDB进行海量数据的存储</li>
+<li>采用Spark + Mllib实现智能推荐</li>
+<li>采用环信服务实现即时通讯</li>
+<li>采用分布式文件系统存储小视频数据</li>
+<li>采用Apache Dobbo作为微服务架构技术</li>
+<li>采用SpringBoot + Mybatis实现系统主架构</li>
+<li>采用Redis集群实现缓存的高可用</li>
+</ul>
+<h3 id="28">2.8、开发方式<a class="headerlink" href="#28" title="Permanent link">&para;</a></h3>
+<p>探花交友项目采用前后端分离的方式开发，就是前端由前端团队负责开发，后端负责接口的开发，这种开发方式有2点好处：</p>
+<ul>
+<li>扬长避短，每个团队做自己擅长的事情</li>
+<li>前后端并行开发，需要事先约定好接口地址以及各种参数、响应数据结构等</li>
+</ul>
+<p>对于接口的定义我们采用YApi进行管理，YApi是一个开源的接口定义、管理、提供mock数据的管理平台。</p>
+<blockquote>
+<p>地址：https://mock-java.itheima.net/</p>
+<p>用户名：tanhua@itcast.cn</p>
+<p>密码：123456</p>
+</blockquote>
+<p><img alt="image-20201017100705286" src="assets/image-20201017100705286.png" /></p>
+<p>接口定义：</p>
+<p><img alt="image-20201017100848313" src="assets/image-20201017100848313.png" /></p>
+<p>mock数据，YApi提供了mock功能，就是模拟服务端返回测试数据：</p>
+<p><img alt="image-20201017101228582" src="assets/image-20201017101228582.png" /></p>
+<p><img alt="image-20201017101252482" src="assets/image-20201017101252482.png" /></p>
+<p>还可以运行http请求（需要在Chrome中安装支持跨域扩展 https://juejin.im/post/6844904057707085832）：</p>
+<p><img alt="image-20201017103028622" src="assets/image-20201017103028622.png" /></p>
+<p><img alt="image-20201017103045864" src="assets/image-20201017103045864.png" /></p>
+<h3 id="29">2.9、基础环境<a class="headerlink" href="#29" title="Permanent link">&para;</a></h3>
+<p>探花交友项目的开发统一使用提供的Centos7环境，该环境中部署安装了项目所需要的各种服务，如：MySQL、MongoDB、Redis、RocketMQ等。</p>
+<ul>
+<li>虚拟机的root用户密码为：root123</li>
+<li>默认参数：CPU：2核，内存：4G，硬盘：60G</li>
+<li>IP地址建议设置为192.168.31.81，否则有些服务将不可用，比如：Redis、RocketMQ等。</li>
+</ul>
+<h2 id="3">3、注册登录<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>业务说明：</p>
+<p>用户通过手机验证码进行登录，如果是第一次登录则需要完善个人信息，在上传图片时，需要对上传的图片做人像的校验，防止用户上传非人像的图片作为头像。流程完成后，则登录成功。</p>
+<p>流程：</p>
+<p><img alt="image-20201116105353320" src="assets/image-20201116105353320.png" /></p>
+<h3 id="31">3.1、单点登录系统<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>为什么要使用单点登录系统？</p>
+<p>以前实现的登录和注册是在同一个tomcat内部完成，我们现在的系统架构是每一个系统都是由一个团队进行维护，每个系统都是单独部署运行一个单独的tomcat，所以，不能将用户的登录信息保存到session中（多个tomcat的session是不能共享的），所以我们需要一个单独的系统来维护用户的登录信息。</p>
+<p><img alt="image-20201016221250343" src="assets/image-20201016221250343.png" /></p>
+<p><img alt="image-20201117235203408" src="assets/image-20201117235203408.png" /></p>
+<p>由上图可以看出：</p>
+<ul>
+<li>客户端需要通过SSO系统才能获取到token；</li>
+<li>客户端在请求服务系统时，服务系统需要通过SSO系统进行对token进行校验；</li>
+<li>SSO系统在整个系统架构中处于核心位置；</li>
+</ul>
+<h3 id="32">3.2、搭建工程<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<h4 id="321my-tanhua">3.2.1、my-tanhua<a class="headerlink" href="#321my-tanhua" title="Permanent link">&para;</a></h4>
+<p>itcast-tanhua是父工程，集中定义了依赖的版本以及所需要的依赖信息。</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+
+    <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>2.1.0.RELEASE<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/parent&gt;</span>
+
+    <span class="nt">&lt;groupId&gt;</span>cn.itcast.tanhua<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>my-tanhua<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+
+    <span class="c">&lt;!-- 集中定义依赖版本号 --&gt;</span>
+    <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;mysql.version&gt;</span>5.1.47<span class="nt">&lt;/mysql.version&gt;</span>
+        <span class="nt">&lt;jackson.version&gt;</span>2.9.9<span class="nt">&lt;/jackson.version&gt;</span>
+        <span class="nt">&lt;druid.version&gt;</span>1.0.9<span class="nt">&lt;/druid.version&gt;</span>
+        <span class="nt">&lt;servlet-api.version&gt;</span>2.5<span class="nt">&lt;/servlet-api.version&gt;</span>
+        <span class="nt">&lt;jsp-api.version&gt;</span>2.0<span class="nt">&lt;/jsp-api.version&gt;</span>
+        <span class="nt">&lt;joda-time.version&gt;</span>2.9.9<span class="nt">&lt;/joda-time.version&gt;</span>
+        <span class="nt">&lt;commons-lang3.version&gt;</span>3.7<span class="nt">&lt;/commons-lang3.version&gt;</span>
+        <span class="nt">&lt;commons-io.version&gt;</span>1.3.2<span class="nt">&lt;/commons-io.version&gt;</span>
+        <span class="nt">&lt;mybatis.version&gt;</span>3.2.8<span class="nt">&lt;/mybatis.version&gt;</span>
+        <span class="nt">&lt;mybatis.mybatis-plus&gt;</span>3.1.1<span class="nt">&lt;/mybatis.mybatis-plus&gt;</span>
+        <span class="nt">&lt;lombok.version&gt;</span>1.18.4<span class="nt">&lt;/lombok.version&gt;</span>
+    <span class="nt">&lt;/properties&gt;</span>
+
+    <span class="c">&lt;!--通用依赖--&gt;</span>
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>4.12<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+
+    <span class="nt">&lt;dependencyManagement&gt;</span>
+        <span class="nt">&lt;dependencies&gt;</span>
+            <span class="c">&lt;!-- mybatis-plus插件依赖 --&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>mybatis-plus<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>${mybatis.mybatis-plus}<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>mybatis-plus-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>${mybatis.mybatis-plus}<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="c">&lt;!-- MySql --&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>mysql<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>mysql-connector-java<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>${mysql.version}<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.mongodb<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>mongodb-driver-sync<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>3.9.1<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;optional&gt;</span>true<span class="nt">&lt;/optional&gt;</span>
+                <span class="nt">&lt;version&gt;</span>${lombok.version}<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.apache.commons<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>commons-lang3<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>${commons-lang3.version}<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="c">&lt;!--RocketMQ相关--&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.apache.rocketmq<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>rocketmq-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>2.0.3<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.apache.rocketmq<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>rocketmq-client<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>4.6.0<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="c">&lt;!-- Jackson Json处理工具包 --&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>jackson-databind<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>${jackson.version}<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.alibaba<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>druid<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>${druid.version}<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>commons-codec<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>commons-codec<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>1.11<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>joda-time<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>joda-time<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>${joda-time.version}<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>io.netty<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>netty-all<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>4.1.32.Final<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="c">&lt;!--zk依赖--&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.apache.zookeeper<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>zookeeper<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>3.4.13<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.github.sgroschupf<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>zkclient<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>0.1<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="c">&lt;!--dubbo的springboot支持--&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.alibaba.boot<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>dubbo-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>0.2.0<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="c">&lt;!--dubbo框架--&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.alibaba<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>dubbo<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>2.6.4<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.aliyun.oss<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>aliyun-sdk-oss<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>2.8.3<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.aliyun<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>aliyun-java-sdk-core<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>4.5.3<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>com.github.tobato<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>fastdfs-client<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>1.26.7<span class="nt">&lt;/version&gt;</span>
+                <span class="nt">&lt;exclusions&gt;</span>
+                    <span class="nt">&lt;exclusion&gt;</span>
+                        <span class="nt">&lt;groupId&gt;</span>ch.qos.logback<span class="nt">&lt;/groupId&gt;</span>
+                        <span class="nt">&lt;artifactId&gt;</span>logback-classic<span class="nt">&lt;/artifactId&gt;</span>
+                    <span class="nt">&lt;/exclusion&gt;</span>
+                <span class="nt">&lt;/exclusions&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>io.jsonwebtoken<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>jjwt<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>0.9.1<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;/dependencies&gt;</span>
+    <span class="nt">&lt;/dependencyManagement&gt;</span>
+
+    <span class="nt">&lt;build&gt;</span>
+        <span class="nt">&lt;plugins&gt;</span>
+            <span class="c">&lt;!-- java编译插件 --&gt;</span>
+            <span class="nt">&lt;plugin&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>3.2<span class="nt">&lt;/version&gt;</span>
+                <span class="nt">&lt;configuration&gt;</span>
+                    <span class="nt">&lt;source&gt;</span>1.8<span class="nt">&lt;/source&gt;</span>
+                    <span class="nt">&lt;target&gt;</span>1.8<span class="nt">&lt;/target&gt;</span>
+                    <span class="nt">&lt;encoding&gt;</span>UTF-8<span class="nt">&lt;/encoding&gt;</span>
+                <span class="nt">&lt;/configuration&gt;</span>
+            <span class="nt">&lt;/plugin&gt;</span>
+        <span class="nt">&lt;/plugins&gt;</span>
+    <span class="nt">&lt;/build&gt;</span>
+
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+
+<h4 id="322my-tanhua-sso">3.2.2、my-tanhua-sso<a class="headerlink" href="#322my-tanhua-sso" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>my-tanhua<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>cn.itcast.tanhua<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/parent&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+
+    <span class="nt">&lt;artifactId&gt;</span>my-tanhua-sso<span class="nt">&lt;/artifactId&gt;</span>
+
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mybatis-plus<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mybatis-plus-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>mysql<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mysql-connector-java<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.alibaba<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>druid<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.commons<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>commons-lang3<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>jackson-databind<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-data-redis<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>commons-codec<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>commons-codec<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+
+        <span class="c">&lt;!--RocketMQ相关--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.rocketmq<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>rocketmq-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.rocketmq<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>rocketmq-client<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="c">&lt;!--简化代码的工具包--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;optional&gt;</span>true<span class="nt">&lt;/optional&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.aliyun<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>aliyun-java-sdk-core<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>io.jsonwebtoken<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>jjwt<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>joda-time<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>joda-time<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+
+
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+
+<h4 id="323">3.2.3、网易模拟器<a class="headerlink" href="#323" title="Permanent link">&para;</a></h4>
+<p>探花交友项目的前端采用Android APP的形式，所以我们需要使用模拟器或真机进行测试。</p>
+<p>对于模拟器这里推荐使用网易模拟器，其兼容性好、功能完善而且还简洁，缺点是它不支持虚拟机中安装。</p>
+<p>下载：https://mumu.163.com/</p>
+<p><img alt="image-20201016214917500" src="assets/image-20201016214917500.png" /></p>
+<h3 id="33">3.3、数据库表<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p>数据库使用的mysql：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">tb_user</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">id</span><span class="o">`</span> <span class="nb">bigint</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">mobile</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;手机号&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">password</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;密码，需要加密&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">created</span><span class="o">`</span> <span class="n">datetime</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">updated</span><span class="o">`</span> <span class="n">datetime</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="o">`</span><span class="n">mobile</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">mobile</span><span class="o">`</span><span class="p">)</span> <span class="k">USING</span> <span class="n">BTREE</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">1</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="k">COMMENT</span><span class="o">=</span><span class="s1">&#39;用户表&#39;</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">tb_user_info</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">id</span><span class="o">`</span> <span class="nb">bigint</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">user_id</span><span class="o">`</span> <span class="nb">bigint</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;用户id&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">nick_name</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;昵称&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">logo</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;用户头像&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">tags</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;用户标签：多个用逗号分隔&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">sex</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="s1">&#39;3&#39;</span> <span class="k">COMMENT</span> <span class="s1">&#39;性别，1-男，2-女，3-未知&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">age</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;用户年龄&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">edu</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;学历&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">city</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;居住城市&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">birthday</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;生日&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">cover_pic</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;封面图片&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">industry</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;行业&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">income</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;收入&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">marriage</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;婚姻状态&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">created</span><span class="o">`</span> <span class="n">datetime</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">updated</span><span class="o">`</span> <span class="n">datetime</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="o">`</span><span class="n">user_id</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">user_id</span><span class="o">`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span> <span class="k">COMMENT</span><span class="o">=</span><span class="s1">&#39;用户信息表&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="34">3.4、编写配置<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<p>application.properties：</p>
+<div class="codehilite"><pre><span></span><code><span class="na">spring.application.name</span> <span class="o">=</span> <span class="s">itcast-tanhua-sso</span>
+
+<span class="na">server.port</span> <span class="o">=</span> <span class="s">18080</span>
+
+<span class="na">spring.datasource.driver-class-name</span><span class="o">=</span><span class="s">com.mysql.jdbc.Driver</span>
+<span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://192.168.31.81:3306/mytanhua?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;allowMultiQueries=true&amp;useSSL=false</span>
+<span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">root</span>
+<span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">root</span>
+
+
+<span class="c"># 枚举包扫描</span>
+<span class="na">mybatis-plus.type-enums-package</span><span class="o">=</span><span class="s">com.tanhua.sso.enums</span>
+<span class="c"># 表名前缀</span>
+<span class="na">mybatis-plus.global-config.db-config.table-prefix</span><span class="o">=</span><span class="s">tb_</span>
+<span class="c"># id策略为自增长</span>
+<span class="na">mybatis-plus.global-config.db-config.id-type</span><span class="o">=</span><span class="s">auto</span>
+
+
+<span class="c"># Redis相关配置</span>
+<span class="na">spring.redis.jedis.pool.max-wait</span> <span class="o">=</span> <span class="s">5000ms</span>
+<span class="na">spring.redis.jedis.pool.max-Idle</span> <span class="o">=</span> <span class="s">100</span>
+<span class="na">spring.redis.jedis.pool.min-Idle</span> <span class="o">=</span> <span class="s">10</span>
+<span class="na">spring.redis.timeout</span> <span class="o">=</span> <span class="s">10s</span>
+<span class="na">spring.redis.cluster.nodes</span> <span class="o">=</span> <span class="s">192.168.31.81:6379,192.168.31.81:6380,192.168.31.81:6381</span>
+<span class="na">spring.redis.cluster.max-redirects</span><span class="o">=</span><span class="s">5</span>
+
+<span class="c"># RocketMQ相关配置</span>
+<span class="na">rocketmq.name-server</span><span class="o">=</span><span class="s">192.168.31.81:9876</span>
+<span class="na">rocketmq.producer.group</span><span class="o">=</span><span class="s">tanhua</span>
+
+<span class="c">#itcast_tanhua</span>
+<span class="c">#盐 值</span>
+<span class="na">jwt.secret</span><span class="o">=</span><span class="s">76bd425b6f29f7fcc2e0bfc286043df1</span>
+
+<span class="c">#虹软相关配置</span>
+<span class="na">arcsoft.appid</span><span class="o">=</span><span class="s">*****</span>
+<span class="na">arcsoft.sdkKey</span><span class="o">=</span><span class="s">****</span>
+<span class="na">arcsoft.libPath</span><span class="o">=</span><span class="s">F:\\code\\WIN64</span>
+</code></pre></div>
+
+<h3 id="35">3.5、编写基础代码<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<h4 id="351lombok">3.5.1、Lombok<a class="headerlink" href="#351lombok" title="Permanent link">&para;</a></h4>
+<p>lombok 提供了简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的 java 代码，尤其是针对pojo。</p>
+<p>官网：https://projectlombok.org/</p>
+<h5 id="3511">3.5.1.1、配置安装<a class="headerlink" href="#3511" title="Permanent link">&para;</a></h5>
+<p>导入依赖：</p>
+<div class="codehilite"><pre><span></span><code><span class="c">&lt;!--简化代码的工具包--&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;optional&gt;</span>true<span class="nt">&lt;/optional&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+
+<p>安装IDEA插件： <img alt="1542036205393" src="assets/1542036205393.png" /></p>
+<blockquote>
+<p>如果不安装插件，程序可以正常执行，但是看不到生成的一些代码，如：get、set方法。</p>
+</blockquote>
+<h5 id="3512">3.5.1.2、常用注解<a class="headerlink" href="#3512" title="Permanent link">&para;</a></h5>
+<ul>
+<li>@Data：注解在类上；提供类所有属性的 getting 和 setting 方法，此外还提供了equals、canEqual、hashCode、toString 方法</li>
+<li>@Setter：注解在属性上；为属性提供 setting 方法</li>
+<li>@Getter：注解在属性上；为属性提供 getting 方法</li>
+<li>@Slf4j：注解在类上；为类提供一个 属性名为log 的 slf4j日志对象</li>
+<li>@NoArgsConstructor：注解在类上；为类提供一个无参的构造方法</li>
+<li>@AllArgsConstructor：注解在类上；为类提供一个全参的构造方法</li>
+<li>@Builder：使用Builder模式构建对象</li>
+</ul>
+<blockquote>
+<p>测试一：使用@Data注解</p>
+</blockquote>
+<p><img alt="image-20201116113610810" src="assets/image-20201116113610810.png" /></p>
+<p>是不是很神奇？！</p>
+<blockquote>
+<p>测试二：使用@Slf4j注解 </p>
+</blockquote>
+<p><img alt="image-20201116113645107" src="assets/image-20201116113645107.png" /></p>
+<p>测试： </p>
+<p><img alt="image-20201116113812602" src="assets/image-20201116113812602.png" /></p>
+<blockquote>
+<p>测试三：@AllArgsConstructor、@NoArgsConstructor注解的使用</p>
+</blockquote>
+<p><img alt="image-20201116114013519" src="assets/image-20201116114013519.png" /></p>
+<blockquote>
+<p>测试四：@Builder</p>
+</blockquote>
+<p><img alt="image-20201116114233416" src="assets/image-20201116114233416.png" /></p>
+<p>测试结果：</p>
+<p><img alt="image-20201116114254202" src="assets/image-20201116114254202.png" /></p>
+<h4 id="352sexenum">3.5.2、SexEnum<a class="headerlink" href="#352sexenum" title="Permanent link">&para;</a></h4>
+<p>用户的性别用枚举进行表示。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.enums</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.enums.IEnum</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">enum</span> <span class="n">SexEnum</span> <span class="kd">implements</span> <span class="n">IEnum</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="n">MAN</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;男&quot;</span><span class="p">),</span>
+    <span class="n">WOMAN</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;女&quot;</span><span class="p">),</span>
+    <span class="n">UNKNOWN</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;未知&quot;</span><span class="p">);</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">desc</span><span class="p">;</span>
+
+    <span class="n">SexEnum</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">,</span> <span class="n">String</span> <span class="n">desc</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">desc</span> <span class="o">=</span> <span class="n">desc</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Integer</span> <span class="nf">getValue</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">desc</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="353useruserinfo">3.5.3、User、UserInfo<a class="headerlink" href="#353useruserinfo" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.annotation.FieldFill</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.annotation.TableField</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">BasePojo</span> <span class="p">{</span>
+
+    <span class="nd">@TableField</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">FieldFill</span><span class="p">.</span><span class="na">INSERT</span><span class="p">)</span> <span class="c1">//MP自动填充</span>
+    <span class="kd">private</span> <span class="n">Date</span> <span class="n">created</span><span class="p">;</span>
+    <span class="nd">@TableField</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">FieldFill</span><span class="p">.</span><span class="na">INSERT_UPDATE</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">Date</span> <span class="n">updated</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.annotation.JsonIgnore</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="kd">extends</span> <span class="n">BasePojo</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">mobile</span><span class="p">;</span> <span class="c1">//手机号</span>
+
+    <span class="nd">@JsonIgnore</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="p">;</span> <span class="c1">//密码，json序列化时忽略</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.enums.SexEnum</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserInfo</span> <span class="kd">extends</span> <span class="n">BasePojo</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">userId</span><span class="p">;</span> <span class="c1">//用户id</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">nickName</span><span class="p">;</span> <span class="c1">//昵称</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">logo</span><span class="p">;</span> <span class="c1">//用户头像</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">tags</span><span class="p">;</span> <span class="c1">//用户标签：多个用逗号分隔</span>
+    <span class="kd">private</span> <span class="n">SexEnum</span> <span class="n">sex</span><span class="p">;</span> <span class="c1">//性别</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span><span class="p">;</span> <span class="c1">//年龄</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">edu</span><span class="p">;</span> <span class="c1">//学历</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">city</span><span class="p">;</span> <span class="c1">//城市</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">;</span> <span class="c1">//生日</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">coverPic</span><span class="p">;</span> <span class="c1">// 封面图片</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">industry</span><span class="p">;</span> <span class="c1">//行业</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">income</span><span class="p">;</span> <span class="c1">//收入</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">marriage</span><span class="p">;</span> <span class="c1">//婚姻状态</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="354mymetaobjecthandler">3.5.4、MyMetaObjectHandler<a class="headerlink" href="#354mymetaobjecthandler" title="Permanent link">&para;</a></h4>
+<p>对自动填充字段的处理：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.handler</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.handlers.MetaObjectHandler</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.ibatis.reflection.MetaObject</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyMetaObjectHandler</span> <span class="kd">implements</span> <span class="n">MetaObjectHandler</span> <span class="p">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">insertFill</span><span class="p">(</span><span class="n">MetaObject</span> <span class="n">metaObject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Object</span> <span class="n">created</span> <span class="o">=</span> <span class="n">getFieldValByName</span><span class="p">(</span><span class="s">&quot;created&quot;</span><span class="p">,</span> <span class="n">metaObject</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">created</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//字段为空，可以进行填充</span>
+            <span class="n">setFieldValByName</span><span class="p">(</span><span class="s">&quot;created&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">Date</span><span class="p">(),</span> <span class="n">metaObject</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">Object</span> <span class="n">updated</span> <span class="o">=</span> <span class="n">getFieldValByName</span><span class="p">(</span><span class="s">&quot;updated&quot;</span><span class="p">,</span> <span class="n">metaObject</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">updated</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//字段为空，可以进行填充</span>
+            <span class="n">setFieldValByName</span><span class="p">(</span><span class="s">&quot;updated&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">Date</span><span class="p">(),</span> <span class="n">metaObject</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">updateFill</span><span class="p">(</span><span class="n">MetaObject</span> <span class="n">metaObject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//更新数据时，直接更新字段</span>
+        <span class="n">setFieldValByName</span><span class="p">(</span><span class="s">&quot;updated&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">Date</span><span class="p">(),</span> <span class="n">metaObject</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="355usermapper">3.5.5、UserMapper<a class="headerlink" href="#355usermapper" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.mapper</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.mapper.BaseMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.pojo.User</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserMapper</span> <span class="kd">extends</span> <span class="n">BaseMapper</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.mapper</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.mapper.BaseMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.pojo.UserInfo</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserInfoMapper</span> <span class="kd">extends</span> <span class="n">BaseMapper</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="356myapplication">3.5.6、MyApplication<a class="headerlink" href="#356myapplication" title="Permanent link">&para;</a></h4>
+<p>SpringBoot的启动类。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.mybatis.spring.annotation.MapperScan</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.SpringApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="p">;</span>
+
+<span class="nd">@MapperScan</span><span class="p">(</span><span class="s">&quot;com.tanhua.sso.mapper&quot;</span><span class="p">)</span> <span class="c1">//设置mapper接口的扫描包</span>
+<span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyApplication</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">MyApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="36">3.6、短信验证码<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
+<p>发送短信验证码的流程：</p>
+<p><img alt="image-20201116090449776" src="assets/image-20201116090449776.png" /></p>
+<p>流程说明：</p>
+<ul>
+<li>用户向SSO系统发送请求，在请求中传递手机号；</li>
+<li>SSO系统接收到请求后，生成随机验证码以及短信内容，请求阿里云短信服务；</li>
+<li>阿里云短信服务接收到请求后，会进行一系列的验证，比如账号余额、短信模板是否正确等，最后向运营商发起请求；</li>
+<li>运营商接收到请求后，向该手机号下发短信，用户即可收到短信；</li>
+</ul>
+<h4 id="361">3.6.1、阿里云短信服务<a class="headerlink" href="#361" title="Permanent link">&para;</a></h4>
+<h5 id="3611">3.6.1.1、申请签名与模板<a class="headerlink" href="#3611" title="Permanent link">&para;</a></h5>
+<p>https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.0.ddysms.2a4316d0ql6PyD</p>
+<p><img alt="image-20201016193819097" src="assets/image-20201016193819097.png" /></p>
+<blockquote>
+<p>说明：申请签名时，个人用户只能申请一个并且签名的名称必须为“ABC商城”，否则审核不通过。</p>
+</blockquote>
+<p>申请模板：</p>
+<p><img alt="image-20201016193927924" src="assets/image-20201016193927924.png" /></p>
+<blockquote>
+<p>审核时间需要1~2小时，请耐心等待~</p>
+</blockquote>
+<h5 id="3612">3.6.1.2、设置用户权限<a class="headerlink" href="#3612" title="Permanent link">&para;</a></h5>
+<p>在阿里云中，需要在RAM服务中创建用户以及权限，才能通过api进行访问接口。</p>
+<p><img alt="image-20201016194331790" src="assets/image-20201016194331790.png" /></p>
+<p>创建用户：</p>
+<p><img alt="image-20201016194409024" src="assets/image-20201016194409024.png" /></p>
+<p><img alt="image-20201016195011698" src="assets/image-20201016195011698.png" /></p>
+<p>创建完成后要保存AccessKey Secret和AccessKey ID，AccessKey Secret只显示这一次，后面将不再显示。</p>
+<p>添加权限：</p>
+<p><img alt="image-20201016194636739" src="assets/image-20201016194636739.png" /></p>
+<h5 id="3613">3.6.1.3、示例代码<a class="headerlink" href="#3613" title="Permanent link">&para;</a></h5>
+<p>文档：https://help.aliyun.com/document_detail/101414.html?spm=a2c4g.11186623.6.625.18705ffa8u4lwj：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.aliyuncs.CommonRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.CommonResponse</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.DefaultAcsClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.IAcsClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.exceptions.ClientException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.exceptions.ServerException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.http.MethodType</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.profile.DefaultProfile</span><span class="p">;</span>
+<span class="cm">/*</span>
+<span class="cm">pom.xml</span>
+<span class="cm">&lt;dependency&gt;</span>
+<span class="cm">  &lt;groupId&gt;com.aliyun&lt;/groupId&gt;</span>
+<span class="cm">  &lt;artifactId&gt;aliyun-java-sdk-core&lt;/artifactId&gt;</span>
+<span class="cm">  &lt;version&gt;4.5.3&lt;/version&gt;</span>
+<span class="cm">&lt;/dependency&gt;</span>
+<span class="cm">*/</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SendSms</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">DefaultProfile</span> <span class="n">profile</span> <span class="o">=</span> <span class="n">DefaultProfile</span><span class="p">.</span><span class="na">getProfile</span><span class="p">(</span><span class="s">&quot;cn-hangzhou&quot;</span><span class="p">,</span>
+                <span class="s">&quot;LTAI4G7d2Q9CHc741gighjTF&quot;</span><span class="p">,</span> <span class="s">&quot;uKOOGdIKvmoGhHlej8cJY8H3nlU6Fj&quot;</span><span class="p">);</span>
+        <span class="n">IAcsClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultAcsClient</span><span class="p">(</span><span class="n">profile</span><span class="p">);</span>
+
+        <span class="n">CommonRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CommonRequest</span><span class="p">();</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysMethod</span><span class="p">(</span><span class="n">MethodType</span><span class="p">.</span><span class="na">POST</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysDomain</span><span class="p">(</span><span class="s">&quot;dysmsapi.aliyuncs.com&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysVersion</span><span class="p">(</span><span class="s">&quot;2017-05-25&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysAction</span><span class="p">(</span><span class="s">&quot;SendSms&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;RegionId&quot;</span><span class="p">,</span> <span class="s">&quot;cn-hangzhou&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;PhoneNumbers&quot;</span><span class="p">,</span> <span class="s">&quot;158****7944&quot;</span><span class="p">);</span> <span class="c1">//目标手机号</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;SignName&quot;</span><span class="p">,</span> <span class="s">&quot;ABC商城&quot;</span><span class="p">);</span> <span class="c1">//签名名称</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;TemplateCode&quot;</span><span class="p">,</span> <span class="s">&quot;SMS_204756062&quot;</span><span class="p">);</span> <span class="c1">//短信模板code</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;TemplateParam&quot;</span><span class="p">,</span> <span class="s">&quot;{\&quot;code\&quot;:\&quot;123456\&quot;}&quot;</span><span class="p">);</span><span class="c1">//模板中变量替换</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">CommonResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="na">getCommonResponse</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+
+            <span class="c1">//{&quot;Message&quot;:&quot;OK&quot;,&quot;RequestId&quot;:&quot;EC2D4C9A-0EAC-4213-BE45-CE6176E1DF23&quot;,&quot;BizId&quot;:&quot;110903802851113360^0&quot;,&quot;Code&quot;:&quot;OK&quot;}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">getData</span><span class="p">());</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ServerException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ClientException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3614">3.6.1.4、实现发送短信方法<a class="headerlink" href="#3614" title="Permanent link">&para;</a></h5>
+<p>配置文件：aliyun.properties</p>
+<div class="codehilite"><pre><span></span><code><span class="na">aliyun.sms.regionId</span> <span class="o">=</span> <span class="s">cn-hangzhou</span>
+<span class="na">aliyun.sms.accessKeyId</span> <span class="o">=</span> <span class="s">LTAI4G7d2Q9CHc741gighjTF</span>
+<span class="na">aliyun.sms.accessKeySecret</span> <span class="o">=</span> <span class="s">uKOOGdIKvmoGhHlej8cJY8H3nlU6Fj</span>
+<span class="na">aliyun.sms.domain</span><span class="o">=</span> <span class="s">dysmsapi.aliyuncs.com</span>
+<span class="na">aliyun.sms.signName</span><span class="o">=</span> <span class="s">ABC商城</span>
+<span class="na">aliyun.sms.templateCode</span><span class="o">=</span> <span class="s">SMS_204756062</span>
+</code></pre></div>
+
+<p>需要注意中文编码问题：</p>
+<p><img alt="image-20201016203847636" src="assets/image-20201016203847636.png" /></p>
+<p>读取配置：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.config</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.context.properties.ConfigurationProperties</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.PropertySource</span><span class="p">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="nd">@PropertySource</span><span class="p">(</span><span class="s">&quot;classpath:aliyun.properties&quot;</span><span class="p">)</span>
+<span class="nd">@ConfigurationProperties</span><span class="p">(</span><span class="n">prefix</span> <span class="o">=</span> <span class="s">&quot;aliyun.sms&quot;</span><span class="p">)</span>
+<span class="nd">@Data</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AliyunSMSConfig</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">regionId</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">accessKeyId</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">accessKeySecret</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">domain</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">signName</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">templateCode</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<p>代码实现：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">//SmsService.java</span>
+<span class="cm">/**</span>
+<span class="cm">     * 发送短信验证码</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param mobile</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sendSms</span><span class="p">(</span><span class="n">String</span> <span class="n">mobile</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">DefaultProfile</span> <span class="n">profile</span> <span class="o">=</span> <span class="n">DefaultProfile</span><span class="p">.</span><span class="na">getProfile</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getRegionId</span><span class="p">(),</span>
+                <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getAccessKeyId</span><span class="p">(),</span> <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getAccessKeySecret</span><span class="p">());</span>
+        <span class="n">IAcsClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultAcsClient</span><span class="p">(</span><span class="n">profile</span><span class="p">);</span>
+
+        <span class="n">String</span> <span class="n">code</span> <span class="o">=</span> <span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">999999</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+
+        <span class="n">CommonRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CommonRequest</span><span class="p">();</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysMethod</span><span class="p">(</span><span class="n">MethodType</span><span class="p">.</span><span class="na">POST</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysDomain</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getDomain</span><span class="p">());</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysVersion</span><span class="p">(</span><span class="s">&quot;2017-05-25&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysAction</span><span class="p">(</span><span class="s">&quot;SendSms&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;RegionId&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getRegionId</span><span class="p">());</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;PhoneNumbers&quot;</span><span class="p">,</span> <span class="n">mobile</span><span class="p">);</span> <span class="c1">//目标手机号</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;SignName&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getSignName</span><span class="p">());</span> <span class="c1">//签名名称</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;TemplateCode&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getTemplateCode</span><span class="p">());</span> <span class="c1">//短信模板code</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;TemplateParam&quot;</span><span class="p">,</span> <span class="s">&quot;{\&quot;code\&quot;:\&quot;&quot;</span> <span class="o">+</span> <span class="n">code</span> <span class="o">+</span> <span class="s">&quot;\&quot;}&quot;</span><span class="p">);</span><span class="c1">//模板中变量替换</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">CommonResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="na">getCommonResponse</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s">&quot;\&quot;Message\&quot;:\&quot;OK\&quot;&quot;</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">code</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;发送短信验证码失败~ data = &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;发送短信验证码失败~ mobile = &quot;</span> <span class="o">+</span> <span class="n">mobile</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4 id="362sso">3.6.2、SSO短信接口服务<a class="headerlink" href="#362sso" title="Permanent link">&para;</a></h4>
+<h5 id="3621mock">3.6.2.1、mock接口<a class="headerlink" href="#3621mock" title="Permanent link">&para;</a></h5>
+<p>地址：https://mock-java.itheima.net/project/35/interface/api/581</p>
+<p><img alt="1564535110994" src="assets/1564535110994.png" /></p>
+<h5 id="3622">3.6.2.2、编写接口服务<a class="headerlink" href="#3622" title="Permanent link">&para;</a></h5>
+<p>编写ErrorResult，ErrorResult对象是与前端约定好的结构，如果发生错误需要返回该对象，如果未发生错误响应200即可。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.vo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.Builder</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@Builder</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ErrorResult</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">errCode</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">errMessage</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>SmsController：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.controller</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.service.SmsService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.vo.ErrorResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.extern.slf4j.Slf4j</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.HttpStatus</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.ResponseEntity</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.PostMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestBody</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="nd">@RestController</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;user&quot;</span><span class="p">)</span>
+<span class="nd">@Slf4j</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SmsController</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">SmsService</span> <span class="n">smsService</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 发送短信验证码接口</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param param</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;login&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">ErrorResult</span><span class="o">&gt;</span> <span class="nf">sendCheckCode</span><span class="p">(</span><span class="nd">@RequestBody</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">param</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ErrorResult</span> <span class="n">errorResult</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">phone</span> <span class="o">=</span> <span class="n">param</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;phone&quot;</span><span class="p">);</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">errorResult</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">smsService</span><span class="p">.</span><span class="na">sendCheckCode</span><span class="p">(</span><span class="n">phone</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">errorResult</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;发送短信验证码失败~ phone = &quot;</span> <span class="o">+</span> <span class="n">phone</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+            <span class="n">errorResult</span> <span class="o">=</span> <span class="n">ErrorResult</span><span class="p">.</span><span class="na">builder</span><span class="p">().</span><span class="na">errCode</span><span class="p">(</span><span class="s">&quot;000002&quot;</span><span class="p">).</span><span class="na">errMessage</span><span class="p">(</span><span class="s">&quot;短信验证码发送失败！&quot;</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">status</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">INTERNAL_SERVER_ERROR</span><span class="p">).</span><span class="na">body</span><span class="p">(</span><span class="n">errorResult</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<p>SmsService：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.aliyuncs.CommonRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.CommonResponse</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.DefaultAcsClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.IAcsClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.exceptions.ClientException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.exceptions.ServerException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.http.MethodType</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.aliyuncs.profile.DefaultProfile</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.config.AliyunSMSConfig</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.vo.ErrorResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.extern.slf4j.Slf4j</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.RandomUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.redis.core.RedisTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.time.Duration</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="nd">@Slf4j</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SmsService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">AliyunSMSConfig</span> <span class="n">aliyunSMSConfig</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RedisTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">redisTemplate</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 发送短信验证码</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param mobile</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sendSms</span><span class="p">(</span><span class="n">String</span> <span class="n">mobile</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">DefaultProfile</span> <span class="n">profile</span> <span class="o">=</span> <span class="n">DefaultProfile</span><span class="p">.</span><span class="na">getProfile</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getRegionId</span><span class="p">(),</span>
+                <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getAccessKeyId</span><span class="p">(),</span> <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getAccessKeySecret</span><span class="p">());</span>
+        <span class="n">IAcsClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultAcsClient</span><span class="p">(</span><span class="n">profile</span><span class="p">);</span>
+
+        <span class="n">String</span> <span class="n">code</span> <span class="o">=</span> <span class="n">RandomUtils</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">999999</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+
+        <span class="n">CommonRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CommonRequest</span><span class="p">();</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysMethod</span><span class="p">(</span><span class="n">MethodType</span><span class="p">.</span><span class="na">POST</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysDomain</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getDomain</span><span class="p">());</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysVersion</span><span class="p">(</span><span class="s">&quot;2017-05-25&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setSysAction</span><span class="p">(</span><span class="s">&quot;SendSms&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;RegionId&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getRegionId</span><span class="p">());</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;PhoneNumbers&quot;</span><span class="p">,</span> <span class="n">mobile</span><span class="p">);</span> <span class="c1">//目标手机号</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;SignName&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getSignName</span><span class="p">());</span> <span class="c1">//签名名称</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;TemplateCode&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="na">aliyunSMSConfig</span><span class="p">.</span><span class="na">getTemplateCode</span><span class="p">());</span> <span class="c1">//短信模板code</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">putQueryParameter</span><span class="p">(</span><span class="s">&quot;TemplateParam&quot;</span><span class="p">,</span> <span class="s">&quot;{\&quot;code\&quot;:\&quot;&quot;</span> <span class="o">+</span> <span class="n">code</span> <span class="o">+</span> <span class="s">&quot;\&quot;}&quot;</span><span class="p">);</span><span class="c1">//模板中变量替换</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">CommonResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="na">getCommonResponse</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s">&quot;\&quot;Message\&quot;:\&quot;OK\&quot;&quot;</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">code</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;发送短信验证码失败~ data = &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;发送短信验证码失败~ mobile = &quot;</span> <span class="o">+</span> <span class="n">mobile</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 发送短信验证码</span>
+<span class="cm">     * 实现：发送完成短信验证码后，需要将验证码保存到redis中</span>
+<span class="cm">     * @param phone</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">ErrorResult</span> <span class="nf">sendCheckCode</span><span class="p">(</span><span class="n">String</span> <span class="n">phone</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">String</span> <span class="n">redisKey</span> <span class="o">=</span> <span class="s">&quot;CHECK_CODE_&quot;</span> <span class="o">+</span> <span class="n">phone</span><span class="p">;</span>
+
+        <span class="c1">//先判断该手机号发送的验证码是否还未失效</span>
+        <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">hasKey</span><span class="p">(</span><span class="n">redisKey</span><span class="p">)){</span>
+            <span class="n">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;上一次发送的验证码还未失效！&quot;</span><span class="p">;</span>
+            <span class="k">return</span> <span class="n">ErrorResult</span><span class="p">.</span><span class="na">builder</span><span class="p">().</span><span class="na">errCode</span><span class="p">(</span><span class="s">&quot;000001&quot;</span><span class="p">).</span><span class="na">errMessage</span><span class="p">(</span><span class="n">msg</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="n">String</span> <span class="n">code</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">sendSms</span><span class="p">(</span><span class="n">phone</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">code</span><span class="p">)){</span>
+            <span class="n">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;发送短信验证码失败！&quot;</span><span class="p">;</span>
+            <span class="k">return</span> <span class="n">ErrorResult</span><span class="p">.</span><span class="na">builder</span><span class="p">().</span><span class="na">errCode</span><span class="p">(</span><span class="s">&quot;000000&quot;</span><span class="p">).</span><span class="na">errMessage</span><span class="p">(</span><span class="n">msg</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="c1">//短信发送成功，将验证码保存到redis中，有效期为5分钟</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">opsForValue</span><span class="p">().</span><span class="na">set</span><span class="p">(</span><span class="n">redisKey</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">Duration</span><span class="p">.</span><span class="na">ofMinutes</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="37jwt">3.7、JWT<a class="headerlink" href="#37jwt" title="Permanent link">&para;</a></h3>
+<h4 id="371">3.7.1、简介<a class="headerlink" href="#371" title="Permanent link">&para;</a></h4>
+<p>JSON Web token简称JWT， 是用于对应用程序上的用户进行身份验证的标记。也就是说, 使用 JWTS 的应用程序不再需要保存有关其用户的 cookie 或其他session数据。此特性便于可伸缩性, 同时保证应用程序的安全。</p>
+<p>在身份验证过程中, 当用户使用其凭据成功登录时, 将返回 JSON Web token, 并且必须在本地保存 (通常在本地存储中)。</p>
+<p>每当用户要访问受保护的路由或资源 (端点) 时, 用户代理(user agent)必须连同请求一起发送 JWT, 通常在授权标头中使用Bearer schema。后端服务器接收到带有 JWT 的请求时, 首先要做的是验证token。</p>
+<h4 id="372">3.7.2、格式<a class="headerlink" href="#372" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>JWT就是一个字符串，经过加密处理与校验处理的字符串，形式为：A.B.C</p>
+</li>
+<li>
+<p>A由JWT头部信息header经过base64加密得到</p>
+</li>
+<li>
+<p>~~~json
+    #默认的头信息
+    {
+      "alg": "HS256",
+      "typ": "JWT"
+    }</p>
+<h1 id="httpsjwtio">官网测试：https://jwt.io/<a class="headerlink" href="#httpsjwtio" title="Permanent link">&para;</a></h1>
+<h1 id="base64eyjhbgcioijiuzi1niisinr5cci6ikpxvcj9">base64加密后的字符串为：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9<a class="headerlink" href="#base64eyjhbgcioijiuzi1niisinr5cci6ikpxvcj9" title="Permanent link">&para;</a></h1>
+<p>~~~</p>
+</li>
+<li>
+<p>B是payload，存放有效信息的地方，这些信息包含三个部分：</p>
+</li>
+<li>
+<p>标准中注册的声明 (建议但不强制使用) </p>
+<ul>
+<li>iss: jwt签发者</li>
+<li>sub: jwt所面向的用户</li>
+<li>aud: 接收jwt的一方</li>
+<li>exp: jwt的过期时间，这个过期时间必须要大于签发时间</li>
+<li>nbf: 定义在什么时间之前，该jwt都是不可用的.</li>
+<li>iat: jwt的签发时间</li>
+<li>jti: jwt的唯一身份标识，主要用来作为一次性token,从而回避重放攻击。</li>
+</ul>
+</li>
+<li>
+<p>公共的声明</p>
+<ul>
+<li>公共的声明可以添加任何的信息，一般添加用户的相关信息或其他业务需要的必要信息.但不建议添加敏感信息，因为该部分在客户端可解密.</li>
+</ul>
+</li>
+<li>
+<p>私有的声明</p>
+<ul>
+<li>私有声明是提供者和消费者所共同定义的声明，一般不建议存放敏感信息，因为base64是对称解密的，意味着该部分信息可以归类为明文信息。</li>
+</ul>
+</li>
+<li>
+<p>~~~json
+    #存放的数据：
+    {
+      "sub": "1234567890",
+      "name": "John Doe",
+      "iat": 1516239022
+    }</p>
+<h1 id="base64">base64后的字符串为：<a class="headerlink" href="#base64" title="Permanent link">&para;</a></h1>
+<p>eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ
+~~~</p>
+</li>
+<li>
+<p>C由A和B通过加密算法得到，用作对token进行校验，看是否有效</p>
+</li>
+<li>
+<p>这个部分需要base64加密后的header和base64加密后的payload使用<code>.</code>连接组成的字符串，然后通过header中声明的加密方式进行加盐<code>secret</code>组合加密，然后就构成了jwt的第三部分。</p>
+</li>
+<li>
+<p>~~~json
+    #secret为：itcast
+    #得到的加密字符串为：DwMTjJktoFFdClHqjJMRgYzICo6FJOUc3Jmev9EScBc</p>
+<h1 id="tokeneyjhbgcioijiuzi1niisinr5cci6ikpxvcj9eyjzdwiioiixmjm0nty3odkwiiwibmftzsi6ikpvag4grg9liiwiawf0ijoxnte2mjm5mdiyfqdwmtjjktoffdclhqjjmrgyzico6fjouc3jmev9escbc">整体的token为：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.DwMTjJktoFFdClHqjJMRgYzICo6FJOUc3Jmev9EScBc<a class="headerlink" href="#tokeneyjhbgcioijiuzi1niisinr5cci6ikpxvcj9eyjzdwiioiixmjm0nty3odkwiiwibmftzsi6ikpvag4grg9liiwiawf0ijoxnte2mjm5mdiyfqdwmtjjktoffdclhqjjmrgyzico6fjouc3jmev9escbc" title="Permanent link">&para;</a></h1>
+<p>~~~</p>
+</li>
+</ul>
+<h4 id="373">3.7.3、流程<a class="headerlink" href="#373" title="Permanent link">&para;</a></h4>
+<p><img alt="1563895628713" src="assets/1563895628713.png" /></p>
+<h4 id="374">3.7.4、示例<a class="headerlink" href="#374" title="Permanent link">&para;</a></h4>
+<p>导入依赖：</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>io.jsonwebtoken<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>jjwt<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.9.1<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+
+<p>编写测试用例：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">io.jsonwebtoken.ExpiredJwtException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">io.jsonwebtoken.JwsHeader</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">io.jsonwebtoken.Jwts</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">io.jsonwebtoken.SignatureAlgorithm</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestJWT</span> <span class="p">{</span>
+
+    <span class="n">String</span> <span class="n">secret</span> <span class="o">=</span> <span class="s">&quot;itcast&quot;</span><span class="p">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCreateToken</span><span class="p">(){</span>
+
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">header</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">header</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">JwsHeader</span><span class="p">.</span><span class="na">TYPE</span><span class="p">,</span> <span class="n">JwsHeader</span><span class="p">.</span><span class="na">JWT_TYPE</span><span class="p">);</span>
+        <span class="n">header</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">JwsHeader</span><span class="p">.</span><span class="na">ALGORITHM</span><span class="p">,</span> <span class="s">&quot;HS256&quot;</span><span class="p">);</span>
+
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">claims</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">claims</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;mobile&quot;</span><span class="p">,</span> <span class="s">&quot;1333333333&quot;</span><span class="p">);</span>
+        <span class="n">claims</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="s">&quot;2&quot;</span><span class="p">);</span>
+
+        <span class="c1">// 生成token</span>
+        <span class="n">String</span> <span class="n">jwt</span> <span class="o">=</span> <span class="n">Jwts</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+                <span class="p">.</span><span class="na">setHeader</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>  <span class="c1">//header，可省略</span>
+                <span class="p">.</span><span class="na">setClaims</span><span class="p">(</span><span class="n">claims</span><span class="p">)</span> <span class="c1">//payload，存放数据的位置，不能放置敏感数据，如：密码等</span>
+                <span class="p">.</span><span class="na">signWith</span><span class="p">(</span><span class="n">SignatureAlgorithm</span><span class="p">.</span><span class="na">HS256</span><span class="p">,</span> <span class="n">secret</span><span class="p">)</span> <span class="c1">//设置加密方法和加密盐</span>
+                <span class="p">.</span><span class="na">setExpiration</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">()</span> <span class="o">+</span> <span class="mi">3000</span><span class="p">))</span> <span class="c1">//设置过期时间，3秒后过期</span>
+                <span class="p">.</span><span class="na">compact</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">jwt</span><span class="p">);</span>
+
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testDecodeToken</span><span class="p">(){</span>
+        <span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="s">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtb2JpbGUiOiIxMzMzMzMzMzMzIiwiaWQiOiIyIiwiZXhwIjoxNjA1NTEzMDA2fQ.1eG3LpudD4XBycUG39UQDaKVBQHgaup-E1OLWo_m8m8&quot;</span><span class="p">;</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">// 通过token解析数据</span>
+            <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">body</span> <span class="o">=</span> <span class="n">Jwts</span><span class="p">.</span><span class="na">parser</span><span class="p">()</span>
+                    <span class="p">.</span><span class="na">setSigningKey</span><span class="p">(</span><span class="n">secret</span><span class="p">)</span>
+                    <span class="p">.</span><span class="na">parseClaimsJws</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+                    <span class="p">.</span><span class="na">getBody</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">body</span><span class="p">);</span> <span class="c1">//{mobile=1333333333, id=2, exp=1605513392}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">ExpiredJwtException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;token已经过期！&quot;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;token不合法！&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="38">3.8、用户登录<a class="headerlink" href="#38" title="Permanent link">&para;</a></h3>
+<p>用户接收到验证码后，进行输入验证码，点击登录，前端系统将手机号以及验证码提交到SSO进行校验。</p>
+<p><img alt="image-20201118231431191" src="assets/image-20201118231431191.png" /></p>
+<h4 id="371mock">3.7.1、mock接口<a class="headerlink" href="#371mock" title="Permanent link">&para;</a></h4>
+<p>接口地址：https://mock-java.itheima.net/project/164/interface/api/12593</p>
+<p><img alt="1564300265546" src="assets/1564300265546.png" /></p>
+<h4 id="372usercontroller">3.7.2、UserController<a class="headerlink" href="#372usercontroller" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.controller</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.service.UserService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.vo.ErrorResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.HttpStatus</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.ResponseEntity</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.PostMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestBody</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="nd">@RestController</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;user&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserController</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserService</span> <span class="n">userService</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 用户登录</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param param</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;loginVerification&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="nf">login</span><span class="p">(</span><span class="nd">@RequestBody</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">param</span><span class="p">){</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">String</span> <span class="n">phone</span> <span class="o">=</span> <span class="n">param</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;phone&quot;</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">code</span> <span class="o">=</span> <span class="n">param</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;verificationCode&quot;</span><span class="p">);</span>
+
+            <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userService</span><span class="p">.</span><span class="na">login</span><span class="p">(</span><span class="n">phone</span><span class="p">,</span> <span class="n">code</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNotEmpty</span><span class="p">(</span><span class="n">data</span><span class="p">)){</span>
+                <span class="c1">//登录成功</span>
+                <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+                <span class="n">String</span><span class="o">[]</span> <span class="n">ss</span> <span class="o">=</span> <span class="n">StringUtils</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="sc">&#39;|&#39;</span><span class="p">);</span>
+
+                <span class="n">result</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;token&quot;</span><span class="p">,</span> <span class="n">ss</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+                <span class="n">result</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;isNew&quot;</span><span class="p">,</span> <span class="n">Boolean</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">ss</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">));</span>
+                <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="n">ErrorResult</span> <span class="n">errorResult</span> <span class="o">=</span> <span class="n">ErrorResult</span><span class="p">.</span><span class="na">builder</span><span class="p">().</span><span class="na">errCode</span><span class="p">(</span><span class="s">&quot;000002&quot;</span><span class="p">).</span><span class="na">errMessage</span><span class="p">(</span><span class="s">&quot;登录失败！&quot;</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">status</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">INTERNAL_SERVER_ERROR</span><span class="p">).</span><span class="na">body</span><span class="p">(</span><span class="n">errorResult</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="373userservice">3.7.3、UserService<a class="headerlink" href="#373userservice" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.sso.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.conditions.query.QueryWrapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.toolkit.Wrappers</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.mapper.UserMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.sso.pojo.User</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">io.jsonwebtoken.Jwts</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">io.jsonwebtoken.SignatureAlgorithm</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.extern.slf4j.Slf4j</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.codec.digest.DigestUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.rocketmq.spring.core.RocketMQTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.joda.time.DateTime</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.redis.core.RedisTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.messaging.MessagingException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="nd">@Slf4j</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RedisTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">redisTemplate</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserMapper</span> <span class="n">userMapper</span><span class="p">;</span>
+
+    <span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${jwt.secret}&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">secret</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RocketMQTemplate</span> <span class="n">rocketMQTemplate</span><span class="p">;</span>
+
+
+    <span class="cm">/**</span>
+<span class="cm">     * 用户登录</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param phone 手机号</span>
+<span class="cm">     * @param code  验证码</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">login</span><span class="p">(</span><span class="n">String</span> <span class="n">phone</span><span class="p">,</span> <span class="n">String</span> <span class="n">code</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">redisKey</span> <span class="o">=</span> <span class="s">&quot;CHECK_CODE_&quot;</span> <span class="o">+</span> <span class="n">phone</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">isNew</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+        <span class="c1">//校验验证码</span>
+        <span class="n">String</span> <span class="n">redisData</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">opsForValue</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">redisKey</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">redisData</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">//验证码错误</span>
+        <span class="p">}</span>
+
+        <span class="c1">//验证码在校验完成后，需要废弃</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">delete</span><span class="p">(</span><span class="n">redisKey</span><span class="p">);</span>
+
+        <span class="n">QueryWrapper</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="n">queryWrapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueryWrapper</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">queryWrapper</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="s">&quot;mobile&quot;</span><span class="p">,</span> <span class="n">phone</span><span class="p">);</span>
+
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userMapper</span><span class="p">.</span><span class="na">selectOne</span><span class="p">(</span><span class="n">queryWrapper</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">user</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//需要注册该用户</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="p">();</span>
+            <span class="n">user</span><span class="p">.</span><span class="na">setMobile</span><span class="p">(</span><span class="n">phone</span><span class="p">);</span>
+            <span class="n">user</span><span class="p">.</span><span class="na">setPassword</span><span class="p">(</span><span class="n">DigestUtils</span><span class="p">.</span><span class="na">md5Hex</span><span class="p">(</span><span class="s">&quot;123456&quot;</span><span class="p">));</span>
+
+            <span class="c1">//注册新用户</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">userMapper</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+            <span class="n">isNew</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//生成token</span>
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">claims</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">claims</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+
+        <span class="c1">// 生成token</span>
+        <span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">Jwts</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+                <span class="p">.</span><span class="na">setClaims</span><span class="p">(</span><span class="n">claims</span><span class="p">)</span> <span class="c1">//payload，存放数据的位置，不能放置敏感数据，如：密码等</span>
+                <span class="p">.</span><span class="na">signWith</span><span class="p">(</span><span class="n">SignatureAlgorithm</span><span class="p">.</span><span class="na">HS256</span><span class="p">,</span> <span class="n">secret</span><span class="p">)</span> <span class="c1">//设置加密方法和加密盐</span>
+                <span class="p">.</span><span class="na">setExpiration</span><span class="p">(</span><span class="k">new</span> <span class="n">DateTime</span><span class="p">().</span><span class="na">plusHours</span><span class="p">(</span><span class="mi">12</span><span class="p">).</span><span class="na">toDate</span><span class="p">())</span> <span class="c1">//设置过期时间，12小时后过期</span>
+                <span class="p">.</span><span class="na">compact</span><span class="p">();</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">//发送用户登录成功的消息</span>
+            <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">msg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+            <span class="n">msg</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+            <span class="n">msg</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;date&quot;</span><span class="p">,</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">());</span>
+
+            <span class="k">this</span><span class="p">.</span><span class="na">rocketMQTemplate</span><span class="p">.</span><span class="na">convertAndSend</span><span class="p">(</span><span class="s">&quot;tanhua-sso-login&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">MessagingException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;发送消息失败！&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">token</span> <span class="o">+</span> <span class="s">&quot;|&quot;</span> <span class="o">+</span> <span class="n">isNew</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="374_1">3.7.4、测试<a class="headerlink" href="#374_1" title="Permanent link">&para;</a></h4>
+<p><img alt="1564300534797" src="assets/1564300534797.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../MongoDB/MongoDB/" class="md-footer__link md-footer__link--prev" aria-label="上一页: MongoDB" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              MongoDB
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../day02/" class="md-footer__link md-footer__link--next" aria-label="下一页: day02" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              day02
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 peaceiris
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/peaceiris" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/piris314en" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

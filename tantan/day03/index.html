@@ -1,0 +1,3265 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions.">
+      
+      
+      
+        <meta name="author" content="nitto">
+      
+      
+        <link rel="canonical" href="https://nitto.netlify.app/tantan/day03/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>day03 - Nitto Java Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nitto Java Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              day03
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nitto Java Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jquery/" class="md-nav__link">
+        JQuery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ajax/" class="md-nav__link">
+        AJAX
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/4/" class="md-nav__link">
+        docker部署容器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/5/" class="md-nav__link">
+        Docerfile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/6/" class="md-nav__link">
+        服务编排
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/7/" class="md-nav__link">
+        私有仓库
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/MongoDB/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        项目一-探花交友
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目一-探花交友" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          项目一-探花交友
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          day03
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        day03
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    课程说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、首页
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、系统架构
+  </a>
+  
+    <nav class="md-nav" aria-label="2、系统架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21nginx" class="md-nav__link">
+    2.1、nginx服务
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1、nginx服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    2.1.1、部署安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    2.1.2、配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    2.1.3、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22server" class="md-nav__link">
+    2.2、搭建server工程
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2、搭建server工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    2.2.1、导入依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222applicationproperties" class="md-nav__link">
+    2.2.2、application.properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223serverapplication" class="md-nav__link">
+    2.2.3、ServerApplication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23dubbo" class="md-nav__link">
+    2.3、搭建dubbo工程
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3、搭建dubbo工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231my-tanhua-dubbo-interface" class="md-nav__link">
+    2.3.1、创建my-tanhua-dubbo-interface工程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232my-tanhua-dubbo-service" class="md-nav__link">
+    2.3.2、创建my-tanhua-dubbo-service工程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4、工程结构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、今日佳人
+  </a>
+  
+    <nav class="md-nav" aria-label="3、今日佳人">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1、表结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32dubbo" class="md-nav__link">
+    3.2、编写dubbo服务
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2、编写dubbo服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    3.2.1、编写接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    3.2.2、编写实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323" class="md-nav__link">
+    3.2.3、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3、实现今日佳人服务
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3、实现今日佳人服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331mock" class="md-nav__link">
+    3.3.1、mock服务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    3.3.2、基础代码
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.2、基础代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3321sexenum" class="md-nav__link">
+    3.3.2.1、SexEnum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3322basepojo" class="md-nav__link">
+    3.3.2.2、BasePojo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3323user" class="md-nav__link">
+    3.3.2.3、User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3324userinfo" class="md-nav__link">
+    3.3.2.4、UserInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    3.3.3、实现功能
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.3、实现功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3331todaybest" class="md-nav__link">
+    3.3.3.1、TodayBest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3332todaybestcontroller" class="md-nav__link">
+    3.3.3.2、TodayBestController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3333todaybestservice" class="md-nav__link">
+    3.3.3.3、TodayBestService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3334userservice" class="md-nav__link">
+    3.3.3.4、UserService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3335recommenduserservice" class="md-nav__link">
+    3.3.3.5、RecommendUserService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3336userinfoservice" class="md-nav__link">
+    3.3.3.6、UserInfoService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3337userinfomapper" class="md-nav__link">
+    3.3.3.7、UserInfoMapper
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334" class="md-nav__link">
+    3.3.4、测试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335mongodbbug" class="md-nav__link">
+    3.3.5、解决MongoDB启动bug
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4、推荐列表
+  </a>
+  
+    <nav class="md-nav" aria-label="4、推荐列表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41mock" class="md-nav__link">
+    4.1、mock接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2、查询参数对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3、结果对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44controller" class="md-nav__link">
+    4.4、Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45service" class="md-nav__link">
+    4.5、Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    4.6、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5、缓存
+  </a>
+  
+    <nav class="md-nav" aria-label="5、缓存">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1、自定义注解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2、采用拦截器进行缓存命中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43_1" class="md-nav__link">
+    4.3、响应结果写入到缓存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6、整合测试
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day04/" class="md-nav__link">
+        day04
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day09/" class="md-nav__link">
+        day09
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_11" type="checkbox" id="__nav_8_11" >
+      
+      <label class="md-nav__link" for="__nav_8_11">
+        补充资料
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="补充资料" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_11">
+          <span class="md-nav__icon md-icon"></span>
+          补充资料
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/lombok/" class="md-nav__link">
+        day01_lombok
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/mybatisPlus/" class="md-nav__link">
+        day01_mybatis_plus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/aliyun/" class="md-nav__link">
+        day01_阿里云
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/sso/" class="md-nav__link">
+        day01_单点登录及jwt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/nginx/" class="md-nav__link">
+        day03_nginx
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/threadlocal/README.md" class="md-nav__link">
+        day03_ThreadLocal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/mongodb/" class="md-nav__link">
+        day04_MongoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/ansy/" class="md-nav__link">
+        day04_多线程@Ansy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        面试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="面试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          面试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/e.g.1.0.0/" class="md-nav__link">
+        e.g.1.0.0
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    课程说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、首页
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、系统架构
+  </a>
+  
+    <nav class="md-nav" aria-label="2、系统架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21nginx" class="md-nav__link">
+    2.1、nginx服务
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1、nginx服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    2.1.1、部署安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    2.1.2、配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    2.1.3、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22server" class="md-nav__link">
+    2.2、搭建server工程
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2、搭建server工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    2.2.1、导入依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222applicationproperties" class="md-nav__link">
+    2.2.2、application.properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223serverapplication" class="md-nav__link">
+    2.2.3、ServerApplication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23dubbo" class="md-nav__link">
+    2.3、搭建dubbo工程
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3、搭建dubbo工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231my-tanhua-dubbo-interface" class="md-nav__link">
+    2.3.1、创建my-tanhua-dubbo-interface工程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232my-tanhua-dubbo-service" class="md-nav__link">
+    2.3.2、创建my-tanhua-dubbo-service工程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4、工程结构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、今日佳人
+  </a>
+  
+    <nav class="md-nav" aria-label="3、今日佳人">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1、表结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32dubbo" class="md-nav__link">
+    3.2、编写dubbo服务
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2、编写dubbo服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    3.2.1、编写接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    3.2.2、编写实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323" class="md-nav__link">
+    3.2.3、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3、实现今日佳人服务
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3、实现今日佳人服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331mock" class="md-nav__link">
+    3.3.1、mock服务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    3.3.2、基础代码
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.2、基础代码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3321sexenum" class="md-nav__link">
+    3.3.2.1、SexEnum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3322basepojo" class="md-nav__link">
+    3.3.2.2、BasePojo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3323user" class="md-nav__link">
+    3.3.2.3、User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3324userinfo" class="md-nav__link">
+    3.3.2.4、UserInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    3.3.3、实现功能
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.3、实现功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3331todaybest" class="md-nav__link">
+    3.3.3.1、TodayBest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3332todaybestcontroller" class="md-nav__link">
+    3.3.3.2、TodayBestController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3333todaybestservice" class="md-nav__link">
+    3.3.3.3、TodayBestService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3334userservice" class="md-nav__link">
+    3.3.3.4、UserService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3335recommenduserservice" class="md-nav__link">
+    3.3.3.5、RecommendUserService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3336userinfoservice" class="md-nav__link">
+    3.3.3.6、UserInfoService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3337userinfomapper" class="md-nav__link">
+    3.3.3.7、UserInfoMapper
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334" class="md-nav__link">
+    3.3.4、测试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335mongodbbug" class="md-nav__link">
+    3.3.5、解决MongoDB启动bug
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4、推荐列表
+  </a>
+  
+    <nav class="md-nav" aria-label="4、推荐列表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41mock" class="md-nav__link">
+    4.1、mock接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2、查询参数对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3、结果对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44controller" class="md-nav__link">
+    4.4、Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45service" class="md-nav__link">
+    4.5、Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    4.6、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5、缓存
+  </a>
+  
+    <nav class="md-nav" aria-label="5、缓存">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1、自定义注解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2、采用拦截器进行缓存命中
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43_1" class="md-nav__link">
+    4.3、响应结果写入到缓存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6、整合测试
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/tantan/day03/README.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>day03</h1>
+                
+                <h2 id="_1">课程说明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>首页功能说明</li>
+<li>系统架构说明</li>
+<li>实现今日佳人功能</li>
+<li>实现推荐用户的列表</li>
+<li>接口增加缓存功能</li>
+<li>整合前端联调测试</li>
+</ul>
+<h2 id="1">1、首页<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>在用户登录成功后，就会进入首页，首页中有今日佳人、推荐好友、探花、搜附近等功能。</p>
+<p><img alt="1564104604248" src="assets/1564104604248.png" /></p>
+<h2 id="2">2、系统架构<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>在开发完SSO系统中的登录功能后，接下来就需要实现其他的功能，在整体架构中，完成与APP对接的服务工程叫my-tanhua-server，真正的核心业务逻辑使用dubbo完成，其工程名叫：my-tanhua-dubbo，它们的架构示意图如下：</p>
+<p><img alt="image-20201130102009217" src="assets/image-20201130102009217.png" /></p>
+<p>说明：</p>
+<ul>
+<li>客户端APP发起请求到Nginx，在Nginx中对请求做出判断，将请求转发至sso系统或server系统。</li>
+<li>sso系统中，将对接第三方平台以及完成数据的缓存、消息发送、用户的注册登录功能。</li>
+<li>server系统为APP提供了接口服务的支撑</li>
+<li>用户请求中携带的token需要到sso系统中进行校验</li>
+<li>通过rpc调用dubbo中提供的服务，在dubbo服务中与MongoDB对接，完成数据的CRUD操作</li>
+<li>将一些数据缓存到Redis，从而提升数据查询性能</li>
+<li>用户数据的查询将基于MySQL数据库进行查询</li>
+</ul>
+<h3 id="21nginx">2.1、nginx服务<a class="headerlink" href="#21nginx" title="Permanent link">&para;</a></h3>
+<h4 id="211">2.1.1、部署安装<a class="headerlink" href="#211" title="Permanent link">&para;</a></h4>
+<p>安装包在资料中：nginx-1.17.3.zip</p>
+<p>安装在任意目录，通过命令：start nginx.exe 启动：</p>
+<p><img alt="1566999483561" src="assets/1566999483561.png" /></p>
+<p>重启加载配置文件命令：nginx.exe -s reload</p>
+<p><img alt="1566999546104" src="assets/1566999546104.png" /></p>
+<h4 id="212">2.1.2、配置<a class="headerlink" href="#212" title="Permanent link">&para;</a></h4>
+<p>修改conf目录下的nginx.conf文件：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">#user  nobody;</span>
+worker_processes  <span class="m">1</span><span class="p">;</span>
+
+<span class="c1">#error_log  logs/error.log;</span>
+<span class="c1">#error_log  logs/error.log  notice;</span>
+<span class="c1">#error_log  logs/error.log  info;</span>
+
+<span class="c1">#pid        logs/nginx.pid;</span>
+
+
+events <span class="o">{</span>
+    worker_connections  <span class="m">1024</span><span class="p">;</span>
+<span class="o">}</span>
+
+
+http <span class="o">{</span>
+    include       mime.types<span class="p">;</span>
+    default_type  application/octet-stream<span class="p">;</span>
+
+    <span class="c1">#log_format  main  &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39;</span>
+    <span class="c1">#                  &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39;</span>
+    <span class="c1">#                  &#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;;</span>
+
+    <span class="c1">#access_log  logs/access.log  main;</span>
+
+    sendfile        on<span class="p">;</span>
+    <span class="c1">#tcp_nopush     on;</span>
+
+    <span class="c1">#keepalive_timeout  0;</span>
+    keepalive_timeout  <span class="m">65</span><span class="p">;</span>
+
+    <span class="c1">#gzip  on;</span>
+
+    server <span class="o">{</span>
+        listen       <span class="m">80</span><span class="p">;</span>
+        server_name  localhost<span class="p">;</span>
+
+        <span class="c1">#charset koi8-r;</span>
+
+        <span class="c1">#access_log  logs/host.access.log  main;</span>
+
+        <span class="c1">#error_page  404              /404.html;</span>
+
+        <span class="c1"># redirect server error pages to the static page /50x.html</span>
+        <span class="c1">#</span>
+        error_page   <span class="m">500</span> <span class="m">502</span> <span class="m">503</span> <span class="m">504</span>  /50x.html<span class="p">;</span>
+        <span class="nv">location</span> <span class="o">=</span> /50x.html <span class="o">{</span>
+            root   html<span class="p">;</span>
+        <span class="o">}</span>
+
+        location /user/ <span class="o">{</span>  <span class="c1">#请求路径中凡是以/user/开头的请求，转发到sso系统</span>
+            client_max_body_size  300m<span class="p">;</span>  <span class="c1">#设置最大的请求体大小，解决大文件上传不了的问题</span>
+            proxy_connect_timeout 300s<span class="p">;</span>  <span class="c1">#代理连接超时时间</span>
+            proxy_send_timeout 300s<span class="p">;</span>  <span class="c1">#代理发送数据的超时时间</span>
+            proxy_read_timeout 300s<span class="p">;</span>  <span class="c1">#代理读取数据的超时时间</span>
+            proxy_pass   http://127.0.0.1:18080<span class="p">;</span>  <span class="c1">#转发请求</span>
+        <span class="o">}</span>
+
+        location / <span class="o">{</span>   <span class="c1">#上面未匹配到的在这里处理</span>
+            client_max_body_size  300m<span class="p">;</span>
+            proxy_connect_timeout 300s<span class="p">;</span>
+            proxy_send_timeout 300s<span class="p">;</span>
+            proxy_read_timeout 300s<span class="p">;</span>
+                proxy_pass   http://127.0.0.1:18081<span class="p">;</span>  <span class="c1">#转发请求到server系统</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div>
+
+<h4 id="213">2.1.3、测试<a class="headerlink" href="#213" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20201130111356817" src="assets/image-20201130111356817.png" /></p>
+<h3 id="22server">2.2、搭建server工程<a class="headerlink" href="#22server" title="Permanent link">&para;</a></h3>
+<h4 id="221">2.2.1、导入依赖<a class="headerlink" href="#221" title="Permanent link">&para;</a></h4>
+<p>pom.xml文件：</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>my-tanhua<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>cn.itcast.tanhua<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/parent&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+
+    <span class="nt">&lt;artifactId&gt;</span>my-tanhua-server<span class="nt">&lt;/artifactId&gt;</span>
+
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>cn.itcast.tanhua<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>my-tanhua-dubbo-interface<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-data-redis<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="c">&lt;!--dubbo的springboot支持--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.alibaba.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>dubbo-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="c">&lt;!--dubbo框架--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.alibaba<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>dubbo<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="c">&lt;!--zk依赖--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.zookeeper<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>zookeeper<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.github.sgroschupf<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>zkclient<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.commons<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>commons-lang3<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.commons<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>commons-collections4<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>4.4<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mybatis-plus<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mybatis-plus-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>mysql<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mysql-connector-java<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>commons-io<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>commons-io<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>2.6<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>commons-codec<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>commons-codec<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+
+<h4 id="222applicationproperties">2.2.2、application.properties<a class="headerlink" href="#222applicationproperties" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="na">spring.application.name</span> <span class="o">=</span> <span class="s">itcast-tanhua-server</span>
+<span class="na">server.port</span> <span class="o">=</span> <span class="s">18081</span>
+
+<span class="c">#数据库连接信息</span>
+<span class="na">spring.datasource.driver-class-name</span><span class="o">=</span><span class="s">com.mysql.jdbc.Driver</span>
+<span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://192.168.31.81:3306/mytanhua?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;allowMultiQueries=true&amp;useSSL=false</span>
+<span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">root</span>
+<span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">root</span>
+
+<span class="c"># 枚举包扫描</span>
+<span class="na">mybatis-plus.type-enums-package</span><span class="o">=</span><span class="s">com.tanhua.server.enums</span>
+<span class="c"># 表名前缀</span>
+<span class="na">mybatis-plus.global-config.db-config.table-prefix</span><span class="o">=</span><span class="s">tb_</span>
+<span class="c"># id策略为自增长</span>
+<span class="na">mybatis-plus.global-config.db-config.id-type</span><span class="o">=</span><span class="s">auto</span>
+
+<span class="c">#dubbo注册中心配置</span>
+<span class="na">dubbo.application.name</span> <span class="o">=</span> <span class="s">itcast-tanhua-server</span>
+<span class="na">dubbo.registry.address</span> <span class="o">=</span> <span class="s">zookeeper://192.168.31.81:2181</span>
+<span class="na">dubbo.registry.client</span> <span class="o">=</span> <span class="s">zkclient</span>
+<span class="na">dubbo.registry.timeout</span> <span class="o">=</span> <span class="s">60000</span>
+<span class="na">dubbo.consumer.timeout</span> <span class="o">=</span> <span class="s">60000</span>
+
+<span class="c">#sso系统服务地址</span>
+<span class="na">tanhua.sso.url</span><span class="o">=</span><span class="s">http://127.0.0.1</span>
+<span class="c">#默认今日佳人推荐用户</span>
+<span class="na">tanhua.sso.default.user</span><span class="o">=</span><span class="s">2</span>
+</code></pre></div>
+
+<h4 id="223serverapplication">2.2.3、ServerApplication<a class="headerlink" href="#223serverapplication" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.mybatis.spring.annotation.MapperScan</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.SpringApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="p">;</span>
+
+<span class="nd">@MapperScan</span><span class="p">(</span><span class="s">&quot;com.tanhua.server.mapper&quot;</span><span class="p">)</span> <span class="c1">//设置mapper接口的扫描包</span>
+<span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ServerApplication</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">ServerApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="23dubbo">2.3、搭建dubbo工程<a class="headerlink" href="#23dubbo" title="Permanent link">&para;</a></h3>
+<p>my-tanhua-dubbo是dubbo工程的父工程：</p>
+<p>~~~xml</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<p><project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>my-tanhua</artifactId>
+        <groupId>cn.itcast.tanhua</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;artifactId&gt;</span>my-tanhua-dubbo<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;packaging&gt;</span>pom<span class="nt">&lt;/packaging&gt;</span>
+<span class="nt">&lt;modules&gt;</span>
+    <span class="nt">&lt;module&gt;</span>my-tanhua-dubbo-interface<span class="nt">&lt;/module&gt;</span>
+    <span class="nt">&lt;module&gt;</span>my-tanhua-dubbo-service<span class="nt">&lt;/module&gt;</span>
+<span class="nt">&lt;/modules&gt;</span>
+</code></pre></div>
+
+<p></project>
+ ~~~</p>
+<h4 id="231my-tanhua-dubbo-interface">2.3.1、创建my-tanhua-dubbo-interface工程<a class="headerlink" href="#231my-tanhua-dubbo-interface" title="Permanent link">&para;</a></h4>
+<p>该工程中定义了dubbo服务中的interface与实体对象。</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>my-tanhua-dubbo<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>cn.itcast.tanhua<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/parent&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+
+    <span class="nt">&lt;artifactId&gt;</span>my-tanhua-dubbo-interface<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-data-mongodb<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+
+<h4 id="232my-tanhua-dubbo-service">2.3.2、创建my-tanhua-dubbo-service工程<a class="headerlink" href="#232my-tanhua-dubbo-service" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>my-tanhua-dubbo<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>cn.itcast.tanhua<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/parent&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+
+    <span class="nt">&lt;artifactId&gt;</span>my-tanhua-dubbo-service<span class="nt">&lt;/artifactId&gt;</span>
+
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="c">&lt;!--引入interface依赖--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>cn.itcast.tanhua<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>my-tanhua-dubbo-interface<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+
+        <span class="c">&lt;!--dubbo的springboot支持--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.alibaba.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>dubbo-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="c">&lt;!--dubbo框架--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.alibaba<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>dubbo<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="c">&lt;!--zk依赖--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.zookeeper<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>zookeeper<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.github.sgroschupf<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>zkclient<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+
+        <span class="c">&lt;!--MongoDB相关依赖--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-data-mongodb<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.mongodb<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mongodb-driver-sync<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+
+        <span class="c">&lt;!--其他工具包依赖--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.commons<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>commons-lang3<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>joda-time<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>joda-time<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>io.netty<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>netty-all<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+
+    <span class="nt">&lt;/dependencies&gt;</span>
+
+
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+
+<p>application.properties：</p>
+<div class="codehilite"><pre><span></span><code><span class="c"># Spring boot application</span>
+<span class="na">spring.application.name</span> <span class="o">=</span> <span class="s">itcast-tanhua-dubbo-service</span>
+
+<span class="c"># dubbo 扫描包配置</span>
+<span class="na">dubbo.scan.basePackages</span> <span class="o">=</span> <span class="s">com.tanhua.dubbo.server</span>
+<span class="na">dubbo.application.name</span> <span class="o">=</span> <span class="s">dubbo-provider-tanhua</span>
+
+<span class="c">#dubbo 对外暴露的端口信息</span>
+<span class="na">dubbo.protocol.name</span> <span class="o">=</span> <span class="s">dubbo</span>
+<span class="na">dubbo.protocol.port</span> <span class="o">=</span> <span class="s">20880</span>
+
+<span class="c">#dubbo注册中心的配置</span>
+<span class="na">dubbo.registry.address</span> <span class="o">=</span> <span class="s">zookeeper://192.168.31.81:2181</span>
+<span class="na">dubbo.registry.client</span> <span class="o">=</span> <span class="s">zkclient</span>
+<span class="na">dubbo.registry.timeout</span> <span class="o">=</span> <span class="s">60000 </span>
+
+<span class="c">#springboot MongoDB配置</span>
+<span class="na">spring.data.mongodb.username</span><span class="o">=</span><span class="s">tanhua</span>
+<span class="na">spring.data.mongodb.password</span><span class="o">=</span><span class="s">l3SCjl0HvmSkTtiSbN0Swv40spYnHhDV</span>
+<span class="na">spring.data.mongodb.authentication-database</span><span class="o">=</span><span class="s">admin</span>
+<span class="na">spring.data.mongodb.database</span><span class="o">=</span><span class="s">tanhua</span>
+<span class="na">spring.data.mongodb.port</span><span class="o">=</span><span class="s">27017</span>
+<span class="na">spring.data.mongodb.host</span><span class="o">=</span><span class="s">192.168.31.81</span>
+</code></pre></div>
+
+<p>编写启动类：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.boot.SpringApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="p">;</span>
+
+<span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DubboApplication</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">DubboApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="24">2.4、工程结构<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p>最终搭建完成的效果如下：</p>
+<p><img alt="image-20201130120238951" src="assets/image-20201130120238951.png" /></p>
+<h2 id="3">3、今日佳人<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>今日佳人，会推荐缘分值最大的用户，进行展现出来。缘分值的计算是由用户的行为进行打分，如：点击、点赞、评论、学历、婚姻状态等信息组合而成的。</p>
+<p>实现：我们先不考虑推荐的逻辑，假设现在已经有推荐的结果，我们只需要从结果中查询到缘分值最高的用户就可以了。至于推荐的逻辑以及实现，我们将后面的课程中讲解。</p>
+<p>流程：</p>
+<p><img alt="image-20201130150720621" src="assets/image-20201130150720621.png" /></p>
+<h3 id="31">3.1、表结构<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">#表结构，表名：recommend_user</span>
+<span class="o">{</span>
+  <span class="s2">&quot;userId&quot;</span>:1001,  <span class="c1">#推荐的用户id</span>
+  <span class="s2">&quot;toUserId&quot;</span>:1002, <span class="c1">#用户id</span>
+  <span class="s2">&quot;score&quot;</span>:90,  <span class="c1">#推荐得分</span>
+  <span class="s2">&quot;date&quot;</span>:<span class="s2">&quot;2019/1/1&quot;</span> <span class="c1">#日期</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>已经提供的测试数据（4855条数据）：</p>
+<p><img alt="image-20201130151126971" src="assets/image-20201130151126971.png" /></p>
+<h3 id="32dubbo">3.2、编写dubbo服务<a class="headerlink" href="#32dubbo" title="Permanent link">&para;</a></h3>
+<h4 id="321">3.2.1、编写接口<a class="headerlink" href="#321" title="Permanent link">&para;</a></h4>
+<p>在my-tanhua-dubbo-interface工程中定义接口：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.api</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.vo.PageInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.RecommendUser</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RecommendUserApi</span> <span class="p">{</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 查询一位得分最高的推荐用户</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param userId</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="n">RecommendUser</span> <span class="nf">queryWithMaxScore</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">);</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 按照得分倒序</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param userId</span>
+<span class="cm">     * @param pageNum</span>
+<span class="cm">     * @param pageSize</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">RecommendUser</span><span class="o">&gt;</span> <span class="nf">queryPageInfo</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageNum</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.annotation.Id</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.index.Indexed</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.mapping.Document</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@Document</span><span class="p">(</span><span class="n">collection</span> <span class="o">=</span> <span class="s">&quot;recommend_user&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RecommendUser</span> <span class="kd">implements</span> <span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4296017160071130962L</span><span class="p">;</span>
+
+    <span class="nd">@Id</span>
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">id</span><span class="p">;</span> <span class="c1">//主键id</span>
+    <span class="nd">@Indexed</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">userId</span><span class="p">;</span> <span class="c1">//推荐的用户id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">toUserId</span><span class="p">;</span> <span class="c1">//用户id</span>
+    <span class="nd">@Indexed</span>
+    <span class="kd">private</span> <span class="n">Double</span> <span class="n">score</span><span class="p">;</span> <span class="c1">//推荐得分</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">date</span><span class="p">;</span> <span class="c1">//日期</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.vo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PageInfo</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2105385689859184204L</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 总条数</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 当前页</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">pageNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 一页显示的大小</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">pageSize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 数据列表</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">records</span> <span class="o">=</span> <span class="n">Collections</span><span class="p">.</span><span class="na">emptyList</span><span class="p">();</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="322">3.2.2、编写实现<a class="headerlink" href="#322" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.api</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.alibaba.dubbo.config.annotation.Service</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.RecommendUser</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.vo.PageInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.domain.PageRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.domain.Sort</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.MongoTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Criteria</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Query</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@Service</span><span class="p">(</span><span class="n">version</span> <span class="o">=</span> <span class="s">&quot;1.0.0&quot;</span><span class="p">)</span> <span class="c1">//申明这是一个dubbo服务</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RecommendUserApiImpl</span> <span class="kd">implements</span> <span class="n">RecommendUserApi</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">MongoTemplate</span> <span class="n">mongoTemplate</span><span class="p">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">RecommendUser</span> <span class="nf">queryWithMaxScore</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//查询得分最高的用户，按照得分倒序排序</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;toUserId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">userId</span><span class="p">))</span>
+                <span class="p">.</span><span class="na">with</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">by</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">Order</span><span class="p">.</span><span class="na">desc</span><span class="p">(</span><span class="s">&quot;score&quot;</span><span class="p">))).</span><span class="na">limit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">findOne</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">RecommendUser</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">RecommendUser</span><span class="o">&gt;</span> <span class="nf">queryPageInfo</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageNum</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">//分页并且排序参数</span>
+        <span class="n">PageRequest</span> <span class="n">pageRequest</span> <span class="o">=</span> <span class="n">PageRequest</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">pageNum</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pageSize</span><span class="p">,</span> <span class="n">Sort</span><span class="p">.</span><span class="na">by</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">Order</span><span class="p">.</span><span class="na">desc</span><span class="p">(</span><span class="s">&quot;score&quot;</span><span class="p">)));</span>
+
+        <span class="c1">//查询参数</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;toUserId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">userId</span><span class="p">)).</span><span class="na">with</span><span class="p">(</span><span class="n">pageRequest</span><span class="p">);</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">RecommendUser</span><span class="o">&gt;</span> <span class="n">recommendUserList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">RecommendUser</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+        <span class="c1">//暂时不提供数据总数</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">PageInfo</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">pageNum</span><span class="p">,</span> <span class="n">pageSize</span><span class="p">,</span> <span class="n">recommendUserList</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="323">3.2.3、测试<a class="headerlink" href="#323" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.api</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.runner.RunWith</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.test.context.junit4.SpringRunner</span><span class="p">;</span>
+
+<span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="nd">@SpringBootTest</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestRecommendUserApi</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RecommendUserApi</span> <span class="n">recommendUserApi</span><span class="p">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testQueryWithMaxScore</span><span class="p">(){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">recommendUserApi</span><span class="p">.</span><span class="na">queryWithMaxScore</span><span class="p">(</span><span class="mi">1L</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">recommendUserApi</span><span class="p">.</span><span class="na">queryWithMaxScore</span><span class="p">(</span><span class="mi">8L</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">recommendUserApi</span><span class="p">.</span><span class="na">queryWithMaxScore</span><span class="p">(</span><span class="mi">26L</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testQueryPageInfo</span><span class="p">(){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">recommendUserApi</span><span class="p">.</span><span class="na">queryPageInfo</span><span class="p">(</span><span class="mi">1L</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">recommendUserApi</span><span class="p">.</span><span class="na">queryPageInfo</span><span class="p">(</span><span class="mi">1L</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">recommendUserApi</span><span class="p">.</span><span class="na">queryPageInfo</span><span class="p">(</span><span class="mi">1L</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="33">3.3、实现今日佳人服务<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<h4 id="331mock">3.3.1、mock服务<a class="headerlink" href="#331mock" title="Permanent link">&para;</a></h4>
+<p>地址：https://mock-java.itheima.net/project/35/interface/api/617</p>
+<p><img alt="image-20201130152808705" src="assets/image-20201130152808705.png" /></p>
+<p><img alt="1566915288334" src="assets/1566915288334.png" /></p>
+<h4 id="332">3.3.2、基础代码<a class="headerlink" href="#332" title="Permanent link">&para;</a></h4>
+<h5 id="3321sexenum">3.3.2.1、SexEnum<a class="headerlink" href="#3321sexenum" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.enums</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.enums.IEnum</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">enum</span> <span class="n">SexEnum</span> <span class="kd">implements</span> <span class="n">IEnum</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="n">MAN</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;男&quot;</span><span class="p">),</span>
+    <span class="n">WOMAN</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;女&quot;</span><span class="p">),</span>
+    <span class="n">UNKNOWN</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;未知&quot;</span><span class="p">);</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">desc</span><span class="p">;</span>
+
+    <span class="n">SexEnum</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">,</span> <span class="n">String</span> <span class="n">desc</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">desc</span> <span class="o">=</span> <span class="n">desc</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Integer</span> <span class="nf">getValue</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">desc</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3322basepojo">3.3.2.2、BasePojo<a class="headerlink" href="#3322basepojo" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.annotation.FieldFill</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.annotation.TableField</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+
+
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">BasePojo</span> <span class="p">{</span>
+
+    <span class="nd">@TableField</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">FieldFill</span><span class="p">.</span><span class="na">INSERT</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">Date</span> <span class="n">created</span><span class="p">;</span>
+    <span class="nd">@TableField</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">FieldFill</span><span class="p">.</span><span class="na">INSERT_UPDATE</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">Date</span> <span class="n">updated</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3323user">3.3.2.3、User<a class="headerlink" href="#3323user" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.annotation.JsonIgnore</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.annotation.JsonIgnoreProperties</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@JsonIgnoreProperties</span><span class="p">(</span><span class="n">ignoreUnknown</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">User</span> <span class="kd">extends</span> <span class="n">BasePojo</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">mobile</span><span class="p">;</span> <span class="c1">//手机号</span>
+
+    <span class="nd">@JsonIgnore</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="p">;</span> <span class="c1">//密码，json序列化时忽略</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3324userinfo">3.3.2.4、UserInfo<a class="headerlink" href="#3324userinfo" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.server.enums.SexEnum</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserInfo</span> <span class="kd">extends</span> <span class="n">BasePojo</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">userId</span><span class="p">;</span> <span class="c1">//用户id</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">nickName</span><span class="p">;</span> <span class="c1">//昵称</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">logo</span><span class="p">;</span> <span class="c1">//用户头像</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">tags</span><span class="p">;</span> <span class="c1">//用户标签：多个用逗号分隔</span>
+    <span class="kd">private</span> <span class="n">SexEnum</span> <span class="n">sex</span><span class="p">;</span> <span class="c1">//性别</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span><span class="p">;</span> <span class="c1">//年龄</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">edu</span><span class="p">;</span> <span class="c1">//学历</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">city</span><span class="p">;</span> <span class="c1">//城市</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">;</span> <span class="c1">//生日</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">coverPic</span><span class="p">;</span> <span class="c1">// 封面图片</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">industry</span><span class="p">;</span> <span class="c1">//行业</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">income</span><span class="p">;</span> <span class="c1">//收入</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">marriage</span><span class="p">;</span> <span class="c1">//婚姻状态</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="333">3.3.3、实现功能<a class="headerlink" href="#333" title="Permanent link">&para;</a></h4>
+<p>实现描述：</p>
+<ul>
+<li>需要根据前端定义的结构定义java对象</li>
+<li>根据sso系统提供的接口查询当前登录用户的信息</li>
+<li>根据dubbo系统提供的服务进行查询今日佳人数据</li>
+</ul>
+<h5 id="3331todaybest">3.3.3.1、TodayBest<a class="headerlink" href="#3331todaybest" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.vo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 今日佳人</span>
+<span class="cm"> */</span>
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TodayBest</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">avatar</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">nickname</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">gender</span><span class="p">;</span> <span class="c1">//性别 man woman</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">tags</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">fateValue</span><span class="p">;</span> <span class="c1">//缘分值</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3332todaybestcontroller">3.3.3.2、TodayBestController<a class="headerlink" href="#3332todaybestcontroller" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.controller</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.server.service.TodayBestService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.vo.TodayBest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.extern.slf4j.Slf4j</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.HttpStatus</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.ResponseEntity</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestHeader</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
+
+<span class="nd">@RestController</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;tanhua&quot;</span><span class="p">)</span>
+<span class="nd">@Slf4j</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TodayBestController</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">TodayBestService</span> <span class="n">todayBestService</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 查询今日佳人</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param token</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;todayBest&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">TodayBest</span><span class="o">&gt;</span> <span class="nf">queryTodayBest</span><span class="p">(</span><span class="nd">@RequestHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">)</span> <span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">TodayBest</span> <span class="n">todayBest</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">todayBestService</span><span class="p">.</span><span class="na">queryTodayBest</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">!=</span> <span class="n">todayBest</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">todayBest</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;查询今日佳人出错~ token = &quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">status</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">INTERNAL_SERVER_ERROR</span><span class="p">).</span><span class="na">body</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3333todaybestservice">3.3.3.3、TodayBestService<a class="headerlink" href="#3333todaybestservice" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.server.pojo.User</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.pojo.UserInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.vo.TodayBest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TodayBestService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserService</span> <span class="n">userService</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RecommendUserService</span> <span class="n">recommendUserService</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserInfoService</span> <span class="n">userInfoService</span><span class="p">;</span>
+
+    <span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${tanhua.sso.default.user}&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">defaultUser</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">TodayBest</span> <span class="nf">queryTodayBest</span><span class="p">(</span><span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//校验token是否有效，通过SSO的接口进行校验</span>
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userService</span><span class="p">.</span><span class="na">queryUserByToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">user</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//token非法或已经过期</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//查询推荐用户（今日佳人）</span>
+        <span class="n">TodayBest</span> <span class="n">todayBest</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">recommendUserService</span><span class="p">.</span><span class="na">queryTodayBest</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+        <span class="k">if</span><span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">todayBest</span><span class="p">){</span>
+            <span class="c1">//给出默认的推荐用户</span>
+            <span class="n">todayBest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TodayBest</span><span class="p">();</span>
+            <span class="n">todayBest</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">defaultUser</span><span class="p">);</span>
+            <span class="n">todayBest</span><span class="p">.</span><span class="na">setFateValue</span><span class="p">(</span><span class="mi">80L</span><span class="p">);</span> <span class="c1">//固定值</span>
+        <span class="p">}</span>
+
+        <span class="c1">//补全个人信息</span>
+        <span class="n">UserInfo</span> <span class="n">userInfo</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoService</span><span class="p">.</span><span class="na">queryUserInfoByUserId</span><span class="p">(</span><span class="n">todayBest</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+        <span class="k">if</span><span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">userInfo</span><span class="p">){</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">todayBest</span><span class="p">.</span><span class="na">setAvatar</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getLogo</span><span class="p">());</span>
+        <span class="n">todayBest</span><span class="p">.</span><span class="na">setNickname</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getNickName</span><span class="p">());</span>
+        <span class="n">todayBest</span><span class="p">.</span><span class="na">setTags</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getTags</span><span class="p">(),</span> <span class="sc">&#39;,&#39;</span><span class="p">));</span>
+        <span class="n">todayBest</span><span class="p">.</span><span class="na">setGender</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getSex</span><span class="p">().</span><span class="na">getValue</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">?</span> <span class="s">&quot;man&quot;</span> <span class="p">:</span> <span class="s">&quot;woman&quot;</span><span class="p">);</span>
+        <span class="n">todayBest</span><span class="p">.</span><span class="na">setAge</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+
+        <span class="k">return</span> <span class="n">todayBest</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3334userservice">3.3.3.4、UserService<a class="headerlink" href="#3334userservice" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.ObjectMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.pojo.User</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.extern.slf4j.Slf4j</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.client.RestTemplate</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="nd">@Slf4j</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RestTemplate</span> <span class="n">restTemplate</span><span class="p">;</span>
+
+    <span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${tanhua.sso.url}&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">ssoUrl</span><span class="p">;</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">ObjectMapper</span> <span class="n">MAPPER</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="p">();</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 通过sso的rest接口查询</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param token</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">User</span> <span class="nf">queryUserByToken</span><span class="p">(</span><span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="n">ssoUrl</span> <span class="o">+</span> <span class="s">&quot;/user/&quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">;</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">restTemplate</span><span class="p">.</span><span class="na">getForObject</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">MAPPER</span><span class="p">.</span><span class="na">readValue</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">User</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;校验token出错，token = &quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.config</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.client.ClientHttpRequestFactory</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.client.SimpleClientHttpRequestFactory</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.converter.StringHttpMessageConverter</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.client.RestTemplate</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.nio.charset.Charset</span><span class="p">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RestTemplateConfig</span> <span class="p">{</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="n">RestTemplate</span> <span class="nf">restTemplate</span><span class="p">(</span><span class="n">ClientHttpRequestFactory</span> <span class="n">factory</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">RestTemplate</span> <span class="n">restTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RestTemplate</span><span class="p">(</span><span class="n">factory</span><span class="p">);</span>
+        <span class="c1">// 支持中文编码</span>
+        <span class="n">restTemplate</span><span class="p">.</span><span class="na">getMessageConverters</span><span class="p">().</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="k">new</span> <span class="n">StringHttpMessageConverter</span><span class="p">(</span><span class="n">Charset</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;UTF-8&quot;</span><span class="p">)));</span>
+        <span class="k">return</span> <span class="n">restTemplate</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="n">ClientHttpRequestFactory</span> <span class="nf">simpleClientHttpRequestFactory</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">SimpleClientHttpRequestFactory</span> <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleClientHttpRequestFactory</span><span class="p">();</span>
+        <span class="n">factory</span><span class="p">.</span><span class="na">setReadTimeout</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span><span class="c1">//单位为ms</span>
+        <span class="n">factory</span><span class="p">.</span><span class="na">setConnectTimeout</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span><span class="c1">//单位为ms</span>
+        <span class="k">return</span> <span class="n">factory</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3335recommenduserservice">3.3.3.5、RecommendUserService<a class="headerlink" href="#3335recommenduserservice" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.alibaba.dubbo.config.annotation.Reference</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.api.RecommendUserApi</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.RecommendUser</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.vo.TodayBest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 负责与dubbo服务进行交互</span>
+<span class="cm"> */</span>
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RecommendUserService</span> <span class="p">{</span>
+
+    <span class="nd">@Reference</span><span class="p">(</span><span class="n">version</span> <span class="o">=</span> <span class="s">&quot;1.0.0&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">RecommendUserApi</span> <span class="n">recommendUserApi</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">TodayBest</span> <span class="nf">queryTodayBest</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">RecommendUser</span> <span class="n">recommendUser</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">recommendUserApi</span><span class="p">.</span><span class="na">queryWithMaxScore</span><span class="p">(</span><span class="n">userId</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">recommendUser</span><span class="p">){</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">TodayBest</span> <span class="n">todayBest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TodayBest</span><span class="p">();</span>
+        <span class="n">todayBest</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">recommendUser</span><span class="p">.</span><span class="na">getUserId</span><span class="p">());</span>
+
+        <span class="c1">//缘分值</span>
+        <span class="kt">double</span> <span class="n">score</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">floor</span><span class="p">(</span><span class="n">recommendUser</span><span class="p">.</span><span class="na">getScore</span><span class="p">());</span><span class="c1">//取整,98.2 -&gt; 98</span>
+        <span class="n">todayBest</span><span class="p">.</span><span class="na">setFateValue</span><span class="p">(</span><span class="n">Double</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">score</span><span class="p">).</span><span class="na">longValue</span><span class="p">());</span>
+
+        <span class="k">return</span> <span class="n">todayBest</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3336userinfoservice">3.3.3.6、UserInfoService<a class="headerlink" href="#3336userinfoservice" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.conditions.query.QueryWrapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.mapper.UserInfoMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.pojo.UserInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserInfoService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserInfoMapper</span> <span class="n">userInfoMapper</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">UserInfo</span> <span class="nf">queryUserInfoByUserId</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">QueryWrapper</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="n">queryWrapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueryWrapper</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">queryWrapper</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="s">&quot;user_id&quot;</span><span class="p">,</span> <span class="n">userId</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoMapper</span><span class="p">.</span><span class="na">selectOne</span><span class="p">(</span><span class="n">queryWrapper</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="3337userinfomapper">3.3.3.7、UserInfoMapper<a class="headerlink" href="#3337userinfomapper" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.mapper</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.mapper.BaseMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.common.pojo.UserInfo</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserInfoMapper</span> <span class="kd">extends</span> <span class="n">BaseMapper</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="334">3.3.4、测试<a class="headerlink" href="#334" title="Permanent link">&para;</a></h4>
+<p>单元测试，测试dubbo服务：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.server.service.RecommendUserService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.vo.TodayBest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.runner.RunWith</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.test.context.junit4.SpringJUnit4ClassRunner</span><span class="p">;</span>
+
+<span class="nd">@SpringBootTest</span>
+<span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringJUnit4ClassRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestRecommendUserApi</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RecommendUserService</span> <span class="n">recommendUserService</span><span class="p">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testQueryTodayBest</span><span class="p">(){</span>
+        <span class="n">TodayBest</span> <span class="n">todayBest</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">recommendUserService</span><span class="p">.</span><span class="na">queryTodayBest</span><span class="p">(</span><span class="mi">1L</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">todayBest</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<p>整合功能测试，需要将sso、dubbo服务启动完成后进行测试。</p>
+<p><img alt="image-20201130170209235" src="assets/image-20201130170209235.png" /></p>
+<h4 id="335mongodbbug">3.3.5、解决MongoDB启动bug<a class="headerlink" href="#335mongodbbug" title="Permanent link">&para;</a></h4>
+<p>在项目中，添加了mongo的依赖的话，springboot就会自动去连接本地的mongo，由于他连接不上会导致出错。</p>
+<p><img alt="1567411076994" src="assets/1567411076994.png" /></p>
+<p>解决：</p>
+<p>springboot中添加排除自动配置的注解</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.mybatis.spring.annotation.MapperScan</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.SpringApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration</span><span class="p">;</span>
+
+<span class="nd">@MapperScan</span><span class="p">(</span><span class="s">&quot;com.tanhua.server.mapper&quot;</span><span class="p">)</span> <span class="c1">//设置mapper接口的扫描包</span>
+<span class="nd">@SpringBootApplication</span><span class="p">(</span><span class="n">exclude</span> <span class="o">=</span> <span class="p">{</span><span class="n">MongoAutoConfiguration</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="n">MongoDataAutoConfiguration</span><span class="p">.</span><span class="na">class</span><span class="p">})</span> <span class="c1">//排除mongo的自动配置</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ServerApplication</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">ServerApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="4">4、推荐列表<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p><img alt="1567064038029" src="assets/1567064038029.png" /></p>
+<h3 id="41mock">4.1、mock接口<a class="headerlink" href="#41mock" title="Permanent link">&para;</a></h3>
+<p>地址：https://mock-java.itheima.net/project/35/interface/api/623</p>
+<p><img alt="image-20201130181444611" src="assets/image-20201130181444611.png" /></p>
+<p><img alt="1567064266212" src="assets/1567064266212.png" /></p>
+<h3 id="42">4.2、查询参数对象<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.vo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RecommendUserQueryParam</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">page</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//当前页数</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">pagesize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">//页尺寸</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">gender</span><span class="p">;</span> <span class="c1">//性别 man woman</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">lastLogin</span><span class="p">;</span> <span class="c1">//近期登陆时间</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span><span class="p">;</span> <span class="c1">//年龄</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">city</span><span class="p">;</span> <span class="c1">//居住地</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">education</span><span class="p">;</span> <span class="c1">//学历</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="43">4.3、结果对象<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.vo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PageResult</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">counts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//总记录数</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">pagesize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//页大小</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">pages</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//总页数</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">page</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//当前页码</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;?&gt;</span> <span class="n">items</span> <span class="o">=</span> <span class="n">Collections</span><span class="p">.</span><span class="na">emptyList</span><span class="p">();</span> <span class="c1">//列表</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="44controller">4.4、Controller<a class="headerlink" href="#44controller" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>    <span class="cm">/**</span>
+<span class="cm">     * 查询推荐用户列表</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param token</span>
+<span class="cm">     * @param queryParam</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;recommendation&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">PageResult</span><span class="o">&gt;</span> <span class="nf">queryRecommendation</span><span class="p">(</span><span class="nd">@RequestHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">)</span> <span class="n">String</span> <span class="n">token</span><span class="p">,</span>
+                                                          <span class="n">RecommendUserQueryParam</span> <span class="n">queryParam</span><span class="p">){</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">PageResult</span> <span class="n">pageResult</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">todayBestService</span><span class="p">.</span><span class="na">queryRecommendation</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">queryParam</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">!=</span> <span class="n">pageResult</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="n">pageResult</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;查询推荐用户列表出错~ token = &quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">status</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">INTERNAL_SERVER_ERROR</span><span class="p">).</span><span class="na">body</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+    <span class="p">}</span>
+</code></pre></div>
+
+<h3 id="45service">4.5、Service<a class="headerlink" href="#45service" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm">     * 查询推荐用户列表</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param queryParam</span>
+<span class="cm">     * @param token</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">PageResult</span> <span class="nf">queryRecommendation</span><span class="p">(</span><span class="n">String</span> <span class="n">token</span><span class="p">,</span> <span class="n">RecommendUserQueryParam</span> <span class="n">queryParam</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//校验token是否有效，通过SSO的接口进行校验</span>
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userService</span><span class="p">.</span><span class="na">queryUserByToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">user</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//token非法或已经过期</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">PageResult</span> <span class="n">pageResult</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PageResult</span><span class="p">();</span>
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setPage</span><span class="p">(</span><span class="n">queryParam</span><span class="p">.</span><span class="na">getPage</span><span class="p">());</span>
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setPagesize</span><span class="p">(</span><span class="n">queryParam</span><span class="p">.</span><span class="na">getPagesize</span><span class="p">());</span>
+
+        <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">RecommendUser</span><span class="o">&gt;</span> <span class="n">pageInfo</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">recommendUserService</span><span class="p">.</span><span class="na">queryRecommendUserList</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span> <span class="n">queryParam</span><span class="p">.</span><span class="na">getPage</span><span class="p">(),</span> <span class="n">queryParam</span><span class="p">.</span><span class="na">getPagesize</span><span class="p">());</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">RecommendUser</span><span class="o">&gt;</span> <span class="n">records</span> <span class="o">=</span> <span class="n">pageInfo</span><span class="p">.</span><span class="na">getRecords</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">CollectionUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">records</span><span class="p">))</span> <span class="p">{</span>
+            <span class="c1">//没有查询到推荐的用户列表</span>
+            <span class="k">return</span> <span class="n">pageResult</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//填充个人信息</span>
+
+        <span class="c1">//收集推荐用户的id</span>
+        <span class="n">Set</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">userIds</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">RecommendUser</span> <span class="n">record</span> <span class="p">:</span> <span class="n">records</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">userIds</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="na">getUserId</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="n">QueryWrapper</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="n">queryWrapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueryWrapper</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+        <span class="c1">//用户id参数</span>
+        <span class="n">queryWrapper</span><span class="p">.</span><span class="na">in</span><span class="p">(</span><span class="s">&quot;user_id&quot;</span><span class="p">,</span> <span class="n">userIds</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNotEmpty</span><span class="p">(</span><span class="n">queryParam</span><span class="p">.</span><span class="na">getGender</span><span class="p">()))</span> <span class="p">{</span>
+            <span class="c1">//需要性别参数查询</span>
+            <span class="n">queryWrapper</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="s">&quot;sex&quot;</span><span class="p">,</span> <span class="n">StringUtils</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">queryParam</span><span class="p">.</span><span class="na">getGender</span><span class="p">(),</span> <span class="s">&quot;man&quot;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isNotEmpty</span><span class="p">(</span><span class="n">queryParam</span><span class="p">.</span><span class="na">getCity</span><span class="p">()))</span> <span class="p">{</span>
+            <span class="c1">//需要城市参数查询</span>
+            <span class="n">queryWrapper</span><span class="p">.</span><span class="na">like</span><span class="p">(</span><span class="s">&quot;city&quot;</span><span class="p">,</span> <span class="n">queryParam</span><span class="p">.</span><span class="na">getCity</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">queryParam</span><span class="p">.</span><span class="na">getAge</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//设置年龄参数，条件：小于等于</span>
+            <span class="n">queryWrapper</span><span class="p">.</span><span class="na">le</span><span class="p">(</span><span class="s">&quot;age&quot;</span><span class="p">,</span> <span class="n">queryParam</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="n">userInfoList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoService</span><span class="p">.</span><span class="na">queryUserInfoList</span><span class="p">(</span><span class="n">queryWrapper</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">CollectionUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">userInfoList</span><span class="p">)){</span>
+            <span class="c1">//没有查询到用户的基本信息</span>
+            <span class="k">return</span> <span class="n">pageResult</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">TodayBest</span><span class="o">&gt;</span> <span class="n">todayBests</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">UserInfo</span> <span class="n">userInfo</span> <span class="p">:</span> <span class="n">userInfoList</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">TodayBest</span> <span class="n">todayBest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TodayBest</span><span class="p">();</span>
+
+            <span class="n">todayBest</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getUserId</span><span class="p">());</span>
+            <span class="n">todayBest</span><span class="p">.</span><span class="na">setAvatar</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getLogo</span><span class="p">());</span>
+            <span class="n">todayBest</span><span class="p">.</span><span class="na">setNickname</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getNickName</span><span class="p">());</span>
+            <span class="n">todayBest</span><span class="p">.</span><span class="na">setTags</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getTags</span><span class="p">(),</span> <span class="sc">&#39;,&#39;</span><span class="p">));</span>
+            <span class="n">todayBest</span><span class="p">.</span><span class="na">setGender</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getSex</span><span class="p">().</span><span class="na">getValue</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">?</span> <span class="s">&quot;man&quot;</span> <span class="p">:</span> <span class="s">&quot;woman&quot;</span><span class="p">);</span>
+            <span class="n">todayBest</span><span class="p">.</span><span class="na">setAge</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getAge</span><span class="p">());</span>
+
+            <span class="c1">//缘分值</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">RecommendUser</span> <span class="n">record</span> <span class="p">:</span> <span class="n">records</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="na">getUserId</span><span class="p">().</span><span class="na">longValue</span><span class="p">()</span> <span class="o">==</span> <span class="n">userInfo</span><span class="p">.</span><span class="na">getUserId</span><span class="p">().</span><span class="na">longValue</span><span class="p">()){</span>
+                    <span class="kt">double</span> <span class="n">score</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">floor</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="na">getScore</span><span class="p">());</span><span class="c1">//取整,98.2 -&gt; 98</span>
+                    <span class="n">todayBest</span><span class="p">.</span><span class="na">setFateValue</span><span class="p">(</span><span class="n">Double</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">score</span><span class="p">).</span><span class="na">longValue</span><span class="p">());</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="n">todayBests</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">todayBest</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//按照缘分值进行倒序排序</span>
+        <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">todayBests</span><span class="p">,</span> <span class="p">(</span><span class="n">o1</span><span class="p">,</span> <span class="n">o2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="n">Long</span><span class="p">(</span><span class="n">o2</span><span class="p">.</span><span class="na">getFateValue</span><span class="p">()</span> <span class="o">-</span> <span class="n">o1</span><span class="p">.</span><span class="na">getFateValue</span><span class="p">()).</span><span class="na">intValue</span><span class="p">());</span>
+
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setItems</span><span class="p">(</span><span class="n">todayBests</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">pageResult</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">//RecommendUserService</span>
+    <span class="kd">public</span> <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">RecommendUser</span><span class="o">&gt;</span> <span class="nf">queryRecommendUserList</span><span class="p">(</span><span class="n">Long</span> <span class="n">id</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pagesize</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">recommendUserApi</span><span class="p">.</span><span class="na">queryPageInfo</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">pagesize</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">//UserInfoService</span>
+    <span class="cm">/**</span>
+<span class="cm">     * 查询用户信息列表</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param queryWrapper</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="nf">queryUserInfoList</span><span class="p">(</span><span class="n">QueryWrapper</span> <span class="n">queryWrapper</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoMapper</span><span class="p">.</span><span class="na">selectList</span><span class="p">(</span><span class="n">queryWrapper</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h3 id="46">4.6、测试<a class="headerlink" href="#46" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20201130190537686" src="assets/image-20201130190537686.png" /></p>
+<p><img alt="image-20201130190553650" src="assets/image-20201130190553650.png" /></p>
+<h2 id="5">5、缓存<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>在接口服务中，有必要对于接口进行缓存处理，尤其是GET请求，如果每个接口单独添加的话会存在很多的重复的逻辑，所以可以编写一套通用的解决方案。</p>
+<p>实现思路：</p>
+<ul>
+<li>通过拦截器实现对请求的拦截，在拦截器中实现缓存的命中。</li>
+<li>通过ResponseBodyAdvice进行对响应的拦截，可以将数据缓存到Redis中。</li>
+<li>考虑到，不能对于所有的请求都一刀切，所以需要创建@Cache注解进行标记，只有标记的Controller才进行缓存处理。</li>
+<li>缓存的处理中，仅针对GET请求处理，其他的请求均不做处理。</li>
+</ul>
+<h3 id="51">5.1、自定义注解<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.utils</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.lang.annotation.*</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 被标记为Cache的Controller进行缓存，其他情况不进行缓存</span>
+<span class="cm"> */</span>
+<span class="nd">@Target</span><span class="p">(</span><span class="n">ElementType</span><span class="p">.</span><span class="na">METHOD</span><span class="p">)</span>
+<span class="nd">@Retention</span><span class="p">(</span><span class="n">RetentionPolicy</span><span class="p">.</span><span class="na">RUNTIME</span><span class="p">)</span>
+<span class="nd">@Documented</span> <span class="c1">//标记注解</span>
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="n">Cache</span> <span class="p">{</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 缓存时间，默认为60秒</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="n">String</span> <span class="nf">time</span><span class="p">()</span> <span class="k">default</span> <span class="s">&quot;60&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="52">5.2、采用拦截器进行缓存命中<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<p>编写拦截器：RedisCacheInterceptor。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.interceptor</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.ObjectMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.utils.Cache</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.codec.digest.DigestUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.redis.core.RedisTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.method.HandlerMethod</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.servlet.HandlerInterceptor</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="p">;</span>
+
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RedisCacheInterceptor</span> <span class="kd">implements</span> <span class="n">HandlerInterceptor</span> <span class="p">{</span>
+
+    <span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${tanhua.cache.enable}&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">Boolean</span> <span class="n">enable</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RedisTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">redisTemplate</span><span class="p">;</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">ObjectMapper</span> <span class="n">MAPPER</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="p">();</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">preHandle</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="p">,</span> <span class="n">Object</span> <span class="n">handler</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="c1">//缓存的全局开关的校验</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">enable</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//校验handler是否是HandlerMethod</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">handler</span> <span class="k">instanceof</span> <span class="n">HandlerMethod</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//判断是否为get请求</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">((</span><span class="n">HandlerMethod</span><span class="p">)</span> <span class="n">handler</span><span class="p">).</span><span class="na">hasMethodAnnotation</span><span class="p">(</span><span class="n">GetMapping</span><span class="p">.</span><span class="na">class</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//判断是否添加了@Cache注解</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">((</span><span class="n">HandlerMethod</span><span class="p">)</span> <span class="n">handler</span><span class="p">).</span><span class="na">hasMethodAnnotation</span><span class="p">(</span><span class="n">Cache</span><span class="p">.</span><span class="na">class</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//缓存命中</span>
+        <span class="n">String</span> <span class="n">redisKey</span> <span class="o">=</span> <span class="n">createRedisKey</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+        <span class="n">String</span> <span class="n">cacheData</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">opsForValue</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">redisKey</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">cacheData</span><span class="p">)){</span>
+            <span class="c1">//缓存未命中</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 将data数据进行响应</span>
+        <span class="n">response</span><span class="p">.</span><span class="na">setCharacterEncoding</span><span class="p">(</span><span class="s">&quot;UTF-8&quot;</span><span class="p">);</span>
+        <span class="n">response</span><span class="p">.</span><span class="na">setContentType</span><span class="p">(</span><span class="s">&quot;application/json; charset=utf-8&quot;</span><span class="p">);</span>
+        <span class="n">response</span><span class="p">.</span><span class="na">getWriter</span><span class="p">().</span><span class="na">write</span><span class="p">(</span><span class="n">cacheData</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 生成redis中的key，规则：SERVER_CACHE_DATA_MD5(url + param + token)</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param request</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">createRedisKey</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="na">getRequestURI</span><span class="p">();</span>
+        <span class="n">String</span> <span class="n">param</span> <span class="o">=</span> <span class="n">MAPPER</span><span class="p">.</span><span class="na">writeValueAsString</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">getParameterMap</span><span class="p">());</span>
+        <span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="na">getHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">);</span>
+
+        <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s">&quot;_&quot;</span> <span class="o">+</span> <span class="n">param</span> <span class="o">+</span> <span class="s">&quot;_&quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">;</span>
+        <span class="k">return</span> <span class="s">&quot;SERVER_CACHE_DATA_&quot;</span> <span class="o">+</span> <span class="n">DigestUtils</span><span class="p">.</span><span class="na">md5Hex</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>application.properties：</p>
+<div class="codehilite"><pre><span></span><code><span class="c">#是否开启数据缓存</span>
+<span class="na">tanhua.cache.enable</span><span class="o">=</span><span class="s">false</span>
+
+<span class="c"># Redis相关配置</span>
+<span class="na">spring.redis.jedis.pool.max-wait</span> <span class="o">=</span> <span class="s">5000ms</span>
+<span class="na">spring.redis.jedis.pool.max-Idle</span> <span class="o">=</span> <span class="s">100</span>
+<span class="na">spring.redis.jedis.pool.min-Idle</span> <span class="o">=</span> <span class="s">10</span>
+<span class="na">spring.redis.timeout</span> <span class="o">=</span> <span class="s">10s</span>
+<span class="na">spring.redis.cluster.nodes</span> <span class="o">=</span> <span class="s">192.168.31.81:6379,192.168.31.81:6380,192.168.31.81:6381</span>
+<span class="na">spring.redis.cluster.max-redirects</span><span class="o">=</span><span class="s">5</span>
+</code></pre></div>
+
+<p>注册拦截器到Spring容器：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.config</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.server.interceptor.RedisCacheInterceptor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.servlet.config.annotation.InterceptorRegistry</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.servlet.config.annotation.WebMvcConfigurer</span><span class="p">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WebConfig</span> <span class="kd">implements</span> <span class="n">WebMvcConfigurer</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RedisCacheInterceptor</span> <span class="n">redisCacheInterceptor</span><span class="p">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addInterceptors</span><span class="p">(</span><span class="n">InterceptorRegistry</span> <span class="n">registry</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">registry</span><span class="p">.</span><span class="na">addInterceptor</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">redisCacheInterceptor</span><span class="p">).</span><span class="na">addPathPatterns</span><span class="p">(</span><span class="s">&quot;/**&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="43_1">4.3、响应结果写入到缓存<a class="headerlink" href="#43_1" title="Permanent link">&para;</a></h3>
+<p>使用ResponseBodyAdvice进行对响应结果处理，将结果写入到Redis中：</p>
+<p>具体实现：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.interceptor</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.ObjectMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.utils.Cache</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.core.MethodParameter</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.redis.core.RedisTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.MediaType</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.server.ServerHttpRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.server.ServerHttpResponse</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.http.server.ServletServerHttpRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.ControllerAdvice</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.concurrent.TimeUnit</span><span class="p">;</span>
+
+<span class="nd">@ControllerAdvice</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyResponseBodyAdvice</span> <span class="kd">implements</span> <span class="n">ResponseBodyAdvice</span> <span class="p">{</span>
+
+    <span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${tanhua.cache.enable}&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">Boolean</span> <span class="n">enable</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RedisTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">redisTemplate</span><span class="p">;</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">ObjectMapper</span> <span class="n">MAPPER</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="p">();</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">supports</span><span class="p">(</span><span class="n">MethodParameter</span> <span class="n">returnType</span><span class="p">,</span> <span class="n">Class</span> <span class="n">converterType</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 开关处于开启状态  是get请求  包含了@Cache注解</span>
+        <span class="k">return</span> <span class="n">enable</span> <span class="o">&amp;&amp;</span> <span class="n">returnType</span><span class="p">.</span><span class="na">hasMethodAnnotation</span><span class="p">(</span><span class="n">GetMapping</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+                <span class="o">&amp;&amp;</span> <span class="n">returnType</span><span class="p">.</span><span class="na">hasMethodAnnotation</span><span class="p">(</span><span class="n">Cache</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">beforeBodyWrite</span><span class="p">(</span><span class="n">Object</span> <span class="n">body</span><span class="p">,</span> <span class="n">MethodParameter</span> <span class="n">returnType</span><span class="p">,</span> <span class="n">MediaType</span> <span class="n">selectedContentType</span><span class="p">,</span> <span class="n">Class</span> <span class="n">selectedConverterType</span><span class="p">,</span>
+                                  <span class="n">ServerHttpRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">ServerHttpResponse</span> <span class="n">response</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">body</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+
+            <span class="n">String</span> <span class="n">redisValue</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">body</span> <span class="k">instanceof</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">redisValue</span> <span class="o">=</span> <span class="p">(</span><span class="n">String</span><span class="p">)</span> <span class="n">body</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">redisValue</span> <span class="o">=</span> <span class="n">MAPPER</span><span class="p">.</span><span class="na">writeValueAsString</span><span class="p">(</span><span class="n">body</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="n">String</span> <span class="n">redisKey</span> <span class="o">=</span> <span class="n">RedisCacheInterceptor</span><span class="p">.</span><span class="na">createRedisKey</span><span class="p">(((</span><span class="n">ServletServerHttpRequest</span><span class="p">)</span> <span class="n">request</span><span class="p">).</span><span class="na">getServletRequest</span><span class="p">());</span>
+
+            <span class="n">Cache</span> <span class="n">cache</span> <span class="o">=</span> <span class="n">returnType</span><span class="p">.</span><span class="na">getMethodAnnotation</span><span class="p">(</span><span class="n">Cache</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+            <span class="c1">//缓存的时间单位是秒</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">opsForValue</span><span class="p">().</span><span class="na">set</span><span class="p">(</span><span class="n">redisKey</span><span class="p">,</span> <span class="n">redisValue</span><span class="p">,</span> <span class="n">Long</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">cache</span><span class="p">.</span><span class="na">time</span><span class="p">()),</span> <span class="n">TimeUnit</span><span class="p">.</span><span class="na">SECONDS</span><span class="p">);</span>
+
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">body</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="44">4.4、测试<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20201130202845964" src="assets/image-20201130202845964.png" /></p>
+<p>可以看到数据已经缓存到Redis中，并且其缓存时间也是30秒，与预期一致。</p>
+<p><img alt="image-20201130203238548" src="assets/image-20201130203238548.png" /></p>
+<h2 id="6">6、整合测试<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<p>测试时需要注意，由于用户数据较少，所以测试时需要把条件注释掉，否则查询不到数据：</p>
+<p><img alt="image-20201130202631311" src="assets/image-20201130202631311.png" /></p>
+<p>效果：</p>
+<p><img alt="image-20201130200736231" src="assets/image-20201130200736231.png" /></p>
+<p><img alt="image-20201130202349684" src="assets/image-20201130202349684.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../day02/" class="md-footer__link md-footer__link--prev" aria-label="上一页: day02" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              day02
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../day04/" class="md-footer__link md-footer__link--next" aria-label="下一页: day04" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              day04
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 peaceiris
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/peaceiris" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/piris314en" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

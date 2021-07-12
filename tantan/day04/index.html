@@ -1,0 +1,3273 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions.">
+      
+      
+      
+        <meta name="author" content="nitto">
+      
+      
+        <link rel="canonical" href="https://nitto.netlify.app/tantan/day04/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>day04 - Nitto Java Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nitto Java Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              day04
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nitto Java Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jquery/" class="md-nav__link">
+        JQuery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ajax/" class="md-nav__link">
+        AJAX
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/4/" class="md-nav__link">
+        docker部署容器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/5/" class="md-nav__link">
+        Docerfile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/6/" class="md-nav__link">
+        服务编排
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/7/" class="md-nav__link">
+        私有仓库
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/MongoDB/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        项目一-探花交友
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目一-探花交友" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          项目一-探花交友
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day03/" class="md-nav__link">
+        day03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          day04
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        day04
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    课程说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1common" class="md-nav__link">
+    1、抽取common工程
+  </a>
+  
+    <nav class="md-nav" aria-label="1、抽取common工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11my-tanhua-common" class="md-nav__link">
+    1.1、创建my-tanhua-common工程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2、通用枚举
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13mapper" class="md-nav__link">
+    1.3、抽取mapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14pojo" class="md-nav__link">
+    1.4、抽取pojo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15utils" class="md-nav__link">
+    1.5、抽取utils
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、圈子功能
+  </a>
+  
+    <nav class="md-nav" aria-label="2、圈子功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1、功能说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2、实现方案分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3、表结构设计
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、好友关系数据
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4、查询好友动态
+  </a>
+  
+    <nav class="md-nav" aria-label="4、查询好友动态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1、基础代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42dubbo" class="md-nav__link">
+    4.2、dubbo服务
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2、dubbo服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    4.2.1、定义接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    4.2.2、实现接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423" class="md-nav__link">
+    4.2.3、测试用例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43app" class="md-nav__link">
+    4.3、APP接口服务
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3、APP接口服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431quanzivo" class="md-nav__link">
+    4.3.1、QuanZiVo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432quanzicontroller" class="md-nav__link">
+    4.3.2、QuanZiController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433quanziservice" class="md-nav__link">
+    4.3.3、QuanZiService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434" class="md-nav__link">
+    4.3.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5token" class="md-nav__link">
+    5、统一校验token
+  </a>
+  
+    <nav class="md-nav" aria-label="5、统一校验token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51userthreadlocal" class="md-nav__link">
+    5.1、编写UserThreadLocal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52tokeninterceptor" class="md-nav__link">
+    5.2、编写TokenInterceptor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53noauthorization" class="md-nav__link">
+    5.3、编写注解NoAuthorization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    5.4、注册拦截器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55threadlocal" class="md-nav__link">
+    5.5、使用ThreadLocal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6、发布动态
+  </a>
+  
+    <nav class="md-nav" aria-label="6、发布动态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61dubbo" class="md-nav__link">
+    6.1、dubbo服务
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1、dubbo服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611" class="md-nav__link">
+    6.1.1、定义接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612" class="md-nav__link">
+    6.1.2、实现接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613" class="md-nav__link">
+    6.1.3、好友时间线数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#614" class="md-nav__link">
+    6.1.4、测试好友时间线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#615" class="md-nav__link">
+    6.1.5、测试发布动态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62app" class="md-nav__link">
+    6.2、APP接口服务
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2、APP接口服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621" class="md-nav__link">
+    6.2.1、图片上传
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622" class="md-nav__link">
+    6.2.2、接口服务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623quanziservice" class="md-nav__link">
+    6.2.3、QuanZiService实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7、查询推荐动态
+  </a>
+  
+    <nav class="md-nav" aria-label="7、查询推荐动态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71dubbo" class="md-nav__link">
+    7.1、dubbo服务
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1、dubbo服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711" class="md-nav__link">
+    7.1.1、定义接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#712" class="md-nav__link">
+    7.1.2、编写实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72app" class="md-nav__link">
+    7.2、APP服务
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2、APP服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721quanzicontroller" class="md-nav__link">
+    7.2.1、QuanZiController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722quanziservice" class="md-nav__link">
+    7.2.2、QuanZiService
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    7.3、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day09/" class="md-nav__link">
+        day09
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_11" type="checkbox" id="__nav_8_11" >
+      
+      <label class="md-nav__link" for="__nav_8_11">
+        补充资料
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="补充资料" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_11">
+          <span class="md-nav__icon md-icon"></span>
+          补充资料
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/lombok/" class="md-nav__link">
+        day01_lombok
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/mybatisPlus/" class="md-nav__link">
+        day01_mybatis_plus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/aliyun/" class="md-nav__link">
+        day01_阿里云
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/sso/" class="md-nav__link">
+        day01_单点登录及jwt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/nginx/" class="md-nav__link">
+        day03_nginx
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/threadlocal/README.md" class="md-nav__link">
+        day03_ThreadLocal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/mongodb/" class="md-nav__link">
+        day04_MongoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../further/ansy/" class="md-nav__link">
+        day04_多线程@Ansy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        面试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="面试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          面试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/e.g.1.0.0/" class="md-nav__link">
+        e.g.1.0.0
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    课程说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1common" class="md-nav__link">
+    1、抽取common工程
+  </a>
+  
+    <nav class="md-nav" aria-label="1、抽取common工程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11my-tanhua-common" class="md-nav__link">
+    1.1、创建my-tanhua-common工程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2、通用枚举
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13mapper" class="md-nav__link">
+    1.3、抽取mapper
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14pojo" class="md-nav__link">
+    1.4、抽取pojo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15utils" class="md-nav__link">
+    1.5、抽取utils
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、圈子功能
+  </a>
+  
+    <nav class="md-nav" aria-label="2、圈子功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1、功能说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2、实现方案分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3、表结构设计
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、好友关系数据
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4、查询好友动态
+  </a>
+  
+    <nav class="md-nav" aria-label="4、查询好友动态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1、基础代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42dubbo" class="md-nav__link">
+    4.2、dubbo服务
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2、dubbo服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    4.2.1、定义接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    4.2.2、实现接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423" class="md-nav__link">
+    4.2.3、测试用例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43app" class="md-nav__link">
+    4.3、APP接口服务
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3、APP接口服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431quanzivo" class="md-nav__link">
+    4.3.1、QuanZiVo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432quanzicontroller" class="md-nav__link">
+    4.3.2、QuanZiController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433quanziservice" class="md-nav__link">
+    4.3.3、QuanZiService
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434" class="md-nav__link">
+    4.3.4、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5token" class="md-nav__link">
+    5、统一校验token
+  </a>
+  
+    <nav class="md-nav" aria-label="5、统一校验token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51userthreadlocal" class="md-nav__link">
+    5.1、编写UserThreadLocal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52tokeninterceptor" class="md-nav__link">
+    5.2、编写TokenInterceptor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53noauthorization" class="md-nav__link">
+    5.3、编写注解NoAuthorization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    5.4、注册拦截器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55threadlocal" class="md-nav__link">
+    5.5、使用ThreadLocal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6、发布动态
+  </a>
+  
+    <nav class="md-nav" aria-label="6、发布动态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61dubbo" class="md-nav__link">
+    6.1、dubbo服务
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1、dubbo服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611" class="md-nav__link">
+    6.1.1、定义接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612" class="md-nav__link">
+    6.1.2、实现接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613" class="md-nav__link">
+    6.1.3、好友时间线数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#614" class="md-nav__link">
+    6.1.4、测试好友时间线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#615" class="md-nav__link">
+    6.1.5、测试发布动态
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62app" class="md-nav__link">
+    6.2、APP接口服务
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2、APP接口服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621" class="md-nav__link">
+    6.2.1、图片上传
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622" class="md-nav__link">
+    6.2.2、接口服务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623quanziservice" class="md-nav__link">
+    6.2.3、QuanZiService实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7、查询推荐动态
+  </a>
+  
+    <nav class="md-nav" aria-label="7、查询推荐动态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71dubbo" class="md-nav__link">
+    7.1、dubbo服务
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1、dubbo服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711" class="md-nav__link">
+    7.1.1、定义接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#712" class="md-nav__link">
+    7.1.2、编写实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72app" class="md-nav__link">
+    7.2、APP服务
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2、APP服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721quanzicontroller" class="md-nav__link">
+    7.2.1、QuanZiController
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722quanziservice" class="md-nav__link">
+    7.2.2、QuanZiService
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    7.3、测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/tantan/day04/README.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>day04</h1>
+                
+                <h2 id="_1">课程说明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>抽取common工程</li>
+<li>圈子功能说明</li>
+<li>圈子技术实现</li>
+<li>圈子技术方案</li>
+<li>圈子实现发布动态</li>
+<li>圈子实现好友动态</li>
+<li>圈子实现推荐动态</li>
+</ul>
+<h2 id="1common">1、抽取common工程<a class="headerlink" href="#1common" title="Permanent link">&para;</a></h2>
+<p>在项目中一般需要将公用的对象进行抽取放到common工程中，其他的工程依赖此工程即可。下面我们将sso以及server工程中的公用的对象进行抽取。</p>
+<h3 id="11my-tanhua-common">1.1、创建my-tanhua-common工程<a class="headerlink" href="#11my-tanhua-common" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>my-tanhua<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>cn.itcast.tanhua<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/parent&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+
+    <span class="nt">&lt;artifactId&gt;</span>my-tanhua-common<span class="nt">&lt;/artifactId&gt;</span>
+
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mybatis-plus-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>jackson-databind<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+
+<h3 id="12">1.2、通用枚举<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>将SexEnum枚举移动至common工程，并且后续创建的枚举也要放到次工程中，以达到公用的目的。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.common.enums</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.enums.IEnum</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">enum</span> <span class="n">SexEnum</span> <span class="kd">implements</span> <span class="n">IEnum</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="n">MAN</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;男&quot;</span><span class="p">),</span>
+    <span class="n">WOMAN</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;女&quot;</span><span class="p">),</span>
+    <span class="n">UNKNOWN</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;未知&quot;</span><span class="p">);</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">desc</span><span class="p">;</span>
+
+    <span class="n">SexEnum</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">,</span> <span class="n">String</span> <span class="n">desc</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">desc</span> <span class="o">=</span> <span class="n">desc</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Integer</span> <span class="nf">getValue</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">desc</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>需要修改server与sso工程中的application.properties配置：</p>
+<div class="codehilite"><pre><span></span><code><span class="c"># 枚举包扫描</span>
+<span class="na">mybatis-plus.type-enums-package</span><span class="o">=</span><span class="s">com.tanhua.common.enums</span>
+</code></pre></div>
+
+<p>将server与sso工程中的SexEnum对象删除以及将相关的类引用进行修改。</p>
+<h3 id="13mapper">1.3、抽取mapper<a class="headerlink" href="#13mapper" title="Permanent link">&para;</a></h3>
+<p>需要将UserInfoMapper以及UserMapper放置到common工程的com.tanhua.common.mapper包下。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.common.mapper</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.mapper.BaseMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.common.pojo.User</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserMapper</span> <span class="kd">extends</span> <span class="n">BaseMapper</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.common.mapper</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.mapper.BaseMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.common.pojo.UserInfo</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UserInfoMapper</span> <span class="kd">extends</span> <span class="n">BaseMapper</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<blockquote>
+<p><strong>说明：抽取完成后，需要将原工程的代码删除以及修改其他代码中引入的依赖。</strong></p>
+</blockquote>
+<h3 id="14pojo">1.4、抽取pojo<a class="headerlink" href="#14pojo" title="Permanent link">&para;</a></h3>
+<p>将BasePojo、User、UserInfo移动至common工程：</p>
+<p><img alt="image-20201208143929602" src="assets/image-20201208143929602.png" /></p>
+<h3 id="15utils">1.5、抽取utils<a class="headerlink" href="#15utils" title="Permanent link">&para;</a></h3>
+<p>将server工程的utils进行抽取公用，后续的工具类也放置到common工程中。</p>
+<p><img alt="image-20201211113721758" src="assets/image-20201211113721758.png" /></p>
+<blockquote>
+<p><strong>抽取完成后进行测试，确保可以正常启动以及功能都正常。</strong></p>
+</blockquote>
+<h2 id="2">2、圈子功能<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1、功能说明<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>探花交友项目中的圈子功能，类似微信的朋友圈，基本的功能为：发布动态、浏览好友动态、浏览推荐动态、点赞、评论、喜欢等功能。</p>
+<p><img alt="1567496518185" src="assets/1567496518185.png" /></p>
+<p>发布：</p>
+<p><img alt="1567497614205" src="assets/1567497614205.png" /></p>
+<h3 id="22">2.2、实现方案分析<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>对于圈子功能的实现，我们需要对它的功能特点做分析：</p>
+<ul>
+<li>数据量会随着用户数增大而增大</li>
+<li>读多写少，一般而言，浏览朋友圈动态会多一些，发动态相对就会少一些</li>
+<li>非好友看不到其动态内容</li>
+<li>……</li>
+</ul>
+<p>针对以上特点，我们来分析一下：</p>
+<ul>
+<li>对于数据量大而言，显然不能够使用关系型数据库进行存储，我们需要通过MongoDB进行存储</li>
+<li>对于读多写少的应用，尽可能的减少读取数据的成本</li>
+<li>比如说，一条SQL语句，单张表查询一定比多张表查询要快</li>
+<li>条件越多的查询速度将越慢，尽可能的减少条件以提升查询速度</li>
+</ul>
+<p><strong>所以对于存储而言，主要是核心的4张表：</strong></p>
+<ul>
+<li>发布表：记录了所有用户的发布的东西信息，如图片、视频等。</li>
+<li>相册：相册是每个用户独立的，记录了该用户所发布的所有内容。</li>
+<li>评论：针对某个具体发布的朋友评论和点赞操作。</li>
+<li>时间线：所谓“刷朋友圈”，就是刷时间线，就是一个用户所有的朋友的发布内容。</li>
+</ul>
+<p>流程：</p>
+<p><img alt="image-20201208180725556" src="assets/image-20201208180725556.png" /></p>
+<p>流程说明：</p>
+<ul>
+<li>用户发布动态，动态中一般包含了图片和文字，图片上传到阿里云，上传成功后拿到图片地址，将文字和图片地址进行持久化存储</li>
+<li>首先，需要将动态数据写入到发布表中，其次，再写入到自己的相册表中，需要注意的是，相册表中只包含了发布id，不会冗余存储发布数据</li>
+<li>最后，需要将发布数据异步的写入到好友的时间线表中，之所以考虑异步操作，是因为希望发布能够尽快给用户反馈，发布成功</li>
+<li>好友刷朋友圈时，实际上只需要查询自己的时间线表即可，这样最大限度的提升了查询速度，再配合redis的缓存，那速度将是飞快的</li>
+<li>用户在对动态内容进行点赞、喜欢、评论操作时，只需要写入到评论表即可，该表中也是只会记录发布id，并不会冗余存储发布数据</li>
+</ul>
+<h3 id="23">2.3、表结构设计<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>发布表：</strong></p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="err">#表名：qua</span><span class="kc">n</span><span class="err">zi_publish</span>
+<span class="p">{</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;5fae53d17e52992e78a3db61&quot;</span><span class="p">,</span><span class="err">#主键id</span>
+    <span class="nt">&quot;pid&quot;</span><span class="p">:</span><span class="mi">1001</span><span class="p">,</span> <span class="err">#发布id（Lo</span><span class="kc">n</span><span class="err">g类型）</span>
+    <span class="nt">&quot;userId&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="err">#用户id</span>
+    <span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;今天心情很好&quot;</span><span class="p">,</span> <span class="err">#文本内容</span>
+    <span class="nt">&quot;medias&quot;</span><span class="p">:</span><span class="s2">&quot;http://xxxx/x/y/z.jpg&quot;</span><span class="p">,</span> <span class="err">#媒体数据，图片或小视频</span> <span class="err">url</span>
+    <span class="nt">&quot;seeType&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="err">#谁可以看，</span><span class="mi">1-</span><span class="err">公开，</span><span class="mi">2-</span><span class="err">私密，</span><span class="mi">3-</span><span class="err">部分可见，</span><span class="mi">4-</span><span class="err">不给谁看</span>
+    <span class="nt">&quot;seeList&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="err">#部分可见的列表</span>
+    <span class="nt">&quot;notSeeList&quot;</span><span class="p">:[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span><span class="err">#不给谁看的列表</span>
+    <span class="nt">&quot;longitude&quot;</span><span class="p">:</span><span class="mf">108.840974298098</span><span class="p">,</span><span class="err">#经度</span>
+    <span class="nt">&quot;latitude&quot;</span><span class="p">:</span><span class="mf">34.2789316522934</span><span class="p">,</span><span class="err">#纬度</span>
+    <span class="nt">&quot;locationName&quot;</span><span class="p">:</span><span class="s2">&quot;上海市浦东区&quot;</span><span class="p">,</span> <span class="err">#位置名称</span>
+    <span class="s2">&quot;created&quot;</span><span class="p">,</span><span class="mi">1568012791171</span> <span class="err">#发布时间</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<blockquote>
+<p><strong>相册表：</strong></p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="err">#表名：qua</span><span class="kc">n</span><span class="err">zi_album_</span><span class="p">{</span><span class="err">userId</span><span class="p">}</span>
+<span class="p">{</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;5fae539d7e52992e78a3b684&quot;</span><span class="p">,</span><span class="err">#主键id</span>
+    <span class="nt">&quot;publishId&quot;</span><span class="p">:</span><span class="s2">&quot;5fae53d17e52992e78a3db61&quot;</span><span class="p">,</span> <span class="err">#发布id</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span><span class="mi">1568012791171</span> <span class="err">#发布时间</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<blockquote>
+<p><strong>时间线表：</strong></p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="err">#表名：qua</span><span class="kc">n</span><span class="err">zi_</span><span class="kc">t</span><span class="err">ime_li</span><span class="kc">ne</span><span class="err">_</span><span class="p">{</span><span class="err">userId</span><span class="p">}</span>
+<span class="p">{</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;5fae539b7e52992e78a3b4ae&quot;</span><span class="p">,</span><span class="err">#主键id</span><span class="p">,</span>
+    <span class="nt">&quot;userId&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="err">#好友id</span>
+    <span class="nt">&quot;publishId&quot;</span><span class="p">:</span><span class="s2">&quot;5fae53d17e52992e78a3db61&quot;</span><span class="p">,</span> <span class="err">#发布id</span>
+    <span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="mi">1568012791171</span> <span class="err">#发布时间</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<blockquote>
+<p><strong>评论表：</strong></p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="err">#表名：qua</span><span class="kc">n</span><span class="err">zi_comme</span><span class="kc">nt</span>
+<span class="p">{</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;5fae539d7e52992e78a3b648&quot;</span><span class="p">,</span> <span class="err">#主键id</span>
+    <span class="nt">&quot;publishId&quot;</span><span class="p">:</span><span class="s2">&quot;5fae53d17e52992e78a3db61&quot;</span><span class="p">,</span> <span class="err">#发布id</span>
+    <span class="nt">&quot;commentType&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="err">#评论类型，</span><span class="mi">1-</span><span class="err">点赞，</span><span class="mi">2-</span><span class="err">评论，</span><span class="mi">3-</span><span class="err">喜欢</span>
+    <span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="s2">&quot;给力！&quot;</span><span class="p">,</span> <span class="err">#评论内容</span>
+    <span class="nt">&quot;userId&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="err">#评论人</span>
+    <span class="nt">&quot;publishUserId&quot;</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="err">#发布动态的人的id</span>
+    <span class="nt">&quot;isParent&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span> <span class="err">#是否为父节点，默认是否</span>
+    <span class="nt">&quot;parentId&quot;</span><span class="p">:</span><span class="mi">1001</span><span class="p">,</span> <span class="err">#父节点id</span>
+    <span class="nt">&quot;created&quot;</span><span class="p">:</span><span class="mi">1568012791171</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="3">3、好友关系数据<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>由于圈子中会涉及的好友关系数据，虽然现在主线是开发圈子功能，但是也需要对于好友关系有所了解，在我们提供的Mongodb数据库中有一些mock数据。</p>
+<p>好友关系结构：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.mapping.Document</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@Document</span><span class="p">(</span><span class="n">collection</span> <span class="o">=</span> <span class="s">&quot;tanhua_users&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Users</span> <span class="kd">implements</span> <span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">6003135946820874230L</span><span class="p">;</span>
+
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">userId</span><span class="p">;</span> <span class="c1">//用户id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">friendId</span><span class="p">;</span> <span class="c1">//好友id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">date</span><span class="p">;</span> <span class="c1">//时间</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<p>在mock数据中，为每个用户构造了10个好友数据：</p>
+<p><img alt="image-20201208212007691" src="assets/image-20201208212007691.png" /></p>
+<h2 id="4">4、查询好友动态<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>查询好友动态与查询推荐动态显示的结构是一样的，只是其查询数据源不同：</p>
+<p><img alt="1567496518185" src="assets/1567496518185.png" /></p>
+<h3 id="41">4.1、基础代码<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>在my-tanhua-dubbo-interface中编写：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.annotation.Id</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.mapping.Document</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 发布表，动态内容</span>
+<span class="cm"> */</span>
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@Document</span><span class="p">(</span><span class="n">collection</span> <span class="o">=</span> <span class="s">&quot;quanzi_publish&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Publish</span> <span class="kd">implements</span> <span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">8732308321082804771L</span><span class="p">;</span>
+
+    <span class="nd">@Id</span>
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">id</span><span class="p">;</span> <span class="c1">//主键id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">pid</span><span class="p">;</span> <span class="c1">//发布id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">userId</span><span class="p">;</span> <span class="c1">//发布用户id</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">text</span><span class="p">;</span> <span class="c1">//文字</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">medias</span><span class="p">;</span> <span class="c1">//媒体数据，图片或小视频 url</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">seeType</span><span class="p">;</span> <span class="c1">// 谁可以看，1-公开，2-私密，3-部分可见，4-不给谁看</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">seeList</span><span class="p">;</span> <span class="c1">//部分可见的列表</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">notSeeList</span><span class="p">;</span> <span class="c1">//不给谁看的列表</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">longitude</span><span class="p">;</span> <span class="c1">//经度</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">latitude</span><span class="p">;</span> <span class="c1">//纬度</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">locationName</span><span class="p">;</span> <span class="c1">//位置名称</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">created</span><span class="p">;</span> <span class="c1">//发布时间</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.annotation.Id</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.mapping.Document</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 相册表，用于存储自己发布的数据，每一个用户一张表进行存储</span>
+<span class="cm"> */</span>
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@Document</span><span class="p">(</span><span class="n">collection</span> <span class="o">=</span> <span class="s">&quot;quanzi_album_{userId}&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Album</span> <span class="kd">implements</span> <span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">432183095092216817L</span><span class="p">;</span>
+
+    <span class="nd">@Id</span>
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">id</span><span class="p">;</span> <span class="c1">//主键id</span>
+
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">publishId</span><span class="p">;</span> <span class="c1">//发布id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">created</span><span class="p">;</span> <span class="c1">//发布时间</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.annotation.Id</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.mapping.Document</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 时间线表，用于存储发布的数据，每一个用户一张表进行存储</span>
+<span class="cm"> */</span>
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@Document</span><span class="p">(</span><span class="n">collection</span> <span class="o">=</span> <span class="s">&quot;quanzi_time_line_{userId}&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TimeLine</span> <span class="kd">implements</span> <span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">9096178416317502524L</span><span class="p">;</span>
+
+    <span class="nd">@Id</span>
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">userId</span><span class="p">;</span> <span class="c1">// 好友id</span>
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">publishId</span><span class="p">;</span> <span class="c1">//发布id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">date</span><span class="p">;</span> <span class="c1">//发布的时间</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.pojo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.annotation.Id</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.mapping.Document</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 评论表</span>
+<span class="cm"> */</span>
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@Document</span><span class="p">(</span><span class="n">collection</span> <span class="o">=</span> <span class="s">&quot;quanzi_comment&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Comment</span> <span class="kd">implements</span> <span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">Serializable</span><span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="o">-</span><span class="mi">291788258125767614L</span><span class="p">;</span>
+
+    <span class="nd">@Id</span>
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">publishId</span><span class="p">;</span> <span class="c1">//发布id</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">commentType</span><span class="p">;</span> <span class="c1">//评论类型，1-点赞，2-评论，3-喜欢</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">content</span><span class="p">;</span> <span class="c1">//评论内容</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">userId</span><span class="p">;</span> <span class="c1">//评论人</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">publishUserId</span><span class="p">;</span> <span class="c1">//发布动态的用户id</span>
+    <span class="kd">private</span> <span class="n">Boolean</span> <span class="n">isParent</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">//是否为父节点，默认是否</span>
+    <span class="kd">private</span> <span class="n">ObjectId</span> <span class="n">parentId</span><span class="p">;</span> <span class="c1">// 父节点id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">created</span><span class="p">;</span> <span class="c1">//发表时间</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="42dubbo">4.2、dubbo服务<a class="headerlink" href="#42dubbo" title="Permanent link">&para;</a></h3>
+<p>圈子的具体业务逻辑的实现需要在dubbo中完成，所以需要开发dubbo服务。</p>
+<h4 id="421">4.2.1、定义接口<a class="headerlink" href="#421" title="Permanent link">&para;</a></h4>
+<p>在my-tanhua-dubbo-interface工程中：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.api</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.Publish</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.vo.PageInfo</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">QuanZiApi</span> <span class="p">{</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 查询好友动态</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param userId 用户id</span>
+<span class="cm">     * @param page 当前页数</span>
+<span class="cm">     * @param pageSize 每一页查询的数据条数</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="nf">queryPublishList</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="422">4.2.2、实现接口<a class="headerlink" href="#422" title="Permanent link">&para;</a></h4>
+<p>在my-tanhua-dubbo-service中完成：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.api</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">cn.hutool.core.collection.CollUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.alibaba.dubbo.config.annotation.Service</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.Publish</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.TimeLine</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.vo.PageInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.domain.PageRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.domain.Pageable</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.domain.Sort</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.MongoTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Criteria</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Query</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@Service</span><span class="p">(</span><span class="n">version</span> <span class="o">=</span> <span class="s">&quot;1.0.0&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuanZiApiImpl</span> <span class="kd">implements</span> <span class="n">QuanZiApi</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">MongoTemplate</span> <span class="n">mongoTemplate</span><span class="p">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="nf">queryPublishList</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//分析：查询好友的动态，实际上查询时间线表</span>
+        <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">pageInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PageInfo</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">pageInfo</span><span class="p">.</span><span class="na">setPageNum</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+        <span class="n">pageInfo</span><span class="p">.</span><span class="na">setPageSize</span><span class="p">(</span><span class="n">pageSize</span><span class="p">);</span>
+
+        <span class="n">Pageable</span> <span class="n">pageable</span> <span class="o">=</span> <span class="n">PageRequest</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">page</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pageSize</span><span class="p">,</span>
+                <span class="n">Sort</span><span class="p">.</span><span class="na">by</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">Order</span><span class="p">.</span><span class="na">desc</span><span class="p">(</span><span class="s">&quot;date&quot;</span><span class="p">)));</span>
+
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Query</span><span class="p">().</span><span class="na">with</span><span class="p">(</span><span class="n">pageable</span><span class="p">);</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">TimeLine</span><span class="o">&gt;</span> <span class="n">timeLineList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">TimeLine</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="s">&quot;quanzi_time_line_&quot;</span> <span class="o">+</span> <span class="n">userId</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">CollUtil</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">timeLineList</span><span class="p">)){</span>
+            <span class="c1">//没有查询到数据</span>
+            <span class="k">return</span> <span class="n">pageInfo</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//获取时间线列表中的发布id的列表</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">ids</span> <span class="o">=</span> <span class="n">CollUtil</span><span class="p">.</span><span class="na">getFieldValues</span><span class="p">(</span><span class="n">timeLineList</span><span class="p">,</span> <span class="s">&quot;publishId&quot;</span><span class="p">);</span>
+
+        <span class="c1">//根据动态id查询动态列表</span>
+        <span class="n">Query</span> <span class="n">queryPublish</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">).</span><span class="na">in</span><span class="p">(</span><span class="n">ids</span><span class="p">))</span>
+                <span class="p">.</span><span class="na">with</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">by</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">Order</span><span class="p">.</span><span class="na">desc</span><span class="p">(</span><span class="s">&quot;created&quot;</span><span class="p">)));</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">publishList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">queryPublish</span><span class="p">,</span> <span class="n">Publish</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="n">pageInfo</span><span class="p">.</span><span class="na">setRecords</span><span class="p">(</span><span class="n">publishList</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">pageInfo</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>引入Hutool工具包，官方文档：https://www.hutool.cn/docs/#/</p>
+<div class="codehilite"><pre><span></span><code><span class="c">&lt;!-- 在my-tanhua工程中定义依赖 --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>cn.hutool<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>hutool-all<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>5.5.2<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+
+<span class="c">&lt;!-- 在my-tanhua-dubbo-service中引入使用 --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>cn.hutool<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>hutool-all<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+
+<h4 id="423">4.2.3、测试用例<a class="headerlink" href="#423" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.api</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.Publish</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.vo.PageInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.runner.RunWith</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.test.context.junit4.SpringRunner</span><span class="p">;</span>
+
+<span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="nd">@SpringBootTest</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestQuanZiApi</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">QuanZiApi</span> <span class="n">quanZiApi</span><span class="p">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testQueryPublishList</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">quanZiApi</span><span class="p">.</span><span class="na">queryPublishList</span><span class="p">(</span><span class="mi">1L</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="p">.</span><span class="na">getRecords</span><span class="p">().</span><span class="na">forEach</span><span class="p">(</span><span class="n">publish</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">publish</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;------------&quot;</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">quanZiApi</span><span class="p">.</span><span class="na">queryPublishList</span><span class="p">(</span><span class="mi">1L</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="p">.</span><span class="na">getRecords</span><span class="p">().</span><span class="na">forEach</span><span class="p">(</span><span class="n">publish</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">publish</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;------------&quot;</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">quanZiApi</span><span class="p">.</span><span class="na">queryPublishList</span><span class="p">(</span><span class="mi">1L</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="p">.</span><span class="na">getRecords</span><span class="p">().</span><span class="na">forEach</span><span class="p">(</span><span class="n">publish</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">publish</span><span class="p">));</span>
+
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<p>测试结果： <img alt="image-20201214105907912" src="assets/image-20201214105907912.png" /></p>
+<h3 id="43app">4.3、APP接口服务<a class="headerlink" href="#43app" title="Permanent link">&para;</a></h3>
+<p>开发完成dubbo服务后，我们将开发APP端的接口服务，依然是需要按照mock接口的中的接口定义实现。</p>
+<p>接口地址：https://mock-java.itheima.net/project/35/interface/api/683</p>
+<h4 id="431quanzivo">4.3.1、QuanZiVo<a class="headerlink" href="#431quanzivo" title="Permanent link">&para;</a></h4>
+<p>根据接口中响应的数据结构进行定义vo对象：(在my-tanhua-server工程中)</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.vo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuanZiVo</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">id</span><span class="p">;</span> <span class="c1">//动态id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">userId</span><span class="p">;</span> <span class="c1">//用户id</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">avatar</span><span class="p">;</span> <span class="c1">//头像</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">nickname</span><span class="p">;</span> <span class="c1">//昵称</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">gender</span><span class="p">;</span> <span class="c1">//性别 man woman</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span><span class="p">;</span> <span class="c1">//年龄</span>
+    <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">tags</span><span class="p">;</span> <span class="c1">//标签</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">textContent</span><span class="p">;</span> <span class="c1">//文字动态</span>
+    <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">imageContent</span><span class="p">;</span> <span class="c1">//图片动态</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">distance</span><span class="p">;</span> <span class="c1">//距离</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">createDate</span><span class="p">;</span> <span class="c1">//发布时间 如: 10分钟前</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">likeCount</span><span class="p">;</span> <span class="c1">//点赞数</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">commentCount</span><span class="p">;</span> <span class="c1">//评论数</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">loveCount</span><span class="p">;</span> <span class="c1">//喜欢数</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">hasLiked</span><span class="p">;</span> <span class="c1">//是否点赞（1是，0否）</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">hasLoved</span><span class="p">;</span> <span class="c1">//是否喜欢（1是，0否）</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="432quanzicontroller">4.3.2、QuanZiController<a class="headerlink" href="#432quanzicontroller" title="Permanent link">&para;</a></h4>
+<p>根据服务接口编写QuanZiController，其请求方法为GET请求，会传递page、pageSize、token等信息。</p>
+<p>代码实现如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.controller</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.server.service.QuanZiService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.vo.PageResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.*</span><span class="p">;</span>
+
+<span class="nd">@RestController</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;movements&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuanZiController</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">QuanZiService</span> <span class="n">quanZiService</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 查询好友动态</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param page</span>
+<span class="cm">     * @param pageSize</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@GetMapping</span>
+    <span class="kd">public</span> <span class="n">PageResult</span> <span class="nf">queryPublishList</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;page&quot;</span><span class="p">,</span> <span class="n">defaultValue</span> <span class="o">=</span> <span class="s">&quot;1&quot;</span><span class="p">)</span> <span class="n">Integer</span> <span class="n">page</span><span class="p">,</span>
+                                       <span class="nd">@RequestParam</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;pagesize&quot;</span><span class="p">,</span> <span class="n">defaultValue</span> <span class="o">=</span> <span class="s">&quot;10&quot;</span><span class="p">)</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">,</span>
+                                       <span class="nd">@RequestHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">)</span> <span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">quanZiService</span><span class="p">.</span><span class="na">queryPublishList</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">pageSize</span><span class="p">,</span> <span class="n">token</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="433quanziservice">4.3.3、QuanZiService<a class="headerlink" href="#433quanziservice" title="Permanent link">&para;</a></h4>
+<p>在QuanZiService中将实现具体的业务逻辑，需要调用quanzi的dubbo服务完成数据的查询，并且要完成用户登录是否有效的校验，最后按照服务接口中定义的结构进行封装数据。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">cn.hutool.core.bean.BeanUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">cn.hutool.core.collection.CollUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">cn.hutool.core.util.StrUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.alibaba.dubbo.config.annotation.Reference</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.common.pojo.User</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.common.pojo.UserInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.common.utils.RelativeDateFormat</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.api.QuanZiApi</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.Publish</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.vo.PageInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.vo.PageResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.vo.QuanZiVo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuanZiService</span> <span class="p">{</span>
+
+    <span class="nd">@Reference</span><span class="p">(</span><span class="n">version</span> <span class="o">=</span> <span class="s">&quot;1.0.0&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">QuanZiApi</span> <span class="n">quanZiApi</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserService</span> <span class="n">userService</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserInfoService</span> <span class="n">userInfoService</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">PageResult</span> <span class="nf">queryPublishList</span><span class="p">(</span><span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">,</span> <span class="n">String</span> <span class="n">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//分析：通过dubbo中的服务查询用户的好友动态</span>
+        <span class="c1">//通过mysql查询用户的信息，回写到结果对象中（QuanZiVo）</span>
+
+        <span class="n">PageResult</span> <span class="n">pageResult</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PageResult</span><span class="p">();</span>
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setPage</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setPagesize</span><span class="p">(</span><span class="n">pageSize</span><span class="p">);</span>
+
+        <span class="c1">//校验token是否有效</span>
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userService</span><span class="p">.</span><span class="na">queryUserByToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">user</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//token已经失效</span>
+            <span class="k">return</span> <span class="n">pageResult</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//通过dubbo查询数据</span>
+        <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">pageInfo</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">quanZiApi</span><span class="p">.</span><span class="na">queryPublishList</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span> <span class="n">page</span><span class="p">,</span> <span class="n">pageSize</span><span class="p">);</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">records</span> <span class="o">=</span> <span class="n">pageInfo</span><span class="p">.</span><span class="na">getRecords</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">CollUtil</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">records</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">pageResult</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">QuanZiVo</span><span class="o">&gt;</span> <span class="n">quanZiVoList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">records</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">publish</span> <span class="o">-&gt;</span> <span class="p">{</span>
+            <span class="n">QuanZiVo</span> <span class="n">quanZiVo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QuanZiVo</span><span class="p">();</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getId</span><span class="p">().</span><span class="na">toHexString</span><span class="p">());</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setTextContent</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getText</span><span class="p">());</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setImageContent</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getMedias</span><span class="p">().</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{}));</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setUserId</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getUserId</span><span class="p">());</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setCreateDate</span><span class="p">(</span><span class="n">RelativeDateFormat</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getCreated</span><span class="p">())));</span>
+
+            <span class="n">quanZiVoList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">quanZiVo</span><span class="p">);</span>
+        <span class="p">});</span>
+
+        <span class="c1">//查询用户信息</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">userIds</span> <span class="o">=</span> <span class="n">CollUtil</span><span class="p">.</span><span class="na">getFieldValues</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="s">&quot;userId&quot;</span><span class="p">);</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="n">userInfoList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoService</span><span class="p">.</span><span class="na">queryUserInfoByUserIdList</span><span class="p">(</span><span class="n">userIds</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">QuanZiVo</span> <span class="n">quanZiVo</span> <span class="p">:</span> <span class="n">quanZiVoList</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//找到对应的用户信息</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">UserInfo</span> <span class="n">userInfo</span> <span class="p">:</span> <span class="n">userInfoList</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">quanZiVo</span><span class="p">.</span><span class="na">getUserId</span><span class="p">().</span><span class="na">longValue</span><span class="p">()</span> <span class="o">==</span> <span class="n">userInfo</span><span class="p">.</span><span class="na">getUserId</span><span class="p">().</span><span class="na">longValue</span><span class="p">()){</span>
+                    <span class="k">this</span><span class="p">.</span><span class="na">fillUserInfoToQuanZiVo</span><span class="p">(</span><span class="n">userInfo</span><span class="p">,</span> <span class="n">quanZiVo</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setItems</span><span class="p">(</span><span class="n">quanZiVoList</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">pageResult</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 填充用户信息</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param userInfo</span>
+<span class="cm">     * @param quanZiVo</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">fillUserInfoToQuanZiVo</span><span class="p">(</span><span class="n">UserInfo</span> <span class="n">userInfo</span><span class="p">,</span> <span class="n">QuanZiVo</span> <span class="n">quanZiVo</span><span class="p">){</span>
+        <span class="n">BeanUtil</span><span class="p">.</span><span class="na">copyProperties</span><span class="p">(</span><span class="n">userInfo</span><span class="p">,</span> <span class="n">quanZiVo</span><span class="p">,</span> <span class="s">&quot;id&quot;</span><span class="p">);</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setGender</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getSex</span><span class="p">().</span><span class="na">name</span><span class="p">().</span><span class="na">toLowerCase</span><span class="p">());</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setTags</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getTags</span><span class="p">(),</span> <span class="sc">&#39;,&#39;</span><span class="p">));</span>
+
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setCommentCount</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 评论数</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setDistance</span><span class="p">(</span><span class="s">&quot;1.2公里&quot;</span><span class="p">);</span> <span class="c1">//TODO 距离</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setHasLiked</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 是否点赞（1是，0否）</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setLikeCount</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 点赞数</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setHasLoved</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 是否喜欢（1是，0否）</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setLoveCount</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 喜欢数</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">// com.tanhua.server.service.UserInfoService</span>
+    <span class="cm">/**</span>
+<span class="cm">     * 根据用户id的集合查询用户列表</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param userIds</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="nf">queryUserInfoList</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;?&gt;</span> <span class="n">userIds</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">QueryWrapper</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="n">queryWrapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueryWrapper</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">queryWrapper</span><span class="p">.</span><span class="na">in</span><span class="p">(</span><span class="s">&quot;user_id&quot;</span><span class="p">,</span> <span class="n">userIds</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">queryUserInfoList</span><span class="p">(</span><span class="n">queryWrapper</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<p>在com.tanhua.server.vo.QuanZiVo中增加字段别名，方便直接拷贝属性数据：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.vo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">cn.hutool.core.annotation.Alias</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuanZiVo</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">id</span><span class="p">;</span> <span class="c1">//动态id</span>
+    <span class="kd">private</span> <span class="n">Long</span> <span class="n">userId</span><span class="p">;</span> <span class="c1">//用户id</span>
+    <span class="nd">@Alias</span><span class="p">(</span><span class="s">&quot;logo&quot;</span><span class="p">)</span> <span class="c1">//别名</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">avatar</span><span class="p">;</span> <span class="c1">//头像</span>
+    <span class="nd">@Alias</span><span class="p">(</span><span class="s">&quot;nickName&quot;</span><span class="p">)</span> <span class="c1">//别名</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">nickname</span><span class="p">;</span> <span class="c1">//昵称</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">gender</span><span class="p">;</span> <span class="c1">//性别 man woman</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">age</span><span class="p">;</span> <span class="c1">//年龄</span>
+    <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">tags</span><span class="p">;</span> <span class="c1">//标签</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">textContent</span><span class="p">;</span> <span class="c1">//文字动态</span>
+    <span class="kd">private</span> <span class="n">String</span><span class="o">[]</span> <span class="n">imageContent</span><span class="p">;</span> <span class="c1">//图片动态</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">distance</span><span class="p">;</span> <span class="c1">//距离</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">createDate</span><span class="p">;</span> <span class="c1">//发布时间 如: 10分钟前</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">likeCount</span><span class="p">;</span> <span class="c1">//点赞数</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">commentCount</span><span class="p">;</span> <span class="c1">//评论数</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">loveCount</span><span class="p">;</span> <span class="c1">//喜欢数</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">hasLiked</span><span class="p">;</span> <span class="c1">//是否点赞（1是，0否）</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">hasLoved</span><span class="p">;</span> <span class="c1">//是否喜欢（1是，0否）</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="434">4.3.4、测试<a class="headerlink" href="#434" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20201209162304889" src="assets/image-20201209162304889.png" /></p>
+<h2 id="5token">5、统一校验token<a class="headerlink" href="#5token" title="Permanent link">&para;</a></h2>
+<p>在之前的开发中，我们会在每一个Service中对token做处理，相同的逻辑一定是要进行统一处理的，该如何处理呢？</p>
+<p>由于程序是运行在web容器中，每一个HTTP请求都是一个独立线程，也就是可以理解成我们编写的应用程序运行在一个多线程的环境中，那么我们就可以使用ThreadLocal在HTTP请求的生命周期内进行存值、取值操作。</p>
+<p>如下图：</p>
+<p><img alt="image-20201209195645804" src="assets/image-20201209195645804.png" /></p>
+<p>说明：</p>
+<ul>
+<li>用户的每一个请求，都是一个独立的线程</li>
+<li>图中的TL就是ThreadLocal，一旦将数据绑定到ThreadLocal中，那么在整个请求的生命周期内都可以随时拿到ThreadLocal中当前线程的数据。</li>
+</ul>
+<p>根据上面的分析，我们只需要在Controller请求之前进行对token做校验，如果token有效，则会拿到User对象，然后将该User对象保存到ThreadLocal中即可，最后放行请求，在后续的各个环节中都可以获取到该数据了。</p>
+<p>如果token无效，给客户端响应401状态码，拦截请求，不再放行到Controller中。</p>
+<p>由此可见，这个校验的逻辑是比较适合放在拦截器中完成的。</p>
+<h3 id="51userthreadlocal">5.1、编写UserThreadLocal<a class="headerlink" href="#51userthreadlocal" title="Permanent link">&para;</a></h3>
+<p>在my-tanhua-common工程中，编写UserThreadLocal。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.common.utils</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.common.pojo.User</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserThreadLocal</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">ThreadLocal</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="n">LOCAL</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ThreadLocal</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+    <span class="kd">private</span> <span class="nf">UserThreadLocal</span><span class="p">(){</span>
+
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 将对象放入到ThreadLocal</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param user</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">set</span><span class="p">(</span><span class="n">User</span> <span class="n">user</span><span class="p">){</span>
+        <span class="n">LOCAL</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 返回当前线程中的User对象</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">User</span> <span class="nf">get</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">LOCAL</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 删除当前线程中的User对象</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">remove</span><span class="p">(){</span>
+        <span class="n">LOCAL</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="52tokeninterceptor">5.2、编写TokenInterceptor<a class="headerlink" href="#52tokeninterceptor" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.interceptor</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">cn.hutool.core.util.StrUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.common.pojo.User</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.common.utils.NoAuthorization</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.common.utils.UserThreadLocal</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.service.UserService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.method.HandlerMethod</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.servlet.HandlerInterceptor</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="p">;</span>
+
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserTokenInterceptor</span> <span class="kd">implements</span> <span class="n">HandlerInterceptor</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserService</span> <span class="n">userService</span><span class="p">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">preHandle</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="p">,</span> <span class="n">Object</span> <span class="n">handler</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="c1">//校验handler是否是HandlerMethod</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">handler</span> <span class="k">instanceof</span> <span class="n">HandlerMethod</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//判断是否包含@NoAuthorization注解，如果包含，直接放行</span>
+        <span class="k">if</span> <span class="p">(((</span><span class="n">HandlerMethod</span><span class="p">)</span> <span class="n">handler</span><span class="p">).</span><span class="na">hasMethodAnnotation</span><span class="p">(</span><span class="n">NoAuthorization</span><span class="p">.</span><span class="na">class</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//从请求头中获取token</span>
+        <span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="na">getHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">StrUtil</span><span class="p">.</span><span class="na">isNotEmpty</span><span class="p">(</span><span class="n">token</span><span class="p">)){</span>
+            <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userService</span><span class="p">.</span><span class="na">queryUserByToken</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">user</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">){</span>
+                <span class="c1">//token有效</span>
+                <span class="c1">//将User对象放入到ThreadLocal中</span>
+                <span class="n">UserThreadLocal</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">//token无效，响应状态为401</span>
+        <span class="n">response</span><span class="p">.</span><span class="na">setStatus</span><span class="p">(</span><span class="mi">401</span><span class="p">);</span> <span class="c1">//无权限</span>
+
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterCompletion</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">HttpServletResponse</span> <span class="n">response</span><span class="p">,</span> <span class="n">Object</span> <span class="n">handler</span><span class="p">,</span> <span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="c1">//从ThreadLocal中移除User对象</span>
+        <span class="n">UserThreadLocal</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="53noauthorization">5.3、编写注解NoAuthorization<a class="headerlink" href="#53noauthorization" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.common.utils</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.lang.annotation.*</span><span class="p">;</span>
+
+<span class="nd">@Target</span><span class="p">(</span><span class="n">ElementType</span><span class="p">.</span><span class="na">METHOD</span><span class="p">)</span>
+<span class="nd">@Retention</span><span class="p">(</span><span class="n">RetentionPolicy</span><span class="p">.</span><span class="na">RUNTIME</span><span class="p">)</span>
+<span class="nd">@Documented</span> <span class="c1">//标记注解</span>
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="n">NoAuthorization</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="54">5.4、注册拦截器<a class="headerlink" href="#54" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server.config</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.server.interceptor.RedisCacheInterceptor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.server.interceptor.UserTokenInterceptor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.servlet.config.annotation.InterceptorRegistry</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.servlet.config.annotation.WebMvcConfigurer</span><span class="p">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WebConfig</span> <span class="kd">implements</span> <span class="n">WebMvcConfigurer</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RedisCacheInterceptor</span> <span class="n">redisCacheInterceptor</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserTokenInterceptor</span> <span class="n">userTokenInterceptor</span><span class="p">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addInterceptors</span><span class="p">(</span><span class="n">InterceptorRegistry</span> <span class="n">registry</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//考虑拦截器的顺序</span>
+        <span class="n">registry</span><span class="p">.</span><span class="na">addInterceptor</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">userTokenInterceptor</span><span class="p">).</span><span class="na">addPathPatterns</span><span class="p">(</span><span class="s">&quot;/**&quot;</span><span class="p">);</span>
+        <span class="n">registry</span><span class="p">.</span><span class="na">addInterceptor</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">redisCacheInterceptor</span><span class="p">).</span><span class="na">addPathPatterns</span><span class="p">(</span><span class="s">&quot;/**&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="55threadlocal">5.5、使用ThreadLocal<a class="headerlink" href="#55threadlocal" title="Permanent link">&para;</a></h3>
+<p>在所有的Service中，如果需要获取User对象的，直接从UserThreadLocal获取即可，同时在Controller中也无需进行获取token操作。</p>
+<p>例如：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">//com.tanhua.server.service.QuanZiService</span>
+
+<span class="kd">public</span> <span class="n">PageResult</span> <span class="nf">queryPublishList</span><span class="p">(</span><span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">PageResult</span> <span class="n">pageResult</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PageResult</span><span class="p">();</span>
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setPage</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setPagesize</span><span class="p">(</span><span class="n">pageSize</span><span class="p">);</span>
+
+        <span class="c1">//获取User对象，无需对User对象校验，其一定不为null</span>
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">UserThreadLocal</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+
+        <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">pageInfo</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">quanZiApi</span><span class="p">.</span><span class="na">queryPublishList</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span> <span class="n">page</span><span class="p">,</span> <span class="n">pageSize</span><span class="p">);</span>
+
+       <span class="c1">//。。。。代码略。。。。。</span>
+
+        <span class="k">return</span> <span class="n">pageResult</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<p>需要注意的是，在APP中，如果请求响应401，会跳转到登录页面。</p>
+<h2 id="6">6、发布动态<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<p>用户可以在圈子中发布动态，动态内容中可以有文字和图片。如下图：</p>
+<p><img src="assets/主页面-一期-添加图片后.png" alt="主页面-一期-添加图片后" style="zoom: 25%;" /></p>
+<h3 id="61dubbo">6.1、dubbo服务<a class="headerlink" href="#61dubbo" title="Permanent link">&para;</a></h3>
+<h4 id="611">6.1.1、定义接口<a class="headerlink" href="#611" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.api</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.Publish</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.vo.PageInfo</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">QuanZiApi</span> <span class="p">{</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 查询好友动态</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param userId 用户id</span>
+<span class="cm">     * @param page 当前页数</span>
+<span class="cm">     * @param pageSize 每一页查询的数据条数</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="nf">queryPublishList</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">);</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 发布动态</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param publish</span>
+<span class="cm">     * @return 发布成功返回动态id</span>
+<span class="cm">     */</span>
+    <span class="n">String</span> <span class="nf">savePublish</span><span class="p">(</span><span class="n">Publish</span> <span class="n">publish</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="612">6.1.2、实现接口<a class="headerlink" href="#612" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>    <span class="cm">/**</span>
+<span class="cm">     * 发布动态</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param publish</span>
+<span class="cm">     * @return 发布成功返回动态id</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">savePublish</span><span class="p">(</span><span class="n">Publish</span> <span class="n">publish</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//对publish对象校验</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ObjectUtil</span><span class="p">.</span><span class="na">isAllNotEmpty</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getText</span><span class="p">(),</span> <span class="n">publish</span><span class="p">.</span><span class="na">getUserId</span><span class="p">()))</span> <span class="p">{</span>
+            <span class="c1">//发布失败</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//设置主键id</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">ObjectId</span><span class="p">.</span><span class="na">get</span><span class="p">());</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">//设置自增长的pid</span>
+            <span class="n">publish</span><span class="p">.</span><span class="na">setPid</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">idService</span><span class="p">.</span><span class="na">createId</span><span class="p">(</span><span class="n">IdType</span><span class="p">.</span><span class="na">PUBLISH</span><span class="p">));</span>
+            <span class="n">publish</span><span class="p">.</span><span class="na">setCreated</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">());</span>
+
+            <span class="c1">//写入到publish表中</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">publish</span><span class="p">);</span>
+
+            <span class="c1">//写入相册表</span>
+            <span class="n">Album</span> <span class="n">album</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Album</span><span class="p">();</span>
+            <span class="n">album</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">ObjectId</span><span class="p">.</span><span class="na">get</span><span class="p">());</span>
+            <span class="n">album</span><span class="p">.</span><span class="na">setCreated</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">());</span>
+            <span class="n">album</span><span class="p">.</span><span class="na">setPublishId</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+
+            <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">album</span><span class="p">,</span> <span class="s">&quot;quanzi_album_&quot;</span> <span class="o">+</span> <span class="n">publish</span><span class="p">.</span><span class="na">getUserId</span><span class="p">());</span>
+
+            <span class="c1">//写入好友的时间线表（异步写入）</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">timeLineService</span><span class="p">.</span><span class="na">saveTimeLine</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getUserId</span><span class="p">(),</span> <span class="n">publish</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//TODO 需要做事务的回滚，Mongodb的单节点服务，不支持事务，对于回滚我们暂时不实现了</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;发布动态失败~ publish = &quot;</span> <span class="o">+</span> <span class="n">publish</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">publish</span><span class="p">.</span><span class="na">getId</span><span class="p">().</span><span class="na">toHexString</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.enums.IdType</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.redis.core.RedisTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="c1">//生成自增长的id，原理：使用redis的自增长值</span>
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">IdService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RedisTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">redisTemplate</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">Long</span> <span class="nf">createId</span><span class="p">(</span><span class="n">IdType</span> <span class="n">idType</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">idKey</span> <span class="o">=</span> <span class="s">&quot;TANHUA_ID_&quot;</span> <span class="o">+</span> <span class="n">idType</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">opsForValue</span><span class="p">().</span><span class="na">increment</span><span class="p">(</span><span class="n">idKey</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.enums</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">enum</span> <span class="n">IdType</span> <span class="p">{</span>
+
+    <span class="n">PUBLISH</span><span class="p">,</span> <span class="n">VIDEO</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="613">6.1.3、好友时间线数据<a class="headerlink" href="#613" title="Permanent link">&para;</a></h4>
+<p>好友的时间线数据需要异步执行。这里使用Spring的@Async注解实现异步执行，其底层是通过启动独立线程来执行，从而可以异步执行。通过返回的CompletableFuture来判断是否执行成功以及是否存在异常。同时需要在启动类中添加@EnableAsync 开启异步的支持。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">cn.hutool.core.collection.CollUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.TimeLine</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.Users</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.extern.slf4j.Slf4j</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.MongoTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Criteria</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Query</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.scheduling.annotation.Async</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.CompletableFuture</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="nd">@Slf4j</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TimeLineService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">MongoTemplate</span> <span class="n">mongoTemplate</span><span class="p">;</span>
+
+    <span class="nd">@Async</span> <span class="c1">//异步执行，原理：底层开一个线程去执行该方法</span>
+    <span class="kd">public</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">saveTimeLine</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">,</span> <span class="n">ObjectId</span> <span class="n">publishId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//写入好友的时间线表</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="c1">//查询好友列表</span>
+            <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;userId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">userId</span><span class="p">));</span>
+            <span class="n">List</span><span class="o">&lt;</span><span class="n">Users</span><span class="o">&gt;</span> <span class="n">usersList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">Users</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">CollUtil</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">usersList</span><span class="p">))</span> <span class="p">{</span>
+                <span class="c1">//返回成功</span>
+                <span class="k">return</span> <span class="n">CompletableFuture</span><span class="p">.</span><span class="na">completedFuture</span><span class="p">(</span><span class="s">&quot;ok&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="c1">//依次写入到好友的时间线表中</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">Users</span> <span class="n">users</span> <span class="p">:</span> <span class="n">usersList</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">TimeLine</span> <span class="n">timeLine</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TimeLine</span><span class="p">();</span>
+                <span class="n">timeLine</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">ObjectId</span><span class="p">.</span><span class="na">get</span><span class="p">());</span>
+                <span class="n">timeLine</span><span class="p">.</span><span class="na">setDate</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">());</span>
+                <span class="n">timeLine</span><span class="p">.</span><span class="na">setPublishId</span><span class="p">(</span><span class="n">publishId</span><span class="p">);</span>
+                <span class="n">timeLine</span><span class="p">.</span><span class="na">setUserId</span><span class="p">(</span><span class="n">userId</span><span class="p">);</span>
+
+                <span class="c1">//写入数据</span>
+                <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">timeLine</span><span class="p">,</span> <span class="s">&quot;quanzi_time_line_&quot;</span> <span class="o">+</span> <span class="n">users</span><span class="p">.</span><span class="na">getFriendId</span><span class="p">());</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;写入好友时间线表失败~ userId = &quot;</span> <span class="o">+</span> <span class="n">userId</span> <span class="o">+</span> <span class="s">&quot;, publishId = &quot;</span> <span class="o">+</span> <span class="n">publishId</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+            <span class="c1">//TODO 事务回滚问题</span>
+            <span class="k">return</span> <span class="n">CompletableFuture</span><span class="p">.</span><span class="na">completedFuture</span><span class="p">(</span><span class="s">&quot;error&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">CompletableFuture</span><span class="p">.</span><span class="na">completedFuture</span><span class="p">(</span><span class="s">&quot;ok&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<p>开启异步执行：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">cn.hutool.core.util.StrUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.SpringApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.scheduling.annotation.EnableAsync</span><span class="p">;</span>
+
+<span class="nd">@SpringBootApplication</span>
+<span class="nd">@EnableAsync</span> <span class="c1">//开启异步执行的支持</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DubboApplication</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">DubboApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="n">args</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="614">6.1.4、测试好友时间线<a class="headerlink" href="#614" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.dubbo.server.api</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.service.TimeLineService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bson.types.ObjectId</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.runner.RunWith</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.test.context.junit4.SpringRunner</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.concurrent.CompletableFuture</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.ExecutionException</span><span class="p">;</span>
+
+<span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="nd">@SpringBootTest</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestTimeLineService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">TimeLineService</span> <span class="n">timeLineService</span><span class="p">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSaveTimeLine</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">ObjectId</span> <span class="n">objectId</span> <span class="o">=</span> <span class="n">ObjectId</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;生成的id为：&quot;</span> <span class="o">+</span> <span class="n">objectId</span><span class="p">.</span><span class="na">toHexString</span><span class="p">());</span>
+        <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">future</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">timeLineService</span><span class="p">.</span><span class="na">saveTimeLine</span><span class="p">(</span><span class="mi">1L</span><span class="p">,</span> <span class="n">objectId</span><span class="p">);</span>
+        <span class="n">future</span><span class="p">.</span><span class="na">whenComplete</span><span class="p">((</span><span class="n">s</span><span class="p">,</span> <span class="n">throwable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;执行完成：&quot;</span> <span class="o">+</span> <span class="n">s</span><span class="p">);</span>
+        <span class="p">});</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;异步方法执行完成&quot;</span><span class="p">);</span>
+
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">future</span><span class="p">.</span><span class="na">get</span><span class="p">();</span> <span class="c1">//阻塞当前的主线程，等待异步执行的结束</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="615">6.1.5、测试发布动态<a class="headerlink" href="#615" title="Permanent link">&para;</a></h4>
+<p>将dubbo服务启动起来，在my-tanhua-server工程中进行功能的测试：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.tanhua.server</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">cn.hutool.core.collection.ListUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.alibaba.dubbo.config.annotation.Reference</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.api.QuanZiApi</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.tanhua.dubbo.server.pojo.Publish</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.runner.RunWith</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.test.context.junit4.SpringRunner</span><span class="p">;</span>
+
+<span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="nd">@SpringBootTest</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestQuanZiApi</span> <span class="p">{</span>
+
+    <span class="nd">@Reference</span><span class="p">(</span><span class="n">version</span> <span class="o">=</span> <span class="s">&quot;1.0.0&quot;</span><span class="p">)</span>
+    <span class="kd">private</span> <span class="n">QuanZiApi</span> <span class="n">quanZiApi</span><span class="p">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSavePublish</span><span class="p">(){</span>
+        <span class="n">Publish</span> <span class="n">publish</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Publish</span><span class="p">();</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;人生不如意事十之八九，真正有格局的人，既能享受最好的，也能承受最坏的。&quot;</span><span class="p">);</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setMedias</span><span class="p">(</span><span class="n">ListUtil</span><span class="p">.</span><span class="na">toList</span><span class="p">(</span><span class="s">&quot;https://tanhua-dev.oss-cn-zhangjiakou.aliyuncs.com/photo/6/1.jpg&quot;</span><span class="p">,</span> <span class="s">&quot;https://tanhua-dev.oss-cn-zhangjiakou.aliyuncs.com/photo/6/CL-3.jpg&quot;</span><span class="p">));</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setUserId</span><span class="p">(</span><span class="mi">1L</span><span class="p">);</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setSeeType</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setLongitude</span><span class="p">(</span><span class="s">&quot;116.350426&quot;</span><span class="p">);</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setLatitude</span><span class="p">(</span><span class="s">&quot;40.066355&quot;</span><span class="p">);</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setLocationName</span><span class="p">(</span><span class="s">&quot;中国北京市昌平区建材城西路16号&quot;</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">quanZiApi</span><span class="p">.</span><span class="na">savePublish</span><span class="p">(</span><span class="n">publish</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="62app">6.2、APP接口服务<a class="headerlink" href="#62app" title="Permanent link">&para;</a></h3>
+<p>接口地址：https://mock-java.itheima.net/project/35/interface/api/701</p>
+<p><img alt="image-20201210173432543" src="assets/image-20201210173432543.png" /></p>
+<p>从接口中可以看出，主要的参数有：文字、图片、位置等内容。</p>
+<h4 id="621">6.2.1、图片上传<a class="headerlink" href="#621" title="Permanent link">&para;</a></h4>
+<p>图片上传功能原来是在sso中完成的，为了能公用该功能，所以需要将图片上传的Service以及配置移动至common工程中。</p>
+<p><img alt="image-20201210213548508" src="assets/image-20201210213548508.png" /></p>
+<p>pom.xml：</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>my-tanhua<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>cn.itcast.tanhua<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/parent&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+
+    <span class="nt">&lt;artifactId&gt;</span>my-tanhua-common<span class="nt">&lt;/artifactId&gt;</span>
+
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mybatis-plus-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>jackson-databind<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.aliyun.oss<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>aliyun-sdk-oss<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.commons<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>commons-lang3<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>joda-time<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>joda-time<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+
+<p>需要注意3点：</p>
+<ul>
+<li>
+<p>将sso系统中的相关代码删除</p>
+</li>
+<li>
+<p>将aliyun.properties复制到my-tanhua-server中</p>
+</li>
+<li>
+<p>启动类中需要将包扫描范围扩大到comm.tanhua，因为相关类被移动到com.tanhua.common下，默认扫描不能被扫描到。</p>
+</li>
+<li>
+<p>sso与server系统都需要设置：</p>
+</li>
+<li>
+<p>~~~java
+    package com.tanhua.server;</p>
+<p>@MapperScan("com.tanhua.common.mapper") //设置mapper接口的扫描包
+@SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class}) //排除mongo的自动配置
+@ComponentScan(basePackages={"com.tanhua"}) //设置扫描包范围
+public class ServerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ServerApplication.class, args);
+    }
+}</p>
+<p>~~~</p>
+</li>
+</ul>
+<h4 id="622">6.2.2、接口服务<a class="headerlink" href="#622" title="Permanent link">&para;</a></h4>
+<p>需要注意的是，文字是必须提交的，图片是非必须的。</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">//com.tanhua.server.controller.QuanZiController</span>
+<span class="cm">/**</span>
+<span class="cm">     * 发送动态</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param textContent</span>
+<span class="cm">     * @param location</span>
+<span class="cm">     * @param multipartFile</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@PostMapping</span>
+    <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">Void</span><span class="o">&gt;</span> <span class="nf">savePublish</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">&quot;textContent&quot;</span><span class="p">)</span> <span class="n">String</span> <span class="n">textContent</span><span class="p">,</span>
+                                            <span class="nd">@RequestParam</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;location&quot;</span><span class="p">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="n">String</span> <span class="n">location</span><span class="p">,</span>
+                                            <span class="nd">@RequestParam</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;latitude&quot;</span><span class="p">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="n">String</span> <span class="n">latitude</span><span class="p">,</span>
+                                            <span class="nd">@RequestParam</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;longitude&quot;</span><span class="p">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="n">String</span> <span class="n">longitude</span><span class="p">,</span>
+                                            <span class="nd">@RequestParam</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;imageContent&quot;</span><span class="p">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="n">MultipartFile</span><span class="o">[]</span> <span class="n">multipartFile</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">String</span> <span class="n">publishId</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">quanZiService</span><span class="p">.</span><span class="na">savePublish</span><span class="p">(</span><span class="n">textContent</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">multipartFile</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">StrUtil</span><span class="p">.</span><span class="na">isNotEmpty</span><span class="p">(</span><span class="n">publishId</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ResponseEntity</span><span class="p">.</span><span class="na">status</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">INTERNAL_SERVER_ERROR</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4 id="623quanziservice">6.2.3、QuanZiService实现<a class="headerlink" href="#623quanziservice" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">// com.tanhua.server.service.QuanZiService</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">PicUploadService</span> <span class="n">picUploadService</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">savePublish</span><span class="p">(</span><span class="n">String</span> <span class="n">textContent</span><span class="p">,</span>
+                               <span class="n">String</span> <span class="n">location</span><span class="p">,</span>
+                               <span class="n">String</span> <span class="n">latitude</span><span class="p">,</span>
+                               <span class="n">String</span> <span class="n">longitude</span><span class="p">,</span>
+                               <span class="n">MultipartFile</span><span class="o">[]</span> <span class="n">multipartFile</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//查询当前的登录信息</span>
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">UserThreadLocal</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+
+        <span class="n">Publish</span> <span class="n">publish</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Publish</span><span class="p">();</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setUserId</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">textContent</span><span class="p">);</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setLocationName</span><span class="p">(</span><span class="n">location</span><span class="p">);</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setLatitude</span><span class="p">(</span><span class="n">latitude</span><span class="p">);</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setLongitude</span><span class="p">(</span><span class="n">longitude</span><span class="p">);</span>
+        <span class="n">publish</span><span class="p">.</span><span class="na">setSeeType</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">picUrls</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="c1">//图片上传</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">MultipartFile</span> <span class="n">file</span> <span class="p">:</span> <span class="n">multipartFile</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">PicUploadResult</span> <span class="n">picUploadResult</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">picUploadService</span><span class="p">.</span><span class="na">upload</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+            <span class="n">picUrls</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">picUploadResult</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="n">publish</span><span class="p">.</span><span class="na">setMedias</span><span class="p">(</span><span class="n">picUrls</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">quanZiApi</span><span class="p">.</span><span class="na">savePublish</span><span class="p">(</span><span class="n">publish</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h2 id="7">7、查询推荐动态<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<p>推荐动态是通过推荐系统计算出的结果，现在我们只需要实现查询即可，推荐系统在后面的课程中完成。</p>
+<p>推荐系统计算完成后，会将结果数据写入到Redis中，数据如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="m">192</span>.168.31.81:6379&gt; get QUANZI_PUBLISH_RECOMMEND_1
+<span class="s2">&quot;2562,3639,2063,3448,2128,2597,2893,2333,3330,2642,2541,3002,3561,3649,2384,2504,3397,2843,2341,2249&quot;</span>
+</code></pre></div>
+
+<p>可以看到，在Redis中的数据是有多个发布id组成（pid）由逗号分隔。所以实现中需要自己对这些数据做分页处理。</p>
+<h3 id="71dubbo">7.1、dubbo服务<a class="headerlink" href="#71dubbo" title="Permanent link">&para;</a></h3>
+<h4 id="711">7.1.1、定义接口<a class="headerlink" href="#711" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">//com.tanhua.dubbo.server.api.QuanZiApi</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 查询推荐动态</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param userId 用户id</span>
+<span class="cm">     * @param page 当前页数</span>
+<span class="cm">     * @param pageSize 每一页查询的数据条数</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="nf">queryRecommendPublishList</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">);</span>
+</code></pre></div>
+
+<h4 id="712">7.1.2、编写实现<a class="headerlink" href="#712" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">//com.tanhua.dubbo.server.api.QuanZiApiImpl</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">RedisTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">redisTemplate</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="nf">queryRecommendPublishList</span><span class="p">(</span><span class="n">Long</span> <span class="n">userId</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">pageInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PageInfo</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">pageInfo</span><span class="p">.</span><span class="na">setPageNum</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+        <span class="n">pageInfo</span><span class="p">.</span><span class="na">setPageSize</span><span class="p">(</span><span class="n">pageSize</span><span class="p">);</span>
+
+        <span class="c1">// 查询推荐结果数据</span>
+        <span class="n">String</span> <span class="n">key</span> <span class="o">=</span> <span class="s">&quot;QUANZI_PUBLISH_RECOMMEND_&quot;</span> <span class="o">+</span> <span class="n">userId</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">redisTemplate</span><span class="p">.</span><span class="na">opsForValue</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">StrUtil</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">pageInfo</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//查询到的pid进行分页处理</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">pids</span> <span class="o">=</span> <span class="n">StrUtil</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="sc">&#39;,&#39;</span><span class="p">);</span>
+        <span class="c1">//计算分页</span>
+        <span class="c1">//[0, 10]</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">startEnd</span> <span class="o">=</span> <span class="n">PageUtil</span><span class="p">.</span><span class="na">transToStartEnd</span><span class="p">(</span><span class="n">page</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">pageSize</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">startIndex</span> <span class="o">=</span> <span class="n">startEnd</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span> <span class="c1">//开始</span>
+        <span class="kt">int</span> <span class="n">endIndex</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">startEnd</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">pids</span><span class="p">.</span><span class="na">size</span><span class="p">());</span> <span class="c1">//结束</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">pidLongList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">startIndex</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">endIndex</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">pidLongList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Long</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">pids</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)));</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">CollUtil</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">pidLongList</span><span class="p">))</span> <span class="p">{</span>
+            <span class="c1">//没有查询到数据</span>
+            <span class="k">return</span> <span class="n">pageInfo</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">//根据pid查询publish</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;pid&quot;</span><span class="p">).</span><span class="na">in</span><span class="p">(</span><span class="n">pidLongList</span><span class="p">))</span>
+                <span class="p">.</span><span class="na">with</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">by</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">Order</span><span class="p">.</span><span class="na">desc</span><span class="p">(</span><span class="s">&quot;created&quot;</span><span class="p">)));</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">publishList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">Publish</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">CollUtil</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">publishList</span><span class="p">))</span> <span class="p">{</span>
+            <span class="c1">//没有查询到数据</span>
+            <span class="k">return</span> <span class="n">pageInfo</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">pageInfo</span><span class="p">.</span><span class="na">setRecords</span><span class="p">(</span><span class="n">publishList</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">pageInfo</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h3 id="72app">7.2、APP服务<a class="headerlink" href="#72app" title="Permanent link">&para;</a></h3>
+<p>地址：https://mock-java.itheima.net/project/35/interface/api/677</p>
+<p>通过接口的定义可以看出，其响应的数据结构与好友动态结构一样，所以可以复用QuanZiVo对象。</p>
+<h4 id="721quanzicontroller">7.2.1、QuanZiController<a class="headerlink" href="#721quanzicontroller" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">//com.tanhua.server.controller.QuanZiController</span>
+    <span class="cm">/**</span>
+<span class="cm">     * 查询推荐动态</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param page</span>
+<span class="cm">     * @param pageSize</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;recommend&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">PageResult</span> <span class="nf">queryRecommendPublishList</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;page&quot;</span><span class="p">,</span> <span class="n">defaultValue</span> <span class="o">=</span> <span class="s">&quot;1&quot;</span><span class="p">)</span> <span class="n">Integer</span> <span class="n">page</span><span class="p">,</span>
+                                       <span class="nd">@RequestParam</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&quot;pagesize&quot;</span><span class="p">,</span> <span class="n">defaultValue</span> <span class="o">=</span> <span class="s">&quot;10&quot;</span><span class="p">)</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">quanZiService</span><span class="p">.</span><span class="na">queryRecommendPublishList</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">pageSize</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h4 id="722quanziservice">7.2.2、QuanZiService<a class="headerlink" href="#722quanziservice" title="Permanent link">&para;</a></h4>
+<p>在实现中，将查询好友动态的方法中公共的内容，进行抽取，具体如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">//com.tanhua.server.service.QuanZiService</span>
+    <span class="kd">public</span> <span class="n">PageResult</span> <span class="nf">queryRecommendPublishList</span><span class="p">(</span><span class="n">Integer</span> <span class="n">page</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">pageSize</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//分析：通过dubbo中的服务查询系统推荐动态</span>
+        <span class="c1">//通过mysql查询用户的信息，回写到结果对象中（QuanZiVo）</span>
+
+        <span class="n">PageResult</span> <span class="n">pageResult</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PageResult</span><span class="p">();</span>
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setPage</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setPagesize</span><span class="p">(</span><span class="n">pageSize</span><span class="p">);</span>
+
+        <span class="c1">//直接从ThreadLocal中获取对象</span>
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">UserThreadLocal</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+
+        <span class="c1">//通过dubbo查询数据</span>
+        <span class="n">PageInfo</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">pageInfo</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">quanZiApi</span><span class="p">.</span><span class="na">queryRecommendPublishList</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span> <span class="n">page</span><span class="p">,</span> <span class="n">pageSize</span><span class="p">);</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">records</span> <span class="o">=</span> <span class="n">pageInfo</span><span class="p">.</span><span class="na">getRecords</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">CollUtil</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">records</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">pageResult</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">pageResult</span><span class="p">.</span><span class="na">setItems</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">fillQuanZiVo</span><span class="p">(</span><span class="n">records</span><span class="p">));</span>
+        <span class="k">return</span> <span class="n">pageResult</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>    <span class="cm">/**</span>
+<span class="cm">     * 填充用户信息</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param userInfo</span>
+<span class="cm">     * @param quanZiVo</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">fillUserInfoToQuanZiVo</span><span class="p">(</span><span class="n">UserInfo</span> <span class="n">userInfo</span><span class="p">,</span> <span class="n">QuanZiVo</span> <span class="n">quanZiVo</span><span class="p">){</span>
+        <span class="n">BeanUtil</span><span class="p">.</span><span class="na">copyProperties</span><span class="p">(</span><span class="n">userInfo</span><span class="p">,</span> <span class="n">quanZiVo</span><span class="p">,</span> <span class="s">&quot;id&quot;</span><span class="p">);</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setGender</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getSex</span><span class="p">().</span><span class="na">name</span><span class="p">().</span><span class="na">toLowerCase</span><span class="p">());</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setTags</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="n">userInfo</span><span class="p">.</span><span class="na">getTags</span><span class="p">(),</span> <span class="sc">&#39;,&#39;</span><span class="p">));</span>
+
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setCommentCount</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 评论数</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setDistance</span><span class="p">(</span><span class="s">&quot;1.2公里&quot;</span><span class="p">);</span> <span class="c1">//TODO 距离</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setHasLiked</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 是否点赞（1是，0否）</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setLikeCount</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 点赞数</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setHasLoved</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 是否喜欢（1是，0否）</span>
+        <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setLoveCount</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//TODO 喜欢数</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 根据查询到的publish集合填充QuanZiVo对象</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param records</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">QuanZiVo</span><span class="o">&gt;</span> <span class="nf">fillQuanZiVo</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Publish</span><span class="o">&gt;</span> <span class="n">records</span><span class="p">){</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">QuanZiVo</span><span class="o">&gt;</span> <span class="n">quanZiVoList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">records</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">publish</span> <span class="o">-&gt;</span> <span class="p">{</span>
+            <span class="n">QuanZiVo</span> <span class="n">quanZiVo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QuanZiVo</span><span class="p">();</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getId</span><span class="p">().</span><span class="na">toHexString</span><span class="p">());</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setTextContent</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getText</span><span class="p">());</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setImageContent</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getMedias</span><span class="p">().</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{}));</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setUserId</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getUserId</span><span class="p">());</span>
+            <span class="n">quanZiVo</span><span class="p">.</span><span class="na">setCreateDate</span><span class="p">(</span><span class="n">RelativeDateFormat</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">(</span><span class="n">publish</span><span class="p">.</span><span class="na">getCreated</span><span class="p">())));</span>
+
+            <span class="n">quanZiVoList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">quanZiVo</span><span class="p">);</span>
+        <span class="p">});</span>
+
+        <span class="c1">//查询用户信息</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">userIds</span> <span class="o">=</span> <span class="n">CollUtil</span><span class="p">.</span><span class="na">getFieldValues</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="s">&quot;userId&quot;</span><span class="p">);</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">UserInfo</span><span class="o">&gt;</span> <span class="n">userInfoList</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">userInfoService</span><span class="p">.</span><span class="na">queryUserInfoByUserIdList</span><span class="p">(</span><span class="n">userIds</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">QuanZiVo</span> <span class="n">quanZiVo</span> <span class="p">:</span> <span class="n">quanZiVoList</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//找到对应的用户信息</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">UserInfo</span> <span class="n">userInfo</span> <span class="p">:</span> <span class="n">userInfoList</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">quanZiVo</span><span class="p">.</span><span class="na">getUserId</span><span class="p">().</span><span class="na">longValue</span><span class="p">()</span> <span class="o">==</span> <span class="n">userInfo</span><span class="p">.</span><span class="na">getUserId</span><span class="p">().</span><span class="na">longValue</span><span class="p">()){</span>
+                    <span class="k">this</span><span class="p">.</span><span class="na">fillUserInfoToQuanZiVo</span><span class="p">(</span><span class="n">userInfo</span><span class="p">,</span> <span class="n">quanZiVo</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">quanZiVoList</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h3 id="73">7.3、测试<a class="headerlink" href="#73" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20201211005052474" src="assets/image-20201211005052474.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../day03/" class="md-footer__link md-footer__link--prev" aria-label="上一页: day03" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              day03
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../day05/" class="md-footer__link md-footer__link--next" aria-label="下一页: day05" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              day05
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 peaceiris
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/peaceiris" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/piris314en" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
