@@ -83,6 +83,27 @@ nav:
       - "服务编排": "docker/6.md"
       - "私有仓库": "docker/7.md"
   - "MongoDB": "MongoDB/MongoDB.md"
+  - "项目一-探花交友":
+      - "day01": "tantan/day01/README.md"
+      - "day02": "tantan/day02/README.md"
+      - "day03": "tantan/day03/README.md"
+      - "day04": "tantan/day04/README.md"
+      - "day05": "tantan/day05/README.md"
+      - "day06": "tantan/day06/README.md"
+      - "day07": "tantan/day07/README.md"
+      - "day08": "tantan/day08/README.md"
+      - "day09": "tantan/day09/README.md"
+      - "day10": "tantan/day10/README.md"
+      - "补充资料": 
+          - "day01_lombok": "tantan/further/lombok/README.md"
+          - "day01_mybatis_plus": "tantan/further/mybatisPlus/README.md"
+          - "day01_阿里云": "tantan/further/aliyun/README.md"
+          - "day01_单点登录及jwt": "tantan/further/sso/README.md"
+          - "day03_nginx": "tantan/further/nginx/README.md"
+          - "day03_ThreadLocal": "tantan/further/threadlocal/README.md"
+          - "day04_MongoDB": "tantan/further/mongodb/README.md"
+          - "day04_多线程@Ansy": "tantan/further/ansy/README.md"
+
   - "面试": 
       - "e.g.1.0.0": "interview/e.g.1.0.0.md"
      
