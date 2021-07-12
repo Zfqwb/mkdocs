@@ -69,7 +69,7 @@ extra:
 nav:
   - "Home": "index.md"
   - "Mysql": "MySQL.md"
-  - "JQuery": "JQuery/README.md"
+  - "JQuery": "jquery/README.md"
   - "AJAX": "ajax/README.md"
   - "Redis":
       - "day01": "redis/day01.md"
