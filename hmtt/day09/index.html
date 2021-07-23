@@ -1,0 +1,2548 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions.">
+      
+      
+      
+        <meta name="author" content="nitto">
+      
+      
+        <link rel="canonical" href="https://nitto.netlify.app/hmtt/day09/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>day09 - Nitto Java Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01-_0049" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nitto Java Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              day09
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nitto Java Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jquery/" class="md-nav__link">
+        JQuery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ajax/" class="md-nav__link">
+        AJAX
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/4/" class="md-nav__link">
+        docker部署容器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/5/" class="md-nav__link">
+        Docerfile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/6/" class="md-nav__link">
+        服务编排
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/7/" class="md-nav__link">
+        私有仓库
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/MongoDB/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        项目一-探花交友
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目一-探花交友" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          项目一-探花交友
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day03/" class="md-nav__link">
+        day03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day04/" class="md-nav__link">
+        day04
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day09/" class="md-nav__link">
+        day09
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_11" type="checkbox" id="__nav_8_11" >
+      
+      <label class="md-nav__link" for="__nav_8_11">
+        补充资料
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="补充资料" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_11">
+          <span class="md-nav__icon md-icon"></span>
+          补充资料
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/lombok/" class="md-nav__link">
+        day01_lombok
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/mybatisPlus/" class="md-nav__link">
+        day01_mybatis_plus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/aliyun/" class="md-nav__link">
+        day01_阿里云
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/sso/" class="md-nav__link">
+        day01_单点登录及jwt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/nginx/" class="md-nav__link">
+        day03_nginx
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/threadlocal/README.md" class="md-nav__link">
+        day03_ThreadLocal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/mongodb/" class="md-nav__link">
+        day04_MongoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/ansy/" class="md-nav__link">
+        day04_多线程@Ansy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        项目二-黑马头条
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目二-黑马头条" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          项目二-黑马头条
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day03/" class="md-nav__link">
+        day03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day04/" class="md-nav__link">
+        day04
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        day09
+      </a>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day11/" class="md-nav__link">
+        day11
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day12/" class="md-nav__link">
+        day12
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day13/" class="md-nav__link">
+        day13
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day14/" class="md-nav__link">
+        day14
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day15/" class="md-nav__link">
+        day15
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        面试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="面试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          面试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/e.g.1.0.0/" class="md-nav__link">
+        e.g.1.0.0
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/hmtt/day09/README.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="01-_0049">01-今日学习目标 00:49<a class="headerlink" href="#01-_0049" title="Permanent link">&para;</a></h1>
+<ul>
+<li>能够完成app端文章列表展示功能开发</li>
+<li>能够完成app端文章详情的功能开发</li>
+<li>能够掌握解决long类型丢失精度的问题</li>
+<li>能够完成app端登录的功能</li>
+<li>能够掌握关注作者功能</li>
+</ul>
+<h1 id="02--">02-文章列表-需求分析<a class="headerlink" href="#02--" title="Permanent link">&para;</a></h1>
+<p><img alt="Snipaste_2020-10-13_07-34-34" src="asserts\Snipaste_2020-10-13_07-34-34.png" /></p>
+<p>1,在默认频道展示10条文章信息                        </p>
+<div class="codehilite"><pre><span></span><code>&gt;分页查询
+</code></pre></div>
+
+<p>2,可以切换频道查看不同种类文章</p>
+<blockquote>
+<p>根据频道类别进行查询</p>
+</blockquote>
+<p>3,当用户下拉可以加载最新的文章信息（按照发布时间）</p>
+<blockquote>
+<p>见上图，根据发布时间查询</p>
+</blockquote>
+<p>本页文章列表中发布时间最大的时间为依据</p>
+<p>4,当用户上拉可以加载更多的文章（分页）</p>
+<p>本页文章列表中发布时间为最小的时间为依据</p>
+<p><img alt="Snipaste_2020-10-13_07-35-23" src="asserts\Snipaste_2020-10-13_07-35-23.png" /></p>
+<h1 id="03-_0411">03-接口定义 04:11<a class="headerlink" href="#03-_0411" title="Permanent link">&para;</a></h1>
+<h1 id="article-home-controller">article-home-controller<a class="headerlink" href="#article-home-controller" title="Permanent link">&para;</a></h1>
+<h2 id="load">load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h2>
+<p><strong>接口地址</strong>:<code>/api/v1/article/load</code></p>
+<p><strong>请求方式</strong>:<code>POST</code></p>
+<p><strong>请求数据类型</strong>:<code>application/json</code></p>
+<p><strong>响应数据类型</strong>:<code>*/*</code></p>
+<p><strong>接口描述</strong>:</p>
+<p><strong>请求示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;maxBehotTime&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;minBehotTime&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;size&quot;</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
+    <span class="s2">&quot;tag&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>请求参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>in</th>
+<th>是否必须</th>
+<th>数据类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dto</td>
+<td>dto</td>
+<td>body</td>
+<td>true</td>
+<td>ArticleHomeDto</td>
+<td>ArticleHomeDto</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;maxBehotTime</td>
+<td>最大时间</td>
+<td></td>
+<td>false</td>
+<td>string(date-time)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;minBehotTime</td>
+<td>最小时间</td>
+<td></td>
+<td>false</td>
+<td>string(date-time)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;size</td>
+<td>当前页展示数据数据量</td>
+<td></td>
+<td>false</td>
+<td>integer(int32)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;tag</td>
+<td>频道ID</td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应状态</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>ResponseResult</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td></td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td></td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>errorMessage</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>host</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="s2">&quot;errorMessage&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;host&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="loadmore">loadMore<a class="headerlink" href="#loadmore" title="Permanent link">&para;</a></h2>
+<p><strong>接口地址</strong>:<code>/api/v1/article/loadmore</code></p>
+<p><strong>请求方式</strong>:<code>POST</code></p>
+<p><strong>请求数据类型</strong>:<code>application/json</code></p>
+<p><strong>响应数据类型</strong>:<code>*/*</code></p>
+<p><strong>接口描述</strong>:</p>
+<p><strong>请求示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;maxBehotTime&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;minBehotTime&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;size&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;tag&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>请求参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>in</th>
+<th>是否必须</th>
+<th>数据类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dto</td>
+<td>dto</td>
+<td>body</td>
+<td>true</td>
+<td>ArticleHomeDto</td>
+<td>ArticleHomeDto</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;maxBehotTime</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string(date-time)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;minBehotTime</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string(date-time)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;size</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>integer(int32)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;tag</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应状态</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>ResponseResult</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td></td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td></td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>errorMessage</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>host</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="s2">&quot;errorMessage&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;host&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="loadnew">loadNew<a class="headerlink" href="#loadnew" title="Permanent link">&para;</a></h2>
+<p><strong>接口地址</strong>:<code>/api/v1/article/loadnew</code></p>
+<p><strong>请求方式</strong>:<code>POST</code></p>
+<p><strong>请求数据类型</strong>:<code>application/json</code></p>
+<p><strong>响应数据类型</strong>:<code>*/*</code></p>
+<p><strong>接口描述</strong>:</p>
+<p><strong>请求示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;maxBehotTime&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;minBehotTime&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;size&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;tag&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>请求参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>in</th>
+<th>是否必须</th>
+<th>数据类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dto</td>
+<td>dto</td>
+<td>body</td>
+<td>true</td>
+<td>ArticleHomeDto</td>
+<td>ArticleHomeDto</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;maxBehotTime</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string(date-time)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;minBehotTime</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string(date-time)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;size</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>integer(int32)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;tag</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应状态</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>ResponseResult</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td></td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td></td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>errorMessage</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>host</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="s2">&quot;errorMessage&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;host&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>在apis模块中新增接口</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.apis.article</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.heima.model.article.dtos.ArticleHomeDto</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.common.dtos.ResponseResult</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">ArticleHomeControllerApi</span> <span class="p">{</span>
+
+
+    <span class="cm">/**</span>
+<span class="cm">     * 加载首页文章</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">load</span><span class="p">(</span><span class="n">ArticleHomeDto</span> <span class="n">dto</span><span class="p">);</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 加载更多</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">loadMore</span><span class="p">(</span><span class="n">ArticleHomeDto</span> <span class="n">dto</span><span class="p">);</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 加载最新</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">loadNew</span><span class="p">(</span><span class="n">ArticleHomeDto</span> <span class="n">dto</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>ArticleHomeDto</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.model.article.dtos</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">lombok.Data</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+
+<span class="nd">@Data</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArticleHomeDto</span> <span class="p">{</span>
+
+    <span class="c1">// 最大时间</span>
+    <span class="n">Date</span> <span class="n">maxBehotTime</span><span class="p">;</span>
+    <span class="c1">// 最小时间</span>
+    <span class="n">Date</span> <span class="n">minBehotTime</span><span class="p">;</span>
+    <span class="c1">// 分页size</span>
+    <span class="n">Integer</span> <span class="n">size</span><span class="p">;</span>
+    <span class="c1">// 数据范围，比如频道ID</span>
+    <span class="n">String</span> <span class="n">tag</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="04-sql_1005">04-SQL编写 10:05<a class="headerlink" href="#04-sql_1005" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span>
+<span class="nt">&lt;mapper</span> <span class="na">namespace=</span><span class="s">&quot;com.heima.article.mapper.ApArticleMapper&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;resultMap</span> <span class="na">id=</span><span class="s">&quot;resultMap&quot;</span> <span class="na">type=</span><span class="s">&quot;com.heima.model.article.pojos.ApArticle&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;id</span> <span class="na">column=</span><span class="s">&quot;id&quot;</span> <span class="na">property=</span><span class="s">&quot;id&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;title&quot;</span> <span class="na">property=</span><span class="s">&quot;title&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;author_id&quot;</span> <span class="na">property=</span><span class="s">&quot;authorId&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;author_name&quot;</span> <span class="na">property=</span><span class="s">&quot;authorName&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;channel_id&quot;</span> <span class="na">property=</span><span class="s">&quot;channelId&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;channel_name&quot;</span> <span class="na">property=</span><span class="s">&quot;channelName&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;layout&quot;</span> <span class="na">property=</span><span class="s">&quot;layout&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;flag&quot;</span> <span class="na">property=</span><span class="s">&quot;flag&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;images&quot;</span> <span class="na">property=</span><span class="s">&quot;images&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;labels&quot;</span> <span class="na">property=</span><span class="s">&quot;labels&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;likes&quot;</span> <span class="na">property=</span><span class="s">&quot;likes&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;collection&quot;</span> <span class="na">property=</span><span class="s">&quot;collection&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;comment&quot;</span> <span class="na">property=</span><span class="s">&quot;comment&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;views&quot;</span> <span class="na">property=</span><span class="s">&quot;views&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;province_id&quot;</span> <span class="na">property=</span><span class="s">&quot;provinceId&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;city_id&quot;</span> <span class="na">property=</span><span class="s">&quot;cityId&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;county_id&quot;</span> <span class="na">property=</span><span class="s">&quot;countyId&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;created_time&quot;</span> <span class="na">property=</span><span class="s">&quot;createdTime&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;publish_time&quot;</span> <span class="na">property=</span><span class="s">&quot;publishTime&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;sync_status&quot;</span> <span class="na">property=</span><span class="s">&quot;syncStatus&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/resultMap&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;loadArticleList&quot;</span> <span class="na">resultMap=</span><span class="s">&quot;resultMap&quot;</span><span class="nt">&gt;</span>
+        SELECT
+        aa.*
+        FROM
+        `ap_article` aa
+        LEFT JOIN ap_article_config aac ON aa.id = aac.article_id
+        <span class="nt">&lt;where&gt;</span>
+            and aac.is_delete != 1
+            and aac.is_down != 1
+            <span class="c">&lt;!-- loadmore --&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;type != null and type == 1&quot;</span><span class="nt">&gt;</span>
+                and aa.publish_time <span class="ni">&amp;lt;</span> #{dto.minBehotTime}
+            <span class="nt">&lt;/if&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;type != null and type == 2&quot;</span><span class="nt">&gt;</span>
+               <span class="cp">&lt;![CDATA[ and aa.publish_time &gt; #{dto.maxBehotTime} ]]&gt;</span>
+            <span class="nt">&lt;/if&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;dto.tag != &#39;__all__&#39;&quot;</span><span class="nt">&gt;</span>
+                and aa.channel_id = #{dto.tag}
+            <span class="nt">&lt;/if&gt;</span>
+        <span class="nt">&lt;/where&gt;</span>
+        order by aa.publish_time desc
+        limit #{dto.size}
+    <span class="nt">&lt;/select&gt;</span>
+
+<span class="nt">&lt;/mapper&gt;</span>
+</code></pre></div>
+
+<h1 id="05-_1402">05-业务层代码编写 14:02<a class="headerlink" href="#05-_1402" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.article.mapper</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.mapper.BaseMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.article.dtos.ArticleHomeDto</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.article.pojos.ApArticle</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.ibatis.annotations.Mapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.ibatis.annotations.Param</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@Mapper</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">ApArticleMapper</span> <span class="kd">extends</span> <span class="n">BaseMapper</span><span class="o">&lt;</span><span class="n">ApArticle</span><span class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">ApArticle</span><span class="o">&gt;</span> <span class="nf">loadArticleList</span><span class="p">(</span><span class="nd">@Param</span><span class="p">(</span><span class="s">&quot;dto&quot;</span><span class="p">)</span> <span class="n">ArticleHomeDto</span> <span class="n">dto</span><span class="p">,</span><span class="nd">@Param</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">)</span> <span class="n">Short</span> <span class="n">type</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">load</span><span class="p">(</span><span class="n">ArticleHomeDto</span> <span class="n">dto</span><span class="p">,</span> <span class="n">Short</span> <span class="n">loadType</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//1.校验参数</span>
+        <span class="n">Integer</span> <span class="n">size</span> <span class="o">=</span> <span class="n">dto</span><span class="p">.</span><span class="na">getSize</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">size</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">size</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">//最多只能请求50条，如果&gt;=50就取50</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="n">MAX_PAGE_SIZE</span><span class="p">);</span> 
+        <span class="n">dto</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+
+        <span class="c1">//类型参数检验 判断如果不等于1和2，给出默认值1</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">loadType</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">ArticleConstans</span><span class="p">.</span><span class="na">LOADTYPE_LOAD_MORE</span><span class="p">)</span><span class="o">&amp;&amp;!</span><span class="n">loadType</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">ArticleConstans</span><span class="p">.</span><span class="na">LOADTYPE_LOAD_NEW</span><span class="p">)){</span>
+            <span class="n">loadType</span> <span class="o">=</span> <span class="n">ArticleConstans</span><span class="p">.</span><span class="na">LOADTYPE_LOAD_MORE</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">//文章频道校验 如果没有传递tag参数，就给出默认的值_all_,查询所有数据</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getTag</span><span class="p">())){</span>
+            <span class="n">dto</span><span class="p">.</span><span class="na">setTag</span><span class="p">(</span><span class="n">ArticleConstans</span><span class="p">.</span><span class="na">DEFAULT_TAG</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//时间校验 如果为空，设置为最新的时间</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getMaxBehotTime</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="n">dto</span><span class="p">.</span><span class="na">setMaxBehotTime</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">());</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getMinBehotTime</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="n">dto</span><span class="p">.</span><span class="na">setMinBehotTime</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">());</span>
+        <span class="c1">//2.查询数据</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">ApArticle</span><span class="o">&gt;</span> <span class="n">apArticles</span> <span class="o">=</span> <span class="n">apArticleMapper</span><span class="p">.</span><span class="na">loadArticleList</span><span class="p">(</span><span class="n">dto</span><span class="p">,</span> <span class="n">loadType</span><span class="p">);</span>
+
+        <span class="c1">//3.结果封装 host地址 + 图片ID 拼成图片URL</span>
+        <span class="n">ResponseResult</span> <span class="n">responseResult</span> <span class="o">=</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">apArticles</span><span class="p">);</span>
+        <span class="n">responseResult</span><span class="p">.</span><span class="na">setHost</span><span class="p">(</span><span class="n">fileServerUrl</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">responseResult</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h1 id="06-_0850">06-测试和网关搭建 08:50<a class="headerlink" href="#06-_0850" title="Permanent link">&para;</a></h1>
+<h1 id="07-_1044">07-前端搭建和联调测试 10:44<a class="headerlink" href="#07-_1044" title="Permanent link">&para;</a></h1>
+<h4 id="tab"><em>注意：按TAB键才可以在前端选中输入框</em><a class="headerlink" href="#tab" title="Permanent link">&para;</a></h4>
+<p>1.使用vs code打开项目之后，使用npm install先更新项目（可不做）</p>
+<p>2.根据讲义中的内容修改IP地址（已修改为127.0.0.1，本地调试就不用改，如果是WIFI调试，改成同一网段下的内网IP）</p>
+<p>3.使用Terminal终端，npm run start命令启动即可</p>
+<blockquote>
+<p>前端需要登录才可以测试文章内容展示，先完成登录功能再测试</p>
+</blockquote>
+<h1 id="08-_0321">08-需求说明和思路分析 03:21<a class="headerlink" href="#08-_0321" title="Permanent link">&para;</a></h1>
+<p>文章详情所展示的主要是文章的内容，这个时候无须再次加重ap_article表中的数据，只需要通过前端传递过来的文章id去查询文章的内容即可，同时需要判断当前文章是否已上架和是否已经删除。</p>
+<p>由分析得出，主要是通过文章id查询ap_article_content和ap_article_config表的数据即可。</p>
+<p>ap_article_content app文章内容表</p>
+<p><img alt="1586157495840" src="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAAyUAAABRCAYAAADMzwnVAAAgAElEQVR4nO3dfVBUZ77g8W9LEv9YatZKJX/sxYiSJt5hiTV3UuoAMZm0ivISb6MOcfIyTBBpZ6jqRjMGzJhcrvEmoGPspi4zNiiBjEkMV4VNxI7E4CROwwTL7I7DOkPoEDQwVbdm13GmyH9b1fvHOf0GTb9Dv/D7VHVp9znPc55zOH3O+T1vreno6HAihBBCCCGEEHFyl+s/er0+nuUQKaanpweQ82quyXGOTqyPXyr8PVJhH+ZCop8riZ6fEEIEc5f3m5Ebv+O/330lXmURKeL/Ze/zeT9y43dxKklqW5nzPZ/3cpzDE+vjlwp/j1TYh7mQ6OdKoucnhBChuGv6B85F98SjHEIIIYQQQogFakZQwqLFcSiGEEIIIYQQYqGa2VKS9iWmVW28OX3Bd/T8/a3HlP/f+pQNpf/Ji9d/QGGIG/ryVDP/dHgcyONMgHR9B/ey/UzgdQB++aO91P+v5TSeN/JTPmVDaQ9D08spEseghbUv2Lw+yKHs6BvU58WtRKlp2nEuO/qhHONwxPw8vUpj/st0e33ysP5VTry4mon39rLNcgNw/Z086z5sOsmJpzIi3WhMna7ezLHhHPZ0vcEOuqkqt/IHgFwDn7WWJdT2PMe0CPOAibwQl0VeTpT8upZxMtrjMuG1r6j7vzS6Mg4e3kxtj9cH+lf57MXVkWc4cZXGgy/TPQzkFmFeDyfZnjDnqhAiuS2a+cl3sFzYzpof/JS/D7eor5/yPHcprSiLFsPyjVwafpZC1/sQXg/+aB9/H26h8TtpAdcrbAi+DosW89NTP+X572g41+lQy9NC43ce5cypjSGXSV5z9PInz8RZUw5lRz/ks4EP+WzgBXhzL6cnQjhLJ7qpOnw1/LM70nTJLM/EZwOvUpZr4LMBCUjCFs156tdq6rsMPKx/Vc3vQ3ZmvkvjICx96g3M+hz2dLn+Tqt5XJ9D2VFXQDLJ6erNrM3fzNr8aMoQnR2tr1KWC5feuQpLyzgx8CF7coswh/LgHcF3MJrtLX3qDT4b+JA9ueEti+RYK+U08NmAibxwj4vfwit5nDXlUGbK5JJ9MrJ8fCjn12dqvg9n/kMUeU3SeHCAx19RvxutJuBmDMo4BxbitV+IFDAjKHGmLcaZdhdo7saZ9gXG567gTPsu5nc340xbTN/BGr6VW8O3ct+jL22xur7y+vLtY+qyGr713Hv0Tfoud6YtxqlZBNPTDbzHBjXdhoNf+F1n5utunJq1vKjpo2VyZt6+eV7hy7TFyv7k1vCt3GNsULfV8pzy3pVHSPsgr4Cv0GRQ/7znxjsxaKEqX3koqDrcjfuZYNDC2nIrf+h5WX1g2Mxar5tNROkGLcr76u4Z709XK/8OHt7rfkBpHPQ8HEy8t9eTX7WFwTg9KEZqtvIrn++lqnpv3B+CE8u08zQGf/+8ZZk4bk1/4Jzk9OG9fLLuDerzlFrnwcNHGX9efaA8msmxg90zM5s369jJu/7PiYluGqs9x8S9TpDvbiTbGzy8mbX5FgZd+Xt/j6MQ62Md+fdpkt9+nMmzT21H+/GQ+3oWcL8HLbPmlvei2toy0U3Dx+to8GrRmP1cnuVvNHgGx/rt5Hm13uQ99YanlcTveXCVRnX/q/I3U3X4qhr87eX0RKBlgcsY8PhGdd4JIeLJT0vJPaBJgy4L//XbFjpIUz5TXxtffYu/jbzF6//k+zlfX8aiMfC3EWX5304/yWj7Zca811l0DzAzneFXD2BV01m119n/P6et4/d1N5DGxqq1dLf/aUbeWcuf9MrzPzH8+q+w6BEsfc+whgd4se8IZaMWuouO8Le2B+j+5K+h74O8Ar9C9cAyuPlnAJY+sJ0GtSa5IfMWDe+pD215Jj6bVtPs3f0gonR5JqWG+pWyGe93tL5K2bCVTzJ/qKZ7g8evnFFueBPdnOIFT36t27n5jlcglOgClF+ptb8B2h96HszekRs54DlPY/T3H7xyE+0y7+4uk5yuPgpP+3YTy3vR835pXj6x7ygVnryn1ymtFz6u0ngQnm31HBMOqg/PQb67kWwv70Wvlg5Xq2A0O+XON7bHOuLv08QQl7T5LCWDx7VX+O2Eq3wB9jvPFDTb0wevsOGVMtzxRMBz2f/faOLW9PPW22zngdpSSCY7u06ywfEyl9af5LOjmVyy/0OAZZORX6+iPO+EEPHjZ/atxbDoLtixnzuvQm35n5XPZkjDuWgxrl9eHPvkKh2vvU3Ha97rPAS7tvCTzMDpcmpeZcUicAIrntfz49c+8FnHv7uBu3CuKGaf5mV++fVqn7zHPrnI7n+7pIwzAdb8XO+1b99jw4pljLKBfc8vw/lJGmju4cuQ90HE2oT9DA0Wm9qfGh42bZ/TdHlPr+PkO1fZ8eJqmOjmJD/khOuOnWvg2ac8N7G8dXDSPsmjXKHbYqXbp2IyB54ui7rv93yYsAcrfw4bnlb2e2lePmVvTjDbA8pCFPz4BdDzMmvVvv0Pm05ywh183ODYwTOY12dy8mA3j7Z6PTi6N3yVxoPvwvNvxGAvorC0jJ3s5fSE1zkxOIBj/XavMmfw6PqbnBqEvGi7Dvrb3lyL6bEO//s0Yb+Cdp2y7bx1mZy0T7IjyvEaE+/t5dL6FzzXN6I8l/0JdB48AOjzyVuawU2K2PlUBkrUqpplmVyvhFh4Zs6+lbYY1O5bpH0X89lZUqpdpVyyHlzOmpf30Pf8fwu8xWnpWKRRxiGkuT64B5i2jl93g+YuSFvMRsM6jrT+b8pced/8gN3/toh9l3vYmAn85pcUfnXPtH1b7CnLokVK68qKEPdBxMbXtyBzjdK1wAI7uz5UugYMWqi6FUL6SNMBLC1jg0N54HnU60EgYJJlmTxseiH5BnUOWqi6tZ0TyVr+eFPP06j+/rMOMM5hzysm8pbCA+zl1GDZjHFApw8O8HjrG1EPzI4FVzC/IUW3F92xjnYMyCS//fgG3cObPRMj5C6Dp6Jot3F122r1PWcjOZeXurod5s3P9SNpr7dCiIj57761KE3pwhWwi8605boCcnrf56Ovg3Xt8U2XteFxbvz7BXcXqbGO92d0GfP/SvPktWIb+zRddLvTpcHTy9m44h74+v/yq3/vA41XOte+udbXKC0lIe+DvGLQfWuS02/eZEOBesPRL1MCi4lJTr9pm7m6Y0LpWjBxlcbqzTS6atoiTQfseD6TS+90c+rjdTzr8xRyhVPvebpaDF5Ry5mXj/bjM0k3jsQt2csfF17n6Rwfv6UF63C8OXMsw47W6GeKipmlZezkXS653ufl+4x9cI2JeNy7wAG+g2FvD4Cb3JxA+c5X+85sFq3wjvVqHtdecY85mxg8wyVtfgjpZ+nGNTHEJa1Xl6OBDzFrr3iNRQl3vydndNs6Xe3qWhfBuZy3nQ0fH/UqzySDh/cqf89QzoNwRft9i+a8E0LEhZ+B7r+n9vFWht75F5YsL2bJz3/vNYj599QuL2bJ8mL2f27jB8uLWbJ8H7/8ejHOtEc5ZllB715l+ZLl+9j48/OMBUuX9RTHaycxqMsNXz7Ga4/Y+MG28wEHU/9y27/Q8XmrO58NP9Hh/HyRsjzrKX6msSvlePwNnFtKGDq4k9pPPfu2seP/4NS4trNIXR5oH+QV1UD3QQvbLDfofsE1w81Rxp9XB2EuLWMnV5TPy4/C+iL+YNnpuYksLWOn9grb8jeztvxdWH9SqU2ONJ1LnokNDiuO9WumdZlZx7O86x5A+cm6F9TuAqupf2UZnxz0zNLjM7g+EQxaWJv/Mt3DVs8gT/cUt7OXf+K9vdT23OBYuYVB1IeeYevCGyAa6DwN+Pef7ThdpdF70K33JA3uY64+MC0tYwNW1lZ7zqkJdVBz1XuxmIkpMu5zQR1MnPf0Ohh2LV1N/Stwyj3A+Qy84vVgH+w7GPb21MqEcuU7P77eQJn7PHUNnN7MsWEbtT4DoAMtU0RyrPNe/CG8uZO1+ZvZ9ibsVFvDIvk+VbnOE3UdZTrfGxwrV8o5+37P5s+MDyvn11r3vruWBTiXJ2YLdzLY0foCvLPX/d34JPMF98xx/s8Dz/mvHFcbteoA/T9YdroHpPtb1jgYxfUqgvNOCBF/mo6ODieAXq9n5MbveCgzPd5lEklO819y6elROtC7zqvENMnp6jM82mryCkqu0lg9Qf0c/P5CrK3M+V6SHOfEFOvjlwp/j1TYh7mQ6OdKoucnhBCh8PPjiWHMniSEH5p4FyCoSU5X73TXGh47nO/u76/UuEF3vlV+eFAIIYQQYp7MHOg+24/fCZEyMtjR+iE7/CyZ7XMhhBBCCDF3fIKSlTnfi1c5RAqT82p+yHGOTqyPXyr8PVJhH+ZCop8riZ6fEEL4o4EgPwciRIQ6OjriXQQhhBBCCJEEJCgRc8bplFNrrvX29lJSUhLvYiStWB+/VPh7pMI+zIVEP1cSPT8hhAjG3X3rS8df4lkOkUIe1N7v/v/Xf/5rHEuS+Po/ej/itLqNW9z/l+McnVgfv2jyO/gvL0ac9pV/PRxx2unm45xKlH0Nx65duyJO66/MiZ6fXFuEEPNl5kB3IcS80uv1YadxTdcphBDz7XLdHmg6xhMhrDvetgnrgxd5Xed/2R6O071rRczLKIRIPhKUCCFEAmprawt53WhqxxNBMu5rrMuc6Pl5e6KphP0Z99L369t+gw2Pr+h3lGFwZ3+Jy20OvnpQC+YjNFy7CjxCmeM1jD/ZzRPLwyqGECLFzPhFd25a+YH2BX4TINFvDtzPg0HWEULMs/FL7N9yL8sy7mXZlj1cHvddfLluE2UZ97Jsy3HG/ecgkohGk/i/CBQrybivsS5zYh2DDbxuf40/Xbzk8+nltmnXlvGLfHDqJR7LUK9LGb30OUZYoduArvk4nzZU0GC/zTHtCF/Na/mFEIloZlCSaeA/HEf5foBE3z/0F17+7twVSqSO9i3KQ3BA48cpy9jD5XAzjzRdimo3HiG79hq3Jm/zaS1UGD3HfbxtD32bLtI9eZtbzWBtk0eAZJZYD6hzKxn3NeUCkv49alDh9Sp4iX+k1+ezPnyvLZc/gmOTt7nletlXgtYIdfeyx7ibxxo6aSi41/3v/v747aIQIv58um/95sD97DwN8CNOTgtMbn7yAj/b+RafA9/dcRqZk0OEovL9Lka3OAKvtHw33ZMRZB5JuvHjlP1KS3fThgg2mNgq37/o/v9yXQnPmD3Hvf8DKHSNqV+uhQ8uwq7d81xCEQmNRuMzk13cH1DnUDLua6zLnJDHQHeMW5PHfD5Sxooc41bTMf9p+vfQx0r+lHEv1wCefY2GP77E24yQ/e3VXLt21Wvl1TTYL1Ip3beEWNB8Wkq+f+gvfOnw0wpy08rPWh7iFw5l+S+0F3j183kspUh6422b1Nq0Tezv96pJq3PVss1s8Rjv36N0N8rYxP624+zPuJdldZcCplO2s4myLZ7ttbv6E/TvYVnBS1w7Ve6p3au7RCoabzvCn57cNMvSDWQzIi1MScT1YOr9gJqqU24n477GuszJeAxm0B3j9V27MT67mgb7bW417aby/dvcal7JB+xTWnTV7lu3JiUgEUL4677lx83L/4OVNQYy1feZP67hh3NYKJFirr2EVb0J3bIfJ9u82x0oPNGkNOs3PDItzfhx9phXqk3/Fymkm7cfeY1bagvHbOmW77pI57NX4dvqTe/XOTT8Sg08dMe4ZX+NR57t8nQnSMAWkyVLlsx4hWO8bQ97HPtkRpsUk9QPqGFKxn2NdZkT7Rh4KoKU12MNV3n7uWldurwredQuXxWnrtJQoCzf3w+MjQC9lGV4um2lcgWRECJ0IQUlQkSnAsMu9eF/+Qoqa3P44KPAYxrGP+rmH2t346o8e2JjGdPjltmt5smfKNtbrivhmT8G6T6WYO7cuRPwfSCX6zZhxRike9pXjLIypOk8RfxNfyBNhAfUuZKM+xrrMifqMXBVBLlenzas5plf+37mU8mjO8atydt0ulpKJm9TyCXGv7zBtVOdSpcub6d6pfVWiAUupKAk84l/ZqTFyk31/c2OFt6dw0IJsdC5ApHQA5KvaN+yib5NF3ldbSFp37LHPROO7kn4yjWIdPxigK5dIhG5HkwT5QF1LiXjvsa6zMl4DAK7xP66SzxBL499UMan7sCmwh2w3JoM7XdPhBCpyyso+ZgD2vt5UHs/r37+Fju19/OgtpiOm0CmgV/UfMHP1OU/cxTz8nffYme5NW4FF8mkE2ub2jQ//hXt5hs8uTFw16LlG8v4k9kzveTlX700s2YtUn90KPmqU+gm6owv4bSQMH6RD675dqdouIZ7ms3lu47BRXWZEY5J166kkzoPqMEl477GuszJeAzgK8ZnzDd+lYaCXgqbYP9z0PBkN4/JtORCCD+8Zt9azyHHXzg0y4qZjx/lPxxHvT75Cz+ey5KJlNC+pZy3H3mNTznCsoxyYDXP/Po4ry8HuMT+jHLedq2c0YlnFpbddNcqA92vsZpnGl7jmT+6Vpw9ne6jTVScugqn9rBi0shXW8p5+xq8XadVuhYs343x25t4LOMlpSwN14L8+FeSWL6b7snAs2lVNt2msmmeyiOESA3jxykrmFkp9EjDNYwX72XZc96fruaRR3Iwvu9p9Xii6Tad3EtFBnSqrSGVG4+r13agoZMGNa3MwCXEwia/6C7mVOX7t6kEYDe3Zvxo8AZen7zN67Ml1h2j2zUNZf8eyr5dEjzdros+23nCvX2vz5oucksezoUQIriAFR63Q7qWPtE0bb0QKlGEEAuPBCUicfXvYdlzncr/H6mgsznxZsoSYq7s2jUjik9ZybivsS5zoucnhBBzTYISkbj8/GBXKurp6Yl3EYQQQggh4sodlDyovT+e5RBiQdJt3BLvIogE88q/Ho53EeZNMu5rrMuc6PkJIcR80QDJOMWHSALnz5+PdxGEEEIIIUQSuKujo4OKiop4l0OkmN7eXkpKSoKvKKIixzk6sT5+qfD3SIV9mAuJfq4ken5CCBGMu/vWN998E89yiBQl51VgZ86ciTjt9u3b3f+X4xydWB+/aPKrra2NOK3ZbI447XTzcU4lyr6GI5oB5P7KnOj5ybVFCDFfZKC7EHGm1+vDTiOD44UQ8dOH0QjNzYVhphujRWcmu7+ZcFMKIVKfBCVCCJGA2traQl432ad/TcZ9jXWZEz0/X4U0lxpJN8JUsMCkz0j61naoPMdU6XnqhtohvZ3Kc1M0oyyrPDdF2PGNECLlLJqXrYy1oEs30hdWEh3p6emkh5kuFmXpM87BdoWYa2N9GHXpyvdGZ6RvzHdxn1GHLj2ddF0LY/5zEELEiEajiXcRYmSMFtd1JT0do9Go/H9rO7RvVa4nYy3KtcXfPbuwmampKaZKz5PeuJLrU1NMTU1Rej6d9POlTE3NDEi8t5euXrMAJcDx/jxdh1Fu1EKkjNgEJWMt6AJdGbJq6J8Kr7k2q6afqakpmtZEXbqwy1LYPAfbXaBadF43lNlEELRGlS5FtVQ1srL+OlNTU1yvh61VnuM+1mLkfGk//VNTTJ0Ac4uEJULMldQJSACyqOlXAompqSlKS0vd/59SrydVVXDC/Znn/qpU8OkwGnVKEDNUxyo1oNjaDrQ3KsvS00n3eoZwba9pTSXnpqaY6q9RFhQ2c71pDZXnXNs6AY065HImRGrwCUrG+ozu2g6d0bs2tQ+jWivR0tei1saqD4N9RtJX1THUvtVTe+F1cVEuSrO0PHjX7KbrMBqNIV1cPK0o/muEZxOoLL77Lo+5sVLTf47KYCtFELRGnC5YAJ3Eavr7qSnMAiCrsNTnuNvOQqnrQGVlw1nbvJdPiFQ0PQBJrYBkpkJGfe7TY7azsK2ILH/rNiuBQ2nptgD3gW1K4BFR/60smutzOWuTqESIVOATlGRpa921HSdWjlDlvvIU0jw1xbnKIeoaR5Ta2HNwvmVMaZq93sSaynOemhOvi4tyUfLX8jDmU7M7NXWClcPDwUs81oKZE55t9dcyag6tO8qsZRlroapxpde+n6duKIQMRcg8gaQOo1cUGVqgqMPY0qIExmpAMVs6ZTs6dDrP9tyncZAAOpWMtTQyvK1olqWFrGREWpiEiBFXIOIdkDidKfoTYIXZ4A4CxrCdzaW+xl9I4pIF50co9W5dcb/qgezoBr1rV8KII5ochBAJwrelxGamSn1YW1XX7mf1NTSdaFZqYwubaQ54IQpizMbZ3Hp3za7SRNxPsCzHbGdpr1vl1ad0FXXtZ4mmomTMdpbc+hp3TU9WTW3w2n0RuqE6zNQrN6HrJ1jZWOUOFEILFPsp5Szta5rcAe9s6bJq+jlXOQS5yvaun8ulztzn2ljAADpRLFmyZMYrHGMtRqpG6umP5vsphAjLgghIACikCLNyDe8zc3ZbbQhBRTtbfcaCuF5b8fekIYRYmDxByVgLVXVQf119WDuXmI/lWdm5rGm6Pq22JXgwI+Kpktoa9baVlUVNCM3t0wPFwqJthD7MZw3bapXtZRWWUjk8Gkmh4+bOnTsB3wfSZ9Rhppb+gMHWGCOslCk5hYiB6QFIagckiqyaWjDr0DWu5ES0N9/h0egm3nCMwEptdGUQQiQE34HulSspzALGxmhpDLP+wnVhUceJBO0Vk1XEtuFGT9easTFajDqMwQaVFJaSe9Yc8jiSUGQVbWO40dMFbKzFLLU3Iq5cgUjoAckYLTod50v73S2YLTqj+5wu2gajru/kmC1A1y4hRLhcgchCCEgA6DNT1z7E0FBovRRcLduuCk/PQHV1EHtLpLNojdHSOMy2IqmVFCIVeIKSrBrqOas0qa6qgm2VDNWtUi4U6nR/W9uHqFulDgb3Dh6yaqjPPavMqrGqEbZdV6f4cw2QT6duyNV86+rjn0XNiXpGqtLd2xxZeUJ9oAqUrpDmEys570qXrps2KH82AfLMquFE/Yi761rVSClNa9rZGmzWKBGidswt6h1nLLSbyPRAsc9cR8yG+YQbQMdJOC0kjNk4OzRE+1ZP14i6IXD1tM6qaYbz6rIqoq/dFEL4WBABiWvq3/Ol7rGgVPl5JlBWnjm1rzqVsPd1Kj09nSpOUDrqud670rnv1V5TAq+q877OVTFSLz0lhEgVPj+eWNjcz1Sz531NjetNDf1TNQEzmp5W/ZTmqSlmfOySVUhzv7/lwdLV0NxfM/ty/yUMmGdWYTP9PjswReA9FqFo0W2lfU0T12kkPX0rsIbKcydozgIlUPTqU5zeDqyh6Xo/NVk19NcrA92HWENlUxOV7nkQZk9XZNOxtX0I2o1kT9UyqtuK8jZbGT+SVUN9ro5V6XVKWZqup8aPdmUF/47WNE9RE96XRgix0I21oFulVgqtaeL61JTXTFvKdME1uCYZGQIqOTfVTKHXMh99Row0+7nuetb0mw7U3zyRi5gQqUp+0V3MKc/NpYaZz8xBgk/vQLHPiC63NHi6mn6f7RT6ubn5D6CFEELMEEKFh7Jav59rvB+FzWFWKAohForUCUq8a3P8qDw381djRYLrMyo/uAWwppJzJ+QPKBaOXbt2xbsI8yYZ9zXWZU70/IQQYq6lTlASYm2OSCILpKm+p6cn3kUQQgghhIir1AlKhEhC27dvj3cRRIIxm83xLsK8ScZ9jXWZEz0/IYSYL5qOjg7nfffdF+9yCCGEEEIIIRaouwBKSkriXQ6RYnp7e+W8mgdynKMT6+OXCn+PVNiHuZDo50qi5yeEEMFI9y0h4qizszPitBUVFTEsiUgU0QxQbmtri2FJ5l4y7musy5zo+QkhxHyRoESIONPr9WGnkcHxQoj4sWEwgNVaFGY6B5aCIzxktxJ2SksB2V3ljNpNaENPREH2DQ44w9+eEGL+SVAihBAJKJxa62Sf/jUZ9zXWZU70/HwVYdUb0BjAGSwwsRnQFLdC9QWc+h5qB1pB00r1BSdWlGXVF5yEEt9UHwgWkDiw2aCoSF1La8I+asFgcVBkCjmUEULEyaJ4F0AIIYQQicqBpUCDRqO8DAaD8v/iVmgtRlNgweGwUKBxrWPA5p28yIrT6cSp70FzKIdRpxOn04m+R4OmR4/T6S8gceBwBCuXDZtt2keOXg4VZ7vLqtFo0FSAngrfzzQapdxRHhkhRGzNfVDisFBgmH7lSMA8xZxxWAr836yEEEIkOC0muxJIOJ1O9Hq9+/9OpxNnJ1RUQKf7M09XKZtBg0ZTgMFQoAQxA7Vkq0FBcSvQekhZptGg8bmnaxk94htEZNcO0Frs/VkxxcW+9xTbkS7KR504R83kk4951InzwENgsvt+5nTiDKcbmBBiXvgGJQ4bBneNSAEGgwGLqyrBYfEsK/B8rjxwFlBQUOBO505jM6DJrmWgtdhzIfG68HgeVpU8bTHIUyQercmO0+nEnD9PG5RAWAgh5kQRX3jux4CjtwvKS/w+4BdZnTidnej15VTPmmM5F5xOP93AqpXP1deFaq+AwqkGHtV6n7EiRVY7Jb0FaCqg02nHpLVhKC6m2GBTunI5O6FCnhmESFReQYkDS8Uhcg6Mql/6TnKGh9VlNgwVsM9VW2LfBxVKDYXWZOdC9QDkHsDpdDJ6IZfaI+oXvsiqXjgueC4krguPw8IROj2f2/fxxRGlOTXiPEXyiSTYBRw2g9pdoACDxYLBFZxGGAhjM3i15tiU/DQaDDYkEBZCCJeih6DXXVtJb1cuBwKO19BCzw303q0r7tcB4KHgg9AdFg5RDhXqNXkWNoOGCjrVVhAHloJD5IyqXccKLDhcrT7yzCBEQvIEJY5eunIPYHINEEOLyW7HpAVsPQz71IRoKSkfpsd9ccinfJ/yJdcW6ake/iLohh29XbTWevf9zKa2tctzrYsgT5FsIgx2HRYqDuWo3QXs6OmiNd+s3GgiDIQpsjJqzof8HLIpQl+dT/WFUaWv8zwHwkuWLJnxEkKIxFBECUeUSiLbEWn6GfgAAARgSURBVLrK94Uws1UrxdPHdKhdsFqDpnVgqbjBAasJk10dizLLeJAiqxO7Sau0bGsqoFN9himyKt3MpEJJiIQWt4Hu2odyyTePTqs1US8gYmGIMNh19HaR6zULS1FJOaH0DAsWCGtNdkbLu6goKKBH34m1KD4n4507dwK+F0KIeNKa9sGRAgoO5dAZ7U17+IvZB5zbDGg0FdDpGadSZB3FzA1G/a3vGnBf0QUMUJvtFQBl1zIAVNPjt/VdCBF/nqBEW0L58CGvMSQOLIYCDBYHFOnJ7er1unAoTbb6UCuLXRcddcyKwYaa5xFP95lw+ctTiABCCYRHb0BuLgz3jMZ1ZhZXICIBiRAi4diOUNs6wMCAd++G2SljS9TXhWqqL3i9t5vAUuDnHt5KcY/eT2WlFpO/3zlxWChwDbi3HyA33+ye6Ut5jWLOr0ZvtUolqBAJyqulRIup8wA3Kly1ChXcyOnEqrR9Yu2EI+6+/0fcNRcOSwHFrQPUZhuw4cBSUEzrQK2niVRr4kBulzLjRvYhKFe7xFCEtTOHHtf2NAUUGJQm2cjzFEklwmBXW1LO8CFP873tiFID5iOCQNhmUFtIrHY6cw5RMf0uOc+BsAQkQoiE4mqJ6HHNwKUOHNdoKJjR7OA7lbD7Vdw6bRYtZRyI/ovpXbKqueDnxu6Yba5grQm7zKglRFLz7b6lLcJq99QgW72rEbQmzzK71V3D4JpZSZkG0GvqQK+LSZHVHjxPpx27VbmgRJWnSDCeQeO1A65+xa5m8wiDXa0J+4EbSv9gTQE9OWbfmV2iCIRbi49gw0Fv1wADrcWeG60EwkKIhcj7N0hcLRHui5/n/tzp/i0Q1zS9vlMJz9pS4lTGgRSZQgsotKNH3N2xcgPVYHlNP+zurjuj9koIkUjkF93FHCvC6nRinW2x1oTVbpqxXGuy4zR55WJ3YvJeociK3ammshkoyNX7btVqx+lvo7Nsj2DbC5SnEEKkKq0Ju3P61dDfar7X0FkVWWe/H/isNstaRVacQS/EQe47QoiEJEGJSE42g/JjXAD51VzolGYLkVp27doV7yLMm2Tc11iXOdHzE0KIuSZBiUhOIdWWJYeenp54F0EIIYQQIq4kKBEijioqKuJdBJFg2tra4l2EeZOM+xrrMid6fkIIMV80HR0dzvvuuy/e5RBCCCGEEEIsUHcBlJSUxLscIsX09vbKeTUP5DhHJ9bHLxX+HqmwD3Mh0c+VRM9PCCGCcXff+uabb+JZDpGi5LwK7MyZMxGn3b59u/v/cpyjE+vjF01+tbW1Eac1m80Rp51uPs6pRNnXcEQzgNxfmRM9P7m2CCHmi4wpESLO9Hp98JWmkcHxQgghhEglEpQIIUQCCmfAcrJP/5qM+xrrMid6fkIIMdcWBV9FCCGEEEIIIeaOBCVCCCGEEEKIuJKgRAghhBBCCBFXEpQIIYQQQggh4koGuguRYJYsWTLjszt37sShJEIIIYQQ8+P/A6TbzgTYSB0zAAAAAElFTkSuQmCC" /></p>
+<p>ap_article_config app文章配置表</p>
+<p><img alt="1586157523334" src="data:image/jpg;base64,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" /></p>
+<h2 id="loadarticleinfo">loadArticleInfo<a class="headerlink" href="#loadarticleinfo" title="Permanent link">&para;</a></h2>
+<p><strong>接口地址</strong>:<code>/api/v1/article/load_article_info</code></p>
+<p><strong>请求方式</strong>:<code>POST</code></p>
+<p><strong>请求数据类型</strong>:<code>application/json</code></p>
+<p><strong>响应数据类型</strong>:<code>*/*</code></p>
+<p><strong>接口描述</strong>:</p>
+<p><strong>请求示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;articleId&quot;</span><span class="o">:</span> <span class="mf">0</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>请求参数</strong>:</p>
+<p><strong>请求参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>in</th>
+<th>是否必须</th>
+<th>数据类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dto</td>
+<td>dto</td>
+<td>body</td>
+<td>true</td>
+<td>ArticleInfoDto</td>
+<td>ArticleInfoDto</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;articleId</td>
+<td></td>
+<td></td>
+<td>false</td>
+<td>integer(int64)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应状态</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>ResponseResult</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td></td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td></td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>errorMessage</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>host</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;content&quot;</span> <span class="o">:</span> <span class="nx">文章对象ApArticleContent</span><span class="p">,</span>
+        <span class="s2">&quot;config&quot;</span> <span class="o">:</span> <span class="nx">文章配置对象ApArticleConfig</span>     
+    <span class="p">},</span>
+    <span class="s2">&quot;errorMessage&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;host&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="09-_1043">09-功能开发 10:43<a class="headerlink" href="#09-_1043" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.article.service.impl</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.toolkit.Wrappers</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.article.mapper.ApArticleConfigMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.article.mapper.ApArticleContentMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.article.service.ArticleInfoService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.article.dtos.ArticleInfoDto</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.article.pojos.ApArticleConfig</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.article.pojos.ApArticleContent</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.common.dtos.ResponseResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.common.enums.AppHttpCodeEnum</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArticleInfoServiceImpl</span> <span class="kd">implements</span> <span class="n">ArticleInfoService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">ApArticleConfigMapper</span> <span class="n">apArticleConfigMapper</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">ApArticleContentMapper</span> <span class="n">apArticleContentMapper</span><span class="p">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">loadArticleInfo</span><span class="p">(</span><span class="n">ArticleInfoDto</span> <span class="n">dto</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">resultMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+        <span class="c1">//1.检查参数</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dto</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">dto</span><span class="p">.</span><span class="na">getArticleId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_INVALID</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//2.查询文章的配置</span>
+        <span class="n">ApArticleConfig</span> <span class="n">apArticleConfig</span> <span class="o">=</span> <span class="n">apArticleConfigMapper</span><span class="p">.</span><span class="na">selectOne</span><span class="p">(</span><span class="n">Wrappers</span><span class="p">.</span><span class="o">&lt;</span><span class="n">ApArticleConfig</span><span class="o">&gt;</span><span class="n">lambdaQuery</span><span class="p">().</span><span class="na">eq</span><span class="p">(</span><span class="n">ApArticleConfig</span><span class="p">::</span><span class="n">getArticleId</span><span class="p">,</span> <span class="n">dto</span><span class="p">.</span><span class="na">getArticleId</span><span class="p">()));</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">apArticleConfig</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_INVALID</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//3.查询文章的内容</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">apArticleConfig</span><span class="p">.</span><span class="na">getIsDelete</span><span class="p">()</span><span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">apArticleConfig</span><span class="p">.</span><span class="na">getIsDown</span><span class="p">()){</span>
+            <span class="n">ApArticleContent</span> <span class="n">apArticleContent</span> <span class="o">=</span> <span class="n">apArticleContentMapper</span><span class="p">.</span><span class="na">selectOne</span><span class="p">(</span><span class="n">Wrappers</span><span class="p">.</span><span class="o">&lt;</span><span class="n">ApArticleContent</span><span class="o">&gt;</span><span class="n">lambdaQuery</span><span class="p">().</span><span class="na">eq</span><span class="p">(</span><span class="n">ApArticleContent</span><span class="p">::</span><span class="n">getArticleId</span><span class="p">,</span> <span class="n">dto</span><span class="p">.</span><span class="na">getArticleId</span><span class="p">()));</span>
+            <span class="n">resultMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;content&quot;</span><span class="p">,</span><span class="n">apArticleContent</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="c1">//当前文章已经被下架或者删除，无法进行阅读</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_INVALID</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">resultMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;config&quot;</span><span class="p">,</span><span class="n">apArticleConfig</span><span class="p">);</span>
+        <span class="c1">//4.结果返回</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">resultMap</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="10-app-_0452">10-APP文章详情-测试  04:52<a class="headerlink" href="#10-app-_0452" title="Permanent link">&para;</a></h1>
+<p>1.启动article微服务</p>
+<p>2.启动app网关</p>
+<p>3.启动前端项目 npm run start</p>
+<h1 id="11-long_1225">11-Long类型转换 12:25<a class="headerlink" href="#11-long_1225" title="Permanent link">&para;</a></h1>
+<p>产生原因：</p>
+<p>js 的 number 类型支持的最大值是9007199254740992 （2 的 53次方 -1）16位，溢出之后的精度会丢失，导致前后端的值不一致。
+java 的 long 类型最大值为 9223372036854775807  19位，远高于 js number类型的最大值，所以这个坑就出现了。</p>
+<p>解决思路：</p>
+<p>方案一：将文章的id的由long类型手动改为String类型，可以解决此问题。（需要修改表结构）</p>
+<p>方案二：可以使用jackson进行序列化和反序列化解决（本项目采用这种方案）</p>
+<p>这部分不需要同学们自己写，把相关代码放进去即可。</p>
+<p>jackson的配置文件</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.common.jackson</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.core.Version</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.DeserializationFeature</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.Module</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.ObjectMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.PropertyNamingStrategy</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConfusionModule</span> <span class="kd">extends</span> <span class="n">Module</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">MODULE_NAME</span> <span class="o">=</span> <span class="s">&quot;jackson-confusion-encryption&quot;</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">Version</span> <span class="n">VERSION</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Version</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="kc">null</span><span class="p">,</span><span class="s">&quot;heima&quot;</span><span class="p">,</span><span class="n">MODULE_NAME</span><span class="p">);</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getModuleName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">MODULE_NAME</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Version</span> <span class="nf">version</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">VERSION</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setupModule</span><span class="p">(</span><span class="n">SetupContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">context</span><span class="p">.</span><span class="na">addBeanSerializerModifier</span><span class="p">(</span><span class="k">new</span> <span class="n">ConfusionSerializerModifier</span><span class="p">());</span>
+        <span class="n">context</span><span class="p">.</span><span class="na">addBeanDeserializerModifier</span><span class="p">(</span><span class="k">new</span> <span class="n">ConfusionDeserializerModifier</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 注册当前模块</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ObjectMapper</span> <span class="nf">registerModule</span><span class="p">(</span><span class="n">ObjectMapper</span> <span class="n">objectMapper</span><span class="p">){</span>
+        <span class="c1">//CamelCase策略，Java对象属性：personId，序列化后属性：persionId</span>
+        <span class="c1">//PascalCase策略，Java对象属性：personId，序列化后属性：PersonId</span>
+        <span class="c1">//SnakeCase策略，Java对象属性：personId，序列化后属性：person_id</span>
+        <span class="c1">//KebabCase策略，Java对象属性：personId，序列化后属性：person-id</span>
+        <span class="c1">// 忽略多余字段，抛错</span>
+        <span class="n">objectMapper</span><span class="p">.</span><span class="na">configure</span><span class="p">(</span><span class="n">DeserializationFeature</span><span class="p">.</span><span class="na">FAIL_ON_UNKNOWN_PROPERTIES</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="c1">//        objectMapper.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE);</span>
+        <span class="k">return</span> <span class="n">objectMapper</span><span class="p">.</span><span class="na">registerModule</span><span class="p">(</span><span class="k">new</span> <span class="n">ConfusionModule</span><span class="p">());</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<p>jackson的配置类：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.common.jackson</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.ObjectMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">InitJacksonConfig</span> <span class="p">{</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="n">ObjectMapper</span> <span class="nf">objectMapper</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">ObjectMapper</span> <span class="n">objectMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="p">();</span>
+        <span class="n">objectMapper</span> <span class="o">=</span> <span class="n">ConfusionModule</span><span class="p">.</span><span class="na">registerModule</span><span class="p">(</span><span class="n">objectMapper</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">objectMapper</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<p>在article中启动配置类：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.article.config</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.ComponentScan</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="nd">@ComponentScan</span><span class="p">(</span><span class="s">&quot;com.heima.common.jackson&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">InitConfig</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="12-_0421">12-登录 需求及思路 04:21<a class="headerlink" href="#12-_0421" title="Permanent link">&para;</a></h1>
+<p>点击登录，校验手机号密码，获取用户ID生成jwtToken</p>
+<p>不登录先看看，直接使用0作为用户ID生成jwtToken</p>
+<h1 id="13-_1213">13-功能实现 12:13<a class="headerlink" href="#13-_1213" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.user.service.impl</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.baomidou.mybatisplus.core.toolkit.Wrappers</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.common.dtos.ResponseResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.common.enums.AppHttpCodeEnum</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.user.dtos.LoginDto</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.user.pojos.ApUser</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.user.mapper.ApUserMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.user.service.ApUserLoginService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.utils.common.AppJwtUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.util.DigestUtils</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ApUserLoginServiceImpl</span> <span class="kd">implements</span> <span class="n">ApUserLoginService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="n">ApUserMapper</span> <span class="n">apUserMapper</span><span class="p">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">login</span><span class="p">(</span><span class="n">LoginDto</span> <span class="n">dto</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//1.校验参数</span>
+        <span class="c1">//2.这儿写错了，应该是手机号 密码 设备ID同时为空 返回错误</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getEquipmentId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getPhone</span><span class="p">())</span><span class="o">&amp;&amp;</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getPassword</span><span class="p">()))){</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_INVALID</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//2.手机号+密码登录</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getPhone</span><span class="p">())</span><span class="o">&amp;&amp;!</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getPassword</span><span class="p">())){</span>
+            <span class="c1">//用户登录</span>
+            <span class="n">ApUser</span> <span class="n">dbUser</span> <span class="o">=</span> <span class="n">apUserMapper</span><span class="p">.</span><span class="na">selectOne</span><span class="p">(</span><span class="n">Wrappers</span><span class="p">.</span><span class="o">&lt;</span><span class="n">ApUser</span><span class="o">&gt;</span><span class="n">lambdaQuery</span><span class="p">().</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUser</span><span class="p">::</span><span class="n">getPhone</span><span class="p">,</span> <span class="n">dto</span><span class="p">.</span><span class="na">getPhone</span><span class="p">()));</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">dbUser</span><span class="o">!=</span><span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">String</span> <span class="n">pswd</span> <span class="o">=</span> <span class="n">DigestUtils</span><span class="p">.</span><span class="na">md5DigestAsHex</span><span class="p">((</span><span class="n">dto</span><span class="p">.</span><span class="na">getPassword</span><span class="p">()</span><span class="o">+</span><span class="n">dbUser</span><span class="p">.</span><span class="na">getSalt</span><span class="p">()).</span><span class="na">getBytes</span><span class="p">());</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">dbUser</span><span class="p">.</span><span class="na">getPassword</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">pswd</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+                    <span class="n">dbUser</span><span class="p">.</span><span class="na">setPassword</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+                    <span class="n">dbUser</span><span class="p">.</span><span class="na">setSalt</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+                    <span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;token&quot;</span><span class="p">,</span> <span class="n">AppJwtUtil</span><span class="p">.</span><span class="na">getToken</span><span class="p">(</span><span class="n">dbUser</span><span class="p">.</span><span class="na">getId</span><span class="p">().</span><span class="na">longValue</span><span class="p">()));</span>
+                    <span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;user&quot;</span><span class="p">,</span> <span class="n">dbUser</span><span class="p">);</span>
+                    <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">map</span><span class="p">);</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">LOGIN_PASSWORD_ERROR</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">DATA_NOT_EXIST</span><span class="p">,</span> <span class="s">&quot;用户不存在&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+            <span class="c1">//3.设备登录</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getEquipmentId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+                <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_INVALID</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="c1">//根据设备ID，在用户表中查询一下，如果用户存在，返回用户ID，如果用户不存在，创建用户并且绑定设备ID</span>
+            <span class="c1">//设备登录直接给用户设置id为0</span>
+            <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+            <span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;token&quot;</span><span class="p">,</span><span class="n">AppJwtUtil</span><span class="p">.</span><span class="na">getToken</span><span class="p">(</span><span class="mi">0</span><span class="n">l</span><span class="p">));</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">map</span><span class="p">);</span>
+
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="14-_1213">14-网关搭建及测试 12:13<a class="headerlink" href="#14-_1213" title="Permanent link">&para;</a></h1>
+<h1 id="15--_0648">15-关注和取消关注-需求和思路分析 06:48<a class="headerlink" href="#15--_0648" title="Permanent link">&para;</a></h1>
+<p>点击按钮可以关注用户，再次点击取消关注</p>
+<p>一个用户可以关注多个作者，一个作者也可以有多个粉丝</p>
+<blockquote>
+<p>1.前端传递作者ID</p>
+<p>2.用户保存关注的作者，作者保存当前粉丝，这是两张表</p>
+<p>3.取消关注，要删除上述两张表的内容</p>
+</blockquote>
+<p>两张表：</p>
+<p>app关注信息表 ap_user_follow</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">ap_user_follow</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span> <span class="k">COMMENT</span> <span class="s1">&#39;主键&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">user_id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;用户ID&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">follow_id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;关注作者ID&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">follow_name</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">COLLATE</span> <span class="n">utf8mb4_unicode_ci</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;粉丝昵称&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="k">level</span><span class="o">`</span> <span class="n">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;关注度\r\n            0 偶尔感兴趣\r\n            1 一般\r\n            2 经常\r\n            3 高度&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">is_notice</span><span class="o">`</span> <span class="n">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;是否动态通知&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">created_time</span><span class="o">`</span> <span class="n">datetime</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;创建时间&#39;</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span> <span class="k">USING</span> <span class="n">BTREE</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">14</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_unicode_ci</span> <span class="n">ROW_FORMAT</span><span class="o">=</span><span class="k">DYNAMIC</span> <span class="k">COMMENT</span><span class="o">=</span><span class="s1">&#39;APP用户关注信息表&#39;</span>
+</code></pre></div>
+
+<p>app用户粉丝表 ap_user_fan</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">ap_user_fan</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span> <span class="k">COMMENT</span> <span class="s1">&#39;主键&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">user_id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;作者ID&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">fans_id</span><span class="o">`</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;粉丝ID&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">fans_name</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">COLLATE</span> <span class="n">utf8mb4_unicode_ci</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;粉丝昵称&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="k">level</span><span class="o">`</span> <span class="n">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;粉丝忠实度\r\n            0 正常\r\n            1 潜力股\r\n            2 勇士\r\n            3 铁杆\r\n            4 老铁&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">created_time</span><span class="o">`</span> <span class="n">datetime</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;创建时间&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">is_display</span><span class="o">`</span> <span class="n">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;是否可见我动态&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">is_shield_letter</span><span class="o">`</span> <span class="n">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;是否屏蔽私信&#39;</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">is_shield_comment</span><span class="o">`</span> <span class="n">tinyint</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">unsigned</span> <span class="k">DEFAULT</span> <span class="k">NULL</span> <span class="k">COMMENT</span> <span class="s1">&#39;是否屏蔽评论&#39;</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span> <span class="k">USING</span> <span class="n">BTREE</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">13</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_unicode_ci</span> <span class="n">ROW_FORMAT</span><span class="o">=</span><span class="k">DYNAMIC</span> <span class="k">COMMENT</span><span class="o">=</span><span class="s1">&#39;APP用户粉丝信息表&#39;</span>
+</code></pre></div>
+
+<h1 id="16-_0756">16-接口定义 07:56<a class="headerlink" href="#16-_0756" title="Permanent link">&para;</a></h1>
+<h2 id="follow">follow<a class="headerlink" href="#follow" title="Permanent link">&para;</a></h2>
+<p><strong>接口地址</strong>:<code>/api/v1/user/user_follow</code></p>
+<p><strong>请求方式</strong>:<code>POST</code></p>
+<p><strong>请求数据类型</strong>:<code>application/json</code></p>
+<p><strong>响应数据类型</strong>:<code>*/*</code></p>
+<p><strong>接口描述</strong>:</p>
+<p><strong>请求示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;articleId&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;authorId&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;operation&quot;</span><span class="o">:</span> <span class="mf">0</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>请求参数</strong>:</p>
+<p><strong>请求参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>in</th>
+<th>是否必须</th>
+<th>数据类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dto</td>
+<td>dto</td>
+<td>body</td>
+<td>true</td>
+<td>UserRelationDto</td>
+<td>UserRelationDto</td>
+</tr>
+<tr>
+<td>&emsp;&emsp;articleId</td>
+<td>文章ID</td>
+<td></td>
+<td>false</td>
+<td>integer(int64)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;authorId</td>
+<td>作者ID</td>
+<td></td>
+<td>false</td>
+<td>integer(int32)</td>
+<td></td>
+</tr>
+<tr>
+<td>&emsp;&emsp;operation</td>
+<td>0关注 1取消</td>
+<td></td>
+<td>false</td>
+<td>integer(int32)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应状态</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>ResponseResult</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td></td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td></td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td></td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应参数</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数说明</th>
+<th>类型</th>
+<th>schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td></td>
+<td>integer(int32)</td>
+<td>integer(int32)</td>
+</tr>
+<tr>
+<td>data</td>
+<td></td>
+<td>object</td>
+<td></td>
+</tr>
+<tr>
+<td>errorMessage</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>host</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>响应示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="s2">&quot;errorMessage&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;host&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="17-_0959">17-获取作者和获取登录人 09:59<a class="headerlink" href="#17-_0959" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>前端传递的author_id是ap_author表中的id,所以需要查询出对应的user_id</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.user.feign</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.heima.model.article.pojos.ApAuthor</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.common.dtos.ResponseResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.cloud.openfeign.FeignClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.PathVariable</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.PostMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestBody</span><span class="p">;</span>
+
+<span class="nd">@FeignClient</span><span class="p">(</span><span class="s">&quot;leadnews-article&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">ArticleFeign</span> <span class="p">{</span>
+
+    <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/api/v1/author/findByUserId/{id}&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">ApAuthor</span> <span class="nf">findByUserId</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span> <span class="n">Integer</span> <span class="n">id</span><span class="p">);</span>
+
+    <span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;/api/v1/author/save&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">save</span><span class="p">(</span><span class="nd">@RequestBody</span> <span class="n">ApAuthor</span> <span class="n">apAuthor</span><span class="p">);</span>
+
+    <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/api/v1/author/one/{id}&quot;</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">ApAuthor</span> <span class="nf">findById</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span> <span class="n">Integer</span> <span class="n">id</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>AuthorController：</p>
+<div class="codehilite"><pre><span></span><code>    <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/one/{id}&quot;</span><span class="p">)</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">ApAuthor</span> <span class="nf">findById</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span> <span class="n">Integer</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">authorService</span><span class="p">.</span><span class="na">getById</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<p>user模块中添加过滤器：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.user.filter</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.heima.model.user.pojos.ApUser</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.wemedia.pojos.WmUser</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.utils.threadlocal.AppThreadLocalUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.utils.threadlocal.WmThreadLocalUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.core.annotation.Order</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.filter.GenericFilterBean</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.servlet.FilterChain</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.ServletResponse</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.annotation.WebFilter</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="p">;</span>
+
+<span class="nd">@Order</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nd">@WebFilter</span><span class="p">(</span><span class="n">filterName</span> <span class="o">=</span> <span class="s">&quot;appTokenFilter&quot;</span><span class="p">,</span> <span class="n">urlPatterns</span> <span class="o">=</span> <span class="s">&quot;/*&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppTokenFilter</span> <span class="kd">extends</span> <span class="n">GenericFilterBean</span> <span class="p">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">doFilter</span><span class="p">(</span><span class="n">ServletRequest</span> <span class="n">servletRequest</span><span class="p">,</span> <span class="n">ServletResponse</span> <span class="n">servletResponse</span><span class="p">,</span> <span class="n">FilterChain</span> <span class="n">filterChain</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="p">,</span> <span class="n">ServletException</span> <span class="p">{</span>
+        <span class="n">HttpServletRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="p">(</span><span class="n">HttpServletRequest</span><span class="p">)</span> <span class="n">servletRequest</span><span class="p">;</span>
+        <span class="n">HttpServletResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="p">(</span><span class="n">HttpServletResponse</span><span class="p">)</span> <span class="n">servletResponse</span><span class="p">;</span>
+        <span class="c1">//得到header中的信息</span>
+        <span class="n">String</span> <span class="n">userId</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="na">getHeader</span><span class="p">(</span><span class="s">&quot;userId&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">userId</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">userId</span><span class="p">).</span><span class="na">intValue</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ApUser</span> <span class="n">apUser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApUser</span><span class="p">();</span>
+            <span class="n">apUser</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">userId</span><span class="p">));</span>
+            <span class="n">AppThreadLocalUtils</span><span class="p">.</span><span class="na">setUser</span><span class="p">(</span><span class="n">apUser</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">filterChain</span><span class="p">.</span><span class="na">doFilter</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>在utils中添加工具类</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.utils.threadlocal</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.heima.model.user.pojos.ApUser</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.wemedia.pojos.WmUser</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppThreadLocalUtils</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">ThreadLocal</span><span class="o">&lt;</span><span class="n">ApUser</span><span class="o">&gt;</span> <span class="n">USER_THREAD_LOCAL</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ThreadLocal</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 设置当前线程中的用户</span>
+<span class="cm">     * @param wmUser</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setUser</span><span class="p">(</span><span class="n">ApUser</span> <span class="n">wmUser</span><span class="p">){</span>
+        <span class="n">USER_THREAD_LOCAL</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">wmUser</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * 获取当前线程中的用户</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ApUser</span> <span class="nf">getUser</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">USER_THREAD_LOCAL</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="18-_1232">18-业务层 12:32<a class="headerlink" href="#18-_1232" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">follow</span><span class="p">(</span><span class="n">UserRelationDto</span> <span class="n">dto</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//1.参数检查</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">){</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_INVALID</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getAuthorId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">,</span><span class="s">&quot;作者信息不能为空&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//2.获取作者</span>
+    <span class="n">Integer</span> <span class="n">followId</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="n">ApAuthor</span> <span class="n">apAuthor</span> <span class="o">=</span> <span class="n">articleFeign</span><span class="p">.</span><span class="na">findById</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getAuthorId</span><span class="p">());</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">apAuthor</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">){</span>
+        <span class="n">followId</span> <span class="o">=</span> <span class="n">apAuthor</span><span class="p">.</span><span class="na">getUserId</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">followId</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">DATA_NOT_EXIST</span><span class="p">,</span><span class="s">&quot;关注人不存在&quot;</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+
+        <span class="n">ApUser</span> <span class="n">apUser</span> <span class="o">=</span> <span class="n">AppThreadLocalUtils</span><span class="p">.</span><span class="na">getUser</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">apUser</span><span class="o">!=</span> <span class="kc">null</span><span class="p">){</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                <span class="c1">//3.如果当前操作是0 创建数据（app用户关注信息和app的用户粉丝信息）</span>
+                <span class="k">return</span> <span class="n">followByUserId</span><span class="p">(</span><span class="n">apUser</span><span class="p">,</span><span class="n">followId</span><span class="p">,</span><span class="n">dto</span><span class="p">.</span><span class="na">getArticleId</span><span class="p">());</span>
+            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                <span class="c1">//4.如果当前操作是1 删除数据（app用户关注信息和app的用户粉丝信息）</span>
+                <span class="k">return</span> <span class="n">followCancelByUserId</span><span class="p">(</span><span class="n">apUser</span><span class="p">,</span><span class="n">followId</span><span class="p">);</span>
+            <span class="p">}</span>
+
+
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">NEED_LOGIN</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="19-_1541">19-处理关注逻辑 15:41<a class="headerlink" href="#19-_1541" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm">     * 处理关注的操作</span>
+<span class="cm">     * @param apUser</span>
+<span class="cm">     * @param followId</span>
+<span class="cm">     * @param articleId</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="n">ResponseResult</span> <span class="nf">followByUserId</span><span class="p">(</span><span class="n">ApUser</span> <span class="n">apUser</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">followId</span><span class="p">,</span> <span class="n">Long</span> <span class="n">articleId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//判断当前关注人是否存在</span>
+        <span class="n">ApUser</span> <span class="n">followUser</span> <span class="o">=</span> <span class="n">apUserMapper</span><span class="p">.</span><span class="na">selectById</span><span class="p">(</span><span class="n">followId</span><span class="p">);</span>
+        <span class="n">ApUser</span> <span class="n">fansUser</span> <span class="o">=</span> <span class="n">apUserMapper</span><span class="p">.</span><span class="na">selectById</span><span class="p">(</span><span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">followUser</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">fansUser</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">DATA_NOT_EXIST</span><span class="p">,</span><span class="s">&quot;关注用户或者登陆用户不存在&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//判断用户是否重复关注</span>
+        <span class="n">ApUserFollow</span> <span class="n">apUserFollow</span> <span class="o">=</span> <span class="n">apUserFollowMapper</span><span class="p">.</span><span class="na">selectOne</span><span class="p">(</span><span class="n">Wrappers</span><span class="p">.</span><span class="o">&lt;</span><span class="n">ApUserFollow</span><span class="o">&gt;</span><span class="n">lambdaQuery</span><span class="p">().</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFollow</span><span class="p">::</span><span class="n">getUserId</span><span class="p">,</span> <span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">()).</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFollow</span><span class="p">::</span><span class="n">getFollowId</span><span class="p">,</span> <span class="n">followId</span><span class="p">));</span>
+        <span class="c1">//没有找到关注信息，所以是未关注的状态</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">apUserFollow</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+            <span class="c1">//保存数据  ap_user_follow   ap_user_fan</span>
+
+            <span class="c1">//查询是否有粉丝关注信息，如果有的话，也不需要保存</span>
+            <span class="n">ApUserFan</span> <span class="n">apUserFan</span> <span class="o">=</span> <span class="n">apUserFanMapper</span><span class="p">.</span><span class="na">selectOne</span><span class="p">(</span><span class="n">Wrappers</span><span class="p">.</span><span class="o">&lt;</span><span class="n">ApUserFan</span><span class="o">&gt;</span><span class="n">lambdaQuery</span><span class="p">().</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFan</span><span class="p">::</span><span class="n">getUserId</span><span class="p">,</span> <span class="n">followId</span><span class="p">).</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFan</span><span class="p">::</span><span class="n">getFansId</span><span class="p">,</span> <span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">()));</span>
+            <span class="c1">//保存app用户粉丝信息</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">apUserFan</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+                <span class="n">apUserFan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApUserFan</span><span class="p">();</span>
+                <span class="c1">//粉丝表中的userId,就是关注的作者ID</span>
+                <span class="n">apUserFan</span><span class="p">.</span><span class="na">setUserId</span><span class="p">(</span><span class="n">followId</span><span class="p">);</span>
+                <span class="c1">//粉丝表中的fansId,就是登录人</span>
+                <span class="n">apUserFan</span><span class="p">.</span><span class="na">setFansId</span><span class="p">(</span><span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">().</span><span class="na">longValue</span><span class="p">());</span>
+                <span class="c1">//登录人名字(修改为粉丝名字)</span>
+                <span class="n">apUserFan</span><span class="p">.</span><span class="na">setFansName</span><span class="p">(</span><span class="n">fansUser</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+                <span class="n">apUserFan</span><span class="p">.</span><span class="na">setLevel</span><span class="p">((</span><span class="kt">short</span><span class="p">)</span><span class="mi">0</span><span class="p">);</span>
+                <span class="n">apUserFan</span><span class="p">.</span><span class="na">setIsDisplay</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+                <span class="n">apUserFan</span><span class="p">.</span><span class="na">setIsShieldLetter</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+                <span class="n">apUserFan</span><span class="p">.</span><span class="na">setIsShieldComment</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+                <span class="n">apUserFan</span><span class="p">.</span><span class="na">setCreatedTime</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">());</span>
+                <span class="n">apUserFanMapper</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">apUserFan</span><span class="p">);</span>
+            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                <span class="c1">//如果粉丝存在，返回错误</span>
+                            <span class="k">return</span>              <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">DATA_EXIST</span><span class="p">,</span><span class="s">&quot;已关注&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="c1">//保存app用户关注信息</span>
+            <span class="n">apUserFollow</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApUserFollow</span><span class="p">();</span>
+            <span class="n">apUserFollow</span><span class="p">.</span><span class="na">setUserId</span><span class="p">(</span><span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+            <span class="n">apUserFollow</span><span class="p">.</span><span class="na">setFollowId</span><span class="p">(</span><span class="n">followId</span><span class="p">);</span>
+            <span class="c1">//设置关注的作者名字</span>
+            <span class="n">apUserFollow</span><span class="p">.</span><span class="na">setFollowName</span><span class="p">(</span><span class="n">apUserFollow</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+            <span class="n">apUserFollow</span><span class="p">.</span><span class="na">setCreatedTime</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">());</span>
+            <span class="n">apUserFollow</span><span class="p">.</span><span class="na">setIsNotice</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+            <span class="n">apUserFollow</span><span class="p">.</span><span class="na">setLevel</span><span class="p">((</span><span class="kt">short</span><span class="p">)</span><span class="mi">1</span><span class="p">);</span>
+            <span class="n">apUserFollowMapper</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">apUserFollow</span><span class="p">);</span>
+            <span class="c1">//TODO 记录关注文章的行为</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">SUCCESS</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="c1">//已关注</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">DATA_EXIST</span><span class="p">,</span><span class="s">&quot;已关注&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h1 id="20-_1117">20-取消关注逻辑 11:17<a class="headerlink" href="#20-_1117" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * 取消关注的处理逻辑</span>
+<span class="cm"> * @param apUser</span>
+<span class="cm"> * @param followId</span>
+<span class="cm"> * @return</span>
+<span class="cm"> */</span>
+<span class="kd">private</span> <span class="n">ResponseResult</span> <span class="nf">followCancelByUserId</span><span class="p">(</span><span class="n">ApUser</span> <span class="n">apUser</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">followId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//先查再删</span>
+    <span class="n">ApUserFollow</span> <span class="n">apUserFollow</span> <span class="o">=</span> <span class="n">apUserFollowMapper</span><span class="p">.</span><span class="na">selectOne</span><span class="p">(</span><span class="n">Wrappers</span><span class="p">.</span><span class="o">&lt;</span><span class="n">ApUserFollow</span><span class="o">&gt;</span><span class="n">lambdaQuery</span><span class="p">().</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFollow</span><span class="p">::</span><span class="n">getUserId</span><span class="p">,</span> <span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">()).</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFollow</span><span class="p">::</span><span class="n">getFollowId</span><span class="p">,</span> <span class="n">followId</span><span class="p">));</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">apUserFollow</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">DATA_NOT_EXIST</span><span class="p">,</span><span class="s">&quot;未关注&quot;</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="n">ApUserFan</span> <span class="n">apUserFan</span> <span class="o">=</span> <span class="n">apUserFanMapper</span><span class="p">.</span><span class="na">selectOne</span><span class="p">(</span><span class="n">Wrappers</span><span class="p">.</span><span class="o">&lt;</span><span class="n">ApUserFan</span><span class="o">&gt;</span><span class="n">lambdaQuery</span><span class="p">().</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFan</span><span class="p">::</span><span class="n">getUserId</span><span class="p">,</span> <span class="n">followId</span><span class="p">).</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFan</span><span class="p">::</span><span class="n">getFansId</span><span class="p">,</span> <span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">()));</span>
+        <span class="c1">//删除用户粉丝信息 修改apUser为apUserFan</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">apUserFan</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">){</span>
+            <span class="n">apUserFanMapper</span><span class="p">.</span><span class="na">delete</span><span class="p">(</span><span class="n">Wrappers</span><span class="p">.</span><span class="o">&lt;</span><span class="n">ApUserFan</span><span class="o">&gt;</span><span class="n">lambdaQuery</span><span class="p">().</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFan</span><span class="p">::</span><span class="n">getUserId</span><span class="p">,</span> <span class="n">followId</span><span class="p">).</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFan</span><span class="p">::</span><span class="n">getFansId</span><span class="p">,</span> <span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">()));</span>
+        <span class="p">}</span>
+        <span class="c1">//删除用户关注信息</span>
+        <span class="n">apUserFollowMapper</span><span class="p">.</span><span class="na">delete</span><span class="p">(</span><span class="n">Wrappers</span><span class="p">.</span><span class="o">&lt;</span><span class="n">ApUserFollow</span><span class="o">&gt;</span><span class="n">lambdaQuery</span><span class="p">().</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFollow</span><span class="p">::</span><span class="n">getUserId</span><span class="p">,</span> <span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">()).</span><span class="na">eq</span><span class="p">(</span><span class="n">ApUserFollow</span><span class="p">::</span><span class="n">getFollowId</span><span class="p">,</span> <span class="n">followId</span><span class="p">));</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">SUCCESS</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../day08/" class="md-footer__link md-footer__link--prev" aria-label="上一页: day08" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              day08
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../day10/" class="md-footer__link md-footer__link--next" aria-label="下一页: day10" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              day10
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 peaceiris
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/peaceiris" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/piris314en" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

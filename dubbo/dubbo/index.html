@@ -1,0 +1,1798 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions.">
+      
+      
+      
+        <meta name="author" content="nitto">
+      
+      
+        <link rel="canonical" href="https://nitto.netlify.app/dubbo/dubbo/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>项目一前置课-Dubbo - Nitto Java Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nitto Java Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              项目一前置课-Dubbo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nitto Java Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jquery/" class="md-nav__link">
+        JQuery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ajax/" class="md-nav__link">
+        AJAX
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/4/" class="md-nav__link">
+        docker部署容器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/5/" class="md-nav__link">
+        Docerfile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/6/" class="md-nav__link">
+        服务编排
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/7/" class="md-nav__link">
+        私有仓库
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/MongoDB/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        项目一-探花交友
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目一-探花交友" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          项目一-探花交友
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day03/" class="md-nav__link">
+        day03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day04/" class="md-nav__link">
+        day04
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day09/" class="md-nav__link">
+        day09
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_11" type="checkbox" id="__nav_8_11" >
+      
+      <label class="md-nav__link" for="__nav_8_11">
+        补充资料
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="补充资料" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_11">
+          <span class="md-nav__icon md-icon"></span>
+          补充资料
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/lombok/" class="md-nav__link">
+        day01_lombok
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/mybatisPlus/" class="md-nav__link">
+        day01_mybatis_plus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/aliyun/" class="md-nav__link">
+        day01_阿里云
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/sso/" class="md-nav__link">
+        day01_单点登录及jwt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/nginx/" class="md-nav__link">
+        day03_nginx
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/threadlocal/README.md" class="md-nav__link">
+        day03_ThreadLocal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/mongodb/" class="md-nav__link">
+        day04_MongoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/ansy/" class="md-nav__link">
+        day04_多线程@Ansy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        项目二-黑马头条
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目二-黑马头条" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          项目二-黑马头条
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day03/" class="md-nav__link">
+        day03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day04/" class="md-nav__link">
+        day04
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day09/" class="md-nav__link">
+        day09
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day11/" class="md-nav__link">
+        day11
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day12/" class="md-nav__link">
+        day12
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day13/" class="md-nav__link">
+        day13
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day14/" class="md-nav__link">
+        day14
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hmtt/day15/" class="md-nav__link">
+        day15
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        面试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="面试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          面试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/e.g.1.0.0/" class="md-nav__link">
+        e.g.1.0.0
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    1-今日内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    2-相关概念
+  </a>
+  
+    <nav class="md-nav" aria-label="2-相关概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21--" class="md-nav__link">
+    2.1-互联网项目架构-特点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22--" class="md-nav__link">
+    2.2-互联网项目架构-目标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-" class="md-nav__link">
+    2.3-集群和分布式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-" class="md-nav__link">
+    2.4-架构演进
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dubbo" class="md-nav__link">
+    3-dubbo 概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dubbo" class="md-nav__link">
+    4-dubbo快速入门
+  </a>
+  
+    <nav class="md-nav" aria-label="4-dubbo快速入门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41zookeeper" class="md-nav__link">
+    4.1zookeeper安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42springspringmvc" class="md-nav__link">
+    4.2spring和springmvc整合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3服务提供者
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4服务消费者
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dubbo" class="md-nav__link">
+    5-dubbo高级特性
+  </a>
+  
+    <nav class="md-nav" aria-label="5-dubbo高级特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51dubbo-admin" class="md-nav__link">
+    5.1dubbo-admin安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-dubbo-admin" class="md-nav__link">
+    5.2-dubbo-admin使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3序列化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    5.4地址缓存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    5.5 超时
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    5.6重试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    5.7多版本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    5.8负载均衡
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    5.9集群容错
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#510" class="md-nav__link">
+    5.10服务降级
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/dubbo/dubbo.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>项目一前置课-Dubbo</h1>
+                
+                <h2 id="1-"><strong>1-今日内容</strong><a class="headerlink" href="#1-" title="Permanent link">&para;</a></h2>
+<p>分布式系统中的相关概念</p>
+<p>dubbo 概述</p>
+<p>dubbo快速入门</p>
+<p>dubbo的高级特性</p>
+<h2 id="2-"><strong>2-相关概念</strong><a class="headerlink" href="#2-" title="Permanent link">&para;</a></h2>
+<h3 id="21--">2.1-互联网项目架构-特点<a class="headerlink" href="#21--" title="Permanent link">&para;</a></h3>
+<p>互联网项目架构-特点</p>
+<ol>
+<li>
+<p>用户多</p>
+</li>
+<li>
+<p>流量大，并发高</p>
+</li>
+<li>
+<p>海量数据</p>
+</li>
+<li>
+<p>易受攻击</p>
+</li>
+<li>
+<p>功能繁琐</p>
+</li>
+<li>
+<p>变更快</p>
+</li>
+</ol>
+<p><strong>传统项目和互联网项目的不同</strong></p>
+<p><img alt="1581310475046" src="../img/1581310475046.png" /></p>
+<p><strong>用户体验</strong>：
+    美观、功能、速度、稳定性</p>
+<p><strong>衡量一个网站速度是否快:</strong>
+    打开一个新页面一瞬间完成;页面内跳转，-刹那间完成。
+    根据佛经《僧衹律》记载:一 刹那者为-念,二十念为-瞬,二十瞬为-弹
+    指，二十弹指为-罗预， 二十罗预为-须臾，一日一夜有三十须臾。</p>
+<h3 id="22--">2.2-互联网项目架构-目标<a class="headerlink" href="#22--" title="Permanent link">&para;</a></h3>
+<p><strong>衡量网站的性能指标:</strong>
+    <strong>响应时间:</strong>指执行一个请求从开始到最后收到响应数据所花费的总体时间。
+    <strong>并发数:</strong>指系统同时能处理的请求数量。
+    <strong>并发连接数:</strong> 指的是客户端向服务器发起请求，并建立了TCP连接。每秒钟服务器连接的总TCP数量
+    <strong>请求数:</strong>也称为QPS(Query Per Second)指每秒多少请求.
+    <strong>并发用户数:</strong>单位时间内有多少用户
+    <strong>吞吐量:</strong>指单位时间内系统能处理的请求数量。</p>
+<div class="codehilite"><pre><span></span><code><span class="err">●</span><span class="nt">QPS</span><span class="o">:</span> <span class="nt">Query</span> <span class="nt">Per</span> <span class="nt">Second每秒查询数</span><span class="err">。</span>
+<span class="err">●</span><span class="nt">TPS</span><span class="o">:</span> <span class="nt">Transactions</span> <span class="nt">Per</span> <span class="nt">Second每秒事务数</span><span class="err">。</span>
+<span class="err">●</span><span class="nt">一个事务是指一</span> <span class="nt">个客户机向服务器发送请求然后服务器做出反应的过程</span><span class="err">。</span><span class="nt">客户机在发送请求时开始计时</span><span class="err">，</span><span class="nt">收到服务器响应后结束</span>
+<span class="nt">计时</span><span class="err">，</span><span class="nt">以此来计算使用的时间和完成的事务个数</span><span class="err">。</span>
+<span class="err">●</span><span class="nt">一个页面的一次访问</span><span class="err">，</span><span class="nt">只会形成一</span> <span class="nt">个TPS</span><span class="o">;</span> <span class="nt">但-次页面请求</span><span class="err">，</span><span class="nt">可能产生多次对服务器的请求</span><span class="err">，</span><span class="nt">就会有多个QPS</span>
+  <span class="nt">QPS</span><span class="o">&gt;=</span><span class="nt">并发连接数</span><span class="o">&gt;=</span> <span class="nt">TPS</span>
+</code></pre></div>
+
+<p><strong>大型互联网项目架构目标</strong>:</p>
+<p>​   ●<strong>高性能:</strong>提供快速的访问体验。
+​   ●<strong>高可用:</strong>网站服务- 可以正常访问</p>
+<h3 id="23-">2.3-集群和分布式<a class="headerlink" href="#23-" title="Permanent link">&para;</a></h3>
+<p>集群和分布式，
+●集群:很多“人”一起，干一样的事。
+●一个业务模块，部署在多台服务器上。
+●分布式:很多"人”一起，干不样的事。这些不一样的事， 合起来是一件大事。</p>
+<p><img alt="" src="../img/%E9%9B%86%E7%BE%A4%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F-1581325224087.png" /></p>
+<h3 id="24-">2.4-架构演进<a class="headerlink" href="#24-" title="Permanent link">&para;</a></h3>
+<p><strong>单体架构：</strong></p>
+<p><strong>优点:</strong>
+    简单:开发部署都很方便，小型项目首选
+<strong>缺点:</strong>
+●项目启动慢
+●可靠性差</p>
+<p><img alt="1581313584459" src="../img/1581313584459.png" /></p>
+<p><strong>垂直架构：</strong>垂直架构是指将单体架构中的多个模块拆分为多个独立的项目。形成多个独立的单体架构。</p>
+<p><strong>单体架构存在的问题:</strong></p>
+<ul>
+<li>
+<p>项目启动慢</p>
+</li>
+<li>
+<p>可靠性差</p>
+</li>
+<li>
+<p>可伸缩性差</p>
+</li>
+<li>
+<p>扩展性和可维护性差</p>
+</li>
+<li>
+<p>性能低</p>
+</li>
+</ul>
+<p><strong>垂直架构存在的问题:</strong> 重复功能太多</p>
+<p><img alt="1581313910427" src="../img/1581313910427.png" /></p>
+<p><strong>分布式架构：</strong>是指在垂直架构的基础上,将公共业务模块抽取出来,作为独立的服务供其他调用者消费，以实现服务的共享和重用。底层通过RPC（远程过程调用实现）
+    <strong>RPC:</strong> Remote Procedure Call远程过程调用。有非常多的协议和技术来都实现了RPC的过程。比如: HTTP REST风格，Java RMI规范、WebService SOAP协议Hession等等。
+<strong>垂直架构存在的问题:</strong>
+    ●重复功能太多</p>
+<p><strong>分布式架构存在的问题:</strong>
+​   ●服务提供方- -旦产生变更,所有消费方都需要变更。</p>
+<p><img alt="" src="../img/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9E%B6%E6%9E%84.png" /></p>
+<p><strong>SOA: (Service- Oriented Architecture,面向服务的架构)</strong>：是一个组件模型,它将应用程序的不同功能单元(称为服务)进行拆分，并通过这些服务之间定义良好的接口和契约联系起来。</p>
+<p><strong>ESB: (Enterparise Servce Bus)</strong>：企业服务总线,服务中介。主要是提供了一一个服
+务于服务之间的交互。ESB包含的功能如:负载均衡，流量控制，加密处理，服务
+的监控，异常处理，监控告急等等。</p>
+<p><img alt="1581314362523" src="../img/1581314362523.png" /></p>
+<p><strong>微服务架构：</strong></p>
+<p>●微服务架构是在SOA上做的升华,微服务架构强调的一个重点是“业务需要彻底的组件化和服务化”，原有的单个
+业务系统会拆分为多个可以独立开发、设计、运行的小应用。这些小应用之间通过服务完成交互和集成。</p>
+<p>●微服务架构= 80%的SOA服务架构思想+ 100%的组件化架构思想+ 80%的领域建模思想</p>
+<p><strong>特点:</strong>
+●服务实现组件化:开发者可以自由选择开发技术。也不需要协调其他团队
+●服务之间交互一 般使用REST API
+●去中心化:每个微服务有自己私有的数据库持久化业务数据
+●自动化部署:把应用拆分成为一 个-个独立的单个服务,方便自动化部署、测试、运维</p>
+<p><img alt="" src="../img/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E5%9B%BE.png" /></p>
+<h2 id="3-dubbo">3-dubbo 概述<a class="headerlink" href="#3-dubbo" title="Permanent link">&para;</a></h2>
+<p><strong>Dubbo概念</strong></p>
+<p>●Dubbo是阿里巴巴公司开源的一个高性能、轻量级的Java RPC框架。
+●致力于提供高性能和透明化的RPC远程服务调用方案,以及SOA服务治理方案。
+●官网: htp://ubbo.apache.orgo</p>
+<p><img alt="" src="../img/Dubbo%E6%9E%B6%E6%9E%84%E5%9B%BE.png" /></p>
+<p>节点角色说明: .
+●Provider: 暴露服务的服务提供方
+●Contahier: 服务运行容器
+●Consumer: 调用远程服务的服务消费方
+●Registry: 服务注册与发现的注册中心
+●Monitor:统计服务的调用次数和调用时间的监控中心</p>
+<h2 id="4-dubbo">4-dubbo快速入门<a class="headerlink" href="#4-dubbo" title="Permanent link">&para;</a></h2>
+<h3 id="41zookeeper">4.1zookeeper安装<a class="headerlink" href="#41zookeeper" title="Permanent link">&para;</a></h3>
+<p>安装步骤：</p>
+<p>第一步：安装 jdk（略）
+第二步：把 zookeeper 的压缩包（zookeeper-3.4.6.tar.gz）上传到 linux 系统
+第三步：解压缩压缩包</p>
+<div class="codehilite"><pre><span></span><code>tar -zxvf  zookeeper-3.4.6.tar.gz
+</code></pre></div>
+
+<p>第四步：进入zookeeper-3.4.6目录，创建data目录</p>
+<div class="codehilite"><pre><span></span><code>mkdir data
+</code></pre></div>
+
+<p>第五步：进入conf目录 ，把zoo_sample.cfg 改名为zoo.cfg</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> conf
+mv zoo_sample.cfg zoo.cfg
+</code></pre></div>
+
+<p>第六步：打开zoo.cfg文件,  修改data属性：</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">dataDir</span><span class="o">=</span>/root/zookeeper-3.4.6/data
+</code></pre></div>
+
+<p>进入Zookeeper的bin目录，启动服务命令</p>
+<div class="codehilite"><pre><span></span><code>./zkServer.sh start
+</code></pre></div>
+
+<p><img alt="1581315609244" src="../img/1581315609244.png" /></p>
+<p>停止服务命令</p>
+<div class="codehilite"><pre><span></span><code>./zkServer.sh stop
+</code></pre></div>
+
+<p>查看服务状态：standalone 单节点</p>
+<div class="codehilite"><pre><span></span><code>./zkServer.sh status
+</code></pre></div>
+
+<p><img alt="1581315645227" src="../img/1581315645227.png" /></p>
+<h3 id="42springspringmvc">4.2spring和springmvc整合<a class="headerlink" href="#42springspringmvc" title="Permanent link">&para;</a></h3>
+<p>实施步骤：</p>
+<p>1.创建服务提供者Provider模块
+2.创建服务消费者Consumer模块
+3.在服务提供者模块编写UserServicelmpl提供服务
+4.在服务消费者中的UserC ontroller远程调用
+5.UserServicelmpl提供的服务
+6.分别启动两个服务，测试</p>
+<p>Dubbo作为一个RPC框架，其最核心的功能就是要实现跨网络的远程调用。本小节就是要创建两个应用，一个作为服务的提供方，一个作为服务的消费方。通过Dubbo来实现服务消费方远程调用服务提供方的方法。</p>
+<p>1 服务提供方开发</p>
+<p>开发步骤：</p>
+<p>（1）创建maven工程（打包方式为war）dubbodemo_provider，在pom.xml文件中导入如下坐标</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;properties&gt;</span>
+  <span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+  <span class="nt">&lt;maven.compiler.source&gt;</span>1.8<span class="nt">&lt;/maven.compiler.source&gt;</span>
+  <span class="nt">&lt;maven.compiler.target&gt;</span>1.8<span class="nt">&lt;/maven.compiler.target&gt;</span>
+  <span class="nt">&lt;spring.version&gt;</span>5.0.5.RELEASE<span class="nt">&lt;/spring.version&gt;</span>
+<span class="nt">&lt;/properties&gt;</span>
+<span class="nt">&lt;dependencies&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-context<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-beans<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-webmvc<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-jdbc<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-aspects<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-jms<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>spring-context-support<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="c">&lt;!-- dubbo相关 --&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.alibaba<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>dubbo<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>2.6.0<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.apache.zookeeper<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>zookeeper<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.4.6<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.github.sgroschupf<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>zkclient<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.1<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>javassist<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>javassist<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.12.1.GA<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.alibaba<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>fastjson<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.2.47<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
+<span class="nt">&lt;build&gt;</span>
+  <span class="nt">&lt;plugins&gt;</span>
+    <span class="nt">&lt;plugin&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>2.3.2<span class="nt">&lt;/version&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;source&gt;</span>1.8<span class="nt">&lt;/source&gt;</span>
+        <span class="nt">&lt;target&gt;</span>1.8<span class="nt">&lt;/target&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;plugin&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.apache.tomcat.maven<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="c">&lt;!-- 指定端口 --&gt;</span>
+        <span class="nt">&lt;port&gt;</span>8081<span class="nt">&lt;/port&gt;</span>
+        <span class="c">&lt;!-- 请求路径 --&gt;</span>
+        <span class="nt">&lt;path&gt;</span>/<span class="nt">&lt;/path&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/plugin&gt;</span>
+  <span class="nt">&lt;/plugins&gt;</span>
+<span class="nt">&lt;/build&gt;</span>
+</code></pre></div>
+
+<p>（2）配置web.xml文件</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE web-app PUBLIC</span>
+<span class="cp"> &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot;</span>
+<span class="cp"> &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot; &gt;</span>
+<span class="nt">&lt;web-app&gt;</span>
+  <span class="nt">&lt;display-name&gt;</span>Archetype Created Web Application<span class="nt">&lt;/display-name&gt;</span>
+  <span class="nt">&lt;context-param&gt;</span>
+    <span class="nt">&lt;param-name&gt;</span>contextConfigLocation<span class="nt">&lt;/param-name&gt;</span>
+    <span class="nt">&lt;param-value&gt;</span>classpath:applicationContext*.xml<span class="nt">&lt;/param-value&gt;</span>
+  <span class="nt">&lt;/context-param&gt;</span>
+  <span class="nt">&lt;listener&gt;</span>
+    <span class="nt">&lt;listener-class&gt;</span>org.springframework.web.context.ContextLoaderListener<span class="nt">&lt;/listener-class&gt;</span>
+  <span class="nt">&lt;/listener&gt;</span>
+<span class="nt">&lt;/web-app&gt;</span>
+</code></pre></div>
+
+<p>（3）创建服务接口</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.itheima.service</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">HelloService</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>（4）创建服务实现类</p>
+<p><strong>注意：</strong>服务实现类上使用的Service注解是Dubbo提供的，用于对外发布服务</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.itheima.service.impl</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.alibaba.dubbo.config.annotation.Service</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.itheima.service.HelloService</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloServiceImpl</span> <span class="kd">implements</span> <span class="n">HelloService</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;hello &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>tomcat7:run</p>
+<p>2 服务消费方开发</p>
+<p>开发步骤：</p>
+<p>（1）创建maven工程（打包方式为war）dubbodemo_consumer，pom.xml配置和上面服务提供者相同，只需要将Tomcat插件的端口号改为8082即可</p>
+<p>（2）配置web.xml文件</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE web-app PUBLIC</span>
+<span class="cp"> &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot;</span>
+<span class="cp"> &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot; &gt;</span>
+<span class="nt">&lt;web-app&gt;</span>
+  <span class="nt">&lt;display-name&gt;</span>Archetype Created Web Application<span class="nt">&lt;/display-name&gt;</span>
+  <span class="nt">&lt;servlet&gt;</span>
+    <span class="nt">&lt;servlet-name&gt;</span>springmvc<span class="nt">&lt;/servlet-name&gt;</span>
+    <span class="nt">&lt;servlet-class&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="nt">&lt;/servlet-class&gt;</span>
+    <span class="c">&lt;!-- 指定加载的配置文件 ，通过参数contextConfigLocation加载 --&gt;</span>
+    <span class="nt">&lt;init-param&gt;</span>
+      <span class="nt">&lt;param-name&gt;</span>contextConfigLocation<span class="nt">&lt;/param-name&gt;</span>
+      <span class="nt">&lt;param-value&gt;</span>classpath:applicationContext-web.xml<span class="nt">&lt;/param-value&gt;</span>
+    <span class="nt">&lt;/init-param&gt;</span>
+    <span class="nt">&lt;load-on-startup&gt;</span>1<span class="nt">&lt;/load-on-startup&gt;</span>
+  <span class="nt">&lt;/servlet&gt;</span>
+  <span class="nt">&lt;servlet-mapping&gt;</span>
+    <span class="nt">&lt;servlet-name&gt;</span>springmvc<span class="nt">&lt;/servlet-name&gt;</span>
+    <span class="nt">&lt;url-pattern&gt;</span>*.do<span class="nt">&lt;/url-pattern&gt;</span>
+  <span class="nt">&lt;/servlet-mapping&gt;</span>
+<span class="nt">&lt;/web-app&gt;</span>
+</code></pre></div>
+
+<p>（3）将服务提供者工程中的HelloService接口复制到当前工程</p>
+<p>（4）编写Controller</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.itheima.controller</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.alibaba.dubbo.config.annotation.Reference</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.itheima.service.HelloService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Controller</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.ResponseBody</span><span class="p">;</span>
+<span class="nd">@Controller</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;/demo&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloController</span> <span class="p">{</span>
+    <span class="nd">@Reference</span>
+    <span class="kd">private</span> <span class="n">HelloService</span> <span class="n">helloService</span><span class="p">;</span>
+    <span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;/hello&quot;</span><span class="p">)</span>
+    <span class="nd">@ResponseBody</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">){</span>
+        <span class="c1">//远程调用</span>
+        <span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">helloService</span><span class="p">.</span><span class="na">sayHello</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>注意：Controller中注入HelloService使用的是Dubbo提供的@Reference注解</p>
+<h3 id="43">4.3服务提供者<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p>在dubbodemo_provider工程中src/main/resources下创建applicationContext-service.xml </p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.springframework.org/schema/beans&quot;</span>
+        <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+        <span class="na">xmlns:p=</span><span class="s">&quot;http://www.springframework.org/schema/p&quot;</span>
+        <span class="na">xmlns:context=</span><span class="s">&quot;http://www.springframework.org/schema/context&quot;</span>
+        <span class="na">xmlns:dubbo=</span><span class="s">&quot;http://code.alibabatech.com/schema/dubbo&quot;</span>
+        <span class="na">xmlns:mvc=</span><span class="s">&quot;http://www.springframework.org/schema/mvc&quot;</span>
+        <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.springframework.org/schema/beans</span>
+<span class="s">        http://www.springframework.org/schema/beans/spring-beans.xsd</span>
+<span class="s">         http://www.springframework.org/schema/mvc</span>
+<span class="s">         http://www.springframework.org/schema/mvc/spring-mvc.xsd</span>
+<span class="s">         http://code.alibabatech.com/schema/dubbo</span>
+<span class="s">         http://code.alibabatech.com/schema/dubbo/dubbo.xsd</span>
+<span class="s">         http://www.springframework.org/schema/context</span>
+<span class="s">         http://www.springframework.org/schema/context/spring-context.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- 当前应用名称，用于注册中心计算应用间依赖关系，注意：消费者和提供者应用名不要一样 --&gt;</span>
+    <span class="nt">&lt;dubbo:application</span> <span class="na">name=</span><span class="s">&quot;dubbodemo_provider&quot;</span> <span class="nt">/&gt;</span>
+    <span class="c">&lt;!-- 连接服务注册中心zookeeper ip为zookeeper所在服务器的ip地址--&gt;</span>
+    <span class="nt">&lt;dubbo:registry</span> <span class="na">address=</span><span class="s">&quot;zookeeper://192.168.134.129:2181&quot;</span><span class="nt">/&gt;</span>
+    <span class="c">&lt;!-- 注册  协议和port   端口默认是20880 --&gt;</span>
+    <span class="nt">&lt;dubbo:protocol</span> <span class="na">name=</span><span class="s">&quot;dubbo&quot;</span> <span class="na">port=</span><span class="s">&quot;20881&quot;</span><span class="nt">&gt;&lt;/dubbo:protocol&gt;</span>
+
+    <span class="c">&lt;!-- 扫描指定包，加上@Service注解的类会被发布为服务  --&gt;</span>
+    <span class="nt">&lt;dubbo:annotation</span> <span class="na">package=</span><span class="s">&quot;com.itheima.service.impl&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div>
+
+<h3 id="44">4.4服务消费者<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<p>在dubbodemo_consumer工程中src/main/resources下创建applicationContext-web.xml</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.springframework.org/schema/beans&quot;</span>
+    <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="na">xmlns:p=</span><span class="s">&quot;http://www.springframework.org/schema/p&quot;</span>
+    <span class="na">xmlns:context=</span><span class="s">&quot;http://www.springframework.org/schema/context&quot;</span>
+    <span class="na">xmlns:dubbo=</span><span class="s">&quot;http://code.alibabatech.com/schema/dubbo&quot;</span>
+    <span class="na">xmlns:mvc=</span><span class="s">&quot;http://www.springframework.org/schema/mvc&quot;</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.springframework.org/schema/beans</span>
+<span class="s">            http://www.springframework.org/schema/beans/spring-beans.xsd</span>
+<span class="s">            http://www.springframework.org/schema/mvc</span>
+<span class="s">            http://www.springframework.org/schema/mvc/spring-mvc.xsd</span>
+<span class="s">            http://code.alibabatech.com/schema/dubbo</span>
+<span class="s">            http://code.alibabatech.com/schema/dubbo/dubbo.xsd</span>
+<span class="s">            http://www.springframework.org/schema/context</span>
+<span class="s">            http://www.springframework.org/schema/context/spring-context.xsd&quot;</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- 当前应用名称，用于注册中心计算应用间依赖关系，注意：消费者和提供者应用名不要一样 --&gt;</span>
+    <span class="nt">&lt;dubbo:application</span> <span class="na">name=</span><span class="s">&quot;dubbodemo-consumer&quot;</span> <span class="nt">/&gt;</span>
+    <span class="c">&lt;!-- 连接服务注册中心zookeeper ip为zookeeper所在服务器的ip地址--&gt;</span>
+    <span class="nt">&lt;dubbo:registry</span> <span class="na">address=</span><span class="s">&quot;zookeeper://192.168.134.129:2181&quot;</span><span class="nt">/&gt;</span>
+    <span class="c">&lt;!-- 包扫描的方式 引用服务 扫描@Reference --&gt;</span>
+    <span class="nt">&lt;dubbo:annotation</span> <span class="na">package=</span><span class="s">&quot;com.itheima.controller&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div>
+
+<p>运行测试</p>
+<p>tomcat7:run启动</p>
+<p>在浏览器输入http://localhost:8082/demo/hello.do?name=Jack，查看浏览器输出结果</p>
+<h2 id="5-dubbo">5-dubbo高级特性<a class="headerlink" href="#5-dubbo" title="Permanent link">&para;</a></h2>
+<h3 id="51dubbo-admin">5.1dubbo-admin安装<a class="headerlink" href="#51dubbo-admin" title="Permanent link">&para;</a></h3>
+<p>dubbo- admin
+    ●dubbo-admin管理平台，是图形化的服务管理页面
+    ●从注册中心中获取到所有的提供者 /消费者进行配置管理
+    ●路由规则、动态配置、服务降级、访问控制、权重调整、负载均衡等管理功能
+    ●dubbo- admin是一个前后端分离的项目。前端使用vue，后端使用springboot
+    ●安装dubbo-admin其实就是部署该项目</p>
+<p>具体安装参见：dubbo-admin.md</p>
+<h3 id="52-dubbo-admin">5.2-dubbo-admin使用<a class="headerlink" href="#52-dubbo-admin" title="Permanent link">&para;</a></h3>
+<p>具体安装参见：dubbo-admin.md</p>
+<h3 id="53">5.3序列化<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<ol>
+<li>dubbo 内部已经将序列化和反序列化的过程内部封装了</li>
+<li>我们只需要在定义pojo类时<strong>实现seriali zable接口</strong>即可</li>
+<li>一般会定义一 个公共的pojo模块,让生产者和消费者都依赖该模块。</li>
+</ol>
+<p><img alt="1581317650919" src="../img/1581317650919.png" /></p>
+<p>User对象未实现seriali zable接口</p>
+<p>错误信息：</p>
+<p><img alt="1581317583708" src="../img/1581317583708.png" /></p>
+<p>解决办法：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">User</span> <span class="kd">implements</span> <span class="n">Serializable</span>
+</code></pre></div>
+
+<h3 id="54">5.4地址缓存<a class="headerlink" href="#54" title="Permanent link">&para;</a></h3>
+<p><strong>注册中心挂了，服务是否可以正常访问？</strong></p>
+<ol>
+<li>可以，因为dubbo服务消费者在第一-次调用时，会将服务提供方地址缓存到本地，以后在调用则不会访问注册中心。</li>
+<li>当服务提供者地址发生变化时，注册中心会通知服务消费者。</li>
+</ol>
+<p><img alt="" src="../img/Dubbo%E6%9E%B6%E6%9E%84%E5%9B%BE-1581318103917.png" /></p>
+<h3 id="55">5.5 超时<a class="headerlink" href="#55" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/%E8%B6%85%E6%97%B6%E5%9B%BE%E7%89%87.png" /></p>
+<ul>
+<li>服务消费者在调用服务提供者的时候发生了阻塞、等待的情形,这个时候,服务消费者会直等待下去。</li>
+<li>在某个峰值时刻，大量的请求都在同时请求服务消费者,会造成线程的大量堆积，势必会造成雪崩。</li>
+<li>dubbo利用超时机制来解决这个问题，设置-个超时时间, 在这个时间段内，无法完成服务访问,则自动断开连接。</li>
+<li>使用timeout属性配置超时时间，默认值1000，单位毫秒</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="c1">//timeout 超时时间 单位毫秒  retries 重试次数</span>
+<span class="nd">@Service</span><span class="p">(</span><span class="n">timeout</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">,</span><span class="n">retries</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="56">5.6重试<a class="headerlink" href="#56" title="Permanent link">&para;</a></h3>
+<p><img alt="1581322543136" src="../img/1581322543136.png" /></p>
+<ol>
+<li>设置了超时时间，在这个时间段内，无法完成服务访问,则自动断开连接。</li>
+<li>如果出现网络抖动,则这一-次请求就会失败。</li>
+<li>Dubbo提供重试机制来避免类似问题的发生。</li>
+<li>通过retries属性来设置重试次数。默认为2次</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="c1">//timeout 超时时间 单位毫秒  retries 重试次数</span>
+<span class="nd">@Service</span><span class="p">(</span><span class="n">timeout</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">,</span><span class="n">retries</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="57">5.7多版本<a class="headerlink" href="#57" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/%E5%A4%9A%E7%89%88%E6%9C%AC%E5%9B%BE%E7%89%87.png" /></p>
+<p><strong>灰度发布:</strong>当出现新功能时,会让一部分用户先使用新功能，用户反馈没问题时，再将所有用户迁移到新功能。</p>
+<p>dubbo中使用version属性来设置和调用同一个接口的不同版本</p>
+<p>生产者配置</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@Service</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="s">&quot;v2.0&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserServiceImp12</span> <span class="kd">implements</span> <span class="n">UserService</span> <span class="p">{...}</span>
+</code></pre></div>
+
+<p>消费者配置</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@Reference</span><span class="p">(</span><span class="n">version</span> <span class="o">=</span> <span class="s">&quot;v2.0&quot;</span><span class="p">)</span><span class="c1">//远程注入</span>
+<span class="kd">private</span> <span class="n">UserService</span> <span class="n">userService</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="58">5.8负载均衡<a class="headerlink" href="#58" title="Permanent link">&para;</a></h3>
+<p><strong>负载均衡策略(4种) :</strong> 
+<strong>Random:</strong>按权重随机，默认值。按权重设置随机概率。</p>
+<p><strong>RoundRobin:</strong> 按权重轮询。</p>
+<p><strong>LeastActive:</strong> 最少活跃调用数,相同活跃数的随机。</p>
+<p><strong>ConsistentHash:</strong>一 致性Hash,相同参数的请求总是发到同一提供者。</p>
+<p><img alt="" src="../img/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%9B%BE.png" /></p>
+<p>服务提供者配置</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@Service</span><span class="p">(</span><span class="n">weight</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserServiceImp12</span> <span class="kd">implements</span> <span class="n">UserService</span> <span class="p">{...}</span>
+</code></pre></div>
+
+<p>application.xml 配置parameter key</p>
+<p><img alt="" src="../img/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" /></p>
+<p>消费者配置</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">//@Reference(loadbalance = &quot;roundrobin&quot;)</span>
+<span class="c1">//@Reference(loadbalance = &quot;leastactive&quot;)</span>
+<span class="c1">//@Reference(loadbalance = &quot;consistenthash&quot;)</span>
+<span class="nd">@Reference</span><span class="p">(</span><span class="n">loadbalance</span> <span class="o">=</span> <span class="s">&quot;random&quot;</span><span class="p">)</span><span class="c1">//默认 按权重随机</span>
+<span class="kd">private</span> <span class="n">UserService</span> <span class="n">userService</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="59">5.9集群容错<a class="headerlink" href="#59" title="Permanent link">&para;</a></h3>
+<p><img alt="1581324308044" src="../img/1581324308044.png" /></p>
+<p><strong>集群容错模式:</strong>
+    <strong>Failover Cluster:</strong>失败重试。默认值。当出现失败，重试其它服务器，默认重试2次，使用retries配置。一般用于读操作
+    <strong>Failfast Cluster :</strong>快速失败,发起-次调用，失败立即报错。通常用于写操作。
+    <strong>Failsafe Cluster:</strong>失败安全，出现异常时，直接忽略。返回一个空结果。
+    <strong>Failback Cluster:</strong>失败自动恢复,后台记录失败请求,定时重发。
+    <strong>Forking Cluster :</strong>并行调用多个服务器，只要一个成功即返回。
+    <strong>Broadcast Cluster:</strong> 广播调用所有提供者,逐个调用，任意一台报错则报错。</p>
+<p>消费者配置</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@Reference</span><span class="p">(</span><span class="n">cluster</span> <span class="o">=</span> <span class="s">&quot;failover&quot;</span><span class="p">)</span><span class="c1">//远程注入</span>
+<span class="kd">private</span> <span class="n">UserService</span> <span class="n">userService</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="510">5.10服务降级<a class="headerlink" href="#510" title="Permanent link">&para;</a></h3>
+<p><strong>服务降级</strong>：当服务器压力剧增的情况下，根据实际业务情况及流量，对一些服务和页面有策略的不处理或换种简单的方式处理，从而释放服务器资源以保证<strong>核心交易</strong>正常运作或高效运作</p>
+<p><strong>服务降级方式:</strong>
+<strong>mock= force:return null</strong>：表示消费方对该服务的方法调用都直接返回null值,不发起远程调用。用来屏蔽不重要服务不可用时对调用方的影响。</p>
+<p><strong>mock=fail:return null</strong>：表示消费方对该服务的方法调用在失败后，再返回null值,不抛异常。用来容忍不重要服务不稳定时对调用方的影响</p>
+<p><img alt="" src="../img/%E6%9C%8D%E5%8A%A1%E9%99%8D%E7%BA%A7%E5%9B%BE%E7%89%87.png" /></p>
+<p>消费方配置</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">//远程注入</span>
+<span class="nd">@Reference</span><span class="p">(</span><span class="n">mock</span> <span class="o">=</span><span class="err">“</span> <span class="n">force</span> <span class="p">:</span><span class="k">return</span> <span class="kc">null</span><span class="s">&quot;)//不再调用userService的服务</span>
+<span class="s">private UserService userService;</span>
+</code></pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 peaceiris
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/peaceiris" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/piris314en" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

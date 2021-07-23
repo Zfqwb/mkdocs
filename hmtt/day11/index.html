@@ -1,0 +1,1697 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions.">
+      
+      
+      
+        <meta name="author" content="nitto">
+      
+      
+        <link rel="canonical" href="https://nitto.netlify.app/hmtt/day11/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>day11 - Nitto Java Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01-_0051" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Nitto Java Docs" class="md-header__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nitto Java Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              day11
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nitto Java Docs" class="md-nav__button md-logo" aria-label="Nitto Java Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nitto Java Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Zfqwb/mkdocs/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jquery/" class="md-nav__link">
+        JQuery
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ajax/" class="md-nav__link">
+        AJAX
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../redis/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/1/" class="md-nav__link">
+        初识 Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/2/" class="md-nav__link">
+        docker命令
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/3/" class="md-nav__link">
+        docker容器的数据卷
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/4/" class="md-nav__link">
+        docker部署容器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/5/" class="md-nav__link">
+        Docerfile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/6/" class="md-nav__link">
+        服务编排
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/7/" class="md-nav__link">
+        私有仓库
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/MongoDB/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        项目一-探花交友
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目一-探花交友" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          项目一-探花交友
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day03/" class="md-nav__link">
+        day03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day04/" class="md-nav__link">
+        day04
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day09/" class="md-nav__link">
+        day09
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_11" type="checkbox" id="__nav_8_11" >
+      
+      <label class="md-nav__link" for="__nav_8_11">
+        补充资料
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="补充资料" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_11">
+          <span class="md-nav__icon md-icon"></span>
+          补充资料
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/lombok/" class="md-nav__link">
+        day01_lombok
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/mybatisPlus/" class="md-nav__link">
+        day01_mybatis_plus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/aliyun/" class="md-nav__link">
+        day01_阿里云
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/sso/" class="md-nav__link">
+        day01_单点登录及jwt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/nginx/" class="md-nav__link">
+        day03_nginx
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/threadlocal/README.md" class="md-nav__link">
+        day03_ThreadLocal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/mongodb/" class="md-nav__link">
+        day04_MongoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tantan/further/ansy/" class="md-nav__link">
+        day04_多线程@Ansy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      <label class="md-nav__link" for="__nav_9">
+        项目二-黑马头条
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="项目二-黑马头条" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          项目二-黑马头条
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day01/" class="md-nav__link">
+        day01
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day02/" class="md-nav__link">
+        day02
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day03/" class="md-nav__link">
+        day03
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day04/" class="md-nav__link">
+        day04
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day05/" class="md-nav__link">
+        day05
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day06/" class="md-nav__link">
+        day06
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day07/" class="md-nav__link">
+        day07
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day08/" class="md-nav__link">
+        day08
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day09/" class="md-nav__link">
+        day09
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day10/" class="md-nav__link">
+        day10
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        day11
+      </a>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day12/" class="md-nav__link">
+        day12
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day13/" class="md-nav__link">
+        day13
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day14/" class="md-nav__link">
+        day14
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day15/" class="md-nav__link">
+        day15
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        面试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="面试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          面试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/e.g.1.0.0/" class="md-nav__link">
+        e.g.1.0.0
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Zfqwb/mkdocs/edit/main/docs_sample/hmtt/day11/README.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="01-_0051">01-今日学习目标 00:51<a class="headerlink" href="#01-_0051" title="Permanent link">&para;</a></h1>
+<ul>
+<li>能够完成对mongodb的环境搭建</li>
+<li>能够掌握mongodb的基本使用</li>
+<li>能够完成app端评论的查询、发表、点赞等功能</li>
+<li>能够完成app端评论回复的查询，发表、点赞功能</li>
+</ul>
+<h1 id="02-mongodb_0435">02-mongodb介绍及安装 04:35<a class="headerlink" href="#02-mongodb_0435" title="Permanent link">&para;</a></h1>
+<p>MongoDB是一个开源、高性能、无模式的文档型数据库</p>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>支持文本查询</li>
+<li>不需要支持事务，不存在复杂的多表查询</li>
+<li>存储数据可持久化</li>
+<li>需要TB甚至 PB 级别数据存储</li>
+<li>需求变化较快，数据模型无法确认，预计使用快速迭代开发形式</li>
+<li>需要至少2000以上的读写QPS【高性能】</li>
+<li>能支持快速水平扩展【高扩展】</li>
+<li>99.999%高可用【高可用】</li>
+</ul>
+<h2 id="windowsmongodb">windows下安装mongodb并设置成自动启动：<a class="headerlink" href="#windowsmongodb" title="Permanent link">&para;</a></h2>
+<p>执行资料中的mongodb-win32-x86_64-2008plus-ssl-4.0.19-signed.msi，一路next即可，过程中会帮你创建服务并且自动启动。</p>
+<h1 id="03-mongodbspringbootcrud_1026">03-mongodb与springboot整合后的crud  10:26<a class="headerlink" href="#03-mongodbspringbootcrud_1026" title="Permanent link">&para;</a></h1>
+<p>mongodb已经与springboot自动配置做了整合，只需要提供如下配置即可</p>
+<div class="codehilite"><pre><span></span><code><span class="n">server</span><span class="o">:</span>
+  <span class="n">port</span><span class="o">:</span> <span class="mi">9001</span>
+<span class="n">spring</span><span class="o">:</span>
+  <span class="n">application</span><span class="o">:</span>
+    <span class="n">name</span><span class="o">:</span> <span class="n">mongo</span><span class="o">-</span><span class="n">demo</span>
+  <span class="n">data</span><span class="o">:</span>
+    <span class="n">mongodb</span><span class="o">:</span>
+      <span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
+      <span class="n">port</span><span class="o">:</span> <span class="mi">27017</span>
+      <span class="n">database</span><span class="o">:</span> <span class="n">leadnews</span><span class="o">-</span><span class="n">comment</span>
+</code></pre></div>
+
+<p>不用提供自己的配置类，不用写，不用写，不用写！</p>
+<h1 id="04-mongodbspringbootcrud2_1335">04-mongodb与springboot整合后的crud2  13:35<a class="headerlink" href="#04-mongodbspringbootcrud2_1335" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.itheima.mongodemo.demo</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.itheima.mongodemo.demo.pojo.ApComment</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.domain.PageRequest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.domain.Pageable</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.domain.Sort</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.MongoTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Criteria</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Query</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Update</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.test.context.junit4.SpringRunner</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@SpringBootTest</span>
+<span class="kd">class</span> <span class="nc">DemoApplicationTests</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">MongoTemplate</span> <span class="n">mongoTemplate</span><span class="p">;</span>
+
+    <span class="c1">//添加</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCreate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ApComment</span> <span class="n">apComment</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApComment</span><span class="p">();</span>
+            <span class="n">apComment</span><span class="p">.</span><span class="na">setContent</span><span class="p">(</span><span class="s">&quot;这是一个评论&quot;</span><span class="p">);</span>
+            <span class="n">apComment</span><span class="p">.</span><span class="na">setLikes</span><span class="p">(</span><span class="mi">20</span><span class="o">+</span><span class="n">i</span><span class="p">);</span>
+            <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">apComment</span><span class="p">);</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="c1">//添加 在id字段上添加@Id注解</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCreate2</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">ApComment</span> <span class="n">apComment</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApComment</span><span class="p">();</span>
+        <span class="n">apComment</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="s">&quot;111&quot;</span><span class="p">);</span>
+        <span class="n">apComment</span><span class="p">.</span><span class="na">setContent</span><span class="p">(</span><span class="s">&quot;这是一个评论&quot;</span><span class="p">);</span>
+        <span class="n">apComment</span><span class="p">.</span><span class="na">setLikes</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">apComment</span><span class="p">);</span>
+
+    <span class="p">}</span>
+
+    <span class="c1">//查询一个</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testFindOne</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">ApComment</span> <span class="n">apComment</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">findById</span><span class="p">(</span><span class="s">&quot;111&quot;</span><span class="p">,</span> <span class="n">ApComment</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">apComment</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//条件查询</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testQuery</span><span class="p">()</span> <span class="p">{</span>
+<span class="c1">//        Query query = Query.query(Criteria.where(&quot;_id&quot;).is(&quot;5f7012e03ea2da5788227a6f&quot;));</span>
+        <span class="c1">//where likes &lt; 28</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;likes&quot;</span><span class="p">).</span><span class="na">lt</span><span class="p">(</span><span class="mi">28</span><span class="p">));</span>
+        <span class="c1">//order by likes desc</span>
+        <span class="n">query</span><span class="p">.</span><span class="na">with</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">by</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">Direction</span><span class="p">.</span><span class="na">DESC</span><span class="p">,</span><span class="s">&quot;likes&quot;</span><span class="p">));</span>
+        <span class="n">Pageable</span> <span class="n">pageable</span> <span class="o">=</span> <span class="n">PageRequest</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+        <span class="n">query</span><span class="p">.</span><span class="na">with</span><span class="p">(</span><span class="n">pageable</span><span class="p">);</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">ApComment</span><span class="o">&gt;</span> <span class="n">apComments</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">ApComment</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">apComments</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//删除</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testDelete</span><span class="p">(){</span>
+        <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;_id&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="s">&quot;5f7012e03ea2da5788227a6f&quot;</span><span class="p">)),</span><span class="n">ApComment</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//修改</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testUpdate</span><span class="p">(){</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;_id&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="s">&quot;5f7015e63ea2da1618d173eb&quot;</span><span class="p">));</span>
+        <span class="n">Update</span> <span class="n">update</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Update</span><span class="p">().</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;content&quot;</span><span class="p">,</span><span class="s">&quot;itcast&quot;</span><span class="p">);</span>
+        <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">updateMulti</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">ApComment</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="05-app-_0547">05-app端评论-发表评论 05:47<a class="headerlink" href="#05-app-_0547" title="Permanent link">&para;</a></h1>
+<p><img alt="1587310483409" src="data:image/jpg;base64,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" /></p>
+<ul>
+<li>文章详情页下方可以查看评论信息，按照点赞数量倒序排列，展示<strong>评论内容、评论的作者、点赞数、回复数、时间</strong>，默认查看20条评论，如果想查看更多，可以点击加载更多进行分页</li>
+</ul>
+<blockquote>
+<p>针对某个文章提供查询接口</p>
+</blockquote>
+<ul>
+<li>可以针对当前文章发布评论</li>
+</ul>
+<blockquote>
+<p>查询评论列表接口</p>
+<p>发布评论接口</p>
+</blockquote>
+<ul>
+<li>可以针对于某一条评论进行点赞操作</li>
+</ul>
+<blockquote>
+<p>点赞接口</p>
+</blockquote>
+<p><img alt="1601173225423" src="data:image/jpg;base64,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" /></p>
+<h1 id="06-_0750">06-环境搭建 07:50<a class="headerlink" href="#06-_0750" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="nt">server</span><span class="p">:</span>
+  <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">9006</span>
+<span class="nt">spring</span><span class="p">:</span>
+  <span class="nt">autoconfigure</span><span class="p">:</span>
+    <span class="nt">exclude</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration</span>
+  <span class="nt">application</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">leadnews-comment</span>
+  <span class="nt">cloud</span><span class="p">:</span>
+    <span class="nt">nacos</span><span class="p">:</span>
+      <span class="nt">discovery</span><span class="p">:</span>
+        <span class="nt">server-addr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost:8848</span>
+  <span class="nt">data</span><span class="p">:</span>
+    <span class="nt">mongodb</span><span class="p">:</span>
+      <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost</span>
+      <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">27017</span>
+      <span class="nt">database</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">leadnews-comment</span>
+</code></pre></div>
+
+<p>使用这个配置文件，就不需要集成mongodb配置类</p>
+<h1 id="07--_1706">07-保存评论-开发 17:06<a class="headerlink" href="#07--_1706" title="Permanent link">&para;</a></h1>
+<p>把下面的配置类放到config包下：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.comment.config</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Import</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.documentation.builders.ApiInfoBuilder</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.documentation.builders.PathSelectors</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.documentation.builders.RequestHandlerSelectors</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.documentation.service.ApiInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.documentation.service.Contact</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.documentation.spi.DocumentationType</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.documentation.spring.web.plugins.Docket</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">springfox.documentation.swagger2.annotations.EnableSwagger2</span><span class="p">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="nd">@EnableSwagger2</span>
+<span class="nd">@EnableKnife4j</span>
+<span class="nd">@Import</span><span class="p">(</span><span class="n">BeanValidatorPluginsConfiguration</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SwaggerConfiguration</span> <span class="p">{</span>
+
+   <span class="nd">@Bean</span>
+   <span class="kd">public</span> <span class="n">Docket</span> <span class="nf">buildDocket</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="n">Docket</span><span class="p">(</span><span class="n">DocumentationType</span><span class="p">.</span><span class="na">SWAGGER_2</span><span class="p">)</span>
+              <span class="p">.</span><span class="na">apiInfo</span><span class="p">(</span><span class="n">buildApiInfo</span><span class="p">())</span>
+              <span class="p">.</span><span class="na">select</span><span class="p">()</span>
+              <span class="c1">// 要扫描的API(Controller)基础包</span>
+              <span class="p">.</span><span class="na">apis</span><span class="p">(</span><span class="n">RequestHandlerSelectors</span><span class="p">.</span><span class="na">basePackage</span><span class="p">(</span><span class="s">&quot;com.heima&quot;</span><span class="p">))</span>
+              <span class="p">.</span><span class="na">paths</span><span class="p">(</span><span class="n">PathSelectors</span><span class="p">.</span><span class="na">any</span><span class="p">())</span>
+              <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+   <span class="p">}</span>
+
+   <span class="kd">private</span> <span class="n">ApiInfo</span> <span class="nf">buildApiInfo</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">Contact</span> <span class="n">contact</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Contact</span><span class="p">(</span><span class="s">&quot;黑马程序员&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="n">ApiInfoBuilder</span><span class="p">()</span>
+              <span class="p">.</span><span class="na">title</span><span class="p">(</span><span class="s">&quot;黑马头条-评论API文档&quot;</span><span class="p">)</span>
+              <span class="p">.</span><span class="na">description</span><span class="p">(</span><span class="s">&quot;评论服务api&quot;</span><span class="p">)</span>
+              <span class="p">.</span><span class="na">contact</span><span class="p">(</span><span class="n">contact</span><span class="p">)</span>
+              <span class="p">.</span><span class="na">version</span><span class="p">(</span><span class="s">&quot;1.0.0&quot;</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>服务层代码:</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">saveComment</span><span class="p">(</span><span class="n">CommentSaveDto</span> <span class="n">dto</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//1.检查参数</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getArticleId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getContent</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">dto</span><span class="p">.</span><span class="na">getContent</span><span class="p">().</span><span class="na">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">140</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">,</span> <span class="s">&quot;评论内容不能超过140字&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//2.判断是否登录</span>
+    <span class="n">ApUser</span> <span class="n">user</span> <span class="o">=</span> <span class="n">AppThreadLocalUtils</span><span class="p">.</span><span class="na">getUser</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">user</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">NEED_LOGIN</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//3.安全过滤,自行实现 (1.敏感词审核 2.阿里云内容安全)</span>
+
+    <span class="c1">//4.保存评论</span>
+    <span class="c1">//调用远程接口，根据用户ID获取用户信息</span>
+    <span class="n">ApUser</span> <span class="n">apUser</span> <span class="o">=</span> <span class="n">userFeign</span><span class="p">.</span><span class="na">findUserById</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">apUser</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">,</span> <span class="s">&quot;当前登录信息有误&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">ApComment</span> <span class="n">apComment</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApComment</span><span class="p">();</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setAuthorId</span><span class="p">(</span><span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setAuthorName</span><span class="p">(</span><span class="n">apUser</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setContent</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getContent</span><span class="p">());</span>
+    <span class="c1">//entryId : 1.文章ID 2.动态ID（未做）</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setEntryId</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getArticleId</span><span class="p">());</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setCreatedTime</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">());</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setUpdatedTime</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">());</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setImage</span><span class="p">(</span><span class="n">apUser</span><span class="p">.</span><span class="na">getImage</span><span class="p">());</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setLikes</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setReply</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setType</span><span class="p">((</span><span class="kt">short</span><span class="p">)</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">apComment</span><span class="p">.</span><span class="na">setFlag</span><span class="p">((</span><span class="kt">short</span><span class="p">)</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">apComment</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">SUCCESS</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="08-_0719">08-测试 07:19<a class="headerlink" href="#08-_0719" title="Permanent link">&para;</a></h1>
+<p>使用老师下发的postman接口进行测试</p>
+<p>1.启动app网关</p>
+<p>2.启动comment、user微服务</p>
+<p>3.使用postman进行登录，将jwt复制发布评论接口的header中的token字段，调用发布评论接口进行测试</p>
+<h1 id="09-_1657">09-点赞评论 16:57<a class="headerlink" href="#09-_1657" title="Permanent link">&para;</a></h1>
+<p>视频中的代码存在重复点赞之后重复插入点赞数据的问题，修复如下：</p>
+<div class="codehilite"><pre><span></span><code>    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">like</span><span class="p">(</span><span class="n">CommentLikeDto</span> <span class="n">dto</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//1.检查参数</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//2.判断是否登录</span>
+        <span class="n">ApUser</span> <span class="n">user</span> <span class="o">=</span> <span class="n">AppThreadLocalUtils</span><span class="p">.</span><span class="na">getUser</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">user</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">NEED_LOGIN</span><span class="p">);</span>
+        <span class="p">}</span>
+
+
+        <span class="c1">//判断是否重复点赞</span>
+        <span class="c1">//判断是否已经存在点赞数据</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;authorId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">()).</span><span class="na">and</span><span class="p">(</span><span class="s">&quot;commentId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">()));</span>
+        <span class="n">ApCommentLike</span> <span class="n">apCommentLike</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">findOne</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">ApCommentLike</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="c1">//1.已点赞，再次点赞</span>
+        <span class="c1">//2.无点赞数据，取消点赞</span>
+        <span class="k">if</span><span class="p">((</span><span class="n">apCommentLike</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span>
+                <span class="p">(</span><span class="n">apCommentLike</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)){</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//3.点赞操作</span>
+        <span class="n">ApComment</span> <span class="n">apComment</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">findById</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">(),</span> <span class="n">ApComment</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">apComment</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//更新评论的点赞数量</span>
+            <span class="n">apComment</span><span class="p">.</span><span class="na">setLikes</span><span class="p">(</span><span class="n">apComment</span><span class="p">.</span><span class="na">getLikes</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">apComment</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">apComment</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//4.取消点赞</span>
+            <span class="c1">//更新评论的点赞数量</span>
+            <span class="n">apComment</span><span class="p">.</span><span class="na">setLikes</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">apComment</span><span class="p">.</span><span class="na">getLikes</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span>
+            <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">apComment</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="c1">//点赞</span>
+            <span class="n">apCommentLike</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApCommentLike</span><span class="p">();</span>
+            <span class="n">apCommentLike</span><span class="p">.</span><span class="na">setAuthorId</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+            <span class="n">apCommentLike</span><span class="p">.</span><span class="na">setCommentId</span><span class="p">(</span><span class="n">apComment</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+            <span class="c1">//保存点赞数据</span>
+            <span class="n">apCommentLike</span><span class="p">.</span><span class="na">setOperation</span><span class="p">((</span><span class="kt">short</span><span class="p">)</span><span class="mi">0</span><span class="p">);</span>
+            <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">apCommentLike</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="c1">//取消点赞</span>
+            <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;authorId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">()).</span><span class="na">and</span><span class="p">(</span><span class="s">&quot;commentId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">())),</span><span class="n">ApCommentLike</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//点赞+1 -1</span>
+
+        <span class="c1">//5.数据返回</span>
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">resultMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">resultMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;likes&quot;</span><span class="p">,</span><span class="n">apComment</span><span class="p">.</span><span class="na">getLikes</span><span class="p">());</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">resultMap</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h1 id="10-_0244">10-测试 02:44<a class="headerlink" href="#10-_0244" title="Permanent link">&para;</a></h1>
+<p>使用老师下发的postman接口进行测试</p>
+<h1 id="11-_1216">11-加载评论列表 12:16<a class="headerlink" href="#11-_1216" title="Permanent link">&para;</a></h1>
+<h1 id="12-2_0918">12-加载评论列表2 09:18<a class="headerlink" href="#12-2_0918" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code> <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">findByArticleId</span><span class="p">(</span><span class="n">CommentDto</span> <span class="n">dto</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//1.检查参数</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getArticleId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getSize</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">dto</span><span class="p">.</span><span class="na">getSize</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">dto</span><span class="p">.</span><span class="na">getSize</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">){</span>
+            <span class="n">dto</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//2.按照文章id过滤，设置分页和排序</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;entryId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getArticleId</span><span class="p">()).</span><span class="na">and</span><span class="p">(</span><span class="s">&quot;likes&quot;</span><span class="p">).</span><span class="na">lt</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getMinLikes</span><span class="p">()));</span>
+        <span class="n">query</span><span class="p">.</span><span class="na">limit</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getSize</span><span class="p">()).</span><span class="na">with</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">by</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">Direction</span><span class="p">.</span><span class="na">DESC</span><span class="p">,</span><span class="s">&quot;likes&quot;</span><span class="p">));</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">ApComment</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">ApComment</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+        <span class="c1">//3.数据封装返回</span>
+        <span class="c1">//3.1 用户未登录 加载数据</span>
+        <span class="n">ApUser</span> <span class="n">user</span> <span class="o">=</span> <span class="n">AppThreadLocalUtils</span><span class="p">.</span><span class="na">getUser</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">user</span><span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//3.2 用户已登录，加载数据，需要判断当前用户点赞了哪些评论</span>
+        <span class="c1">//获取评论列表中的所有数据，通过map方法，将所有评论的id生成集合</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">idList</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span><span class="p">.</span><span class="na">getId</span><span class="p">()).</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+        <span class="c1">//在这些评论中，查询当前登录用户点赞过的评论</span>
+        <span class="n">Query</span> <span class="n">query1</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;commentId&quot;</span><span class="p">).</span><span class="na">in</span><span class="p">(</span><span class="n">idList</span><span class="p">).</span><span class="na">and</span><span class="p">(</span><span class="s">&quot;authorId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">()).</span><span class="na">and</span><span class="p">(</span><span class="s">&quot;operation&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">ApCommentLike</span><span class="o">&gt;</span> <span class="n">apCommentLikes</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query1</span><span class="p">,</span> <span class="n">ApCommentLike</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">ApCommentVo</span><span class="o">&gt;</span> <span class="n">resultList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="c1">//将返回值的点赞赋值，如果用户点赞过，赋值为0</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">apCommentLikes</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">){</span>
+            <span class="c1">//不用双重循环，直接构建一个set用于查询是否点赞过</span>
+            <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">commandId</span> <span class="o">=</span> <span class="n">apCommentLikes</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">()).</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toSet</span><span class="p">());</span>
+            <span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">forEach</span><span class="p">(</span><span class="n">x</span><span class="o">-&gt;</span><span class="p">{</span>
+                <span class="n">ApCommentVo</span> <span class="n">apCommentVo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApCommentVo</span><span class="p">();</span>
+                <span class="n">BeanUtils</span><span class="p">.</span><span class="na">copyProperties</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">apCommentVo</span><span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">commandId</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">getId</span><span class="p">())){</span>
+                    <span class="n">apCommentVo</span><span class="p">.</span><span class="na">setOperation</span><span class="p">((</span><span class="kt">short</span><span class="p">)</span><span class="mi">0</span><span class="p">);</span>
+                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                    <span class="n">apCommentVo</span><span class="p">.</span><span class="na">setOperation</span><span class="p">((</span><span class="kt">short</span><span class="p">)</span><span class="mi">1</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="n">resultList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">apCommentVo</span><span class="p">);</span>
+            <span class="p">});</span>
+<span class="c1">//            list.stream().forEach(x-&gt;{</span>
+<span class="c1">//                ApCommentVo apCommentVo = new ApCommentVo();</span>
+<span class="c1">//                BeanUtils.copyProperties(x,apCommentVo);</span>
+<span class="c1">//                for (ApCommentLike apCommentLike : apCommentLikes) {</span>
+<span class="c1">//                    if(x.getId().equals(apCommentLike.getCommentId())){</span>
+<span class="c1">//                        apCommentVo.setOperation((short)0);</span>
+<span class="c1">//                        break;</span>
+<span class="c1">//                    }</span>
+<span class="c1">//                }</span>
+<span class="c1">//                resultList.add(apCommentVo);</span>
+<span class="c1">//            });</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">resultList</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div>
+
+<h1 id="13-_0334">13-测试 03:34<a class="headerlink" href="#13-_0334" title="Permanent link">&para;</a></h1>
+<p>使用app进行测试</p>
+<blockquote>
+<p>configs/config.js中的ip修改为本机</p>
+<p><code>const ip = "localhost";</code></p>
+</blockquote>
+<h1 id="14-_0733">14-评论回复  07:33<a class="headerlink" href="#14-_0733" title="Permanent link">&para;</a></h1>
+<p>1，用户点击<strong>回复</strong>，根据当前评论id查询对应的所有回复进行展示</p>
+<p>2，用户针对于当前的评论进行了回复，需要保存数据，同时需要更新当前评论的回复数</p>
+<p>3，可以对回复列表进行点赞操作</p>
+<h1 id="15-_0734">15-业务层 07:34<a class="headerlink" href="#15-_0734" title="Permanent link">&para;</a></h1>
+<h1 id="16-2_0721">16-业务层2  07:21<a class="headerlink" href="#16-2_0721" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span> <span class="nn">com.heima.comment.service.impl</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.heima.comment.feign.UserFeign</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.comment.service.CommentRepayService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.comment.dtos.CommentRepayDto</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.comment.dtos.CommentRepayLikeDto</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.comment.dtos.CommentRepaySaveDto</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.comment.pojos.ApComment</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.comment.pojos.ApCommentLike</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.comment.pojos.ApCommentRepay</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.comment.pojos.ApCommentRepayLike</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.comment.vo.ApCommentRepayVo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.comment.vo.ApCommentVo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.common.dtos.ResponseResult</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.common.enums.AppHttpCodeEnum</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.model.user.pojos.ApUser</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.heima.utils.threadlocal.AppThreadLocalUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">lombok.extern.log4j.Log4j2</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.BeanUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.domain.Sort</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.MongoTemplate</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Criteria</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.mongodb.core.query.Query</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.stream.Collectors</span><span class="p">;</span>
+
+<span class="nd">@Service</span>
+<span class="nd">@Log4j2</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CommentRepayServiceImpl</span> <span class="kd">implements</span> <span class="n">CommentRepayService</span> <span class="p">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">MongoTemplate</span> <span class="n">mongoTemplate</span><span class="p">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="n">UserFeign</span> <span class="n">userFeign</span><span class="p">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">loadCommentRepay</span><span class="p">(</span><span class="n">CommentRepayDto</span> <span class="n">dto</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//1.检查参数</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getSize</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">dto</span><span class="p">.</span><span class="na">getSize</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="n">dto</span><span class="p">.</span><span class="na">setSize</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//2.按照文章id过滤，设置分页和排序</span>
+        <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;commentId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">()).</span><span class="na">and</span><span class="p">(</span><span class="s">&quot;likes&quot;</span><span class="p">).</span><span class="na">lt</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getMinLikes</span><span class="p">()));</span>
+        <span class="n">query</span><span class="p">.</span><span class="na">limit</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getSize</span><span class="p">()).</span><span class="na">with</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">by</span><span class="p">(</span><span class="n">Sort</span><span class="p">.</span><span class="na">Direction</span><span class="p">.</span><span class="na">DESC</span><span class="p">,</span><span class="s">&quot;likes&quot;</span><span class="p">));</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">ApCommentRepay</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">ApCommentRepay</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+        <span class="c1">//3.数据封装返回</span>
+        <span class="c1">//3.1 用户未登录 加载数据</span>
+        <span class="n">ApUser</span> <span class="n">user</span> <span class="o">=</span> <span class="n">AppThreadLocalUtils</span><span class="p">.</span><span class="na">getUser</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">user</span><span class="o">==</span> <span class="kc">null</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//3.2 用户已登录，加载数据，需要判断当前用户点赞了哪些评论</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">idList</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span><span class="p">.</span><span class="na">getId</span><span class="p">()).</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+        <span class="n">Query</span> <span class="n">query1</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;commentRepayId&quot;</span><span class="p">).</span><span class="na">in</span><span class="p">(</span><span class="n">idList</span><span class="p">).</span><span class="na">and</span><span class="p">(</span><span class="s">&quot;authorId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">()));</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">ApCommentRepayLike</span><span class="o">&gt;</span> <span class="n">apCommentRepayLikes</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">find</span><span class="p">(</span><span class="n">query1</span><span class="p">,</span> <span class="n">ApCommentRepayLike</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">ApCommentRepayVo</span><span class="o">&gt;</span> <span class="n">resultList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">apCommentRepayLikes</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">){</span>
+
+            <span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">forEach</span><span class="p">(</span><span class="n">x</span><span class="o">-&gt;</span><span class="p">{</span>
+                <span class="n">ApCommentRepayVo</span> <span class="n">apCommentRepayVo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApCommentRepayVo</span><span class="p">();</span>
+                <span class="n">BeanUtils</span><span class="p">.</span><span class="na">copyProperties</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">apCommentRepayVo</span><span class="p">);</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">ApCommentRepayLike</span> <span class="n">apCommentRepayLike</span>  <span class="p">:</span> <span class="n">apCommentRepayLikes</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">getId</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">apCommentRepayLike</span><span class="p">.</span><span class="na">getCommentRepayId</span><span class="p">())){</span>
+                        <span class="n">apCommentRepayVo</span><span class="p">.</span><span class="na">setOperation</span><span class="p">((</span><span class="kt">short</span><span class="p">)</span><span class="mi">0</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="n">resultList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">apCommentRepayVo</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">resultList</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">saveCommentRepay</span><span class="p">(</span><span class="n">CommentRepaySaveDto</span> <span class="n">dto</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//1.检查参数</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getContent</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">dto</span><span class="p">.</span><span class="na">getContent</span><span class="p">().</span><span class="na">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">140</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">,</span> <span class="s">&quot;评论内容不能超过140字&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//2.判断是否登录</span>
+        <span class="n">ApUser</span> <span class="n">user</span> <span class="o">=</span> <span class="n">AppThreadLocalUtils</span><span class="p">.</span><span class="na">getUser</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">user</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">NEED_LOGIN</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//3.安全过滤,自行实现</span>
+
+        <span class="c1">//4.保存评论</span>
+        <span class="n">ApUser</span> <span class="n">apUser</span> <span class="o">=</span> <span class="n">userFeign</span><span class="p">.</span><span class="na">findUserById</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">apUser</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">,</span> <span class="s">&quot;当前登录信息有误&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">ApCommentRepay</span> <span class="n">apCommentRepay</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApCommentRepay</span><span class="p">();</span>
+        <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">setAuthorId</span><span class="p">(</span><span class="n">apUser</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+        <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">setAuthorName</span><span class="p">(</span><span class="n">apUser</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+        <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">setContent</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getContent</span><span class="p">());</span>
+        <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">setCommentId</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">());</span>
+        <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">setCreatedTime</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">());</span>
+        <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">setUpdatedTime</span><span class="p">(</span><span class="k">new</span> <span class="n">Date</span><span class="p">());</span>
+        <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">setLikes</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">apCommentRepay</span><span class="p">);</span>
+
+        <span class="c1">//更新评论的回复数量</span>
+        <span class="n">ApComment</span> <span class="n">apComment</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">findById</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentId</span><span class="p">(),</span> <span class="n">ApComment</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="n">apComment</span><span class="p">.</span><span class="na">setReply</span><span class="p">(</span><span class="n">apComment</span><span class="p">.</span><span class="na">getReply</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">apComment</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">SUCCESS</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">ResponseResult</span> <span class="nf">saveCommentRepayLike</span><span class="p">(</span><span class="n">CommentRepayLikeDto</span> <span class="n">dto</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//1.检查参数</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentRepayId</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">PARAM_REQUIRE</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//2.判断是否登录</span>
+        <span class="n">ApUser</span> <span class="n">user</span> <span class="o">=</span> <span class="n">AppThreadLocalUtils</span><span class="p">.</span><span class="na">getUser</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">user</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">errorResult</span><span class="p">(</span><span class="n">AppHttpCodeEnum</span><span class="p">.</span><span class="na">NEED_LOGIN</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//3.点赞操作</span>
+        <span class="n">ApCommentRepay</span> <span class="n">apCommentRepay</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">findById</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getCommentRepayId</span><span class="p">(),</span> <span class="n">ApCommentRepay</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">apCommentRepay</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//更新评论的点赞数量</span>
+            <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">setLikes</span><span class="p">(</span><span class="n">apCommentRepay</span><span class="p">.</span><span class="na">getLikes</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">apCommentRepay</span><span class="p">);</span>
+
+            <span class="c1">//保存 APP评论信息点赞</span>
+            <span class="n">ApCommentRepayLike</span> <span class="n">apCommentLike</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ApCommentRepayLike</span><span class="p">();</span>
+            <span class="n">apCommentLike</span><span class="p">.</span><span class="na">setAuthorId</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+            <span class="n">apCommentLike</span><span class="p">.</span><span class="na">setCommentRepayId</span><span class="p">(</span><span class="n">apCommentRepay</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+            <span class="n">apCommentLike</span><span class="p">.</span><span class="na">setOperation</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">());</span>
+            <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">apCommentLike</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">apCommentRepay</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//4.取消点赞</span>
+            <span class="c1">//更新评论的点赞数量</span>
+            <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">setLikes</span><span class="p">(</span><span class="n">apCommentRepay</span><span class="p">.</span><span class="na">getLikes</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="mi">0</span> <span class="p">:</span> <span class="n">apCommentRepay</span><span class="p">.</span><span class="na">getLikes</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">apCommentRepay</span><span class="p">);</span>
+            <span class="c1">//更新 APP评论信息点赞</span>
+            <span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="n">Criteria</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;authorId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="na">getId</span><span class="p">()).</span><span class="na">and</span><span class="p">(</span><span class="s">&quot;commentRepayId&quot;</span><span class="p">).</span><span class="na">is</span><span class="p">(</span><span class="n">apCommentRepay</span><span class="p">.</span><span class="na">getId</span><span class="p">()));</span>
+            <span class="n">ApCommentRepayLike</span> <span class="n">apCommentLike</span> <span class="o">=</span> <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">findOne</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">ApCommentRepayLike</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+            <span class="n">apCommentLike</span><span class="p">.</span><span class="na">setOperation</span><span class="p">(</span><span class="n">dto</span><span class="p">.</span><span class="na">getOperation</span><span class="p">());</span>
+            <span class="n">mongoTemplate</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">apCommentLike</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">//5.数据返回</span>
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">resultMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">resultMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;likes&quot;</span><span class="p">,</span><span class="n">apCommentRepay</span><span class="p">.</span><span class="na">getLikes</span><span class="p">());</span>
+        <span class="k">return</span> <span class="n">ResponseResult</span><span class="p">.</span><span class="na">okResult</span><span class="p">(</span><span class="n">resultMap</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../day10/" class="md-footer__link md-footer__link--prev" aria-label="上一页: day10" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              day10
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../day12/" class="md-footer__link md-footer__link--next" aria-label="下一页: day12" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              day12
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 peaceiris
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/peaceiris" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/piris314en" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
