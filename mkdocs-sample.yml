@@ -1,5 +1,5 @@
 # Project information
-site_name: "Nitto Java Docs"
+site_name: "Nitto Docs"
 site_description: "MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions."
 site_author: "nitto"
 site_url: "https://nitto.netlify.app/"
@@ -11,7 +11,6 @@ copyright: "&copy; 2019 peaceiris"
 repo_name: "GitHub"
 repo_url: "https://github.com/Zfqwb/mkdocs"
 edit_uri: "https://github.com/Zfqwb/mkdocs/edit/main/docs_sample"
-
 
 # Configuration
 docs_dir: "docs_sample"
@@ -94,7 +93,7 @@ nav:
       - "day08": "tantan/day08/README.md"
       - "day09": "tantan/day09/README.md"
       - "day10": "tantan/day10/README.md"
-      - "补充资料": 
+      - "补充资料":
           - "day01_lombok": "tantan/further/lombok/README.md"
           - "day01_mybatis_plus": "tantan/further/mybatisPlus/README.md"
           - "day01_阿里云": "tantan/further/aliyun/README.md"
@@ -103,7 +102,7 @@ nav:
           - "day03_ThreadLocal": "tantan/further/threadlocal/README.md"
           - "day04_MongoDB": "tantan/further/mongodb/README.md"
           - "day04_多线程@Ansy": "tantan/further/ansy/README.md"
-  - "项目二-黑马头条": 
+  - "项目二-黑马头条":
       - "day01": "hmtt/day01/README.md"
       - "day02": "hmtt/day02/README.md"
       - "day03": "hmtt/day03/README.md"
@@ -119,7 +118,5 @@ nav:
       - "day13": "hmtt/day13/README.md"
       - "day14": "hmtt/day14/README.md"
       - "day15": "hmtt/day15/README.md"
-  - "面试": 
+  - "面试":
       - "e.g.1.0.0": "interview/e.g.1.0.0.md"
-
-          
