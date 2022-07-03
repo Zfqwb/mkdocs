@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nitto.netlify.app/MySQL/</loc>
-         <lastmod>2022-07-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://nitto.netlify.app/license/</loc>
          <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
